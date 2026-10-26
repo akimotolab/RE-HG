@@ -1,0 +1,1372 @@
+warning: `VIRTUAL_ENV=/hdd/shigekikusaka/blackrl/.venv` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+
+=== Conf Continuous | mode=irl_recursive_rls | seed=0 ===
+  iter    0 (pre-update eval): eval=-193.7813±48.6432 | μ = [0.818 0.635 0.52  0.508 0.907 0.956 0.803 0.865 0.772 0.968 0.908 0.501
+ 0.929 0.517 0.865 0.588]
+  [IRL-RLS conf] Updating reward parameters (iter 0)...
+  [IRL-RLS Diagnostics] iter 0
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.97e-03, cond: 2.97e+09
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.9408, ||omega_bar||: 1.9576
+    ||omega_k - omega_prev||: 14.9408
+    bar_U condition number: inf
+    Q_hat diag=[1.     0.1412 1.     1.0007 1.     1.     1.     1.    ]
+    R_hat diag=[1. 1. 1. 1.]
+    [Subopt Follower] TV(g_beh, g_exact) = 0.5510 | KL (aux) = 17.5315 | rel. value gap = 0.0119
+    [Diagnostics] HG Cosine Sim: 0.2375 | Norm(Est): 62.6668 | Norm(Oracle): 9887.5601
+    [Diagnostics] Reward Pearson Corr: 0.7894 | Var(Δr): 95860.4711
+    [Term-wise] Est: ||dir||=6.195e+01 ||infl||=1.248e+00 ratio=2.015e-02 | Oracle: ||dir||=6.274e+01 ||infl||=9.872e+03 ratio=1.574e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.6109 | cos(dir_est, dir_oracle)=0.9997
+  iter    0: train=-176.9079±40.2957 eval=-197.5491±58.8584 | μ = [0.792 0.614 0.503 0.475 0.876 0.925 0.767 0.836 0.754 0.937 0.882 0.494
+ 0.904 0.504 0.846 0.573]
+  [IRL-RLS conf] Updating reward parameters (iter 1)...
+  [IRL-RLS Diagnostics] iter 1
+    Sigma_k eigmin: 0.00e+00, eigmax: 1.14e-03, cond: 1.14e+09
+    U_k     eigmin: -1.36e-20, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.4271, ||omega_bar||: 3.3357
+    ||omega_k - omega_prev||: 16.1203
+    bar_U condition number: inf
+    Q_hat diag=[0.0672 0.1412 1.     0.9727 1.     1.     1.     1.    ]
+    R_hat diag=[1. 1. 1. 1.]
+    [Diagnostics] HG Cosine Sim: 0.3051 | Norm(Est): 63.6332 | Norm(Oracle): 11427.8207
+    [Diagnostics] Reward Pearson Corr: 0.8628 | Var(Δr): 130593.2295
+    [Term-wise] Est: ||dir||=6.294e+01 ||infl||=1.384e+00 ratio=2.199e-02 | Oracle: ||dir||=6.359e+01 ||infl||=1.141e+04 ratio=1.794e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.8147 | cos(dir_est, dir_oracle)=0.9996
+  [IRL-RLS conf] Updating reward parameters (iter 2)...
+  [IRL-RLS Diagnostics] iter 2
+    Sigma_k eigmin: -3.45e-23, eigmax: 3.85e-04, cond: 3.85e+08
+    U_k     eigmin: -1.36e-20, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.2535, ||omega_bar||: 216.9366
+    ||omega_k - omega_prev||: 15.6705
+    bar_U condition number: inf
+    Q_hat diag=[6.900e-03 1.519e-01 1.000e+00 1.000e+02 1.000e+00 1.000e+00 1.000e+00
+ 1.000e+00]
+    R_hat diag=[1. 1. 1. 1.]
+    [Diagnostics] HG Cosine Sim: 0.1254 | Norm(Est): 120.7734 | Norm(Oracle): 10026.1575
+    [Diagnostics] Reward Pearson Corr: 0.9713 | Var(Δr): 453548.1564
+    [Term-wise] Est: ||dir||=6.335e+01 ||infl||=8.167e+01 ratio=1.289e+00 | Oracle: ||dir||=6.100e+01 ||infl||=1.001e+04 ratio=1.641e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.0265 | cos(dir_est, dir_oracle)=0.9877
+  [IRL-RLS conf] Updating reward parameters (iter 3)...
+  [IRL-RLS Diagnostics] iter 3
+    Sigma_k eigmin: -1.42e-21, eigmax: 1.25e-03, cond: 1.25e+09
+    U_k     eigmin: -9.82e-19, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.3086, ||omega_bar||: 218.3556
+    ||omega_k - omega_prev||: 219.4009
+    bar_U condition number: inf
+    Q_hat diag=[6.900e-03 1.519e-01 1.000e+00 1.000e+02 1.000e+00 1.000e+00 1.000e+02
+ 1.000e+00]
+    R_hat diag=[1. 1. 1. 1.]
+    [Diagnostics] HG Cosine Sim: 0.2809 | Norm(Est): 118.2233 | Norm(Oracle): 35710.5223
+    [Diagnostics] Reward Pearson Corr: 0.9571 | Var(Δr): 1462730.2826
+    [Term-wise] Est: ||dir||=7.372e+01 ||infl||=9.198e+01 ratio=1.248e+00 | Oracle: ||dir||=9.645e+01 ||infl||=3.574e+04 ratio=3.706e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.4511 | cos(dir_est, dir_oracle)=0.8969
+  [IRL-RLS conf] Updating reward parameters (iter 4)...
+  [IRL-RLS Diagnostics] iter 4
+    Sigma_k eigmin: 0.00e+00, eigmax: 6.85e-04, cond: 6.85e+08
+    U_k     eigmin: -4.34e-19, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.2536, ||omega_bar||: 98.0317
+    ||omega_k - omega_prev||: 214.7842
+    bar_U condition number: inf
+    Q_hat diag=[0.1485 0.134  1.     0.001  1.     1.     0.001  1.    ]
+    R_hat diag=[1. 1. 1. 1.]
+    [Diagnostics] HG Cosine Sim: 0.1883 | Norm(Est): 55.5695 | Norm(Oracle): 11740.8663
+    [Diagnostics] Reward Pearson Corr: 0.5862 | Var(Δr): 74544.4240
+    [Term-wise] Est: ||dir||=5.523e+01 ||infl||=1.442e+00 ratio=2.611e-02 | Oracle: ||dir||=5.590e+01 ||infl||=1.173e+04 ratio=2.098e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.5958 | cos(dir_est, dir_oracle)=0.9996
+  [IRL-RLS conf] Updating reward parameters (iter 5)...
+  [IRL-RLS Diagnostics] iter 5
+    Sigma_k eigmin: 0.00e+00, eigmax: 0.00e+00, cond: 0.00e+00
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.9528, ||omega_bar||: 98.0317
+    ||omega_k - omega_prev||: 104.6031
+    bar_U condition number: inf
+    Q_hat diag=[0.1485 0.134  1.     0.001  1.     1.     0.001  1.    ]
+    R_hat diag=[1. 1. 1. 1.]
+    [Diagnostics] HG Cosine Sim: 0.1921 | Norm(Est): 54.3896 | Norm(Oracle): 9995.7732
+    [Diagnostics] Reward Pearson Corr: 0.5243 | Var(Δr): 81545.1340
+    [Term-wise] Est: ||dir||=5.412e+01 ||infl||=8.671e-01 ratio=1.602e-02 | Oracle: ||dir||=5.488e+01 ||infl||=9.984e+03 ratio=1.819e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.3429 | cos(dir_est, dir_oracle)=0.9996
+  [IRL-RLS conf] Updating reward parameters (iter 6)...
+  [IRL-RLS Diagnostics] iter 6
+    Sigma_k eigmin: -2.63e-21, eigmax: 5.90e-03, cond: 5.90e+09
+    U_k     eigmin: -4.07e-22, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.4437, ||omega_bar||: 51.1995
+    ||omega_k - omega_prev||: 98.2425
+    bar_U condition number: inf
+    Q_hat diag=[4.4500e-02 1.0620e-01 1.0000e+00 1.0000e+02 1.0000e+00 1.0000e+00
+ 6.7484e+00 1.0000e+00]
+    R_hat diag=[1. 1. 1. 1.]
+    [Diagnostics] HG Cosine Sim: 0.0703 | Norm(Est): 67.3233 | Norm(Oracle): 8473.6586
+    [Diagnostics] Reward Pearson Corr: 0.9746 | Var(Δr): 282795.7770
+    [Term-wise] Est: ||dir||=5.652e+01 ||infl||=2.587e+01 ratio=4.577e-01 | Oracle: ||dir||=6.581e+01 ||infl||=8.457e+03 ratio=1.285e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2512 | cos(dir_est, dir_oracle)=0.9642
+  [IRL-RLS conf] Updating reward parameters (iter 7)...
+  [IRL-RLS Diagnostics] iter 7
+    Sigma_k eigmin: 0.00e+00, eigmax: 6.50e-06, cond: 6.50e+06
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.6463, ||omega_bar||: 51.1995
+    ||omega_k - omega_prev||: 49.5839
+    bar_U condition number: inf
+    Q_hat diag=[4.4500e-02 1.0620e-01 1.0000e+00 1.0000e+02 1.0000e+00 1.0000e+00
+ 6.7484e+00 1.0000e+00]
+    R_hat diag=[1. 1. 1. 1.]
+    [Diagnostics] HG Cosine Sim: 0.2735 | Norm(Est): 64.7906 | Norm(Oracle): 12411.2391
+    [Diagnostics] Reward Pearson Corr: 0.9572 | Var(Δr): 238451.8776
+    [Term-wise] Est: ||dir||=5.351e+01 ||infl||=2.440e+01 ratio=4.560e-01 | Oracle: ||dir||=7.009e+01 ||infl||=1.236e+04 ratio=1.764e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1538 | cos(dir_est, dir_oracle)=0.9119
+  [IRL-RLS conf] Updating reward parameters (iter 8)...
+  [IRL-RLS Diagnostics] iter 8
+    Sigma_k eigmin: 1.31e-07, eigmax: 8.50e-01, cond: 6.50e+06
+    U_k     eigmin: -1.59e-16, eigmax: 1.00e+00, rank: 8
+    ||omega_k||: 6.8237, ||omega_bar||: 9543.4571
+    ||omega_k - omega_prev||: 52.0491
+    bar_U condition number: 8.9539e+07
+    Q_hat diag=[4.4500e-02 1.0620e-01 1.0000e-03 1.0000e+02 1.0000e+02 1.0000e+02
+ 6.7484e+00 1.0000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Diagnostics] HG Cosine Sim: -0.9999 | Norm(Est): 2563867665.7286 | Norm(Oracle): 4581342654.4881
+    [Diagnostics] Reward Pearson Corr: 0.2159 | Var(Δr): 8718984.1804
+    [Term-wise] Est: ||dir||=2.564e+09 ||infl||=2.057e+06 ratio=8.021e-04 | Oracle: ||dir||=4.614e+09 ||infl||=3.298e+07 ratio=7.149e-03
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1495 | cos(dir_est, dir_oracle)=-0.9999
+  [IRL-RLS conf] Updating reward parameters (iter 9)...
+  [IRL-RLS Diagnostics] iter 9
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.66e-02, cond: 2.66e+10
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.2885, ||omega_bar||: 7017.1470
+    ||omega_k - omega_prev||: 9542.7740
+    bar_U condition number: 8.7238e+07
+    Q_hat diag=[5.400e-02 2.238e-01 1.000e-03 1.000e+02 1.000e+02 1.000e+02 1.000e-03
+ 1.000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Diagnostics] HG Cosine Sim: -1.0000 | Norm(Est): 2045460258.1337 | Norm(Oracle): 3755392472.6356
+    [Diagnostics] Reward Pearson Corr: 0.2128 | Var(Δr): 7961088.3023
+    [Term-wise] Est: ||dir||=2.045e+09 ||infl||=9.799e+05 ratio=4.791e-04 | Oracle: ||dir||=3.787e+09 ||infl||=3.151e+07 ratio=8.321e-03
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0367 | cos(dir_est, dir_oracle)=-1.0000
+  [IRL-RLS conf] Updating reward parameters (iter 10)...
+  [IRL-RLS Diagnostics] iter 10
+    Sigma_k eigmin: 0.00e+00, eigmax: 4.72e-04, cond: 4.72e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 2
+    ||omega_k||: 15.1086, ||omega_bar||: 7923.0345
+    ||omega_k - omega_prev||: 7016.4619
+    bar_U condition number: 1.0113e+08
+    Q_hat diag=[3.440e-02 1.687e-01 1.000e-03 1.000e+02 1.000e+02 1.000e+02 1.300e-03
+ 1.000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Subopt Follower] TV(g_beh, g_exact) = 0.9891 | KL (aux) = 3511.9072 | rel. value gap = 0.0135
+    [Diagnostics] HG Cosine Sim: -0.9999 | Norm(Est): 2643706805.9165 | Norm(Oracle): 4905473505.4276
+    [Diagnostics] Reward Pearson Corr: 0.1958 | Var(Δr): 8609470.9584
+    [Term-wise] Est: ||dir||=2.644e+09 ||infl||=1.553e+06 ratio=5.876e-04 | Oracle: ||dir||=4.937e+09 ||infl||=3.191e+07 ratio=6.463e-03
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1034 | cos(dir_est, dir_oracle)=-0.9999
+  iter   10: train=-1095.6054±241.3166 eval=-161.8231±40.2569 | μ = [0.642 0.498 0.638 0.205 0.696 0.734 0.529 0.678 0.683 0.766 0.604 0.327
+ 0.729 0.396 0.735 0.506]
+  [IRL-RLS conf] Updating reward parameters (iter 11)...
+  [IRL-RLS Diagnostics] iter 11
+    Sigma_k eigmin: 0.00e+00, eigmax: 5.16e-04, cond: 5.16e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 2
+    ||omega_k||: 15.0797, ||omega_bar||: 8852.3274
+    ||omega_k - omega_prev||: 7922.3445
+    bar_U condition number: 1.0779e+08
+    Q_hat diag=[4.15e-02 1.30e-01 1.00e-03 1.00e+02 1.00e+02 1.00e+02 3.26e-02 1.00e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Diagnostics] HG Cosine Sim: -1.0000 | Norm(Est): 1690567289.2233 | Norm(Oracle): 3367349512.7758
+    [Diagnostics] Reward Pearson Corr: 0.1605 | Var(Δr): 8533296.1637
+    [Term-wise] Est: ||dir||=1.691e+09 ||infl||=8.279e+05 ratio=4.897e-04 | Oracle: ||dir||=3.399e+09 ||infl||=3.149e+07 ratio=9.264e-03
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1046 | cos(dir_est, dir_oracle)=-1.0000
+  [IRL-RLS conf] Updating reward parameters (iter 12)...
+  [IRL-RLS Diagnostics] iter 12
+    Sigma_k eigmin: 0.00e+00, eigmax: 5.34e-04, cond: 5.34e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.1870, ||omega_bar||: 8861.2203
+    ||omega_k - omega_prev||: 8851.6905
+    bar_U condition number: 1.0779e+08
+    Q_hat diag=[4.660e-02 1.303e-01 1.000e-03 1.000e+02 1.000e+02 1.000e+02 1.860e-02
+ 1.000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Diagnostics] HG Cosine Sim: -0.9999 | Norm(Est): 2522885414.0001 | Norm(Oracle): 4922380006.6072
+    [Diagnostics] Reward Pearson Corr: 0.2021 | Var(Δr): 9299042.8158
+    [Term-wise] Est: ||dir||=2.523e+09 ||infl||=9.967e+05 ratio=3.951e-04 | Oracle: ||dir||=4.956e+09 ||infl||=3.405e+07 ratio=6.870e-03
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0187 | cos(dir_est, dir_oracle)=-0.9999
+  [IRL-RLS conf] Updating reward parameters (iter 13)...
+  [IRL-RLS Diagnostics] iter 13
+    Sigma_k eigmin: 0.00e+00, eigmax: 6.92e-04, cond: 6.92e+08
+    U_k     eigmin: -1.26e-18, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.6320, ||omega_bar||: 8838.6297
+    ||omega_k - omega_prev||: 8860.5758
+    bar_U condition number: 1.2315e+08
+    Q_hat diag=[4.980e-02 1.326e-01 1.000e-03 1.000e+02 1.000e+02 1.000e+02 1.000e-03
+ 1.000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Diagnostics] HG Cosine Sim: -0.9999 | Norm(Est): 1949274703.1740 | Norm(Oracle): 4038595468.1484
+    [Diagnostics] Reward Pearson Corr: 0.1688 | Var(Δr): 9406880.8768
+    [Term-wise] Est: ||dir||=1.949e+09 ||infl||=4.477e+05 ratio=2.297e-04 | Oracle: ||dir||=4.074e+09 ||infl||=3.511e+07 ratio=8.618e-03
+    [Term-wise] cos(infl_est, infl_oracle)=0.2280 | cos(dir_est, dir_oracle)=-0.9999
+  [IRL-RLS conf] Updating reward parameters (iter 14)...
+  [IRL-RLS Diagnostics] iter 14
+    Sigma_k eigmin: -9.95e-23, eigmax: 4.83e-05, cond: 4.83e+07
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.3461, ||omega_bar||: 8838.6297
+    ||omega_k - omega_prev||: 8837.9833
+    bar_U condition number: 1.2315e+08
+    Q_hat diag=[4.980e-02 1.326e-01 1.000e-03 1.000e+02 1.000e+02 1.000e+02 1.000e-03
+ 1.000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Diagnostics] HG Cosine Sim: -1.0000 | Norm(Est): 2031548339.6591 | Norm(Oracle): 4393473909.1311
+    [Diagnostics] Reward Pearson Corr: 0.1971 | Var(Δr): 9196998.3879
+    [Term-wise] Est: ||dir||=2.031e+09 ||infl||=6.650e+05 ratio=3.274e-04 | Oracle: ||dir||=4.430e+09 ||infl||=3.658e+07 ratio=8.259e-03
+    [Term-wise] cos(infl_est, infl_oracle)=0.4023 | cos(dir_est, dir_oracle)=-1.0000
+  [IRL-RLS conf] Updating reward parameters (iter 15)...
+  [IRL-RLS Diagnostics] iter 15
+    Sigma_k eigmin: 0.00e+00, eigmax: 0.00e+00, cond: 0.00e+00
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.9528, ||omega_bar||: 8838.6297
+    ||omega_k - omega_prev||: 8837.9625
+    bar_U condition number: 1.2315e+08
+    Q_hat diag=[4.980e-02 1.326e-01 1.000e-03 1.000e+02 1.000e+02 1.000e+02 1.000e-03
+ 1.000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Diagnostics] HG Cosine Sim: -1.0000 | Norm(Est): 1161029441.7066 | Norm(Oracle): 2655121674.2677
+    [Diagnostics] Reward Pearson Corr: 0.1110 | Var(Δr): 10067749.5644
+    [Term-wise] Est: ||dir||=1.161e+09 ||infl||=6.750e+05 ratio=5.813e-04 | Oracle: ||dir||=2.684e+09 ||infl||=2.912e+07 ratio=1.085e-02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1430 | cos(dir_est, dir_oracle)=-1.0000
+  [IRL-RLS conf] Updating reward parameters (iter 16)...
+  [IRL-RLS Diagnostics] iter 16
+    Sigma_k eigmin: 0.00e+00, eigmax: 4.29e-02, cond: 4.29e+10
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.0870, ||omega_bar||: 9797.5864
+    ||omega_k - omega_prev||: 8837.9562
+    bar_U condition number: 1.0989e+08
+    Q_hat diag=[4.7700e-02 9.9600e-02 1.0000e-03 1.0000e+02 1.0000e+02 1.0000e+02
+ 2.9334e+00 1.0000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Diagnostics] HG Cosine Sim: -0.9999 | Norm(Est): 763699644.3928 | Norm(Oracle): 1770772545.8435
+    [Diagnostics] Reward Pearson Corr: 0.0671 | Var(Δr): 9972932.7601
+    [Term-wise] Est: ||dir||=7.638e+08 ||infl||=7.544e+05 ratio=9.877e-04 | Oracle: ||dir||=1.796e+09 ||infl||=2.538e+07 ratio=1.413e-02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2183 | cos(dir_est, dir_oracle)=-0.9999
+  [IRL-RLS conf] Updating reward parameters (iter 17)...
+  [IRL-RLS Diagnostics] iter 17
+    Sigma_k eigmin: 0.00e+00, eigmax: 1.97e-06, cond: 1.97e+06
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.3666, ||omega_bar||: 9797.5864
+    ||omega_k - omega_prev||: 9796.9422
+    bar_U condition number: 1.0989e+08
+    Q_hat diag=[4.7700e-02 9.9600e-02 1.0000e-03 1.0000e+02 1.0000e+02 1.0000e+02
+ 2.9334e+00 1.0000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Diagnostics] HG Cosine Sim: -1.0000 | Norm(Est): 1200237646.1423 | Norm(Oracle): 2872860505.9142
+    [Diagnostics] Reward Pearson Corr: 0.1478 | Var(Δr): 9861224.9640
+    [Term-wise] Est: ||dir||=1.200e+09 ||infl||=4.029e+05 ratio=3.357e-04 | Oracle: ||dir||=2.905e+09 ||infl||=3.187e+07 ratio=1.097e-02
+    [Term-wise] cos(infl_est, infl_oracle)=0.2457 | cos(dir_est, dir_oracle)=-1.0000
+  [IRL-RLS conf] Updating reward parameters (iter 18)...
+  [IRL-RLS Diagnostics] iter 18
+    Sigma_k eigmin: 0.00e+00, eigmax: 3.07e-03, cond: 3.07e+09
+    U_k     eigmin: -4.93e-32, eigmax: 1.00e+00, rank: 2
+    ||omega_k||: 14.5569, ||omega_bar||: 10050.9219
+    ||omega_k - omega_prev||: 9796.9059
+    bar_U condition number: 1.2150e+08
+    Q_hat diag=[6.4400e-02 9.3900e-02 1.0000e-03 1.0000e+02 1.0000e+02 1.0000e+02
+ 2.9268e+00 1.0000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Diagnostics] HG Cosine Sim: -1.0000 | Norm(Est): 893878422.9899 | Norm(Oracle): 2227620159.6549
+    [Diagnostics] Reward Pearson Corr: 0.1471 | Var(Δr): 9407466.7131
+    [Term-wise] Est: ||dir||=8.937e+08 ||infl||=5.638e+05 ratio=6.309e-04 | Oracle: ||dir||=2.256e+09 ||infl||=2.892e+07 ratio=1.282e-02
+    [Term-wise] cos(infl_est, infl_oracle)=0.4468 | cos(dir_est, dir_oracle)=-1.0000
+  [IRL-RLS conf] Updating reward parameters (iter 19)...
+  [IRL-RLS Diagnostics] iter 19
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.06e-04, cond: 2.06e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.1749, ||omega_bar||: 10070.2200
+    ||omega_k - omega_prev||: 10050.2701
+    bar_U condition number: 1.2147e+08
+    Q_hat diag=[6.3000e-02 9.3600e-02 1.0000e-03 1.0000e+02 1.0000e+02 1.0000e+02
+ 2.9229e+00 1.0000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Diagnostics] HG Cosine Sim: -0.9998 | Norm(Est): 829575565.0771 | Norm(Oracle): 2149690444.1280
+    [Diagnostics] Reward Pearson Corr: 0.1357 | Var(Δr): 9868033.2610
+    [Term-wise] Est: ||dir||=8.308e+08 ||infl||=3.278e+06 ratio=3.946e-03 | Oracle: ||dir||=2.180e+09 ||infl||=3.033e+07 ratio=1.391e-02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.4066 | cos(dir_est, dir_oracle)=-0.9998
+  [IRL-RLS conf] Updating reward parameters (iter 20)...
+  [IRL-RLS Diagnostics] iter 20
+    Sigma_k eigmin: 0.00e+00, eigmax: 9.07e-08, cond: 9.07e+04
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.7044, ||omega_bar||: 10070.2200
+    ||omega_k - omega_prev||: 10069.5710
+    bar_U condition number: 1.2147e+08
+    Q_hat diag=[6.3000e-02 9.3600e-02 1.0000e-03 1.0000e+02 1.0000e+02 1.0000e+02
+ 2.9229e+00 1.0000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Subopt Follower] TV(g_beh, g_exact) = 0.9753 | KL (aux) = 4643.2598 | rel. value gap = 0.0140
+    [Diagnostics] HG Cosine Sim: -1.0000 | Norm(Est): 619315474.4981 | Norm(Oracle): 1735858108.8082
+    [Diagnostics] Reward Pearson Corr: 0.1250 | Var(Δr): 10628727.0594
+    [Term-wise] Est: ||dir||=6.196e+08 ||infl||=8.462e+05 ratio=1.366e-03 | Oracle: ||dir||=1.764e+09 ||infl||=2.783e+07 ratio=1.578e-02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.3960 | cos(dir_est, dir_oracle)=-1.0000
+  iter   20: train=-1214.0199±220.0231 eval=-158.7199±41.9967 | μ = [0.642 0.498 1.    0.205 0.696 0.734 0.529 0.678 0.683 0.766 0.13  0.328
+ 0.73  0.396 0.735 0.506]
+  [IRL-RLS conf] Updating reward parameters (iter 21)...
+  [IRL-RLS Diagnostics] iter 21
+    Sigma_k eigmin: 0.00e+00, eigmax: 7.49e-04, cond: 7.49e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.4610, ||omega_bar||: 10112.7608
+    ||omega_k - omega_prev||: 10069.5521
+    bar_U condition number: 1.2188e+08
+    Q_hat diag=[7.0200e-02 9.3000e-02 1.0000e-03 1.0000e+02 1.0000e+02 1.0000e+02
+ 2.9194e+00 1.0000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Diagnostics] HG Cosine Sim: -1.0000 | Norm(Est): 179342826.2121 | Norm(Oracle): 636623175.8301
+    [Diagnostics] Reward Pearson Corr: 0.1038 | Var(Δr): 10047966.8516
+    [Term-wise] Est: ||dir||=1.796e+08 ||infl||=5.466e+05 ratio=3.044e-03 | Oracle: ||dir||=6.571e+08 ||infl||=2.047e+07 ratio=3.116e-02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.4388 | cos(dir_est, dir_oracle)=-1.0000
+  [IRL-RLS conf] Updating reward parameters (iter 22)...
+  [IRL-RLS Diagnostics] iter 22
+    Sigma_k eigmin: 0.00e+00, eigmax: 1.15e-03, cond: 1.15e+09
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.0989, ||omega_bar||: 10113.2406
+    ||omega_k - omega_prev||: 10112.0956
+    bar_U condition number: 1.3316e+08
+    Q_hat diag=[7.0200e-02 9.3000e-02 1.0000e-03 1.0000e+02 1.0000e+02 1.0000e+02
+ 2.9194e+00 1.0000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Diagnostics] HG Cosine Sim: -0.9999 | Norm(Est): 47544034.2449 | Norm(Oracle): 247358024.8113
+    [Diagnostics] Reward Pearson Corr: 0.1112 | Var(Δr): 9143155.9039
+    [Term-wise] Est: ||dir||=4.768e+07 ||infl||=3.140e+05 ratio=6.585e-03 | Oracle: ||dir||=2.627e+08 ||infl||=1.540e+07 ratio=5.863e-02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.4845 | cos(dir_est, dir_oracle)=-0.9999
+  [IRL-RLS conf] Updating reward parameters (iter 23)...
+  [IRL-RLS Diagnostics] iter 23
+    Sigma_k eigmin: 0.00e+00, eigmax: 0.00e+00, cond: 0.00e+00
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.9528, ||omega_bar||: 10113.2406
+    ||omega_k - omega_prev||: 10112.5775
+    bar_U condition number: 1.3316e+08
+    Q_hat diag=[7.0200e-02 9.3000e-02 1.0000e-03 1.0000e+02 1.0000e+02 1.0000e+02
+ 2.9194e+00 1.0000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Diagnostics] HG Cosine Sim: -0.0278 | Norm(Est): 105923.1844 | Norm(Oracle): 10778477.3959
+    [Diagnostics] Reward Pearson Corr: 0.1796 | Var(Δr): 6632334.6315
+    [Term-wise] Est: ||dir||=4.474e+04 ||infl||=8.174e+04 ratio=1.827e+00 | Oracle: ||dir||=1.713e+07 ||infl||=6.372e+06 ratio=3.721e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.5149 | cos(dir_est, dir_oracle)=0.6662
+  [IRL-RLS conf] Updating reward parameters (iter 24)...
+  [IRL-RLS Diagnostics] iter 24
+    Sigma_k eigmin: 0.00e+00, eigmax: 1.35e-04, cond: 1.35e+08
+    U_k     eigmin: -1.69e-21, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.9897, ||omega_bar||: 9909.5296
+    ||omega_k - omega_prev||: 10112.5879
+    bar_U condition number: 1.3307e+08
+    Q_hat diag=[6.760e-02 9.800e-02 1.000e-03 1.000e+02 1.000e+02 1.000e+02 7.339e-01
+ 1.000e+02]
+    R_hat diag=[1.e-03 1.e+02 1.e+02 1.e+02]
+    [Diagnostics] HG Cosine Sim: 0.7179 | Norm(Est): 174.9633 | Norm(Oracle): 6490.6201
+    [Diagnostics] Reward Pearson Corr: 0.6704 | Var(Δr): 2406889.3284
+    [Term-wise] Est: ||dir||=1.409e+02 ||infl||=1.006e+02 ratio=7.140e-01 | Oracle: ||dir||=3.466e+02 ||infl||=6.218e+03 ratio=1.794e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.2512 | cos(dir_est, dir_oracle)=0.9751
+  [IRL-RLS conf] Updating reward parameters (iter 25)...
+  [IRL-RLS Diagnostics] iter 25
+    Sigma_k eigmin: 0.00e+00, eigmax: 3.68e-02, cond: 3.68e+10
+    U_k     eigmin: -2.22e-16, eigmax: 1.00e+00, rank: 3
+    ||omega_k||: 13.7734, ||omega_bar||: 31.0893
+    ||omega_k - omega_prev||: 9903.3480
+    bar_U condition number: 2.0220e+04
+    Q_hat diag=[6.2600e-02 1.1640e-01 4.1210e-01 1.0000e+02 3.1046e+00 3.5690e-01
+ 7.2760e-01 8.2700e-01]
+    R_hat diag=[0.2152 1.3496 0.2259 0.3308]
+    [Diagnostics] HG Cosine Sim: 0.7179 | Norm(Est): 126.5771 | Norm(Oracle): 6591.3665
+    [Diagnostics] Reward Pearson Corr: 0.9693 | Var(Δr): 396024.7488
+    [Term-wise] Est: ||dir||=1.095e+02 ||infl||=5.894e+01 ratio=5.382e-01 | Oracle: ||dir||=1.715e+02 ||infl||=6.435e+03 ratio=3.752e+01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0813 | cos(dir_est, dir_oracle)=0.9854
+  [IRL-RLS conf] Updating reward parameters (iter 26)...
+  [IRL-RLS Diagnostics] iter 26
+    Sigma_k eigmin: -4.23e-21, eigmax: 1.36e+04, cond: 1.36e+16
+    U_k     eigmin: -2.84e-23, eigmax: 1.00e+00, rank: 2
+    ||omega_k||: 14.4036, ||omega_bar||: 21.9409
+    ||omega_k - omega_prev||: 34.9015
+    bar_U condition number: 2.0173e+04
+    Q_hat diag=[6.6100e-02 1.1570e-01 6.2256e+00 1.0000e+02 3.0198e+00 1.1800e-02
+ 7.1450e-01 7.1510e-01]
+    R_hat diag=[3.2256 1.315  0.0121 0.3047]
+    [Diagnostics] HG Cosine Sim: -0.9659 | Norm(Est): 222363.4610 | Norm(Oracle): 3736605.6133
+    [Diagnostics] Reward Pearson Corr: 0.6795 | Var(Δr): 418017.6419
+    [Term-wise] Est: ||dir||=2.264e+05 ||infl||=1.937e+04 ratio=8.558e-02 | Oracle: ||dir||=4.939e+06 ||infl||=1.344e+06 ratio=2.721e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.5329 | cos(dir_est, dir_oracle)=-0.9782
+  [IRL-RLS conf] Updating reward parameters (iter 27)...
+  [IRL-RLS Diagnostics] iter 27
+    Sigma_k eigmin: 0.00e+00, eigmax: 1.79e-04, cond: 1.79e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.6423, ||omega_bar||: 20.7109
+    ||omega_k - omega_prev||: 24.6082
+    bar_U condition number: 2.1975e+04
+    Q_hat diag=[6.6800e-02 1.0430e-01 6.2283e+00 1.0000e+02 3.0277e+00 1.1400e-02
+ 7.2380e-01 7.1600e-01]
+    R_hat diag=[3.2253 1.3177 0.0117 0.3071]
+    [Diagnostics] HG Cosine Sim: 0.8162 | Norm(Est): 57113.7760 | Norm(Oracle): 896039.6413
+    [Diagnostics] Reward Pearson Corr: 0.6686 | Var(Δr): 318264.9454
+    [Term-wise] Est: ||dir||=5.217e+04 ||infl||=1.184e+04 ratio=2.270e-01 | Oracle: ||dir||=1.661e+06 ||infl||=8.884e+05 ratio=5.349e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.5963 | cos(dir_est, dir_oracle)=0.9926
+  [IRL-RLS conf] Updating reward parameters (iter 28)...
+  [IRL-RLS Diagnostics] iter 28
+    Sigma_k eigmin: -4.03e-22, eigmax: 1.04e-02, cond: 1.04e+10
+    U_k     eigmin: -2.71e-20, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.6251, ||omega_bar||: 34.1539
+    ||omega_k - omega_prev||: 27.3375
+    bar_U condition number: 1.9235e+04
+    Q_hat diag=[6.1600e-02 1.1120e-01 6.1939e+00 1.0000e+02 2.9465e+00 1.6100e-02
+ 7.3610e-01 7.0640e-01]
+    R_hat diag=[3.2251 1.29   0.0164 0.2829]
+    [Diagnostics] HG Cosine Sim: 0.8122 | Norm(Est): 36964.5385 | Norm(Oracle): 946383.3231
+    [Diagnostics] Reward Pearson Corr: 0.7145 | Var(Δr): 310698.6040
+    [Term-wise] Est: ||dir||=3.301e+04 ||infl||=1.029e+04 ratio=3.117e-01 | Oracle: ||dir||=1.790e+06 ||infl||=1.023e+06 ratio=5.715e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.6148 | cos(dir_est, dir_oracle)=0.9730
+  [IRL-RLS conf] Updating reward parameters (iter 29)...
+  [IRL-RLS Diagnostics] iter 29
+    Sigma_k eigmin: -1.77e-22, eigmax: 2.55e-03, cond: 2.55e+09
+    U_k     eigmin: -1.04e-21, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.0464, ||omega_bar||: 27.9257
+    ||omega_k - omega_prev||: 41.7342
+    bar_U condition number: 1.8720e+04
+    Q_hat diag=[7.0900e-02 1.1120e-01 6.2082e+00 1.0000e+02 2.9842e+00 1.3900e-02
+ 7.2790e-01 7.0950e-01]
+    R_hat diag=[3.224  1.3025 0.0141 0.2931]
+    [Diagnostics] HG Cosine Sim: -0.9963 | Norm(Est): 1367252.4801 | Norm(Oracle): 9734455.7606
+    [Diagnostics] Reward Pearson Corr: 0.7141 | Var(Δr): 581982.0377
+    [Term-wise] Est: ||dir||=1.405e+06 ||infl||=1.038e+05 ratio=7.385e-02 | Oracle: ||dir||=1.139e+07 ||infl||=1.886e+06 ratio=1.657e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.7426 | cos(dir_est, dir_oracle)=-0.9973
+  [IRL-RLS conf] Updating reward parameters (iter 30)...
+  [IRL-RLS Diagnostics] iter 30
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.19e-04, cond: 2.19e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.6043, ||omega_bar||: 28.3492
+    ||omega_k - omega_prev||: 29.0139
+    bar_U condition number: 2.0153e+04
+    Q_hat diag=[7.0900e-02 1.0340e-01 6.2068e+00 1.0000e+02 2.9817e+00 1.4000e-02
+ 7.3640e-01 7.0910e-01]
+    R_hat diag=[3.2237 1.3016 0.0143 0.2924]
+    [Subopt Follower] TV(g_beh, g_exact) = 0.9784 | KL (aux) = 907.0529 | rel. value gap = 0.0142
+    [Diagnostics] HG Cosine Sim: -0.9629 | Norm(Est): 137095.4673 | Norm(Oracle): 2310963.0912
+    [Diagnostics] Reward Pearson Corr: 0.6745 | Var(Δr): 437421.5338
+    [Term-wise] Est: ||dir||=1.415e+05 ||infl||=1.378e+04 ratio=9.737e-02 | Oracle: ||dir||=3.306e+06 ||infl||=1.126e+06 ratio=3.406e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.5860 | cos(dir_est, dir_oracle)=-0.9839
+  iter   30: train=-651.5664±335.1401 eval=-156.5263±51.3933 | μ = [0.625 0.484 0.966 0.181 0.611 0.738 0.506 0.656 0.666 0.745 0.039 0.359
+ 0.762 0.309 0.721 0.48 ]
+  [IRL-RLS conf] Updating reward parameters (iter 31)...
+  [IRL-RLS Diagnostics] iter 31
+    Sigma_k eigmin: -5.97e-25, eigmax: 8.34e-05, cond: 8.34e+07
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.5044, ||omega_bar||: 28.3492
+    ||omega_k - omega_prev||: 36.4027
+    bar_U condition number: 2.0153e+04
+    Q_hat diag=[7.0900e-02 1.0340e-01 6.2068e+00 1.0000e+02 2.9817e+00 1.4000e-02
+ 7.3640e-01 7.0910e-01]
+    R_hat diag=[3.2237 1.3016 0.0143 0.2924]
+    [Diagnostics] HG Cosine Sim: -0.8838 | Norm(Est): 26164.3256 | Norm(Oracle): 1817030.1650
+    [Diagnostics] Reward Pearson Corr: 0.7219 | Var(Δr): 458494.4092
+    [Term-wise] Est: ||dir||=2.776e+04 ||infl||=1.221e+04 ratio=4.400e-01 | Oracle: ||dir||=2.859e+06 ||infl||=1.180e+06 ratio=4.127e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.5245 | cos(dir_est, dir_oracle)=-0.9535
+  [IRL-RLS conf] Updating reward parameters (iter 32)...
+  [IRL-RLS Diagnostics] iter 32
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.20e-03, cond: 2.20e+09
+    U_k     eigmin: -8.67e-19, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.8996, ||omega_bar||: 28.1942
+    ||omega_k - omega_prev||: 35.4657
+    bar_U condition number: 2.1577e+04
+    Q_hat diag=[7.1000e-02 1.0450e-01 6.2072e+00 1.0000e+02 2.9826e+00 1.3900e-02
+ 7.3500e-01 7.0930e-01]
+    R_hat diag=[3.2238 1.302  0.0142 0.2926]
+    [Diagnostics] HG Cosine Sim: 0.7242 | Norm(Est): 41482.4250 | Norm(Oracle): 612318.2182
+    [Diagnostics] Reward Pearson Corr: 0.7177 | Var(Δr): 426165.0623
+    [Term-wise] Est: ||dir||=3.220e+04 ||infl||=1.784e+04 ratio=5.541e-01 | Oracle: ||dir||=1.515e+06 ||infl||=1.060e+06 ratio=6.995e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.7435 | cos(dir_est, dir_oracle)=0.9294
+  [IRL-RLS conf] Updating reward parameters (iter 33)...
+  [IRL-RLS Diagnostics] iter 33
+    Sigma_k eigmin: 0.00e+00, eigmax: 5.30e-04, cond: 5.30e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.1721, ||omega_bar||: 25.4108
+    ||omega_k - omega_prev||: 35.6878
+    bar_U condition number: 2.2501e+04
+    Q_hat diag=[7.2100e-02 1.0120e-01 6.2142e+00 1.0000e+02 2.9994e+00 1.3000e-02
+ 7.3460e-01 7.1120e-01]
+    R_hat diag=[3.2238 1.3077 0.0133 0.2976]
+    [Diagnostics] HG Cosine Sim: -0.9296 | Norm(Est): 240354.2901 | Norm(Oracle): 3676204.3729
+    [Diagnostics] Reward Pearson Corr: 0.6841 | Var(Δr): 436403.5047
+    [Term-wise] Est: ||dir||=2.501e+05 ||infl||=1.968e+04 ratio=7.870e-02 | Oracle: ||dir||=5.073e+06 ||infl||=1.509e+06 ratio=2.975e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.6381 | cos(dir_est, dir_oracle)=-0.9537
+  [IRL-RLS conf] Updating reward parameters (iter 34)...
+  [IRL-RLS Diagnostics] iter 34
+    Sigma_k eigmin: 0.00e+00, eigmax: 0.00e+00, cond: 0.00e+00
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.9528, ||omega_bar||: 25.4108
+    ||omega_k - omega_prev||: 27.9082
+    bar_U condition number: 2.2501e+04
+    Q_hat diag=[7.2100e-02 1.0120e-01 6.2142e+00 1.0000e+02 2.9994e+00 1.3000e-02
+ 7.3460e-01 7.1120e-01]
+    R_hat diag=[3.2238 1.3077 0.0133 0.2976]
+    [Diagnostics] HG Cosine Sim: 0.9605 | Norm(Est): 38834.6657 | Norm(Oracle): 339925.6523
+    [Diagnostics] Reward Pearson Corr: 0.6890 | Var(Δr): 328769.9629
+    [Term-wise] Est: ||dir||=4.504e+04 ||infl||=2.269e+04 ratio=5.038e-01 | Oracle: ||dir||=1.003e+06 ||infl||=7.913e+05 ratio=7.890e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.8586 | cos(dir_est, dir_oracle)=0.9654
+  [IRL-RLS conf] Updating reward parameters (iter 35)...
+  [IRL-RLS Diagnostics] iter 35
+    Sigma_k eigmin: 0.00e+00, eigmax: 6.07e-06, cond: 6.07e+06
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.9311, ||omega_bar||: 25.4108
+    ||omega_k - omega_prev||: 27.0211
+    bar_U condition number: 2.2501e+04
+    Q_hat diag=[7.2100e-02 1.0120e-01 6.2142e+00 1.0000e+02 2.9994e+00 1.3000e-02
+ 7.3460e-01 7.1120e-01]
+    R_hat diag=[3.2238 1.3077 0.0133 0.2976]
+    [Diagnostics] HG Cosine Sim: -0.8865 | Norm(Est): 51100.2552 | Norm(Oracle): 1359908.5684
+    [Diagnostics] Reward Pearson Corr: 0.7106 | Var(Δr): 439417.3519
+    [Term-wise] Est: ||dir||=8.185e+04 ||infl||=5.351e+04 ratio=6.538e-01 | Oracle: ||dir||=2.259e+06 ||infl||=9.731e+05 ratio=4.307e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.8426 | cos(dir_est, dir_oracle)=-0.9438
+  [IRL-RLS conf] Updating reward parameters (iter 36)...
+  [IRL-RLS Diagnostics] iter 36
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.25e-04, cond: 2.25e+08
+    U_k     eigmin: -1.37e-21, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.3177, ||omega_bar||: 23.7515
+    ||omega_k - omega_prev||: 33.4470
+    bar_U condition number: 2.3842e+04
+    Q_hat diag=[7.2900e-02 9.5900e-02 6.2182e+00 1.0000e+02 3.0096e+00 1.2500e-02
+ 7.3810e-01 7.1240e-01]
+    R_hat diag=[3.2237 1.3112 0.0127 0.3007]
+    [Diagnostics] HG Cosine Sim: 0.7045 | Norm(Est): 54488.9796 | Norm(Oracle): 402174.8676
+    [Diagnostics] Reward Pearson Corr: 0.7396 | Var(Δr): 392924.6987
+    [Term-wise] Est: ||dir||=5.364e+04 ||infl||=7.038e+03 ratio=1.312e-01 | Oracle: ||dir||=1.123e+06 ||infl||=8.940e+05 ratio=7.963e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1401 | cos(dir_est, dir_oracle)=0.9975
+  [IRL-RLS conf] Updating reward parameters (iter 37)...
+  [IRL-RLS Diagnostics] iter 37
+    Sigma_k eigmin: 0.00e+00, eigmax: 5.23e-02, cond: 5.23e+10
+    U_k     eigmin: -3.84e-17, eigmax: 1.00e+00, rank: 2
+    ||omega_k||: 14.0242, ||omega_bar||: 14.0005
+    ||omega_k - omega_prev||: 30.2219
+    bar_U condition number: 2.4941e+04
+    Q_hat diag=[9.8500e-02 1.0370e-01 6.2420e+00 1.0000e+02 3.0753e+00 9.7000e-03
+ 7.1530e-01 7.1680e-01]
+    R_hat diag=[3.2211 1.3326 0.01   0.3189]
+    [Diagnostics] HG Cosine Sim: 0.7690 | Norm(Est): 55580.5456 | Norm(Oracle): 3066467.0303
+    [Diagnostics] Reward Pearson Corr: 0.6373 | Var(Δr): 458260.7546
+    [Term-wise] Est: ||dir||=4.841e+04 ||infl||=4.963e+04 ratio=1.025e+00 | Oracle: ||dir||=4.605e+06 ||infl||=1.640e+06 ratio=3.561e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.7920 | cos(dir_est, dir_oracle)=0.2798
+  [IRL-RLS conf] Updating reward parameters (iter 38)...
+  [IRL-RLS Diagnostics] iter 38
+    Sigma_k eigmin: 0.00e+00, eigmax: 4.93e-03, cond: 4.93e+09
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 2
+    ||omega_k||: 14.2374, ||omega_bar||: 13.1439
+    ||omega_k - omega_prev||: 22.6139
+    bar_U condition number: 2.6104e+04
+    Q_hat diag=[1.0740e-01 1.0740e-01 6.2436e+00 1.0000e+02 3.0821e+00 9.5000e-03
+ 7.1030e-01 7.1640e-01]
+    R_hat diag=[3.2201 1.3346 0.0098 0.3203]
+    [Diagnostics] HG Cosine Sim: -0.9945 | Norm(Est): 979212.7078 | Norm(Oracle): 9218367.1670
+    [Diagnostics] Reward Pearson Corr: 0.6405 | Var(Δr): 491987.6246
+    [Term-wise] Est: ||dir||=1.014e+06 ||infl||=6.190e+04 ratio=6.102e-02 | Oracle: ||dir||=1.107e+07 ||infl||=1.973e+06 ratio=1.783e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.7687 | cos(dir_est, dir_oracle)=-0.9969
+  [IRL-RLS conf] Updating reward parameters (iter 39)...
+  [IRL-RLS Diagnostics] iter 39
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.92e-04, cond: 2.92e+08
+    U_k     eigmin: -3.58e-18, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.9848, ||omega_bar||: 14.6731
+    ||omega_k - omega_prev||: 18.0923
+    bar_U condition number: 2.7423e+04
+    Q_hat diag=[1.0490e-01 1.0060e-01 6.2388e+00 1.0000e+02 3.0710e+00 9.9000e-03
+ 6.8810e-01 7.1530e-01]
+    R_hat diag=[3.2201 1.3309 0.0102 0.3169]
+    [Diagnostics] HG Cosine Sim: -0.8197 | Norm(Est): 76223.5741 | Norm(Oracle): 3127888.2908
+    [Diagnostics] Reward Pearson Corr: 0.6322 | Var(Δr): 449533.0382
+    [Term-wise] Est: ||dir||=1.606e+05 ||infl||=1.159e+05 ratio=7.217e-01 | Oracle: ||dir||=4.503e+06 ||infl||=1.452e+06 ratio=3.225e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.8723 | cos(dir_est, dir_oracle)=-0.8924
+  [IRL-RLS conf] Updating reward parameters (iter 40)...
+  [IRL-RLS Diagnostics] iter 40
+    Sigma_k eigmin: -2.05e-24, eigmax: 7.45e-04, cond: 7.45e+08
+    U_k     eigmin: -4.88e-17, eigmax: 1.00e+00, rank: 2
+    ||omega_k||: 14.3518, ||omega_bar||: 12.5302
+    ||omega_k - omega_prev||: 23.2552
+    bar_U condition number: 2.8445e+04
+    Q_hat diag=[1.1070e-01 9.7400e-02 6.2447e+00 1.0000e+02 3.0871e+00 9.3000e-03
+ 6.7770e-01 7.1660e-01]
+    R_hat diag=[3.2196 1.3362 0.0096 0.3216]
+    [Subopt Follower] TV(g_beh, g_exact) = 0.9860 | KL (aux) = 647.8490 | rel. value gap = 0.0140
+    [Diagnostics] HG Cosine Sim: 0.8738 | Norm(Est): 27025.0296 | Norm(Oracle): 1406662.4855
+    [Diagnostics] Reward Pearson Corr: 0.6928 | Var(Δr): 478089.3293
+    [Term-wise] Est: ||dir||=2.636e+04 ||infl||=1.238e+04 ratio=4.697e-01 | Oracle: ||dir||=2.595e+06 ||infl||=1.330e+06 ratio=5.123e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.3403 | cos(dir_est, dir_oracle)=0.9407
+  iter   40: train=-688.1902±367.7100 eval=-146.9088±40.7416 | μ = [0.63  0.484 0.964 0.261 0.609 0.587 0.506 0.654 0.642 0.745 0.181 0.576
+ 0.762 0.143 0.721 0.489]
+  [IRL-RLS conf] Updating reward parameters (iter 41)...
+  [IRL-RLS Diagnostics] iter 41
+    Sigma_k eigmin: 0.00e+00, eigmax: 1.00e-04, cond: 1.00e+08
+    U_k     eigmin: -4.21e-18, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.8021, ||omega_bar||: 8.0991
+    ||omega_k - omega_prev||: 20.8011
+    bar_U condition number: 6.0705e+01
+    Q_hat diag=[0.116  0.0978 6.2693 0.8789 3.1464 0.0074 0.6647 0.7235]
+    R_hat diag=[3.2199 1.3562 0.0076 0.3407]
+    [Diagnostics] HG Cosine Sim: 0.1985 | Norm(Est): 82.7395 | Norm(Oracle): 5098.8564
+    [Diagnostics] Reward Pearson Corr: 0.6486 | Var(Δr): 64078.3923
+    [Term-wise] Est: ||dir||=4.808e+01 ||infl||=7.025e+01 ratio=1.461e+00 | Oracle: ||dir||=4.892e+01 ||infl||=5.074e+03 ratio=1.037e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1079 | cos(dir_est, dir_oracle)=0.9972
+  [IRL-RLS conf] Updating reward parameters (iter 42)...
+  [IRL-RLS Diagnostics] iter 42
+    Sigma_k eigmin: 0.00e+00, eigmax: 1.64e-03, cond: 1.64e+09
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.0471, ||omega_bar||: 8.0990
+    ||omega_k - omega_prev||: 19.1357
+    bar_U condition number: 6.3594e+01
+    Q_hat diag=[0.116  0.0979 6.2694 0.8789 3.1464 0.0074 0.6646 0.7235]
+    R_hat diag=[3.2199 1.3562 0.0076 0.3407]
+    [Diagnostics] HG Cosine Sim: 0.1156 | Norm(Est): 73.6913 | Norm(Oracle): 5826.8939
+    [Diagnostics] Reward Pearson Corr: 0.5996 | Var(Δr): 76165.5308
+    [Term-wise] Est: ||dir||=5.069e+01 ||infl||=5.700e+01 ratio=1.125e+00 | Oracle: ||dir||=5.657e+01 ||infl||=5.796e+03 ratio=1.025e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.3127 | cos(dir_est, dir_oracle)=0.9832
+  [IRL-RLS conf] Updating reward parameters (iter 43)...
+  [IRL-RLS Diagnostics] iter 43
+    Sigma_k eigmin: 0.00e+00, eigmax: 4.58e-04, cond: 4.58e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.1167, ||omega_bar||: 8.0906
+    ||omega_k - omega_prev||: 19.1877
+    bar_U condition number: 6.3602e+01
+    Q_hat diag=[0.1191 0.0978 6.269  0.8775 3.1466 0.0074 0.6653 0.7232]
+    R_hat diag=[3.2196 1.3562 0.0076 0.3406]
+    [Diagnostics] HG Cosine Sim: 0.2059 | Norm(Est): 59.8380 | Norm(Oracle): 4737.3038
+    [Diagnostics] Reward Pearson Corr: 0.6617 | Var(Δr): 46399.9529
+    [Term-wise] Est: ||dir||=4.551e+01 ||infl||=4.457e+01 ratio=9.792e-01 | Oracle: ||dir||=4.618e+01 ||infl||=4.715e+03 ratio=1.021e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1977 | cos(dir_est, dir_oracle)=0.9996
+  [IRL-RLS conf] Updating reward parameters (iter 44)...
+  [IRL-RLS Diagnostics] iter 44
+    Sigma_k eigmin: 0.00e+00, eigmax: 3.71e-03, cond: 3.71e+09
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.9244, ||omega_bar||: 8.0866
+    ||omega_k - omega_prev||: 19.0724
+    bar_U condition number: 6.6491e+01
+    Q_hat diag=[0.119  0.0993 6.2691 0.8768 3.1466 0.0074 0.6632 0.7232]
+    R_hat diag=[3.2196 1.3562 0.0076 0.3406]
+    [Diagnostics] HG Cosine Sim: 0.4356 | Norm(Est): 43.7651 | Norm(Oracle): 5810.3364
+    [Diagnostics] Reward Pearson Corr: 0.5947 | Var(Δr): 73823.6433
+    [Term-wise] Est: ||dir||=4.339e+01 ||infl||=8.990e+00 ratio=2.072e-01 | Oracle: ||dir||=4.429e+01 ||infl||=5.790e+03 ratio=1.307e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0077 | cos(dir_est, dir_oracle)=0.9996
+  [IRL-RLS conf] Updating reward parameters (iter 45)...
+  [IRL-RLS Diagnostics] iter 45
+    Sigma_k eigmin: -2.59e-20, eigmax: 4.33e-02, cond: 4.33e+10
+    U_k     eigmin: -7.29e-19, eigmax: 1.00e+00, rank: 3
+    ||omega_k||: 13.6275, ||omega_bar||: 5.7295
+    ||omega_k - omega_prev||: 13.5992
+    bar_U condition number: 2.4229e+01
+    Q_hat diag=[0.1196 0.0988 4.2126 0.9072 3.2103 0.0592 0.6589 0.771 ]
+    R_hat diag=[2.2386 1.3798 0.0459 0.3609]
+    [Diagnostics] HG Cosine Sim: 0.6533 | Norm(Est): 53.1447 | Norm(Oracle): 7581.2436
+    [Diagnostics] Reward Pearson Corr: 0.6725 | Var(Δr): 95867.9188
+    [Term-wise] Est: ||dir||=5.015e+01 ||infl||=6.108e+00 ratio=1.218e-01 | Oracle: ||dir||=6.025e+01 ||infl||=7.536e+03 ratio=1.251e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.3578 | cos(dir_est, dir_oracle)=0.9843
+  [IRL-RLS conf] Updating reward parameters (iter 46)...
+  [IRL-RLS Diagnostics] iter 46
+    Sigma_k eigmin: 0.00e+00, eigmax: 4.10e-04, cond: 4.10e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.4211, ||omega_bar||: 5.7296
+    ||omega_k - omega_prev||: 17.8743
+    bar_U condition number: 2.4232e+01
+    Q_hat diag=[0.1196 0.0988 4.2126 0.9072 3.2103 0.0592 0.6589 0.771 ]
+    R_hat diag=[2.2386 1.3798 0.0459 0.3609]
+    [Diagnostics] HG Cosine Sim: 0.5216 | Norm(Est): 40.8281 | Norm(Oracle): 6287.2911
+    [Diagnostics] Reward Pearson Corr: 0.6820 | Var(Δr): 66737.5968
+    [Term-wise] Est: ||dir||=4.046e+01 ||infl||=3.414e+00 ratio=8.438e-02 | Oracle: ||dir||=4.489e+01 ||infl||=6.264e+03 ratio=1.395e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.2281 | cos(dir_est, dir_oracle)=0.9840
+  [IRL-RLS conf] Updating reward parameters (iter 47)...
+  [IRL-RLS Diagnostics] iter 47
+    Sigma_k eigmin: -4.21e-24, eigmax: 1.68e-02, cond: 1.68e+10
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 2
+    ||omega_k||: 14.6302, ||omega_bar||: 5.7194
+    ||omega_k - omega_prev||: 16.3329
+    bar_U condition number: 2.5243e+01
+    Q_hat diag=[0.116  0.1047 4.212  0.9018 3.21   0.0591 0.6496 0.7715]
+    R_hat diag=[2.2384 1.3799 0.0458 0.3611]
+    [Diagnostics] HG Cosine Sim: 0.7995 | Norm(Est): 58.0240 | Norm(Oracle): 9794.7587
+    [Diagnostics] Reward Pearson Corr: 0.6593 | Var(Δr): 74266.5700
+    [Term-wise] Est: ||dir||=5.525e+01 ||infl||=5.675e+00 ratio=1.027e-01 | Oracle: ||dir||=7.634e+01 ||infl||=9.729e+03 ratio=1.274e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.4849 | cos(dir_est, dir_oracle)=0.9822
+  [IRL-RLS conf] Updating reward parameters (iter 48)...
+  [IRL-RLS Diagnostics] iter 48
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.66e-04, cond: 2.66e+08
+    U_k     eigmin: -1.39e-17, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.0264, ||omega_bar||: 5.7415
+    ||omega_k - omega_prev||: 16.2843
+    bar_U condition number: 2.6226e+01
+    Q_hat diag=[0.1144 0.1002 4.2116 0.9041 3.2099 0.0591 0.6567 0.7717]
+    R_hat diag=[2.2383 1.3799 0.0458 0.3612]
+    [Diagnostics] HG Cosine Sim: 0.4216 | Norm(Est): 49.1252 | Norm(Oracle): 5502.1545
+    [Diagnostics] Reward Pearson Corr: 0.6883 | Var(Δr): 100752.0029
+    [Term-wise] Est: ||dir||=4.751e+01 ||infl||=4.729e+00 ratio=9.954e-02 | Oracle: ||dir||=6.599e+01 ||infl||=5.475e+03 ratio=8.297e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0018 | cos(dir_est, dir_oracle)=0.9668
+  [IRL-RLS conf] Updating reward parameters (iter 49)...
+  [IRL-RLS Diagnostics] iter 49
+    Sigma_k eigmin: 0.00e+00, eigmax: 3.52e-03, cond: 3.52e+09
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.8170, ||omega_bar||: 5.7317
+    ||omega_k - omega_prev||: 17.3348
+    bar_U condition number: 2.7234e+01
+    Q_hat diag=[0.1142 0.103  4.2116 0.903  3.2099 0.0591 0.6523 0.7717]
+    R_hat diag=[2.2383 1.3799 0.0458 0.3612]
+    [Diagnostics] HG Cosine Sim: 0.7043 | Norm(Est): 43.1129 | Norm(Oracle): 6469.4355
+    [Diagnostics] Reward Pearson Corr: 0.6919 | Var(Δr): 69987.4808
+    [Term-wise] Est: ||dir||=4.301e+01 ||infl||=3.915e+00 ratio=9.101e-02 | Oracle: ||dir||=5.557e+01 ||infl||=6.427e+03 ratio=1.157e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.0230 | cos(dir_est, dir_oracle)=0.9761
+  [IRL-RLS conf] Updating reward parameters (iter 50)...
+  [IRL-RLS Diagnostics] iter 50
+    Sigma_k eigmin: 0.00e+00, eigmax: 3.44e-03, cond: 3.44e+09
+    U_k     eigmin: -4.24e-22, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.2580, ||omega_bar||: 5.7271
+    ||omega_k - omega_prev||: 17.4981
+    bar_U condition number: 2.8242e+01
+    Q_hat diag=[0.1142 0.1043 4.2116 0.902  3.2099 0.0591 0.6505 0.7717]
+    R_hat diag=[2.2383 1.3799 0.0458 0.3612]
+    [Subopt Follower] TV(g_beh, g_exact) = 0.6379 | KL (aux) = 16.7333 | rel. value gap = 0.0147
+    [Diagnostics] HG Cosine Sim: 0.4562 | Norm(Est): 34.2976 | Norm(Oracle): 6745.0439
+    [Diagnostics] Reward Pearson Corr: 0.6971 | Var(Δr): 65762.7760
+    [Term-wise] Est: ||dir||=3.400e+01 ||infl||=2.144e+00 ratio=6.305e-02 | Oracle: ||dir||=3.688e+01 ||infl||=6.728e+03 ratio=1.824e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.4993 | cos(dir_est, dir_oracle)=0.9905
+  iter   50: train=-129.1897±52.0565 eval=-128.7688±49.2558 | μ = [0.403 0.313 0.556 0.042 0.326 0.367 0.226 0.354 0.557 0.496 0.247 0.485
+ 0.586 0.045 0.591 0.437]
+  [IRL-RLS conf] Updating reward parameters (iter 51)...
+  [IRL-RLS Diagnostics] iter 51
+    Sigma_k eigmin: -5.00e-22, eigmax: 7.44e-05, cond: 7.44e+07
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.1542, ||omega_bar||: 5.7271
+    ||omega_k - omega_prev||: 17.1360
+    bar_U condition number: 2.8242e+01
+    Q_hat diag=[0.1142 0.1043 4.2116 0.902  3.2099 0.0591 0.6505 0.7717]
+    R_hat diag=[2.2383 1.3799 0.0458 0.3612]
+    [Diagnostics] HG Cosine Sim: 0.4532 | Norm(Est): 31.7329 | Norm(Oracle): 7270.7210
+    [Diagnostics] Reward Pearson Corr: 0.7300 | Var(Δr): 80757.5728
+    [Term-wise] Est: ||dir||=3.028e+01 ||infl||=3.600e+00 ratio=1.189e-01 | Oracle: ||dir||=3.111e+01 ||infl||=7.257e+03 ratio=2.333e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.7105 | cos(dir_est, dir_oracle)=0.9944
+  [IRL-RLS conf] Updating reward parameters (iter 52)...
+  [IRL-RLS Diagnostics] iter 52
+    Sigma_k eigmin: 0.00e+00, eigmax: 0.00e+00, cond: 0.00e+00
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.9528, ||omega_bar||: 5.7271
+    ||omega_k - omega_prev||: 19.1008
+    bar_U condition number: 2.8242e+01
+    Q_hat diag=[0.1142 0.1043 4.2116 0.902  3.2099 0.0591 0.6505 0.7717]
+    R_hat diag=[2.2383 1.3799 0.0458 0.3612]
+    [Diagnostics] HG Cosine Sim: 0.3942 | Norm(Est): 28.3177 | Norm(Oracle): 5148.9307
+    [Diagnostics] Reward Pearson Corr: 0.6941 | Var(Δr): 48056.7274
+    [Term-wise] Est: ||dir||=2.786e+01 ||infl||=1.358e+00 ratio=4.874e-02 | Oracle: ||dir||=2.982e+01 ||infl||=5.136e+03 ratio=1.723e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.3302 | cos(dir_est, dir_oracle)=0.9822
+  [IRL-RLS conf] Updating reward parameters (iter 53)...
+  [IRL-RLS Diagnostics] iter 53
+    Sigma_k eigmin: 0.00e+00, eigmax: 1.10e-04, cond: 1.10e+08
+    U_k     eigmin: -1.33e-17, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.4951, ||omega_bar||: 5.8031
+    ||omega_k - omega_prev||: 15.5741
+    bar_U condition number: 2.8915e+01
+    Q_hat diag=[0.108  0.0998 4.211  0.8976 3.2091 0.059  0.4618 0.772 ]
+    R_hat diag=[2.2382 1.3798 0.0458 0.3614]
+    [Diagnostics] HG Cosine Sim: 0.5888 | Norm(Est): 27.8102 | Norm(Oracle): 6042.5935
+    [Diagnostics] Reward Pearson Corr: 0.6947 | Var(Δr): 95590.9472
+    [Term-wise] Est: ||dir||=2.585e+01 ||infl||=6.237e+00 ratio=2.412e-01 | Oracle: ||dir||=2.740e+01 ||infl||=6.028e+03 ratio=2.200e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.6267 | cos(dir_est, dir_oracle)=0.9960
+  [IRL-RLS conf] Updating reward parameters (iter 54)...
+  [IRL-RLS Diagnostics] iter 54
+    Sigma_k eigmin: -3.65e-23, eigmax: 1.51e-03, cond: 1.51e+09
+    U_k     eigmin: -1.25e-19, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.6031, ||omega_bar||: 5.7999
+    ||omega_k - omega_prev||: 15.8467
+    bar_U condition number: 2.9922e+01
+    Q_hat diag=[0.108  0.1007 4.211  0.8969 3.2091 0.059  0.4616 0.772 ]
+    R_hat diag=[2.2382 1.3798 0.0458 0.3614]
+    [Diagnostics] HG Cosine Sim: 0.5458 | Norm(Est): 26.6989 | Norm(Oracle): 6045.7261
+    [Diagnostics] Reward Pearson Corr: 0.7308 | Var(Δr): 44430.0417
+    [Term-wise] Est: ||dir||=2.502e+01 ||infl||=5.993e+00 ratio=2.395e-01 | Oracle: ||dir||=2.847e+01 ||infl||=6.027e+03 ratio=2.117e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.1941 | cos(dir_est, dir_oracle)=0.9832
+  [IRL-RLS conf] Updating reward parameters (iter 55)...
+  [IRL-RLS Diagnostics] iter 55
+    Sigma_k eigmin: 0.00e+00, eigmax: 7.00e-04, cond: 7.00e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.0969, ||omega_bar||: 5.8013
+    ||omega_k - omega_prev||: 16.6251
+    bar_U condition number: 3.0931e+01
+    Q_hat diag=[0.108  0.1003 4.211  0.8972 3.2091 0.059  0.4623 0.772 ]
+    R_hat diag=[2.2382 1.3798 0.0458 0.3614]
+    [Diagnostics] HG Cosine Sim: 0.5979 | Norm(Est): 25.1043 | Norm(Oracle): 7121.1745
+    [Diagnostics] Reward Pearson Corr: 0.6908 | Var(Δr): 54987.7928
+    [Term-wise] Est: ||dir||=2.510e+01 ||infl||=4.889e+00 ratio=1.948e-01 | Oracle: ||dir||=3.163e+01 ||infl||=7.098e+03 ratio=2.244e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0667 | cos(dir_est, dir_oracle)=0.9615
+  [IRL-RLS conf] Updating reward parameters (iter 56)...
+  [IRL-RLS Diagnostics] iter 56
+    Sigma_k eigmin: -1.40e-22, eigmax: 7.39e-05, cond: 7.39e+07
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 14.5315, ||omega_bar||: 5.8013
+    ||omega_k - omega_prev||: 16.7286
+    bar_U condition number: 3.0931e+01
+    Q_hat diag=[0.108  0.1003 4.211  0.8972 3.2091 0.059  0.4623 0.772 ]
+    R_hat diag=[2.2382 1.3798 0.0458 0.3614]
+    [Diagnostics] HG Cosine Sim: 0.7620 | Norm(Est): 50.9842 | Norm(Oracle): 8736.1882
+    [Diagnostics] Reward Pearson Corr: 0.7074 | Var(Δr): 53322.9155
+    [Term-wise] Est: ||dir||=4.192e+01 ||infl||=1.113e+01 ratio=2.654e-01 | Oracle: ||dir||=7.054e+01 ||infl||=8.683e+03 ratio=1.231e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.6608 | cos(dir_est, dir_oracle)=0.9784
+  [IRL-RLS conf] Updating reward parameters (iter 57)...
+  [IRL-RLS Diagnostics] iter 57
+    Sigma_k eigmin: 0.00e+00, eigmax: 3.95e-07, cond: 3.95e+05
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.3798, ||omega_bar||: 5.8013
+    ||omega_k - omega_prev||: 18.3583
+    bar_U condition number: 3.0931e+01
+    Q_hat diag=[0.108  0.1003 4.211  0.8972 3.2091 0.059  0.4623 0.772 ]
+    R_hat diag=[2.2382 1.3798 0.0458 0.3614]
+    [Diagnostics] HG Cosine Sim: 0.2907 | Norm(Est): 20.8025 | Norm(Oracle): 6042.7367
+    [Diagnostics] Reward Pearson Corr: 0.7284 | Var(Δr): 66134.6647
+    [Term-wise] Est: ||dir||=2.098e+01 ||infl||=2.443e+00 ratio=1.164e-01 | Oracle: ||dir||=2.132e+01 ||infl||=6.036e+03 ratio=2.832e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.1817 | cos(dir_est, dir_oracle)=0.9971
+  [IRL-RLS conf] Updating reward parameters (iter 58)...
+  [IRL-RLS Diagnostics] iter 58
+    Sigma_k eigmin: 0.00e+00, eigmax: 5.88e-03, cond: 5.88e+09
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.2906, ||omega_bar||: 5.7701
+    ||omega_k - omega_prev||: 18.0388
+    bar_U condition number: 3.0937e+01
+    Q_hat diag=[0.1178 0.1    4.2129 0.8918 3.2099 0.0591 0.4591 0.7707]
+    R_hat diag=[2.2387 1.3797 0.0458 0.3608]
+    [Diagnostics] HG Cosine Sim: 0.9320 | Norm(Est): 76.0353 | Norm(Oracle): 8678.7841
+    [Diagnostics] Reward Pearson Corr: 0.6462 | Var(Δr): 43681.4087
+    [Term-wise] Est: ||dir||=8.341e+01 ||infl||=9.524e+00 ratio=1.142e-01 | Oracle: ||dir||=1.539e+02 ||infl||=8.536e+03 ratio=5.545e+01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.7078 | cos(dir_est, dir_oracle)=0.9954
+  [IRL-RLS conf] Updating reward parameters (iter 59)...
+  [IRL-RLS Diagnostics] iter 59
+    Sigma_k eigmin: 0.00e+00, eigmax: 1.23e-06, cond: 1.23e+06
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.6253, ||omega_bar||: 5.7701
+    ||omega_k - omega_prev||: 18.6049
+    bar_U condition number: 3.0937e+01
+    Q_hat diag=[0.1178 0.1    4.2129 0.8918 3.2099 0.0591 0.4591 0.7707]
+    R_hat diag=[2.2387 1.3797 0.0458 0.3608]
+    [Diagnostics] HG Cosine Sim: 0.5251 | Norm(Est): 19.4475 | Norm(Oracle): 7398.0984
+    [Diagnostics] Reward Pearson Corr: 0.6831 | Var(Δr): 65613.8789
+    [Term-wise] Est: ||dir||=1.765e+01 ||infl||=6.345e+00 ratio=3.594e-01 | Oracle: ||dir||=2.000e+01 ||infl||=7.387e+03 ratio=3.694e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.4989 | cos(dir_est, dir_oracle)=0.9713
+  [IRL-RLS conf] Updating reward parameters (iter 60)...
+  [IRL-RLS Diagnostics] iter 60
+    Sigma_k eigmin: 0.00e+00, eigmax: 8.42e-05, cond: 8.42e+07
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.4805, ||omega_bar||: 5.7701
+    ||omega_k - omega_prev||: 16.7345
+    bar_U condition number: 3.0937e+01
+    Q_hat diag=[0.1178 0.1    4.2129 0.8918 3.2099 0.0591 0.4591 0.7707]
+    R_hat diag=[2.2387 1.3797 0.0458 0.3608]
+    [Subopt Follower] TV(g_beh, g_exact) = 0.6151 | KL (aux) = 12.8289 | rel. value gap = 0.0145
+    [Diagnostics] HG Cosine Sim: 0.1682 | Norm(Est): 15.7812 | Norm(Oracle): 3621.3168
+    [Diagnostics] Reward Pearson Corr: 0.6962 | Var(Δr): 52456.6404
+    [Term-wise] Est: ||dir||=1.432e+01 ||infl||=1.093e+01 ratio=7.630e-01 | Oracle: ||dir||=1.478e+01 ||infl||=3.617e+03 ratio=2.447e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0919 | cos(dir_est, dir_oracle)=0.9986
+  iter   60: train=-97.7470±44.5906 eval=-95.7815±50.4508 | μ = [0.156 0.125 0.171 0.    0.    0.149 0.    0.132 0.466 0.226 0.258 0.388
+ 0.459 0.051 0.447 0.319]
+  [IRL-RLS conf] Updating reward parameters (iter 61)...
+  [IRL-RLS Diagnostics] iter 61
+    Sigma_k eigmin: 0.00e+00, eigmax: 0.00e+00, cond: 0.00e+00
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.9528, ||omega_bar||: 5.7701
+    ||omega_k - omega_prev||: 19.2038
+    bar_U condition number: 3.0937e+01
+    Q_hat diag=[0.1178 0.1    4.2129 0.8918 3.2099 0.0591 0.4591 0.7707]
+    R_hat diag=[2.2387 1.3797 0.0458 0.3608]
+    [Diagnostics] HG Cosine Sim: 0.2871 | Norm(Est): 17.0280 | Norm(Oracle): 6158.7086
+    [Diagnostics] Reward Pearson Corr: 0.7229 | Var(Δr): 48772.4183
+    [Term-wise] Est: ||dir||=1.795e+01 ||infl||=4.789e+00 ratio=2.667e-01 | Oracle: ||dir||=2.093e+01 ||infl||=6.154e+03 ratio=2.940e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.2552 | cos(dir_est, dir_oracle)=0.9888
+  [IRL-RLS conf] Updating reward parameters (iter 62)...
+  [IRL-RLS Diagnostics] iter 62
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.19e-04, cond: 2.19e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.9529, ||omega_bar||: 5.7814
+    ||omega_k - omega_prev||: 17.1257
+    bar_U condition number: 3.1939e+01
+    Q_hat diag=[0.118  0.0977 4.213  0.8941 3.2098 0.0591 0.4496 0.7706]
+    R_hat diag=[2.2388 1.3797 0.0458 0.3607]
+    [Diagnostics] HG Cosine Sim: 0.2991 | Norm(Est): 12.9455 | Norm(Oracle): 6324.8685
+    [Diagnostics] Reward Pearson Corr: 0.6677 | Var(Δr): 63928.7675
+    [Term-wise] Est: ||dir||=1.308e+01 ||infl||=4.212e+00 ratio=3.222e-01 | Oracle: ||dir||=1.358e+01 ||infl||=6.321e+03 ratio=4.654e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.1724 | cos(dir_est, dir_oracle)=0.9974
+  [IRL-RLS conf] Updating reward parameters (iter 63)...
+  [IRL-RLS Diagnostics] iter 63
+    Sigma_k eigmin: -1.84e-22, eigmax: 1.18e-04, cond: 1.18e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.8869, ||omega_bar||: 5.7973
+    ||omega_k - omega_prev||: 15.9523
+    bar_U condition number: 3.2009e+01
+    Q_hat diag=[0.1129 0.0974 4.212  0.8971 3.2095 0.059  0.4563 0.7713]
+    R_hat diag=[2.2385 1.3797 0.0458 0.361 ]
+    [Diagnostics] HG Cosine Sim: 0.3902 | Norm(Est): 45.8478 | Norm(Oracle): 5216.3078
+    [Diagnostics] Reward Pearson Corr: 0.7112 | Var(Δr): 50468.3671
+    [Term-wise] Est: ||dir||=4.603e+01 ||infl||=5.964e+00 ratio=1.296e-01 | Oracle: ||dir||=8.224e+01 ||infl||=5.190e+03 ratio=6.311e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.4467 | cos(dir_est, dir_oracle)=0.9930
+  [IRL-RLS conf] Updating reward parameters (iter 64)...
+  [IRL-RLS Diagnostics] iter 64
+    Sigma_k eigmin: 0.00e+00, eigmax: 1.59e-07, cond: 1.59e+05
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.4993, ||omega_bar||: 5.7973
+    ||omega_k - omega_prev||: 18.8122
+    bar_U condition number: 3.2009e+01
+    Q_hat diag=[0.1129 0.0974 4.212  0.8971 3.2095 0.059  0.4563 0.7713]
+    R_hat diag=[2.2385 1.3797 0.0458 0.361 ]
+    [Diagnostics] HG Cosine Sim: 0.4000 | Norm(Est): 27.2226 | Norm(Oracle): 4914.5290
+    [Diagnostics] Reward Pearson Corr: 0.6337 | Var(Δr): 58627.0475
+    [Term-wise] Est: ||dir||=2.887e+01 ||infl||=3.934e+00 ratio=1.363e-01 | Oracle: ||dir||=5.218e+01 ||infl||=4.896e+03 ratio=9.382e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.3674 | cos(dir_est, dir_oracle)=0.9767
+  [IRL-RLS conf] Updating reward parameters (iter 65)...
+  [IRL-RLS Diagnostics] iter 65
+    Sigma_k eigmin: 0.00e+00, eigmax: 7.80e-04, cond: 7.80e+08
+    U_k     eigmin: -2.78e-17, eigmax: 1.00e+00, rank: 2
+    ||omega_k||: 14.4114, ||omega_bar||: 5.8088
+    ||omega_k - omega_prev||: 16.0406
+    bar_U condition number: 3.3016e+01
+    Q_hat diag=[0.1093 0.0977 4.2111 0.8879 3.2093 0.059  0.4569 0.7718]
+    R_hat diag=[2.2382 1.3798 0.0458 0.3613]
+    [Diagnostics] HG Cosine Sim: 0.7562 | Norm(Est): 33.8353 | Norm(Oracle): 5867.0746
+    [Diagnostics] Reward Pearson Corr: 0.6670 | Var(Δr): 75092.6240
+    [Term-wise] Est: ||dir||=3.288e+01 ||infl||=3.963e+00 ratio=1.205e-01 | Oracle: ||dir||=5.621e+01 ||infl||=5.824e+03 ratio=1.036e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.2794 | cos(dir_est, dir_oracle)=0.9880
+  [IRL-RLS conf] Updating reward parameters (iter 66)...
+  [IRL-RLS Diagnostics] iter 66
+    Sigma_k eigmin: -5.37e-23, eigmax: 1.79e-05, cond: 1.79e+07
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 14.7602, ||omega_bar||: 5.8088
+    ||omega_k - omega_prev||: 16.7913
+    bar_U condition number: 3.3016e+01
+    Q_hat diag=[0.1093 0.0977 4.2111 0.8879 3.2093 0.059  0.4569 0.7718]
+    R_hat diag=[2.2382 1.3798 0.0458 0.3613]
+    [Diagnostics] HG Cosine Sim: 0.3209 | Norm(Est): 13.9187 | Norm(Oracle): 6160.9050
+    [Diagnostics] Reward Pearson Corr: 0.6362 | Var(Δr): 61332.5040
+    [Term-wise] Est: ||dir||=1.377e+01 ||infl||=1.382e+00 ratio=1.004e-01 | Oracle: ||dir||=1.452e+01 ||infl||=6.156e+03 ratio=4.238e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.6696 | cos(dir_est, dir_oracle)=0.9884
+  [IRL-RLS conf] Updating reward parameters (iter 67)...
+  [IRL-RLS Diagnostics] iter 67
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.11e-04, cond: 2.11e+08
+    U_k     eigmin: -1.73e-18, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.3480, ||omega_bar||: 5.8220
+    ||omega_k - omega_prev||: 16.6962
+    bar_U condition number: 3.3061e+01
+    Q_hat diag=[0.1056 0.0976 4.2103 0.8909 3.209  0.059  0.4584 0.7723]
+    R_hat diag=[2.2379 1.3798 0.0458 0.3615]
+    [Diagnostics] HG Cosine Sim: 0.2602 | Norm(Est): 10.8122 | Norm(Oracle): 6575.4321
+    [Diagnostics] Reward Pearson Corr: 0.6796 | Var(Δr): 52516.1770
+    [Term-wise] Est: ||dir||=9.921e+00 ||infl||=4.710e+00 ratio=4.747e-01 | Oracle: ||dir||=1.208e+01 ||infl||=6.572e+03 ratio=5.440e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.1396 | cos(dir_est, dir_oracle)=0.9731
+  [IRL-RLS conf] Updating reward parameters (iter 68)...
+  [IRL-RLS Diagnostics] iter 68
+    Sigma_k eigmin: 0.00e+00, eigmax: 3.45e-05, cond: 3.45e+07
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.6347, ||omega_bar||: 5.8220
+    ||omega_k - omega_prev||: 18.0240
+    bar_U condition number: 3.3061e+01
+    Q_hat diag=[0.1056 0.0976 4.2103 0.8909 3.209  0.059  0.4584 0.7723]
+    R_hat diag=[2.2379 1.3798 0.0458 0.3615]
+    [Diagnostics] HG Cosine Sim: 0.4813 | Norm(Est): 11.8003 | Norm(Oracle): 6175.3169
+    [Diagnostics] Reward Pearson Corr: 0.6747 | Var(Δr): 50627.1722
+    [Term-wise] Est: ||dir||=1.167e+01 ||infl||=2.900e+00 ratio=2.484e-01 | Oracle: ||dir||=1.587e+01 ||infl||=6.166e+03 ratio=3.884e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.3342 | cos(dir_est, dir_oracle)=0.9243
+  [IRL-RLS conf] Updating reward parameters (iter 69)...
+  [IRL-RLS Diagnostics] iter 69
+    Sigma_k eigmin: 0.00e+00, eigmax: 3.34e-04, cond: 3.34e+08
+    U_k     eigmin: -1.21e-17, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.8990, ||omega_bar||: 5.8288
+    ||omega_k - omega_prev||: 16.2945
+    bar_U condition number: 3.4072e+01
+    Q_hat diag=[0.1054 0.0959 4.2102 0.8922 3.209  0.059  0.4618 0.7723]
+    R_hat diag=[2.2379 1.3798 0.0458 0.3615]
+    [Diagnostics] HG Cosine Sim: -0.0795 | Norm(Est): 10.8912 | Norm(Oracle): 5840.5833
+    [Diagnostics] Reward Pearson Corr: 0.6756 | Var(Δr): 87590.7525
+    [Term-wise] Est: ||dir||=1.094e+01 ||infl||=3.142e+00 ratio=2.872e-01 | Oracle: ||dir||=1.103e+01 ||infl||=5.838e+03 ratio=5.291e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.3888 | cos(dir_est, dir_oracle)=0.9775
+  [IRL-RLS conf] Updating reward parameters (iter 70)...
+  [IRL-RLS Diagnostics] iter 70
+    Sigma_k eigmin: 0.00e+00, eigmax: 4.69e-05, cond: 4.69e+07
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.5768, ||omega_bar||: 5.8288
+    ||omega_k - omega_prev||: 17.5125
+    bar_U condition number: 3.4072e+01
+    Q_hat diag=[0.1054 0.0959 4.2102 0.8922 3.209  0.059  0.4618 0.7723]
+    R_hat diag=[2.2379 1.3798 0.0458 0.3615]
+    [Subopt Follower] TV(g_beh, g_exact) = 0.6081 | KL (aux) = 19.0353 | rel. value gap = 0.0142
+    [Diagnostics] HG Cosine Sim: 0.1560 | Norm(Est): 10.1094 | Norm(Oracle): 6579.8621
+    [Diagnostics] Reward Pearson Corr: 0.6969 | Var(Δr): 58703.6109
+    [Term-wise] Est: ||dir||=9.539e+00 ||infl||=2.838e+00 ratio=2.975e-01 | Oracle: ||dir||=9.829e+00 ||infl||=6.579e+03 ratio=6.693e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.4496 | cos(dir_est, dir_oracle)=0.9941
+  iter   70: train=-105.7986±44.2449 eval=-96.1530±38.5316 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.465 0.053 0.239 0.326
+ 0.308 0.161 0.399 0.296]
+  [IRL-RLS conf] Updating reward parameters (iter 71)...
+  [IRL-RLS Diagnostics] iter 71
+    Sigma_k eigmin: 0.00e+00, eigmax: 6.43e-04, cond: 6.43e+08
+    U_k     eigmin: -1.08e-19, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.7266, ||omega_bar||: 5.8242
+    ||omega_k - omega_prev||: 15.9063
+    bar_U condition number: 3.4091e+01
+    Q_hat diag=[0.1067 0.0959 4.2105 0.8912 3.2091 0.059  0.4616 0.7721]
+    R_hat diag=[2.238  1.3798 0.0458 0.3615]
+    [Diagnostics] HG Cosine Sim: 0.2099 | Norm(Est): 29.9678 | Norm(Oracle): 7667.4021
+    [Diagnostics] Reward Pearson Corr: 0.7123 | Var(Δr): 54275.0345
+    [Term-wise] Est: ||dir||=2.980e+01 ||infl||=3.975e+00 ratio=1.334e-01 | Oracle: ||dir||=5.475e+01 ||infl||=7.657e+03 ratio=1.398e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.2974 | cos(dir_est, dir_oracle)=0.9860
+  [IRL-RLS conf] Updating reward parameters (iter 72)...
+  [IRL-RLS Diagnostics] iter 72
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.56e-04, cond: 2.56e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.5127, ||omega_bar||: 5.8277
+    ||omega_k - omega_prev||: 17.9583
+    bar_U condition number: 3.5088e+01
+    Q_hat diag=[0.1068 0.0948 4.2105 0.8921 3.2091 0.059  0.4637 0.7721]
+    R_hat diag=[2.238  1.3798 0.0458 0.3614]
+    [Diagnostics] HG Cosine Sim: 0.1918 | Norm(Est): 9.9056 | Norm(Oracle): 7011.3793
+    [Diagnostics] Reward Pearson Corr: 0.6989 | Var(Δr): 51564.5256
+    [Term-wise] Est: ||dir||=9.979e+00 ||infl||=2.187e+00 ratio=2.192e-01 | Oracle: ||dir||=1.028e+01 ||infl||=7.009e+03 ratio=6.816e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.4539 | cos(dir_est, dir_oracle)=0.9890
+  [IRL-RLS conf] Updating reward parameters (iter 73)...
+  [IRL-RLS Diagnostics] iter 73
+    Sigma_k eigmin: 0.00e+00, eigmax: 7.80e-08, cond: 7.80e+04
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.8397, ||omega_bar||: 5.8277
+    ||omega_k - omega_prev||: 18.8049
+    bar_U condition number: 3.5088e+01
+    Q_hat diag=[0.1068 0.0948 4.2105 0.8921 3.2091 0.059  0.4637 0.7721]
+    R_hat diag=[2.238  1.3798 0.0458 0.3614]
+    [Diagnostics] HG Cosine Sim: 0.8238 | Norm(Est): 28.1161 | Norm(Oracle): 7999.8987
+    [Diagnostics] Reward Pearson Corr: 0.6948 | Var(Δr): 42712.0950
+    [Term-wise] Est: ||dir||=2.553e+01 ||infl||=4.348e+00 ratio=1.703e-01 | Oracle: ||dir||=4.261e+01 ||infl||=7.962e+03 ratio=1.869e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.4722 | cos(dir_est, dir_oracle)=0.9826
+  [IRL-RLS conf] Updating reward parameters (iter 74)...
+  [IRL-RLS Diagnostics] iter 74
+    Sigma_k eigmin: 0.00e+00, eigmax: 3.68e-07, cond: 3.68e+05
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.2064, ||omega_bar||: 5.8277
+    ||omega_k - omega_prev||: 18.2610
+    bar_U condition number: 3.5088e+01
+    Q_hat diag=[0.1068 0.0948 4.2105 0.8921 3.2091 0.059  0.4637 0.7721]
+    R_hat diag=[2.238  1.3798 0.0458 0.3614]
+    [Diagnostics] HG Cosine Sim: 0.7367 | Norm(Est): 42.1283 | Norm(Oracle): 8204.1222
+    [Diagnostics] Reward Pearson Corr: 0.6495 | Var(Δr): 77678.7255
+    [Term-wise] Est: ||dir||=4.575e+01 ||infl||=5.667e+00 ratio=1.239e-01 | Oracle: ||dir||=8.325e+01 ||infl||=8.143e+03 ratio=9.781e+01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.3638 | cos(dir_est, dir_oracle)=0.9936
+  [IRL-RLS conf] Updating reward parameters (iter 75)...
+  [IRL-RLS Diagnostics] iter 75
+    Sigma_k eigmin: 0.00e+00, eigmax: 8.71e-09, cond: 8.71e+03
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.8364, ||omega_bar||: 5.8277
+    ||omega_k - omega_prev||: 19.1060
+    bar_U condition number: 3.5088e+01
+    Q_hat diag=[0.1068 0.0948 4.2105 0.8921 3.2091 0.059  0.4637 0.7721]
+    R_hat diag=[2.238  1.3798 0.0458 0.3614]
+    [Diagnostics] HG Cosine Sim: 0.2336 | Norm(Est): 11.1896 | Norm(Oracle): 5202.4889
+    [Diagnostics] Reward Pearson Corr: 0.6306 | Var(Δr): 145927.9718
+    [Term-wise] Est: ||dir||=1.099e+01 ||infl||=2.798e+00 ratio=2.545e-01 | Oracle: ||dir||=1.122e+01 ||infl||=5.201e+03 ratio=4.636e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.7926 | cos(dir_est, dir_oracle)=0.9958
+  [IRL-RLS conf] Updating reward parameters (iter 76)...
+  [IRL-RLS Diagnostics] iter 76
+    Sigma_k eigmin: 0.00e+00, eigmax: 6.26e-06, cond: 6.26e+06
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.9590, ||omega_bar||: 5.8277
+    ||omega_k - omega_prev||: 18.0957
+    bar_U condition number: 3.5088e+01
+    Q_hat diag=[0.1068 0.0948 4.2105 0.8921 3.2091 0.059  0.4637 0.7721]
+    R_hat diag=[2.238  1.3798 0.0458 0.3614]
+    [Diagnostics] HG Cosine Sim: 0.1634 | Norm(Est): 9.1987 | Norm(Oracle): 5254.3159
+    [Diagnostics] Reward Pearson Corr: 0.6739 | Var(Δr): 48736.6584
+    [Term-wise] Est: ||dir||=8.299e+00 ||infl||=4.638e+00 ratio=5.588e-01 | Oracle: ||dir||=8.515e+00 ||infl||=5.253e+03 ratio=6.169e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.1570 | cos(dir_est, dir_oracle)=0.9949
+  [IRL-RLS conf] Updating reward parameters (iter 77)...
+  [IRL-RLS Diagnostics] iter 77
+    Sigma_k eigmin: 0.00e+00, eigmax: 5.73e-07, cond: 5.73e+05
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.4234, ||omega_bar||: 5.8277
+    ||omega_k - omega_prev||: 18.7775
+    bar_U condition number: 3.5088e+01
+    Q_hat diag=[0.1068 0.0948 4.2105 0.8921 3.2091 0.059  0.4637 0.7721]
+    R_hat diag=[2.238  1.3798 0.0458 0.3614]
+    [Diagnostics] HG Cosine Sim: 0.2210 | Norm(Est): 11.0718 | Norm(Oracle): 4721.3001
+    [Diagnostics] Reward Pearson Corr: 0.6760 | Var(Δr): 63134.4139
+    [Term-wise] Est: ||dir||=1.070e+01 ||infl||=2.954e+00 ratio=2.759e-01 | Oracle: ||dir||=1.222e+01 ||infl||=4.719e+03 ratio=3.862e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.4316 | cos(dir_est, dir_oracle)=0.9714
+  [IRL-RLS conf] Updating reward parameters (iter 78)...
+  [IRL-RLS Diagnostics] iter 78
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.67e-01, cond: 2.67e+11
+    U_k     eigmin: -6.62e-24, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.9371, ||omega_bar||: 5.7763
+    ||omega_k - omega_prev||: 17.9300
+    bar_U condition number: 3.5102e+01
+    Q_hat diag=[0.1235 0.0943 4.2137 0.8809 3.2103 0.0591 0.4594 0.77  ]
+    R_hat diag=[2.2389 1.3797 0.0458 0.3605]
+    [Diagnostics] HG Cosine Sim: 0.7072 | Norm(Est): 25.0781 | Norm(Oracle): 8838.5294
+    [Diagnostics] Reward Pearson Corr: 0.6121 | Var(Δr): 77520.0336
+    [Term-wise] Est: ||dir||=2.346e+01 ||infl||=3.416e+00 ratio=1.456e-01 | Oracle: ||dir||=4.023e+01 ||infl||=8.807e+03 ratio=2.189e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.2661 | cos(dir_est, dir_oracle)=0.9766
+  [IRL-RLS conf] Updating reward parameters (iter 79)...
+  [IRL-RLS Diagnostics] iter 79
+    Sigma_k eigmin: 0.00e+00, eigmax: 1.24e-02, cond: 1.24e+10
+    U_k     eigmin: -3.39e-21, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.2075, ||omega_bar||: 5.7621
+    ||omega_k - omega_prev||: 16.7026
+    bar_U condition number: 3.6100e+01
+    Q_hat diag=[0.1232 0.0982 4.2137 0.8774 3.2103 0.0591 0.455  0.77  ]
+    R_hat diag=[2.2389 1.3797 0.0458 0.3605]
+    [Diagnostics] HG Cosine Sim: 0.3333 | Norm(Est): 10.3017 | Norm(Oracle): 4834.3888
+    [Diagnostics] Reward Pearson Corr: 0.6831 | Var(Δr): 61296.5885
+    [Term-wise] Est: ||dir||=9.939e+00 ||infl||=3.973e+00 ratio=3.997e-01 | Oracle: ||dir||=1.292e+01 ||infl||=4.827e+03 ratio=3.737e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.0178 | cos(dir_est, dir_oracle)=0.9284
+  [IRL-RLS conf] Updating reward parameters (iter 80)...
+  [IRL-RLS Diagnostics] iter 80
+    Sigma_k eigmin: -1.58e-24, eigmax: 4.72e-03, cond: 4.72e+09
+    U_k     eigmin: -1.63e-19, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.4662, ||omega_bar||: 5.7453
+    ||omega_k - omega_prev||: 15.7115
+    bar_U condition number: 3.6117e+01
+    Q_hat diag=[0.1293 0.0981 4.2148 0.8737 3.2108 0.0591 0.4535 0.7693]
+    R_hat diag=[2.2392 1.3797 0.0459 0.3601]
+    [Subopt Follower] TV(g_beh, g_exact) = 0.6401 | KL (aux) = 12.5874 | rel. value gap = 0.0142
+    [Diagnostics] HG Cosine Sim: 0.2411 | Norm(Est): 10.6637 | Norm(Oracle): 5645.8096
+    [Diagnostics] Reward Pearson Corr: 0.6841 | Var(Δr): 72675.0532
+    [Term-wise] Est: ||dir||=1.079e+01 ||infl||=4.547e+00 ratio=4.213e-01 | Oracle: ||dir||=1.096e+01 ||infl||=5.644e+03 ratio=5.152e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.4314 | cos(dir_est, dir_oracle)=0.9953
+  iter   80: train=-107.8843±41.4081 eval=-99.8679±46.1715 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.472 0.011 0.257 0.351
+ 0.315 0.142 0.394 0.313]
+  [IRL-RLS conf] Updating reward parameters (iter 81)...
+  [IRL-RLS Diagnostics] iter 81
+    Sigma_k eigmin: 0.00e+00, eigmax: 4.93e-04, cond: 4.93e+08
+    U_k     eigmin: -1.10e-20, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.0069, ||omega_bar||: 5.7459
+    ||omega_k - omega_prev||: 17.5918
+    bar_U condition number: 3.6133e+01
+    Q_hat diag=[0.1291 0.0981 4.2148 0.8736 3.2107 0.0591 0.4536 0.7693]
+    R_hat diag=[2.2392 1.3797 0.0459 0.3602]
+    [Diagnostics] HG Cosine Sim: 0.0545 | Norm(Est): 9.9653 | Norm(Oracle): 6097.5761
+    [Diagnostics] Reward Pearson Corr: 0.6867 | Var(Δr): 64844.3440
+    [Term-wise] Est: ||dir||=9.441e+00 ||infl||=5.947e+00 ratio=6.299e-01 | Oracle: ||dir||=9.727e+00 ||infl||=6.096e+03 ratio=6.267e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0593 | cos(dir_est, dir_oracle)=0.9953
+  [IRL-RLS conf] Updating reward parameters (iter 82)...
+  [IRL-RLS Diagnostics] iter 82
+    Sigma_k eigmin: 0.00e+00, eigmax: 5.61e-04, cond: 5.61e+08
+    U_k     eigmin: -1.59e-16, eigmax: 1.00e+00, rank: 2
+    ||omega_k||: 14.5767, ||omega_bar||: 5.7526
+    ||omega_k - omega_prev||: 15.8872
+    bar_U condition number: 3.7144e+01
+    Q_hat diag=[0.1268 0.0979 4.2144 0.8753 3.2106 0.0591 0.4545 0.7696]
+    R_hat diag=[2.2391 1.3797 0.0459 0.3603]
+    [Diagnostics] HG Cosine Sim: 0.2474 | Norm(Est): 8.2878 | Norm(Oracle): 6323.5354
+    [Diagnostics] Reward Pearson Corr: 0.6739 | Var(Δr): 42822.7678
+    [Term-wise] Est: ||dir||=9.718e+00 ||infl||=6.533e+00 ratio=6.722e-01 | Oracle: ||dir||=1.109e+01 ||infl||=6.319e+03 ratio=5.700e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1057 | cos(dir_est, dir_oracle)=0.9826
+  [IRL-RLS conf] Updating reward parameters (iter 83)...
+  [IRL-RLS Diagnostics] iter 83
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.93e-03, cond: 2.93e+09
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.2921, ||omega_bar||: 5.7417
+    ||omega_k - omega_prev||: 17.9235
+    bar_U condition number: 3.7164e+01
+    Q_hat diag=[0.131  0.0978 4.2151 0.8727 3.2109 0.0592 0.4536 0.7691]
+    R_hat diag=[2.2393 1.3796 0.0459 0.3601]
+    [Diagnostics] HG Cosine Sim: 0.4935 | Norm(Est): 15.6457 | Norm(Oracle): 6931.8338
+    [Diagnostics] Reward Pearson Corr: 0.6506 | Var(Δr): 109295.6335
+    [Term-wise] Est: ||dir||=1.610e+01 ||infl||=2.651e+00 ratio=1.646e-01 | Oracle: ||dir||=2.590e+01 ||infl||=6.918e+03 ratio=2.671e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0737 | cos(dir_est, dir_oracle)=0.9415
+  [IRL-RLS conf] Updating reward parameters (iter 84)...
+  [IRL-RLS Diagnostics] iter 84
+    Sigma_k eigmin: 0.00e+00, eigmax: 5.99e-03, cond: 5.99e+09
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.9946, ||omega_bar||: 5.7328
+    ||omega_k - omega_prev||: 16.6933
+    bar_U condition number: 3.8158e+01
+    Q_hat diag=[0.1309 0.1006 4.2151 0.8705 3.2109 0.0591 0.4483 0.7691]
+    R_hat diag=[2.2393 1.3796 0.0459 0.3601]
+    [Diagnostics] HG Cosine Sim: 0.3464 | Norm(Est): 9.6059 | Norm(Oracle): 6758.4477
+    [Diagnostics] Reward Pearson Corr: 0.6762 | Var(Δr): 43288.1726
+    [Term-wise] Est: ||dir||=8.451e+00 ||infl||=7.551e+00 ratio=8.936e-01 | Oracle: ||dir||=9.075e+00 ||infl||=6.755e+03 ratio=7.444e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.2147 | cos(dir_est, dir_oracle)=0.9809
+  [IRL-RLS conf] Updating reward parameters (iter 85)...
+  [IRL-RLS Diagnostics] iter 85
+    Sigma_k eigmin: 0.00e+00, eigmax: 8.06e-05, cond: 8.06e+07
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.3235, ||omega_bar||: 5.7328
+    ||omega_k - omega_prev||: 16.7049
+    bar_U condition number: 3.8158e+01
+    Q_hat diag=[0.1309 0.1006 4.2151 0.8705 3.2109 0.0591 0.4483 0.7691]
+    R_hat diag=[2.2393 1.3796 0.0459 0.3601]
+    [Diagnostics] HG Cosine Sim: 0.0589 | Norm(Est): 10.1303 | Norm(Oracle): 5342.5586
+    [Diagnostics] Reward Pearson Corr: 0.6515 | Var(Δr): 60089.0936
+    [Term-wise] Est: ||dir||=1.109e+01 ||infl||=6.788e+00 ratio=6.118e-01 | Oracle: ||dir||=1.133e+01 ||infl||=5.341e+03 ratio=4.714e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0231 | cos(dir_est, dir_oracle)=0.9930
+  [IRL-RLS conf] Updating reward parameters (iter 86)...
+  [IRL-RLS Diagnostics] iter 86
+    Sigma_k eigmin: -1.74e-22, eigmax: 6.46e-05, cond: 6.46e+07
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 14.8612, ||omega_bar||: 5.7328
+    ||omega_k - omega_prev||: 16.8213
+    bar_U condition number: 3.8158e+01
+    Q_hat diag=[0.1309 0.1006 4.2151 0.8705 3.2109 0.0591 0.4483 0.7691]
+    R_hat diag=[2.2393 1.3796 0.0459 0.3601]
+    [Diagnostics] HG Cosine Sim: 0.1359 | Norm(Est): 10.5372 | Norm(Oracle): 5573.0025
+    [Diagnostics] Reward Pearson Corr: 0.6789 | Var(Δr): 78932.0201
+    [Term-wise] Est: ||dir||=1.097e+01 ||infl||=3.448e+00 ratio=3.141e-01 | Oracle: ||dir||=1.127e+01 ||infl||=5.571e+03 ratio=4.942e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.1280 | cos(dir_est, dir_oracle)=0.9959
+  [IRL-RLS conf] Updating reward parameters (iter 87)...
+  [IRL-RLS Diagnostics] iter 87
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.61e-05, cond: 2.61e+07
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.6268, ||omega_bar||: 5.7328
+    ||omega_k - omega_prev||: 17.5928
+    bar_U condition number: 3.8158e+01
+    Q_hat diag=[0.1309 0.1006 4.2151 0.8705 3.2109 0.0591 0.4483 0.7691]
+    R_hat diag=[2.2393 1.3796 0.0459 0.3601]
+    [Diagnostics] HG Cosine Sim: -0.0718 | Norm(Est): 11.0947 | Norm(Oracle): 4919.9357
+    [Diagnostics] Reward Pearson Corr: 0.6454 | Var(Δr): 70135.1585
+    [Term-wise] Est: ||dir||=1.177e+01 ||infl||=5.567e+00 ratio=4.731e-01 | Oracle: ||dir||=1.202e+01 ||infl||=4.920e+03 ratio=4.094e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1064 | cos(dir_est, dir_oracle)=0.9967
+  [IRL-RLS conf] Updating reward parameters (iter 88)...
+  [IRL-RLS Diagnostics] iter 88
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.22e-07, cond: 2.22e+05
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.6942, ||omega_bar||: 5.7328
+    ||omega_k - omega_prev||: 18.6122
+    bar_U condition number: 3.8158e+01
+    Q_hat diag=[0.1309 0.1006 4.2151 0.8705 3.2109 0.0591 0.4483 0.7691]
+    R_hat diag=[2.2393 1.3796 0.0459 0.3601]
+    [Diagnostics] HG Cosine Sim: 0.2021 | Norm(Est): 9.5988 | Norm(Oracle): 5851.7172
+    [Diagnostics] Reward Pearson Corr: 0.6736 | Var(Δr): 52314.4185
+    [Term-wise] Est: ||dir||=1.030e+01 ||infl||=4.160e+00 ratio=4.039e-01 | Oracle: ||dir||=1.073e+01 ||infl||=5.851e+03 ratio=5.453e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.3817 | cos(dir_est, dir_oracle)=0.9960
+  [IRL-RLS conf] Updating reward parameters (iter 89)...
+  [IRL-RLS Diagnostics] iter 89
+    Sigma_k eigmin: -6.56e-24, eigmax: 7.13e-05, cond: 7.13e+07
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.0778, ||omega_bar||: 5.7328
+    ||omega_k - omega_prev||: 16.0733
+    bar_U condition number: 3.8158e+01
+    Q_hat diag=[0.1309 0.1006 4.2151 0.8705 3.2109 0.0591 0.4483 0.7691]
+    R_hat diag=[2.2393 1.3796 0.0459 0.3601]
+    [Diagnostics] HG Cosine Sim: 0.0566 | Norm(Est): 9.1376 | Norm(Oracle): 4725.6194
+    [Diagnostics] Reward Pearson Corr: 0.6810 | Var(Δr): 65034.2136
+    [Term-wise] Est: ||dir||=9.985e+00 ||infl||=6.552e+00 ratio=6.562e-01 | Oracle: ||dir||=1.016e+01 ||infl||=4.724e+03 ratio=4.649e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0542 | cos(dir_est, dir_oracle)=0.9976
+  [IRL-RLS conf] Updating reward parameters (iter 90)...
+  [IRL-RLS Diagnostics] iter 90
+    Sigma_k eigmin: 0.00e+00, eigmax: 1.19e-04, cond: 1.19e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.5401, ||omega_bar||: 5.7375
+    ||omega_k - omega_prev||: 17.9014
+    bar_U condition number: 3.9153e+01
+    Q_hat diag=[0.131  0.0991 4.2151 0.8717 3.2109 0.0592 0.4511 0.7691]
+    R_hat diag=[2.2393 1.3796 0.0459 0.3601]
+    [Subopt Follower] TV(g_beh, g_exact) = 0.6187 | KL (aux) = 19.7120 | rel. value gap = 0.0142
+    [Diagnostics] HG Cosine Sim: 0.1163 | Norm(Est): 9.1224 | Norm(Oracle): 4721.7775
+    [Diagnostics] Reward Pearson Corr: 0.7191 | Var(Δr): 40631.3255
+    [Term-wise] Est: ||dir||=9.448e+00 ||infl||=3.957e+00 ratio=4.188e-01 | Oracle: ||dir||=9.792e+00 ||infl||=4.720e+03 ratio=4.820e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0775 | cos(dir_est, dir_oracle)=0.9944
+  iter   90: train=-96.8167±37.1676 eval=-94.6248±40.1636 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.482 0.001 0.272 0.352
+ 0.242 0.057 0.399 0.282]
+  [IRL-RLS conf] Updating reward parameters (iter 91)...
+  [IRL-RLS Diagnostics] iter 91
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.57e-04, cond: 2.57e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.4652, ||omega_bar||: 5.7424
+    ||omega_k - omega_prev||: 17.9996
+    bar_U condition number: 3.9169e+01
+    Q_hat diag=[0.1291 0.0991 4.2148 0.8729 3.2107 0.0591 0.4516 0.7693]
+    R_hat diag=[2.2392 1.3797 0.0459 0.3602]
+    [Diagnostics] HG Cosine Sim: 0.3155 | Norm(Est): 9.3260 | Norm(Oracle): 6258.0575
+    [Diagnostics] Reward Pearson Corr: 0.7426 | Var(Δr): 37950.9361
+    [Term-wise] Est: ||dir||=9.852e+00 ||infl||=6.500e+00 ratio=6.597e-01 | Oracle: ||dir||=1.047e+01 ||infl||=6.255e+03 ratio=5.973e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.1808 | cos(dir_est, dir_oracle)=0.9858
+  [IRL-RLS conf] Updating reward parameters (iter 92)...
+  [IRL-RLS Diagnostics] iter 92
+    Sigma_k eigmin: 0.00e+00, eigmax: 5.15e-04, cond: 5.15e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.4108, ||omega_bar||: 5.7424
+    ||omega_k - omega_prev||: 17.9945
+    bar_U condition number: 3.9189e+01
+    Q_hat diag=[0.1291 0.0991 4.2148 0.8729 3.2107 0.0591 0.4516 0.7693]
+    R_hat diag=[2.2392 1.3797 0.0459 0.3602]
+    [Diagnostics] HG Cosine Sim: 0.7234 | Norm(Est): 18.3888 | Norm(Oracle): 6261.7928
+    [Diagnostics] Reward Pearson Corr: 0.7251 | Var(Δr): 32550.4733
+    [Term-wise] Est: ||dir||=1.600e+01 ||infl||=5.741e+00 ratio=3.589e-01 | Oracle: ||dir||=2.336e+01 ||infl||=6.244e+03 ratio=2.673e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.3365 | cos(dir_est, dir_oracle)=0.9849
+  [IRL-RLS conf] Updating reward parameters (iter 93)...
+  [IRL-RLS Diagnostics] iter 93
+    Sigma_k eigmin: 0.00e+00, eigmax: 2.51e-04, cond: 2.51e+08
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 15.4817, ||omega_bar||: 5.7442
+    ||omega_k - omega_prev||: 17.8959
+    bar_U condition number: 4.0180e+01
+    Q_hat diag=[0.1291 0.0986 4.2148 0.8734 3.2107 0.0591 0.4526 0.7693]
+    R_hat diag=[2.2392 1.3797 0.0459 0.3602]
+    [Diagnostics] HG Cosine Sim: 0.1103 | Norm(Est): 8.0340 | Norm(Oracle): 4642.5090
+    [Diagnostics] Reward Pearson Corr: 0.6245 | Var(Δr): 53679.3392
+    [Term-wise] Est: ||dir||=9.311e+00 ||infl||=3.128e+00 ratio=3.360e-01 | Oracle: ||dir||=9.892e+00 ||infl||=4.641e+03 ratio=4.691e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0800 | cos(dir_est, dir_oracle)=0.9962
+  [IRL-RLS conf] Updating reward parameters (iter 94)...
+  [IRL-RLS Diagnostics] iter 94
+    Sigma_k eigmin: 0.00e+00, eigmax: 5.42e-05, cond: 5.42e+07
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.3041, ||omega_bar||: 5.7442
+    ||omega_k - omega_prev||: 17.5868
+    bar_U condition number: 4.0180e+01
+    Q_hat diag=[0.1291 0.0986 4.2148 0.8734 3.2107 0.0591 0.4526 0.7693]
+    R_hat diag=[2.2392 1.3797 0.0459 0.3602]
+    [Diagnostics] HG Cosine Sim: 0.5982 | Norm(Est): 15.4722 | Norm(Oracle): 6704.5743
+    [Diagnostics] Reward Pearson Corr: 0.6450 | Var(Δr): 78353.8063
+    [Term-wise] Est: ||dir||=1.411e+01 ||infl||=6.353e+00 ratio=4.504e-01 | Oracle: ||dir||=2.082e+01 ||infl||=6.693e+03 ratio=3.215e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.5022 | cos(dir_est, dir_oracle)=0.9478
+  [IRL-RLS conf] Updating reward parameters (iter 95)...
+  [IRL-RLS Diagnostics] iter 95
+    Sigma_k eigmin: 0.00e+00, eigmax: 6.06e-05, cond: 6.06e+07
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 14.9283, ||omega_bar||: 5.7442
+    ||omega_k - omega_prev||: 17.4041
+    bar_U condition number: 4.0180e+01
+    Q_hat diag=[0.1291 0.0986 4.2148 0.8734 3.2107 0.0591 0.4526 0.7693]
+    R_hat diag=[2.2392 1.3797 0.0459 0.3602]
+    [Diagnostics] HG Cosine Sim: 0.4020 | Norm(Est): 11.3962 | Norm(Oracle): 6824.4430
+    [Diagnostics] Reward Pearson Corr: 0.6868 | Var(Δr): 65260.0240
+    [Term-wise] Est: ||dir||=1.241e+01 ||infl||=5.292e+00 ratio=4.265e-01 | Oracle: ||dir||=1.771e+01 ||infl||=6.814e+03 ratio=3.847e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0290 | cos(dir_est, dir_oracle)=0.9241
+  [IRL-RLS conf] Updating reward parameters (iter 96)...
+  [IRL-RLS Diagnostics] iter 96
+    Sigma_k eigmin: 0.00e+00, eigmax: 7.32e-06, cond: 7.32e+06
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.9145, ||omega_bar||: 5.7442
+    ||omega_k - omega_prev||: 18.1583
+    bar_U condition number: 4.0180e+01
+    Q_hat diag=[0.1291 0.0986 4.2148 0.8734 3.2107 0.0591 0.4526 0.7693]
+    R_hat diag=[2.2392 1.3797 0.0459 0.3602]
+    [Diagnostics] HG Cosine Sim: 0.1868 | Norm(Est): 10.0907 | Norm(Oracle): 7110.0407
+    [Diagnostics] Reward Pearson Corr: 0.6275 | Var(Δr): 59652.5445
+    [Term-wise] Est: ||dir||=1.131e+01 ||infl||=4.245e+00 ratio=3.755e-01 | Oracle: ||dir||=1.181e+01 ||infl||=7.107e+03 ratio=6.019e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0577 | cos(dir_est, dir_oracle)=0.9961
+  [IRL-RLS conf] Updating reward parameters (iter 97)...
+  [IRL-RLS Diagnostics] iter 97
+    Sigma_k eigmin: 0.00e+00, eigmax: 1.54e-03, cond: 1.54e+09
+    U_k     eigmin: 0.00e+00, eigmax: 1.00e+00, rank: 1
+    ||omega_k||: 14.5740, ||omega_bar||: 5.7413
+    ||omega_k - omega_prev||: 16.1537
+    bar_U condition number: 4.0220e+01
+    Q_hat diag=[0.1302 0.0986 4.215  0.8731 3.2108 0.0591 0.4523 0.7692]
+    R_hat diag=[2.2393 1.3797 0.0459 0.3601]
+    [Diagnostics] HG Cosine Sim: 0.2080 | Norm(Est): 10.0044 | Norm(Oracle): 7347.5327
+    [Diagnostics] Reward Pearson Corr: 0.6729 | Var(Δr): 72822.3606
+    [Term-wise] Est: ||dir||=1.045e+01 ||infl||=4.092e+00 ratio=3.915e-01 | Oracle: ||dir||=1.106e+01 ||infl||=7.345e+03 ratio=6.641e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.2122 | cos(dir_est, dir_oracle)=0.9936
+  [IRL-RLS conf] Updating reward parameters (iter 98)...
+  [IRL-RLS Diagnostics] iter 98
+    Sigma_k eigmin: 0.00e+00, eigmax: 0.00e+00, cond: 0.00e+00
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.9528, ||omega_bar||: 5.7413
+    ||omega_k - omega_prev||: 19.1833
+    bar_U condition number: 4.0220e+01
+    Q_hat diag=[0.1302 0.0986 4.215  0.8731 3.2108 0.0591 0.4523 0.7692]
+    R_hat diag=[2.2393 1.3797 0.0459 0.3601]
+    [Diagnostics] HG Cosine Sim: 0.3563 | Norm(Est): 11.0325 | Norm(Oracle): 6356.5755
+    [Diagnostics] Reward Pearson Corr: 0.6913 | Var(Δr): 40841.6944
+    [Term-wise] Est: ||dir||=1.130e+01 ||infl||=1.297e+00 ratio=1.148e-01 | Oracle: ||dir||=1.489e+01 ||infl||=6.349e+03 ratio=4.264e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.0090 | cos(dir_est, dir_oracle)=0.9553
+  [IRL-RLS conf] Updating reward parameters (iter 99)...
+  [IRL-RLS Diagnostics] iter 99
+    Sigma_k eigmin: 0.00e+00, eigmax: 1.28e-05, cond: 1.28e+07
+    U_k     eigmin: 0.00e+00, eigmax: 0.00e+00, rank: 0
+    ||omega_k||: 15.2871, ||omega_bar||: 5.7413
+    ||omega_k - omega_prev||: 18.5951
+    bar_U condition number: 4.0220e+01
+    Q_hat diag=[0.1302 0.0986 4.215  0.8731 3.2108 0.0591 0.4523 0.7692]
+    R_hat diag=[2.2393 1.3797 0.0459 0.3601]
+    [Diagnostics] HG Cosine Sim: 0.7512 | Norm(Est): 60.9922 | Norm(Oracle): 8631.9055
+    [Diagnostics] Reward Pearson Corr: 0.6674 | Var(Δr): 73774.5693
+    [Term-wise] Est: ||dir||=5.856e+01 ||infl||=4.048e+00 ratio=6.912e-02 | Oracle: ||dir||=1.027e+02 ||infl||=8.554e+03 ratio=8.326e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.5087 | cos(dir_est, dir_oracle)=0.9965
+=== Saved to data/internal/rebuttal/exp1b_shrink_a0.35/stats_irl_recursive_rls_seed0.pkl ===

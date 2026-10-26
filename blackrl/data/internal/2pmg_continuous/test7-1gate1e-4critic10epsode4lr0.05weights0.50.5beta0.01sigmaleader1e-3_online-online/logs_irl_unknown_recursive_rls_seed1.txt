@@ -1,0 +1,1370 @@
+
+=== 2PMG Continuous | mode=irl_unknown_recursive_rls | seed=1 ===
+  [Pre-training] Initializing critic with uniform state distribution (400 episodes)...
+    Pre-train epoch  0: loss = 0.698284
+    Pre-train epoch 10: loss = 0.024128
+    Pre-train epoch 20: loss = 0.026275
+    Pre-train epoch 30: loss = 0.001519
+    Pre-train epoch 40: loss = 0.007870
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2033, ||ω̄||=0.0180, eigmin(Σ_k)=1.081e-05, rank(U_k)=1, eigmin(Ū)=-2.846e-17, cond(Ū)=1.08e+19
+    Q_hat diag=[0.9873 1.001 ]
+    R_hat diag=[1.0127]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 1258.2786 | Norm(Oracle): 1259.2203
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0000
+  [Trace] iter=0 | mode=online-online | ret_eval=78.3549 | batch=4 trajs | std_benefit=0.012983 | |benefit|=0.010352 | g1=7224.477513, g2=3874.386590, infl=3773.704128, gradK=1258.278578
+  iter    0: return =   78.5399 (disc:   47.7152) ± 0.0664 | K = [0.3816 0.7869]
+  [Trace] iter=1 | mode=online-online | ret_eval=78.2497 | batch=4 trajs | std_benefit=0.021513 | |benefit|=0.017073 | g1=7627.349787, g2=8808.033177, infl=3659.339847, gradK=1180.541328
+  [Trace] iter=2 | mode=online-online | ret_eval=77.9214 | batch=4 trajs | std_benefit=0.031376 | |benefit|=0.025024 | g1=6950.380614, g2=6549.129836, infl=1923.714603, gradK=292.533509
+  [Trace] iter=3 | mode=online-online | ret_eval=77.6567 | batch=4 trajs | std_benefit=0.037788 | |benefit|=0.030267 | g1=8579.231870, g2=4898.687418, infl=1353.949910, gradK=1290.380272
+  [Trace] iter=4 | mode=online-online | ret_eval=77.8263 | batch=4 trajs | std_benefit=0.007456 | |benefit|=0.006055 | g1=6495.730363, g2=7029.033454, infl=10427.806342, gradK=482.809012
+  [Trace] iter=5 | mode=online-online | ret_eval=78.1494 | batch=4 trajs | std_benefit=0.009913 | |benefit|=0.007826 | g1=7848.756895, g2=7714.337227, infl=6874.902723, gradK=3217.428029
+  [Trace] iter=6 | mode=online-online | ret_eval=77.9685 | batch=4 trajs | std_benefit=0.008435 | |benefit|=0.006673 | g1=8241.976689, g2=5339.140123, infl=5597.357375, gradK=1474.540736
+  [Trace] iter=7 | mode=online-online | ret_eval=78.0958 | batch=4 trajs | std_benefit=0.007812 | |benefit|=0.006297 | g1=6817.893197, g2=3930.349589, infl=4940.337510, gradK=1467.328299
+  [Trace] iter=8 | mode=online-online | ret_eval=77.9956 | batch=4 trajs | std_benefit=0.008084 | |benefit|=0.006448 | g1=8827.818615, g2=5174.601538, infl=5793.267323, gradK=1008.151393
+  [Trace] iter=9 | mode=online-online | ret_eval=77.6470 | batch=4 trajs | std_benefit=0.008810 | |benefit|=0.007103 | g1=7501.005251, g2=5608.308115, infl=5609.697965, gradK=619.996467
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2104, ||ω̄||=0.7306, eigmin(Σ_k)=1.277e-05, rank(U_k)=1, eigmin(Ū)=3.709e-04, cond(Ū)=2.96e+04
+    Q_hat diag=[1.4371 1.6913]
+    R_hat diag=[1.4265]
+    [Diagnostics] HG Cosine Sim: -0.2729 | Norm(Est): 123.9835 | Norm(Oracle): 271.4745
+    [Diagnostics] Reward Pearson Corr: 0.9997 | Var(Δr): 0.0742
+  [Trace] iter=10 | mode=online-online | ret_eval=77.6114 | batch=4 trajs | std_benefit=0.010064 | |benefit|=0.007965 | g1=7552.124534, g2=3702.990776, infl=3677.097850, gradK=123.983467
+  iter   10: return =   77.7040 (disc:   47.0594) ± 0.2092 | K = [0.518  0.6976]
+  [Trace] iter=11 | mode=online-online | ret_eval=77.4569 | batch=4 trajs | std_benefit=0.010640 | |benefit|=0.008521 | g1=7984.293540, g2=4737.452051, infl=4960.458222, gradK=691.905766
+  [Trace] iter=12 | mode=online-online | ret_eval=77.6224 | batch=4 trajs | std_benefit=0.011757 | |benefit|=0.009235 | g1=7236.232650, g2=4241.403502, infl=3471.221165, gradK=1131.994351
+  [Trace] iter=13 | mode=online-online | ret_eval=77.3689 | batch=4 trajs | std_benefit=0.011949 | |benefit|=0.009519 | g1=8608.557127, g2=3783.807863, infl=3932.855953, gradK=860.221981
+  [Trace] iter=14 | mode=online-online | ret_eval=77.4501 | batch=4 trajs | std_benefit=0.010873 | |benefit|=0.008638 | g1=8015.254833, g2=6199.905059, infl=5779.575981, gradK=270.774817
+  [Trace] iter=15 | mode=online-online | ret_eval=77.2069 | batch=4 trajs | std_benefit=0.011732 | |benefit|=0.009115 | g1=8530.584226, g2=9026.021516, infl=6265.670490, gradK=174.092728
+  [Trace] iter=16 | mode=online-online | ret_eval=76.9354 | batch=4 trajs | std_benefit=0.010497 | |benefit|=0.008519 | g1=8918.760103, g2=5945.794742, infl=6893.932793, gradK=2921.072888
+  [Trace] iter=17 | mode=online-online | ret_eval=76.6326 | batch=4 trajs | std_benefit=0.011207 | |benefit|=0.008847 | g1=8790.199982, g2=7904.459045, infl=6090.951091, gradK=664.854208
+  [Trace] iter=18 | mode=online-online | ret_eval=77.0800 | batch=4 trajs | std_benefit=0.010968 | |benefit|=0.008725 | g1=8624.998080, g2=8938.720938, infl=7905.987710, gradK=1361.497950
+  [Trace] iter=19 | mode=online-online | ret_eval=76.9111 | batch=4 trajs | std_benefit=0.011063 | |benefit|=0.008661 | g1=8723.142251, g2=6876.354646, infl=5492.869698, gradK=1101.627211
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1817, ||ω̄||=0.4299, eigmin(Σ_k)=1.605e-05, rank(U_k)=1, eigmin(Ū)=5.255e-04, cond(Ū)=3.99e+04
+    Q_hat diag=[1.2745 1.2842]
+    R_hat diag=[1.2864]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 2237.0978 | Norm(Oracle): 1782.6668
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0505
+  [Trace] iter=20 | mode=online-online | ret_eval=77.1509 | batch=4 trajs | std_benefit=0.011662 | |benefit|=0.009078 | g1=8442.933759, g2=7608.692922, infl=6310.030277, gradK=2237.097800
+  iter   20: return =   76.8651 (disc:   46.6544) ± 0.2583 | K = [0.6228 0.6725]
+  [Trace] iter=21 | mode=online-online | ret_eval=77.3231 | batch=4 trajs | std_benefit=0.011357 | |benefit|=0.008842 | g1=7530.636342, g2=5137.859130, infl=4374.224020, gradK=1290.112640
+  [Trace] iter=22 | mode=online-online | ret_eval=77.0187 | batch=4 trajs | std_benefit=0.011343 | |benefit|=0.008919 | g1=7944.555782, g2=4246.537576, infl=4271.858779, gradK=2661.449489
+  [Trace] iter=23 | mode=online-online | ret_eval=76.7127 | batch=4 trajs | std_benefit=0.011533 | |benefit|=0.008939 | g1=8894.357843, g2=8233.620574, infl=6689.392566, gradK=376.752261
+  [Trace] iter=24 | mode=online-online | ret_eval=76.3712 | batch=4 trajs | std_benefit=0.011272 | |benefit|=0.008773 | g1=9663.501109, g2=8670.589709, infl=6202.360147, gradK=1542.809933
+  [Trace] iter=25 | mode=online-online | ret_eval=76.7681 | batch=4 trajs | std_benefit=0.011353 | |benefit|=0.009011 | g1=8194.232260, g2=6698.051861, infl=5200.491721, gradK=1050.783283
+  [Trace] iter=26 | mode=online-online | ret_eval=77.1340 | batch=4 trajs | std_benefit=0.012014 | |benefit|=0.009667 | g1=7852.585654, g2=9439.314368, infl=6599.360935, gradK=501.312525
+  [Trace] iter=27 | mode=online-online | ret_eval=77.3177 | batch=4 trajs | std_benefit=0.012300 | |benefit|=0.009628 | g1=8393.743089, g2=8549.360521, infl=6356.621121, gradK=4404.202027
+  [Trace] iter=28 | mode=online-online | ret_eval=77.5493 | batch=4 trajs | std_benefit=0.012878 | |benefit|=0.009989 | g1=7895.297895, g2=6579.410382, infl=4680.740292, gradK=2291.340231
+  [Trace] iter=29 | mode=online-online | ret_eval=77.3207 | batch=4 trajs | std_benefit=0.012958 | |benefit|=0.010111 | g1=8097.160470, g2=6146.992042, infl=4596.685422, gradK=1551.975980
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2040, ||ω̄||=0.3757, eigmin(Σ_k)=1.487e-05, rank(U_k)=1, eigmin(Ū)=6.186e-04, cond(Ū)=5.01e+04
+    Q_hat diag=[1.2266 1.2593]
+    R_hat diag=[1.2401]
+    [Diagnostics] HG Cosine Sim: 0.9999 | Norm(Est): 4653.5795 | Norm(Oracle): 3981.7460
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0243
+  [Trace] iter=30 | mode=online-online | ret_eval=77.5588 | batch=4 trajs | std_benefit=0.011997 | |benefit|=0.009506 | g1=8231.051319, g2=8345.281295, infl=6378.158891, gradK=4653.579453
+  iter   30: return =   77.3559 (disc:   47.0257) ± 0.1226 | K = [0.493  0.6625]
+  [Trace] iter=31 | mode=online-online | ret_eval=77.2431 | batch=4 trajs | std_benefit=0.011566 | |benefit|=0.009200 | g1=8524.268266, g2=7995.655317, infl=5387.502197, gradK=1960.100858
+  [Trace] iter=32 | mode=online-online | ret_eval=77.5926 | batch=4 trajs | std_benefit=0.012414 | |benefit|=0.009817 | g1=8845.588000, g2=5873.435967, infl=6653.580474, gradK=409.499739
+  [Trace] iter=33 | mode=online-online | ret_eval=77.1379 | batch=4 trajs | std_benefit=0.012790 | |benefit|=0.009888 | g1=7777.974784, g2=6442.543823, infl=4984.154871, gradK=1497.658443
+  [Trace] iter=34 | mode=online-online | ret_eval=77.6598 | batch=4 trajs | std_benefit=0.012767 | |benefit|=0.010281 | g1=7861.866319, g2=10060.421813, infl=6045.231712, gradK=454.808698
+  [Trace] iter=35 | mode=online-online | ret_eval=77.2464 | batch=4 trajs | std_benefit=0.011412 | |benefit|=0.008790 | g1=7985.107723, g2=4202.650246, infl=3888.286207, gradK=857.788272
+  [Trace] iter=36 | mode=online-online | ret_eval=77.1283 | batch=4 trajs | std_benefit=0.012313 | |benefit|=0.009232 | g1=7881.028539, g2=4997.736888, infl=3983.467998, gradK=1838.454986
+  [Trace] iter=37 | mode=online-online | ret_eval=76.7178 | batch=4 trajs | std_benefit=0.011589 | |benefit|=0.009238 | g1=7331.204567, g2=5632.177251, infl=4325.574212, gradK=908.065992
+  [Trace] iter=38 | mode=online-online | ret_eval=76.4697 | batch=4 trajs | std_benefit=0.011606 | |benefit|=0.008879 | g1=8028.030232, g2=8366.190286, infl=6075.885363, gradK=2942.005631
+  [Trace] iter=39 | mode=online-online | ret_eval=76.7118 | batch=4 trajs | std_benefit=0.011564 | |benefit|=0.009165 | g1=8999.157443, g2=7702.829531, infl=6352.461118, gradK=2150.339944
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2025, ||ω̄||=0.4145, eigmin(Σ_k)=1.549e-05, rank(U_k)=1, eigmin(Ū)=7.675e-04, cond(Ū)=5.34e+04
+    Q_hat diag=[1.2613 1.2774]
+    R_hat diag=[1.2722]
+    [Diagnostics] HG Cosine Sim: 0.9995 | Norm(Est): 1168.9997 | Norm(Oracle): 898.5323
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0418
+  [Trace] iter=40 | mode=online-online | ret_eval=77.0964 | batch=4 trajs | std_benefit=0.012639 | |benefit|=0.009729 | g1=8993.166580, g2=12556.494053, infl=8787.703758, gradK=1168.999650
+  iter   40: return =   76.5653 (disc:   46.5955) ± 0.2657 | K = [0.5762 0.6034]
+  [Trace] iter=41 | mode=online-online | ret_eval=77.2527 | batch=4 trajs | std_benefit=0.011852 | |benefit|=0.009267 | g1=8019.589108, g2=3963.540666, infl=3618.614577, gradK=539.966202
+  [Trace] iter=42 | mode=online-online | ret_eval=77.6432 | batch=4 trajs | std_benefit=0.011039 | |benefit|=0.008847 | g1=8426.267737, g2=7203.479809, infl=7320.099742, gradK=1750.946232
+  [Trace] iter=43 | mode=online-online | ret_eval=77.8777 | batch=4 trajs | std_benefit=0.011966 | |benefit|=0.009412 | g1=7894.048345, g2=3980.566214, infl=3440.001205, gradK=812.265150
+  [Trace] iter=44 | mode=online-online | ret_eval=78.0165 | batch=4 trajs | std_benefit=0.011621 | |benefit|=0.009206 | g1=6536.221450, g2=6911.659574, infl=5478.222224, gradK=424.073989
+  [Trace] iter=45 | mode=online-online | ret_eval=78.2381 | batch=4 trajs | std_benefit=0.012020 | |benefit|=0.009189 | g1=7683.827179, g2=4355.162610, infl=3557.712436, gradK=1630.622624
+  [Trace] iter=46 | mode=online-online | ret_eval=77.9962 | batch=4 trajs | std_benefit=0.012518 | |benefit|=0.009901 | g1=7478.844302, g2=4242.882783, infl=2930.087605, gradK=1423.880731
+  [Trace] iter=47 | mode=online-online | ret_eval=77.6297 | batch=4 trajs | std_benefit=0.011900 | |benefit|=0.009316 | g1=8156.093370, g2=5298.442703, infl=4006.678797, gradK=1718.499648
+  [Trace] iter=48 | mode=online-online | ret_eval=77.3606 | batch=4 trajs | std_benefit=0.012122 | |benefit|=0.009480 | g1=6352.149568, g2=4914.087137, infl=3466.345494, gradK=943.641210
+  [Trace] iter=49 | mode=online-online | ret_eval=77.7595 | batch=4 trajs | std_benefit=0.011940 | |benefit|=0.009024 | g1=7871.197190, g2=8229.026741, infl=5711.174421, gradK=3012.183730
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2145, ||ω̄||=0.4641, eigmin(Σ_k)=1.381e-05, rank(U_k)=1, eigmin(Ū)=8.826e-04, cond(Ū)=5.77e+04
+    Q_hat diag=[1.2996 1.3125]
+    R_hat diag=[1.3096]
+    [Diagnostics] HG Cosine Sim: 0.9959 | Norm(Est): 524.8841 | Norm(Oracle): 471.5533
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0319
+  [Trace] iter=50 | mode=online-online | ret_eval=77.3587 | batch=4 trajs | std_benefit=0.011778 | |benefit|=0.009299 | g1=7071.689298, g2=6902.647160, infl=4558.600572, gradK=524.884076
+  iter   50: return =   77.7948 (disc:   46.9025) ± 0.1761 | K = [0.5041 0.653 ]
+  [Trace] iter=51 | mode=online-online | ret_eval=77.1585 | batch=4 trajs | std_benefit=0.012464 | |benefit|=0.009889 | g1=8190.423855, g2=5545.959563, infl=4782.476757, gradK=2866.938411
+  [Trace] iter=52 | mode=online-online | ret_eval=77.5299 | batch=4 trajs | std_benefit=0.010851 | |benefit|=0.008352 | g1=8196.640404, g2=7656.376957, infl=7260.736210, gradK=3954.534845
+  [Trace] iter=53 | mode=online-online | ret_eval=77.0581 | batch=4 trajs | std_benefit=0.010845 | |benefit|=0.008505 | g1=7456.211495, g2=5971.222926, infl=4683.251891, gradK=731.107167
+  [Trace] iter=54 | mode=online-online | ret_eval=77.0326 | batch=4 trajs | std_benefit=0.010173 | |benefit|=0.007677 | g1=8545.635199, g2=6303.014785, infl=5594.377608, gradK=1733.161908
+  [Trace] iter=55 | mode=online-online | ret_eval=77.2204 | batch=4 trajs | std_benefit=0.010232 | |benefit|=0.007754 | g1=7323.776753, g2=7549.718332, infl=6341.582183, gradK=2709.449881
+  [Trace] iter=56 | mode=online-online | ret_eval=77.4937 | batch=4 trajs | std_benefit=0.011221 | |benefit|=0.008836 | g1=7291.184086, g2=5808.322372, infl=4688.918982, gradK=1869.617957
+  [Trace] iter=57 | mode=online-online | ret_eval=77.1776 | batch=4 trajs | std_benefit=0.010805 | |benefit|=0.008458 | g1=7884.338699, g2=3668.240929, infl=3643.780253, gradK=654.935968
+  [Trace] iter=58 | mode=online-online | ret_eval=77.6043 | batch=4 trajs | std_benefit=0.010694 | |benefit|=0.008321 | g1=8935.962429, g2=7440.624837, infl=5707.831713, gradK=328.244144
+  [Trace] iter=59 | mode=online-online | ret_eval=77.6716 | batch=4 trajs | std_benefit=0.011624 | |benefit|=0.008996 | g1=8127.084391, g2=4963.445864, infl=4247.691578, gradK=764.863415
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2031, ||ω̄||=0.3911, eigmin(Σ_k)=1.404e-05, rank(U_k)=1, eigmin(Ū)=1.080e-03, cond(Ū)=5.64e+04
+    Q_hat diag=[1.2463 1.2556]
+    R_hat diag=[1.258]
+    [Diagnostics] HG Cosine Sim: 0.9993 | Norm(Est): 380.7489 | Norm(Oracle): 355.0293
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0221
+  [Trace] iter=60 | mode=online-online | ret_eval=77.5970 | batch=4 trajs | std_benefit=0.011319 | |benefit|=0.008646 | g1=7916.327812, g2=7157.823816, infl=4667.666650, gradK=380.748868
+  iter   60: return =   77.9495 (disc:   47.0318) ± 0.1578 | K = [0.5117 0.6569]
+  [Trace] iter=61 | mode=online-online | ret_eval=77.2922 | batch=4 trajs | std_benefit=0.009852 | |benefit|=0.007634 | g1=6464.771977, g2=4707.316435, infl=5180.990781, gradK=343.790896
+  [Trace] iter=62 | mode=online-online | ret_eval=77.0402 | batch=4 trajs | std_benefit=0.009423 | |benefit|=0.007374 | g1=7575.004049, g2=5077.811496, infl=5608.852771, gradK=1263.878542
+  [Trace] iter=63 | mode=online-online | ret_eval=77.0237 | batch=4 trajs | std_benefit=0.009876 | |benefit|=0.007588 | g1=8552.918889, g2=4421.521841, infl=4163.773728, gradK=647.000019
+  [Trace] iter=64 | mode=online-online | ret_eval=77.2834 | batch=4 trajs | std_benefit=0.010396 | |benefit|=0.008160 | g1=8469.271589, g2=7496.518442, infl=5799.999429, gradK=712.617933
+  [Trace] iter=65 | mode=online-online | ret_eval=77.0107 | batch=4 trajs | std_benefit=0.010249 | |benefit|=0.007903 | g1=8278.179779, g2=9739.062999, infl=7346.860847, gradK=189.071688
+  [Trace] iter=66 | mode=online-online | ret_eval=76.8203 | batch=4 trajs | std_benefit=0.010320 | |benefit|=0.007896 | g1=7305.871842, g2=4658.576850, infl=4727.433636, gradK=709.882229
+  [Trace] iter=67 | mode=online-online | ret_eval=76.9675 | batch=4 trajs | std_benefit=0.012177 | |benefit|=0.009425 | g1=8878.418445, g2=6722.640975, infl=5114.678376, gradK=3679.321139
+  [Trace] iter=68 | mode=online-online | ret_eval=76.7064 | batch=4 trajs | std_benefit=0.011368 | |benefit|=0.008746 | g1=8407.247541, g2=8296.730522, infl=7395.269440, gradK=4938.070851
+  [Trace] iter=69 | mode=online-online | ret_eval=76.4566 | batch=4 trajs | std_benefit=0.011299 | |benefit|=0.008678 | g1=8727.643299, g2=7342.560272, infl=5322.273780, gradK=2151.035760
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2064, ||ω̄||=0.3290, eigmin(Σ_k)=1.556e-05, rank(U_k)=1, eigmin(Ū)=1.234e-03, cond(Ū)=5.75e+04
+    Q_hat diag=[1.199  1.2159]
+    R_hat diag=[1.2124]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 3004.2252 | Norm(Oracle): 2765.4831
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0281
+  [Trace] iter=70 | mode=online-online | ret_eval=76.0597 | batch=4 trajs | std_benefit=0.010722 | |benefit|=0.008542 | g1=8512.621527, g2=7439.614952, infl=6815.352968, gradK=3004.225197
+  iter   70: return =   76.5321 (disc:   45.7510) ± 0.2242 | K = [0.6801 0.5146]
+  [Trace] iter=71 | mode=online-online | ret_eval=76.5064 | batch=4 trajs | std_benefit=0.011597 | |benefit|=0.008547 | g1=8987.058244, g2=9662.332303, infl=6707.262380, gradK=927.392951
+  [Trace] iter=72 | mode=online-online | ret_eval=76.0689 | batch=4 trajs | std_benefit=0.011575 | |benefit|=0.009174 | g1=9036.622443, g2=7378.263637, infl=6781.257857, gradK=242.634702
+  [Trace] iter=73 | mode=online-online | ret_eval=76.4822 | batch=4 trajs | std_benefit=0.009350 | |benefit|=0.006750 | g1=9982.146824, g2=10103.008691, infl=9910.184388, gradK=3208.368908
+  [Trace] iter=74 | mode=online-online | ret_eval=76.2776 | batch=4 trajs | std_benefit=0.008699 | |benefit|=0.006777 | g1=8925.219041, g2=5023.193966, infl=5495.667506, gradK=547.300680
+  [Trace] iter=75 | mode=online-online | ret_eval=75.8936 | batch=4 trajs | std_benefit=0.009519 | |benefit|=0.007064 | g1=9366.709763, g2=10298.773896, infl=9576.064531, gradK=1685.313136
+  [Trace] iter=76 | mode=online-online | ret_eval=76.1773 | batch=4 trajs | std_benefit=0.009931 | |benefit|=0.007475 | g1=9516.641000, g2=14457.333970, infl=12719.810958, gradK=10253.070106
+  [Trace] iter=77 | mode=online-online | ret_eval=76.1170 | batch=4 trajs | std_benefit=0.009468 | |benefit|=0.006857 | g1=9286.626742, g2=5927.125604, infl=5653.640412, gradK=580.812117
+  [Trace] iter=78 | mode=online-online | ret_eval=76.2311 | batch=4 trajs | std_benefit=0.008523 | |benefit|=0.006186 | g1=9075.015192, g2=5691.345986, infl=6116.576336, gradK=250.477904
+  [Trace] iter=79 | mode=online-online | ret_eval=76.3687 | batch=4 trajs | std_benefit=0.009338 | |benefit|=0.006999 | g1=9552.322926, g2=6971.746858, infl=5973.448014, gradK=685.571598
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1971, ||ω̄||=0.3539, eigmin(Σ_k)=1.655e-05, rank(U_k)=1, eigmin(Ū)=1.314e-03, cond(Ū)=6.16e+04
+    Q_hat diag=[1.209  1.2482]
+    R_hat diag=[1.2217]
+    [Diagnostics] HG Cosine Sim: 0.9965 | Norm(Est): 675.8023 | Norm(Oracle): 525.1640
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0283
+  [Trace] iter=80 | mode=online-online | ret_eval=76.1514 | batch=4 trajs | std_benefit=0.010935 | |benefit|=0.008308 | g1=8446.683672, g2=7564.519160, infl=5737.545212, gradK=675.802261
+  iter   80: return =   76.2545 (disc:   45.8052) ± 0.1969 | K = [0.6365 0.4479]
+  [Trace] iter=81 | mode=online-online | ret_eval=76.2109 | batch=4 trajs | std_benefit=0.009228 | |benefit|=0.006806 | g1=10583.020815, g2=12036.996883, infl=10170.203041, gradK=3241.624136
+  [Trace] iter=82 | mode=online-online | ret_eval=76.7943 | batch=4 trajs | std_benefit=0.010457 | |benefit|=0.007659 | g1=8550.132533, g2=9939.464559, infl=8816.561339, gradK=3588.793660
+  [Trace] iter=83 | mode=online-online | ret_eval=76.7854 | batch=4 trajs | std_benefit=0.009992 | |benefit|=0.007687 | g1=7902.306019, g2=6419.518842, infl=5841.311879, gradK=852.533602
+  [Trace] iter=84 | mode=online-online | ret_eval=76.6611 | batch=4 trajs | std_benefit=0.008791 | |benefit|=0.006787 | g1=9063.828921, g2=5074.954553, infl=5259.450546, gradK=676.708248
+  [Trace] iter=85 | mode=online-online | ret_eval=76.4803 | batch=4 trajs | std_benefit=0.009405 | |benefit|=0.007155 | g1=8302.568382, g2=6409.583181, infl=5809.813484, gradK=2822.853351
+  [Trace] iter=86 | mode=online-online | ret_eval=76.6551 | batch=4 trajs | std_benefit=0.010648 | |benefit|=0.008145 | g1=8405.921870, g2=6619.108298, infl=6012.489514, gradK=916.680732
+  [Trace] iter=87 | mode=online-online | ret_eval=76.2604 | batch=4 trajs | std_benefit=0.010360 | |benefit|=0.007958 | g1=8568.417439, g2=5721.840267, infl=5567.656103, gradK=2379.569176
+  [Trace] iter=88 | mode=online-online | ret_eval=76.7305 | batch=4 trajs | std_benefit=0.010205 | |benefit|=0.007816 | g1=8905.466592, g2=10697.205896, infl=9755.195589, gradK=3079.516097
+  [Trace] iter=89 | mode=online-online | ret_eval=77.0860 | batch=4 trajs | std_benefit=0.009678 | |benefit|=0.007275 | g1=8426.121847, g2=5447.495073, infl=4727.970481, gradK=2073.638565
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1943, ||ω̄||=0.3564, eigmin(Σ_k)=1.500e-05, rank(U_k)=1, eigmin(Ū)=1.418e-03, cond(Ū)=6.41e+04
+    Q_hat diag=[1.2123 1.2468]
+    R_hat diag=[1.2253]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 688.5469 | Norm(Oracle): 662.2237
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0210
+  [Trace] iter=90 | mode=online-online | ret_eval=77.3712 | batch=4 trajs | std_benefit=0.008879 | |benefit|=0.006771 | g1=8535.921451, g2=2907.768630, infl=3796.156417, gradK=688.546885
+  iter   90: return =   76.8659 (disc:   46.8604) ± 0.1662 | K = [0.4445 0.522 ]
+  [Trace] iter=91 | mode=online-online | ret_eval=77.3788 | batch=4 trajs | std_benefit=0.009846 | |benefit|=0.007681 | g1=7426.165055, g2=4694.642428, infl=4360.512687, gradK=74.744919
+  [Trace] iter=92 | mode=online-online | ret_eval=77.0398 | batch=4 trajs | std_benefit=0.007139 | |benefit|=0.005127 | g1=7867.904439, g2=3342.952604, infl=4578.773366, gradK=593.227910
+  [Trace] iter=93 | mode=online-online | ret_eval=76.7324 | batch=4 trajs | std_benefit=0.007558 | |benefit|=0.005551 | g1=7696.610743, g2=4150.095318, infl=5522.651805, gradK=1559.359728
+  [Trace] iter=94 | mode=online-online | ret_eval=76.4304 | batch=4 trajs | std_benefit=0.008669 | |benefit|=0.006594 | g1=7705.651409, g2=3751.363215, infl=4572.553919, gradK=154.030053
+  [Trace] iter=95 | mode=online-online | ret_eval=76.1613 | batch=4 trajs | std_benefit=0.006611 | |benefit|=0.005029 | g1=8926.307470, g2=4758.690450, infl=7931.673185, gradK=529.511052
+  [Trace] iter=96 | mode=online-online | ret_eval=76.3600 | batch=4 trajs | std_benefit=0.008970 | |benefit|=0.006528 | g1=9477.004582, g2=7580.605247, infl=9449.970093, gradK=2425.602912
+  [Trace] iter=97 | mode=online-online | ret_eval=76.0654 | batch=4 trajs | std_benefit=0.007595 | |benefit|=0.005707 | g1=8630.789460, g2=4457.391968, infl=7207.579995, gradK=2316.018549
+  [Trace] iter=98 | mode=online-online | ret_eval=75.7760 | batch=4 trajs | std_benefit=0.008135 | |benefit|=0.006098 | g1=9063.917968, g2=4959.670637, infl=6904.282872, gradK=2175.334482
+  [Trace] iter=99 | mode=online-online | ret_eval=76.1852 | batch=4 trajs | std_benefit=0.009263 | |benefit|=0.007028 | g1=10256.857428, g2=8516.878120, infl=10992.113694, gradK=922.056377
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2111, ||ω̄||=0.3431, eigmin(Σ_k)=1.605e-05, rank(U_k)=1, eigmin(Ū)=1.493e-03, cond(Ū)=6.75e+04
+    Q_hat diag=[1.2062 1.231 ]
+    R_hat diag=[1.2196]
+    [Diagnostics] HG Cosine Sim: 0.9998 | Norm(Est): 1828.6032 | Norm(Oracle): 1597.3001
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0329
+  [Trace] iter=100 | mode=online-online | ret_eval=75.8305 | batch=4 trajs | std_benefit=0.008976 | |benefit|=0.006561 | g1=9314.154228, g2=5542.358246, infl=6424.305812, gradK=1828.603181
+  iter  100: return =   76.1344 (disc:   45.5462) ± 0.1533 | K = [0.6725 0.433 ]
+  [Trace] iter=101 | mode=online-online | ret_eval=76.1003 | batch=4 trajs | std_benefit=0.009380 | |benefit|=0.007056 | g1=9230.668576, g2=7096.139221, infl=9960.375892, gradK=2748.447000
+  [Trace] iter=102 | mode=online-online | ret_eval=76.5347 | batch=4 trajs | std_benefit=0.008549 | |benefit|=0.006232 | g1=9209.128243, g2=7631.171010, infl=9847.072586, gradK=2142.954433
+  [Trace] iter=103 | mode=online-online | ret_eval=76.2654 | batch=4 trajs | std_benefit=0.006928 | |benefit|=0.005012 | g1=9312.143620, g2=3938.749041, infl=7621.353003, gradK=1108.314245
+  [Trace] iter=104 | mode=online-online | ret_eval=75.8737 | batch=4 trajs | std_benefit=0.008095 | |benefit|=0.005882 | g1=9107.042086, g2=4676.011181, infl=7321.488884, gradK=393.519710
+  [Trace] iter=105 | mode=online-online | ret_eval=76.2507 | batch=4 trajs | std_benefit=0.007796 | |benefit|=0.005681 | g1=10418.660348, g2=6463.696555, infl=9447.699207, gradK=883.498461
+  [Trace] iter=106 | mode=online-online | ret_eval=76.4973 | batch=4 trajs | std_benefit=0.008559 | |benefit|=0.006340 | g1=8271.852301, g2=6999.449389, infl=8745.719803, gradK=3458.955633
+  [Trace] iter=107 | mode=online-online | ret_eval=76.8323 | batch=4 trajs | std_benefit=0.005613 | |benefit|=0.004064 | g1=8800.725775, g2=3147.247605, infl=8102.881967, gradK=45.862505
+  [Trace] iter=108 | mode=online-online | ret_eval=76.8602 | batch=4 trajs | std_benefit=0.007938 | |benefit|=0.005850 | g1=8926.082232, g2=3512.752415, infl=6796.259844, gradK=1720.674866
+  [Trace] iter=109 | mode=online-online | ret_eval=76.8635 | batch=4 trajs | std_benefit=0.007731 | |benefit|=0.005477 | g1=7319.094178, g2=1963.524165, infl=3444.927407, gradK=478.808911
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2065, ||ω̄||=0.3044, eigmin(Σ_k)=1.508e-05, rank(U_k)=1, eigmin(Ū)=1.564e-03, cond(Ū)=7.09e+04
+    Q_hat diag=[1.1777 1.2056]
+    R_hat diag=[1.1924]
+    [Diagnostics] HG Cosine Sim: 0.9958 | Norm(Est): 603.5046 | Norm(Oracle): 690.9375
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0171
+  [Trace] iter=110 | mode=online-online | ret_eval=77.0845 | batch=4 trajs | std_benefit=0.006914 | |benefit|=0.004979 | g1=8906.405055, g2=3109.950545, infl=7202.227277, gradK=603.504614
+  iter  110: return =   76.8305 (disc:   46.6253) ± 0.1271 | K = [0.5098 0.5559]
+  [Trace] iter=111 | mode=online-online | ret_eval=77.2972 | batch=4 trajs | std_benefit=0.007685 | |benefit|=0.005429 | g1=7209.843152, g2=2388.700869, infl=4805.209543, gradK=893.781196
+  [Trace] iter=112 | mode=online-online | ret_eval=77.5348 | batch=4 trajs | std_benefit=0.006527 | |benefit|=0.004798 | g1=7737.859466, g2=3341.726351, infl=5255.794850, gradK=1009.029652
+  [Trace] iter=113 | mode=online-online | ret_eval=77.1814 | batch=4 trajs | std_benefit=0.004708 | |benefit|=0.003432 | g1=7287.838510, g2=1641.421648, infl=5439.036490, gradK=1979.871151
+  [Trace] iter=114 | mode=online-online | ret_eval=77.5697 | batch=4 trajs | std_benefit=0.006138 | |benefit|=0.004596 | g1=6558.130238, g2=2205.213858, infl=4446.520259, gradK=536.043146
+  [Trace] iter=115 | mode=online-online | ret_eval=77.4669 | batch=4 trajs | std_benefit=0.006493 | |benefit|=0.004591 | g1=7118.993664, g2=2373.436844, infl=4914.345370, gradK=1550.420742
+  [Trace] iter=116 | mode=online-online | ret_eval=77.5366 | batch=4 trajs | std_benefit=0.006079 | |benefit|=0.004571 | g1=7333.212468, g2=2035.084364, infl=4991.172001, gradK=592.658212
+  [Trace] iter=117 | mode=online-online | ret_eval=77.7642 | batch=4 trajs | std_benefit=0.006184 | |benefit|=0.004466 | g1=7384.864768, g2=2030.596076, infl=5199.016219, gradK=1018.842743
+  [Trace] iter=118 | mode=online-online | ret_eval=77.5458 | batch=4 trajs | std_benefit=0.004696 | |benefit|=0.003401 | g1=7312.416205, g2=2128.304281, infl=5103.588794, gradK=2307.177493
+  [Trace] iter=119 | mode=online-online | ret_eval=77.7535 | batch=4 trajs | std_benefit=0.004317 | |benefit|=0.003156 | g1=7805.362191, g2=642.955631, infl=4018.832845, gradK=522.752653
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2179, ||ω̄||=0.2357, eigmin(Σ_k)=1.398e-05, rank(U_k)=1, eigmin(Ū)=1.894e-03, cond(Ū)=6.38e+04
+    Q_hat diag=[1.1259 1.1663]
+    R_hat diag=[1.1429]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 946.5365 | Norm(Oracle): 942.0167
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0051
+  [Trace] iter=120 | mode=online-online | ret_eval=77.5461 | batch=4 trajs | std_benefit=0.004887 | |benefit|=0.003576 | g1=7117.998886, g2=1221.984980, infl=3903.949365, gradK=946.536494
+  iter  120: return =   77.7871 (disc:   47.0485) ± 0.1081 | K = [0.4138 0.5631]
+  [Trace] iter=121 | mode=online-online | ret_eval=77.5566 | batch=4 trajs | std_benefit=0.005476 | |benefit|=0.003870 | g1=7039.093985, g2=1557.073979, infl=3404.237255, gradK=264.407890
+  [Trace] iter=122 | mode=online-online | ret_eval=77.3174 | batch=4 trajs | std_benefit=0.004267 | |benefit|=0.003108 | g1=7368.421706, g2=1736.748907, infl=5150.024489, gradK=1035.812590
+  [Trace] iter=123 | mode=online-online | ret_eval=77.3652 | batch=4 trajs | std_benefit=0.004525 | |benefit|=0.003345 | g1=7123.307072, g2=1189.036236, infl=4081.436294, gradK=937.731224
+  [Trace] iter=124 | mode=online-online | ret_eval=77.8409 | batch=4 trajs | std_benefit=0.004306 | |benefit|=0.003079 | g1=8563.288766, g2=919.756950, infl=6216.620259, gradK=203.661116
+  [Trace] iter=125 | mode=online-online | ret_eval=78.0043 | batch=4 trajs | std_benefit=0.004825 | |benefit|=0.003114 | g1=6881.318198, g2=1313.794161, infl=4151.378999, gradK=1167.800724
+  [Trace] iter=126 | mode=online-online | ret_eval=78.3024 | batch=4 trajs | std_benefit=0.004011 | |benefit|=0.002783 | g1=6877.694981, g2=1270.096928, infl=3647.392698, gradK=142.462785
+  [Trace] iter=127 | mode=online-online | ret_eval=78.5958 | batch=4 trajs | std_benefit=0.004102 | |benefit|=0.002695 | g1=6789.140518, g2=976.525443, infl=4874.964383, gradK=2451.546964
+  [Trace] iter=128 | mode=online-online | ret_eval=78.1827 | batch=4 trajs | std_benefit=0.003938 | |benefit|=0.002790 | g1=6883.884637, g2=709.599813, infl=3381.462567, gradK=482.493897
+  [Trace] iter=129 | mode=online-online | ret_eval=78.6632 | batch=4 trajs | std_benefit=0.005148 | |benefit|=0.003748 | g1=7311.636531, g2=655.764068, infl=3954.678691, gradK=2064.904925
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2228, ||ω̄||=0.2967, eigmin(Σ_k)=1.198e-05, rank(U_k)=1, eigmin(Ū)=2.139e-03, cond(Ū)=6.11e+04
+    Q_hat diag=[1.1661 1.2106]
+    R_hat diag=[1.1818]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 685.1538 | Norm(Oracle): 670.4880
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0065
+  [Trace] iter=130 | mode=online-online | ret_eval=78.7068 | batch=4 trajs | std_benefit=0.005172 | |benefit|=0.003747 | g1=6140.937928, g2=714.662424, infl=2859.818010, gradK=685.153787
+  iter  130: return =   78.4690 (disc:   48.0265) ± 0.1902 | K = [0.2369 0.7002]
+  [Trace] iter=131 | mode=online-online | ret_eval=78.5715 | batch=4 trajs | std_benefit=0.005912 | |benefit|=0.004298 | g1=7006.958952, g2=1260.462097, infl=2882.644256, gradK=917.842949
+  [Trace] iter=132 | mode=online-online | ret_eval=78.4930 | batch=4 trajs | std_benefit=0.005398 | |benefit|=0.003878 | g1=6272.200092, g2=919.159009, infl=4183.257153, gradK=377.649118
+  [Trace] iter=133 | mode=online-online | ret_eval=78.9251 | batch=4 trajs | std_benefit=0.004861 | |benefit|=0.003636 | g1=6210.503505, g2=691.688973, infl=2474.368245, gradK=1246.815234
+  [Trace] iter=134 | mode=online-online | ret_eval=78.9211 | batch=4 trajs | std_benefit=0.005430 | |benefit|=0.004052 | g1=6015.968021, g2=847.160101, infl=2141.540954, gradK=117.519834
+  [Trace] iter=135 | mode=online-online | ret_eval=78.7843 | batch=4 trajs | std_benefit=0.004631 | |benefit|=0.003468 | g1=6819.563669, g2=623.461244, infl=2972.007162, gradK=872.166564
+  [Trace] iter=136 | mode=online-online | ret_eval=78.5424 | batch=4 trajs | std_benefit=0.006187 | |benefit|=0.004598 | g1=5401.871575, g2=524.659711, infl=1918.969451, gradK=920.903628
+  [Trace] iter=137 | mode=online-online | ret_eval=78.1245 | batch=4 trajs | std_benefit=0.007754 | |benefit|=0.005600 | g1=6035.926379, g2=1114.776566, infl=2897.645703, gradK=592.289468
+  [Trace] iter=138 | mode=online-online | ret_eval=78.6506 | batch=4 trajs | std_benefit=0.007021 | |benefit|=0.004998 | g1=5805.714490, g2=1210.529954, infl=2513.049347, gradK=601.624486
+  [Trace] iter=139 | mode=online-online | ret_eval=78.2738 | batch=4 trajs | std_benefit=0.005390 | |benefit|=0.004062 | g1=6735.466665, g2=662.337817, infl=3149.869107, gradK=541.019061
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2096, ||ω̄||=0.2544, eigmin(Σ_k)=1.364e-05, rank(U_k)=1, eigmin(Ū)=2.390e-03, cond(Ū)=5.89e+04
+    Q_hat diag=[1.1362 1.1827]
+    R_hat diag=[1.153]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 350.1071 | Norm(Oracle): 346.9678
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0046
+  [Trace] iter=140 | mode=online-online | ret_eval=78.5423 | batch=4 trajs | std_benefit=0.005357 | |benefit|=0.003978 | g1=6695.025129, g2=1039.210593, infl=3880.544120, gradK=350.107093
+  iter  140: return =   78.2802 (disc:   47.8673) ± 0.1213 | K = [0.2396 0.6204]
+  [Trace] iter=141 | mode=online-online | ret_eval=78.4897 | batch=4 trajs | std_benefit=0.006136 | |benefit|=0.004547 | g1=6289.553437, g2=603.506521, infl=2530.421044, gradK=449.045233
+  [Trace] iter=142 | mode=online-online | ret_eval=78.7217 | batch=4 trajs | std_benefit=0.007148 | |benefit|=0.005269 | g1=6315.171618, g2=1174.904372, infl=3088.659324, gradK=158.674965
+  [Trace] iter=143 | mode=online-online | ret_eval=78.8708 | batch=4 trajs | std_benefit=0.006137 | |benefit|=0.004484 | g1=6357.138639, g2=583.553423, infl=2662.075774, gradK=334.786743
+  [Trace] iter=144 | mode=online-online | ret_eval=78.5724 | batch=4 trajs | std_benefit=0.004819 | |benefit|=0.003540 | g1=5829.815326, g2=898.567836, infl=3474.214577, gradK=1332.505040
+  [Trace] iter=145 | mode=online-online | ret_eval=78.8397 | batch=4 trajs | std_benefit=0.004519 | |benefit|=0.003211 | g1=5711.140667, g2=1057.213086, infl=3141.209249, gradK=1296.674599
+  [Trace] iter=146 | mode=online-online | ret_eval=78.6063 | batch=4 trajs | std_benefit=0.004689 | |benefit|=0.003414 | g1=6109.282526, g2=604.358615, infl=2497.893165, gradK=1345.461436
+  [Trace] iter=147 | mode=online-online | ret_eval=78.3740 | batch=4 trajs | std_benefit=0.004481 | |benefit|=0.003341 | g1=6788.716039, g2=643.245408, infl=2535.317673, gradK=861.946382
+  [Trace] iter=148 | mode=online-online | ret_eval=78.4554 | batch=4 trajs | std_benefit=0.005412 | |benefit|=0.004051 | g1=6104.953398, g2=1070.839117, infl=3440.134341, gradK=270.154866
+  [Trace] iter=149 | mode=online-online | ret_eval=78.6067 | batch=4 trajs | std_benefit=0.005309 | |benefit|=0.003848 | g1=6333.107123, g2=926.332202, infl=2514.632613, gradK=557.019786
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2200, ||ω̄||=0.2228, eigmin(Σ_k)=1.167e-05, rank(U_k)=1, eigmin(Ū)=2.511e-03, cond(Ū)=6.00e+04
+    Q_hat diag=[1.1128 1.1645]
+    R_hat diag=[1.1304]
+    [Diagnostics] HG Cosine Sim: 0.9969 | Norm(Est): 233.9850 | Norm(Oracle): 223.7457
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0030
+  [Trace] iter=150 | mode=online-online | ret_eval=78.3838 | batch=4 trajs | std_benefit=0.004633 | |benefit|=0.003402 | g1=6732.859860, g2=872.426351, infl=1975.639567, gradK=233.985022
+  iter  150: return =   78.3639 (disc:   47.7778) ± 0.3671 | K = [0.2782 0.6709]
+  [Trace] iter=151 | mode=online-online | ret_eval=78.6403 | batch=4 trajs | std_benefit=0.005575 | |benefit|=0.004105 | g1=6303.154967, g2=1022.864206, infl=2829.859105, gradK=979.198712
+  [Trace] iter=152 | mode=online-online | ret_eval=79.0553 | batch=4 trajs | std_benefit=0.005281 | |benefit|=0.004039 | g1=5784.959416, g2=473.794720, infl=2117.959744, gradK=325.303153
+  [Trace] iter=153 | mode=online-online | ret_eval=78.7932 | batch=4 trajs | std_benefit=0.006252 | |benefit|=0.004720 | g1=6223.720807, g2=604.908483, infl=2720.533520, gradK=690.537446
+  [Trace] iter=154 | mode=online-online | ret_eval=78.4860 | batch=4 trajs | std_benefit=0.005500 | |benefit|=0.004136 | g1=5790.449211, g2=995.435289, infl=2519.166205, gradK=1251.784076
+  [Trace] iter=155 | mode=online-online | ret_eval=78.3478 | batch=4 trajs | std_benefit=0.005546 | |benefit|=0.004103 | g1=7104.188524, g2=1821.465001, infl=3417.390863, gradK=1174.724256
+  [Trace] iter=156 | mode=online-online | ret_eval=77.9790 | batch=4 trajs | std_benefit=0.007380 | |benefit|=0.005403 | g1=6560.155490, g2=781.972601, infl=2941.826356, gradK=350.559675
+  [Trace] iter=157 | mode=online-online | ret_eval=78.1718 | batch=4 trajs | std_benefit=0.007202 | |benefit|=0.005410 | g1=7069.436765, g2=1045.418086, infl=2452.951297, gradK=179.107072
+  [Trace] iter=158 | mode=online-online | ret_eval=78.0879 | batch=4 trajs | std_benefit=0.006150 | |benefit|=0.004640 | g1=6161.235745, g2=1768.893831, infl=3240.155210, gradK=816.965096
+  [Trace] iter=159 | mode=online-online | ret_eval=78.2779 | batch=4 trajs | std_benefit=0.006186 | |benefit|=0.004307 | g1=7065.124308, g2=1804.963242, infl=2847.488237, gradK=1099.286243
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2238, ||ω̄||=0.2250, eigmin(Σ_k)=1.164e-05, rank(U_k)=1, eigmin(Ū)=2.681e-03, cond(Ū)=5.99e+04
+    Q_hat diag=[1.1143 1.1661]
+    R_hat diag=[1.1318]
+    [Diagnostics] HG Cosine Sim: 0.9998 | Norm(Est): 425.1795 | Norm(Oracle): 412.8636
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0037
+  [Trace] iter=160 | mode=online-online | ret_eval=78.4638 | batch=4 trajs | std_benefit=0.007016 | |benefit|=0.004769 | g1=6009.886714, g2=2277.953144, infl=2540.059658, gradK=425.179502
+  iter  160: return =   78.0909 (disc:   47.8202) ± 0.2238 | K = [0.3043 0.721 ]
+  [Trace] iter=161 | mode=online-online | ret_eval=78.2086 | batch=4 trajs | std_benefit=0.005914 | |benefit|=0.004429 | g1=6218.670204, g2=2322.772728, infl=3857.773293, gradK=345.364977
+  [Trace] iter=162 | mode=online-online | ret_eval=78.3831 | batch=4 trajs | std_benefit=0.005920 | |benefit|=0.004081 | g1=6638.601137, g2=1556.817825, infl=2186.545351, gradK=932.229593
+  [Trace] iter=163 | mode=online-online | ret_eval=78.5754 | batch=4 trajs | std_benefit=0.006243 | |benefit|=0.004100 | g1=6591.020668, g2=2445.853126, infl=3416.316913, gradK=343.967327
+  [Trace] iter=164 | mode=online-online | ret_eval=78.3405 | batch=4 trajs | std_benefit=0.005662 | |benefit|=0.004136 | g1=6637.970212, g2=2473.049383, infl=3370.336924, gradK=451.378098
+  [Trace] iter=165 | mode=online-online | ret_eval=78.1511 | batch=4 trajs | std_benefit=0.006064 | |benefit|=0.004030 | g1=7056.920273, g2=2461.061033, infl=3122.171853, gradK=345.688410
+  [Trace] iter=166 | mode=online-online | ret_eval=77.8709 | batch=4 trajs | std_benefit=0.007087 | |benefit|=0.004375 | g1=7695.547288, g2=5327.102914, infl=6289.576151, gradK=2136.466436
+  [Trace] iter=167 | mode=online-online | ret_eval=77.7685 | batch=4 trajs | std_benefit=0.005998 | |benefit|=0.004069 | g1=6951.127279, g2=2054.384170, infl=2886.047670, gradK=585.510056
+  [Trace] iter=168 | mode=online-online | ret_eval=77.5324 | batch=4 trajs | std_benefit=0.007384 | |benefit|=0.004770 | g1=7131.013813, g2=3600.156460, infl=3254.546823, gradK=146.811533
+  [Trace] iter=169 | mode=online-online | ret_eval=77.7277 | batch=4 trajs | std_benefit=0.007709 | |benefit|=0.005610 | g1=7637.661253, g2=3316.188905, infl=4461.764850, gradK=363.157541
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2109, ||ω̄||=0.2272, eigmin(Σ_k)=1.395e-05, rank(U_k)=1, eigmin(Ū)=2.886e-03, cond(Ū)=5.91e+04
+    Q_hat diag=[1.1149 1.1686]
+    R_hat diag=[1.1326]
+    [Diagnostics] HG Cosine Sim: 0.9998 | Norm(Est): 700.1940 | Norm(Oracle): 679.9383
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0053
+  [Trace] iter=170 | mode=online-online | ret_eval=77.9686 | batch=4 trajs | std_benefit=0.007480 | |benefit|=0.004860 | g1=7434.005438, g2=4262.428430, infl=4651.701918, gradK=700.193976
+  iter  170: return =   77.4890 (disc:   47.3884) ± 0.2768 | K = [0.3873 0.6375]
+  [Trace] iter=171 | mode=online-online | ret_eval=77.6351 | batch=4 trajs | std_benefit=0.007607 | |benefit|=0.004820 | g1=7411.290026, g2=5955.520983, infl=5924.274747, gradK=1643.077672
+  [Trace] iter=172 | mode=online-online | ret_eval=77.9572 | batch=4 trajs | std_benefit=0.007296 | |benefit|=0.005299 | g1=7369.533452, g2=3957.566250, infl=4662.859719, gradK=1780.021376
+  [Trace] iter=173 | mode=online-online | ret_eval=78.1877 | batch=4 trajs | std_benefit=0.008029 | |benefit|=0.006093 | g1=7242.014707, g2=1149.649916, infl=2948.704157, gradK=541.748433
+  [Trace] iter=174 | mode=online-online | ret_eval=78.5506 | batch=4 trajs | std_benefit=0.008123 | |benefit|=0.006103 | g1=6943.202336, g2=979.285844, infl=2285.896804, gradK=593.009317
+  [Trace] iter=175 | mode=online-online | ret_eval=78.6458 | batch=4 trajs | std_benefit=0.007360 | |benefit|=0.005449 | g1=6121.770886, g2=2118.770883, infl=2927.795086, gradK=467.730404
+  [Trace] iter=176 | mode=online-online | ret_eval=78.3868 | batch=4 trajs | std_benefit=0.009277 | |benefit|=0.006826 | g1=6408.956790, g2=943.742682, infl=3755.249436, gradK=1873.090822
+  [Trace] iter=177 | mode=online-online | ret_eval=78.8047 | batch=4 trajs | std_benefit=0.011340 | |benefit|=0.008124 | g1=5955.087514, g2=635.607180, infl=3570.269432, gradK=1663.878104
+  [Trace] iter=178 | mode=online-online | ret_eval=78.4634 | batch=4 trajs | std_benefit=0.008728 | |benefit|=0.006652 | g1=5772.788639, g2=1463.518668, infl=2958.745114, gradK=524.095488
+  [Trace] iter=179 | mode=online-online | ret_eval=78.1857 | batch=4 trajs | std_benefit=0.008891 | |benefit|=0.006879 | g1=6023.818403, g2=1422.478030, infl=2756.803905, gradK=1357.227318
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2084, ||ω̄||=0.2026, eigmin(Σ_k)=1.362e-05, rank(U_k)=1, eigmin(Ū)=3.170e-03, cond(Ū)=5.70e+04
+    Q_hat diag=[1.0999 1.1501]
+    R_hat diag=[1.1178]
+    [Diagnostics] HG Cosine Sim: 0.9895 | Norm(Est): 211.5921 | Norm(Oracle): 181.4698
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0030
+  [Trace] iter=180 | mode=online-online | ret_eval=78.0931 | batch=4 trajs | std_benefit=0.009702 | |benefit|=0.007170 | g1=7069.632984, g2=2398.971961, infl=4050.521474, gradK=211.592099
+  iter  180: return =   78.0925 (disc:   47.4863) ± 0.1959 | K = [0.3884 0.663 ]
+  [Trace] iter=181 | mode=online-online | ret_eval=77.7692 | batch=4 trajs | std_benefit=0.008832 | |benefit|=0.006894 | g1=6301.548768, g2=3078.989266, infl=4271.167993, gradK=1119.836325
+  [Trace] iter=182 | mode=online-online | ret_eval=77.9101 | batch=4 trajs | std_benefit=0.009172 | |benefit|=0.006454 | g1=6641.005645, g2=3992.697633, infl=4175.869416, gradK=789.178545
+  [Trace] iter=183 | mode=online-online | ret_eval=77.7016 | batch=4 trajs | std_benefit=0.008801 | |benefit|=0.006808 | g1=7731.327785, g2=3990.326832, infl=4756.999580, gradK=2106.286700
+  [Trace] iter=184 | mode=online-online | ret_eval=77.7295 | batch=4 trajs | std_benefit=0.009043 | |benefit|=0.006620 | g1=6978.452062, g2=5318.151923, infl=4905.906604, gradK=323.466116
+  [Trace] iter=185 | mode=online-online | ret_eval=77.3977 | batch=4 trajs | std_benefit=0.008365 | |benefit|=0.006202 | g1=6864.930235, g2=4392.212492, infl=4092.517153, gradK=471.558653
+  [Trace] iter=186 | mode=online-online | ret_eval=77.8044 | batch=4 trajs | std_benefit=0.009295 | |benefit|=0.006892 | g1=7394.200487, g2=5745.747629, infl=5208.327612, gradK=1671.728874
+  [Trace] iter=187 | mode=online-online | ret_eval=78.0605 | batch=4 trajs | std_benefit=0.008624 | |benefit|=0.006380 | g1=6574.964008, g2=4890.146564, infl=5125.617712, gradK=574.583062
+  [Trace] iter=188 | mode=online-online | ret_eval=78.2408 | batch=4 trajs | std_benefit=0.009848 | |benefit|=0.006500 | g1=7273.783405, g2=5369.722623, infl=3232.445070, gradK=2060.021489
+  [Trace] iter=189 | mode=online-online | ret_eval=78.0895 | batch=4 trajs | std_benefit=0.008918 | |benefit|=0.005920 | g1=6106.287429, g2=3197.267489, infl=2537.661957, gradK=598.402365
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2182, ||ω̄||=0.2464, eigmin(Σ_k)=1.322e-05, rank(U_k)=1, eigmin(Ū)=3.530e-03, cond(Ū)=5.40e+04
+    Q_hat diag=[1.1304 1.1779]
+    R_hat diag=[1.1474]
+    [Diagnostics] HG Cosine Sim: 0.9998 | Norm(Est): 539.6369 | Norm(Oracle): 514.0432
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0048
+  [Trace] iter=190 | mode=online-online | ret_eval=78.2810 | batch=4 trajs | std_benefit=0.008834 | |benefit|=0.006573 | g1=5971.060085, g2=3487.867270, infl=3398.372426, gradK=539.636860
+  iter  190: return =   77.8696 (disc:   47.6698) ± 0.1350 | K = [0.2915 0.6053]
+  [Trace] iter=191 | mode=online-online | ret_eval=78.5581 | batch=4 trajs | std_benefit=0.009512 | |benefit|=0.007136 | g1=6202.334715, g2=3026.754362, infl=3530.736443, gradK=856.111706
+  [Trace] iter=192 | mode=online-online | ret_eval=78.0395 | batch=4 trajs | std_benefit=0.008883 | |benefit|=0.006663 | g1=5797.577350, g2=2964.608481, infl=3063.936859, gradK=365.045855
+  [Trace] iter=193 | mode=online-online | ret_eval=78.1611 | batch=4 trajs | std_benefit=0.008275 | |benefit|=0.006246 | g1=5957.823877, g2=2378.584812, infl=2639.559022, gradK=402.866845
+  [Trace] iter=194 | mode=online-online | ret_eval=77.7825 | batch=4 trajs | std_benefit=0.009401 | |benefit|=0.007104 | g1=6643.788531, g2=4764.747501, infl=4625.758955, gradK=947.348308
+  [Trace] iter=195 | mode=online-online | ret_eval=77.4652 | batch=4 trajs | std_benefit=0.010265 | |benefit|=0.007765 | g1=5981.944763, g2=2763.563423, infl=2969.741209, gradK=1682.483983
+  [Trace] iter=196 | mode=online-online | ret_eval=77.1451 | batch=4 trajs | std_benefit=0.010222 | |benefit|=0.007636 | g1=7385.507179, g2=3976.215795, infl=4328.786767, gradK=2087.143271
+  [Trace] iter=197 | mode=online-online | ret_eval=76.9628 | batch=4 trajs | std_benefit=0.011055 | |benefit|=0.008371 | g1=8301.819818, g2=5055.457481, infl=5575.401659, gradK=734.071525
+  [Trace] iter=198 | mode=online-online | ret_eval=77.2840 | batch=4 trajs | std_benefit=0.011222 | |benefit|=0.008738 | g1=7494.907808, g2=5550.089150, infl=6145.426687, gradK=264.498555
+  [Trace] iter=199 | mode=online-online | ret_eval=76.9838 | batch=4 trajs | std_benefit=0.011482 | |benefit|=0.008589 | g1=7843.815009, g2=2532.444653, infl=2950.174898, gradK=390.021543
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2256, ||ω̄||=0.2565, eigmin(Σ_k)=1.450e-05, rank(U_k)=1, eigmin(Ū)=3.719e-03, cond(Ū)=5.39e+04
+    Q_hat diag=[1.1363 1.1862]
+    R_hat diag=[1.1531]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 2219.3477 | Norm(Oracle): 2156.4602
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0093
+  [Trace] iter=200 | mode=online-online | ret_eval=77.2333 | batch=4 trajs | std_benefit=0.011997 | |benefit|=0.008804 | g1=8148.216919, g2=4501.059935, infl=7046.755334, gradK=2219.347720
+  iter  200: return =   77.0359 (disc:   46.7703) ± 0.0954 | K = [0.448  0.5322]
+  [Trace] iter=201 | mode=online-online | ret_eval=76.9244 | batch=4 trajs | std_benefit=0.011542 | |benefit|=0.008514 | g1=7427.272842, g2=3201.294721, infl=6165.689729, gradK=481.489942
+  [Trace] iter=202 | mode=online-online | ret_eval=77.2804 | batch=4 trajs | std_benefit=0.012861 | |benefit|=0.009514 | g1=7246.948911, g2=3137.892752, infl=4270.401212, gradK=818.797573
+  [Trace] iter=203 | mode=online-online | ret_eval=77.1180 | batch=4 trajs | std_benefit=0.012610 | |benefit|=0.009593 | g1=7055.347716, g2=2668.712407, infl=3890.849157, gradK=683.735706
+  [Trace] iter=204 | mode=online-online | ret_eval=77.1032 | batch=4 trajs | std_benefit=0.012694 | |benefit|=0.009406 | g1=8133.448089, g2=1732.038579, infl=3862.309846, gradK=79.953710
+  [Trace] iter=205 | mode=online-online | ret_eval=77.2639 | batch=4 trajs | std_benefit=0.013855 | |benefit|=0.009904 | g1=7560.148195, g2=2557.567684, infl=6091.756694, gradK=1792.085452
+  [Trace] iter=206 | mode=online-online | ret_eval=77.1240 | batch=4 trajs | std_benefit=0.011858 | |benefit|=0.008877 | g1=7800.226841, g2=2615.366819, infl=4715.171584, gradK=2108.358298
+  [Trace] iter=207 | mode=online-online | ret_eval=76.8352 | batch=4 trajs | std_benefit=0.012779 | |benefit|=0.009495 | g1=6339.220049, g2=3609.734301, infl=3936.810449, gradK=828.900922
+  [Trace] iter=208 | mode=online-online | ret_eval=76.9307 | batch=4 trajs | std_benefit=0.012861 | |benefit|=0.009882 | g1=7966.465106, g2=4183.956580, infl=4800.008641, gradK=668.855523
+  [Trace] iter=209 | mode=online-online | ret_eval=76.7386 | batch=4 trajs | std_benefit=0.013281 | |benefit|=0.009942 | g1=8623.461875, g2=4679.754481, infl=6532.844997, gradK=327.479720
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2064, ||ω̄||=0.2600, eigmin(Σ_k)=1.622e-05, rank(U_k)=1, eigmin(Ū)=3.866e-03, cond(Ū)=5.44e+04
+    Q_hat diag=[1.1385 1.1888]
+    R_hat diag=[1.1553]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 2522.2271 | Norm(Oracle): 2342.2394
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0117
+  [Trace] iter=210 | mode=online-online | ret_eval=77.0557 | batch=4 trajs | std_benefit=0.012766 | |benefit|=0.009469 | g1=7625.912014, g2=4236.786029, infl=4611.118231, gradK=2522.227053
+  iter  210: return =   76.8357 (disc:   46.5912) ± 0.1974 | K = [0.5115 0.537 ]
+  [Trace] iter=211 | mode=online-online | ret_eval=77.1550 | batch=4 trajs | std_benefit=0.012767 | |benefit|=0.009610 | g1=8168.553810, g2=8567.520915, infl=6885.675810, gradK=369.651920
+  [Trace] iter=212 | mode=online-online | ret_eval=77.0721 | batch=4 trajs | std_benefit=0.011923 | |benefit|=0.009165 | g1=8038.653655, g2=7583.883744, infl=6067.003500, gradK=300.698366
+  [Trace] iter=213 | mode=online-online | ret_eval=76.6915 | batch=4 trajs | std_benefit=0.012538 | |benefit|=0.009406 | g1=8100.186329, g2=6233.668135, infl=7283.367310, gradK=3406.854795
+  [Trace] iter=214 | mode=online-online | ret_eval=76.5083 | batch=4 trajs | std_benefit=0.012977 | |benefit|=0.009515 | g1=7063.666375, g2=5156.034147, infl=7337.306344, gradK=758.049770
+  [Trace] iter=215 | mode=online-online | ret_eval=76.4413 | batch=4 trajs | std_benefit=0.012777 | |benefit|=0.009423 | g1=7212.824641, g2=4131.111983, infl=4296.773843, gradK=962.315884
+  [Trace] iter=216 | mode=online-online | ret_eval=76.7444 | batch=4 trajs | std_benefit=0.014215 | |benefit|=0.010194 | g1=7531.490849, g2=10716.056806, infl=8075.268532, gradK=5677.654697
+  [Trace] iter=217 | mode=online-online | ret_eval=76.4423 | batch=4 trajs | std_benefit=0.013105 | |benefit|=0.009680 | g1=7820.104260, g2=4193.190746, infl=4097.836483, gradK=783.826022
+  [Trace] iter=218 | mode=online-online | ret_eval=76.1323 | batch=4 trajs | std_benefit=0.013188 | |benefit|=0.009912 | g1=8728.150820, g2=10871.903970, infl=8309.533136, gradK=5841.642805
+  [Trace] iter=219 | mode=online-online | ret_eval=75.7122 | batch=4 trajs | std_benefit=0.013731 | |benefit|=0.010309 | g1=7237.112573, g2=7735.986225, infl=7384.039921, gradK=1030.948531
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1988, ||ω̄||=0.2656, eigmin(Σ_k)=1.739e-05, rank(U_k)=1, eigmin(Ū)=4.038e-03, cond(Ū)=5.46e+04
+    Q_hat diag=[1.1423 1.1927]
+    R_hat diag=[1.159]
+    [Diagnostics] HG Cosine Sim: 0.9998 | Norm(Est): 2668.0932 | Norm(Oracle): 2165.9404
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0212
+  [Trace] iter=220 | mode=online-online | ret_eval=75.9893 | batch=4 trajs | std_benefit=0.013762 | |benefit|=0.010463 | g1=8184.535807, g2=8418.649270, infl=7238.993830, gradK=2668.093249
+  iter  220: return =   75.6736 (disc:   45.7202) ± 0.1047 | K = [0.6382 0.4495]
+  [Trace] iter=221 | mode=online-online | ret_eval=75.5318 | batch=4 trajs | std_benefit=0.014782 | |benefit|=0.010690 | g1=9208.189552, g2=12392.332187, infl=6606.757685, gradK=3159.758759
+  [Trace] iter=222 | mode=online-online | ret_eval=75.7962 | batch=4 trajs | std_benefit=0.015184 | |benefit|=0.011179 | g1=9205.766540, g2=18153.585734, infl=11102.810132, gradK=542.147324
+  [Trace] iter=223 | mode=online-online | ret_eval=75.9489 | batch=4 trajs | std_benefit=0.015103 | |benefit|=0.011477 | g1=8387.927346, g2=8681.046172, infl=11900.521092, gradK=2336.497774
+  [Trace] iter=224 | mode=online-online | ret_eval=76.1868 | batch=4 trajs | std_benefit=0.014371 | |benefit|=0.010851 | g1=8603.495730, g2=6653.977181, infl=9048.218669, gradK=1337.011342
+  [Trace] iter=225 | mode=online-online | ret_eval=76.7309 | batch=4 trajs | std_benefit=0.014745 | |benefit|=0.010979 | g1=7171.011732, g2=7386.607194, infl=9877.589185, gradK=4311.470151
+  [Trace] iter=226 | mode=online-online | ret_eval=76.5955 | batch=4 trajs | std_benefit=0.015660 | |benefit|=0.011690 | g1=8697.473951, g2=9743.319958, infl=8154.821490, gradK=733.417185
+  [Trace] iter=227 | mode=online-online | ret_eval=77.0395 | batch=4 trajs | std_benefit=0.014637 | |benefit|=0.010974 | g1=8051.193293, g2=7994.356251, infl=6991.011474, gradK=3111.802022
+  [Trace] iter=228 | mode=online-online | ret_eval=77.2943 | batch=4 trajs | std_benefit=0.014455 | |benefit|=0.010674 | g1=6705.825421, g2=3422.392545, infl=5834.412321, gradK=1559.843492
+  [Trace] iter=229 | mode=online-online | ret_eval=76.9808 | batch=4 trajs | std_benefit=0.014014 | |benefit|=0.010510 | g1=6877.979936, g2=5843.400662, infl=5653.419210, gradK=1010.451001
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1919, ||ω̄||=0.2605, eigmin(Σ_k)=1.634e-05, rank(U_k)=1, eigmin(Ū)=4.081e-03, cond(Ū)=5.65e+04
+    Q_hat diag=[1.1389 1.1892]
+    R_hat diag=[1.1555]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 1241.5259 | Norm(Oracle): 1221.1110
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0103
+  [Trace] iter=230 | mode=online-online | ret_eval=76.7078 | batch=4 trajs | std_benefit=0.015835 | |benefit|=0.011803 | g1=7370.707927, g2=8754.424989, infl=6829.406372, gradK=1241.525901
+  iter  230: return =   77.0774 (disc:   46.3206) ± 0.1796 | K = [0.5552 0.5184]
+  [Trace] iter=231 | mode=online-online | ret_eval=76.9795 | batch=4 trajs | std_benefit=0.015887 | |benefit|=0.011751 | g1=7709.273183, g2=5240.741821, infl=5861.993545, gradK=1054.159849
+  [Trace] iter=232 | mode=online-online | ret_eval=76.7005 | batch=4 trajs | std_benefit=0.017295 | |benefit|=0.012624 | g1=7835.409597, g2=4638.604343, infl=5732.924118, gradK=1615.585479
+  [Trace] iter=233 | mode=online-online | ret_eval=76.5924 | batch=4 trajs | std_benefit=0.019255 | |benefit|=0.013974 | g1=9916.280404, g2=5652.541985, infl=6107.944888, gradK=438.410466
+  [Trace] iter=234 | mode=online-online | ret_eval=76.3592 | batch=4 trajs | std_benefit=0.019963 | |benefit|=0.014875 | g1=7391.849488, g2=6037.955028, infl=4333.137746, gradK=4554.284463
+  [Trace] iter=235 | mode=online-online | ret_eval=76.6066 | batch=4 trajs | std_benefit=0.020876 | |benefit|=0.015091 | g1=8523.479415, g2=9292.986884, infl=7693.992338, gradK=426.377568
+  [Trace] iter=236 | mode=online-online | ret_eval=76.3014 | batch=4 trajs | std_benefit=0.021261 | |benefit|=0.015143 | g1=7567.484004, g2=4527.148896, infl=6497.788474, gradK=628.628988
+  [Trace] iter=237 | mode=online-online | ret_eval=76.4407 | batch=4 trajs | std_benefit=0.020674 | |benefit|=0.014812 | g1=8231.093849, g2=5905.609499, infl=5222.928171, gradK=622.780979
+  [Trace] iter=238 | mode=online-online | ret_eval=76.6644 | batch=4 trajs | std_benefit=0.020532 | |benefit|=0.015190 | g1=8150.048452, g2=8947.991828, infl=6990.908659, gradK=2980.282618
+  [Trace] iter=239 | mode=online-online | ret_eval=76.4161 | batch=4 trajs | std_benefit=0.020407 | |benefit|=0.014876 | g1=7227.239865, g2=5061.425392, infl=6554.679616, gradK=3197.157945
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2044, ||ω̄||=0.2629, eigmin(Σ_k)=1.524e-05, rank(U_k)=1, eigmin(Ū)=4.121e-03, cond(Ū)=5.83e+04
+    Q_hat diag=[1.141  1.1901]
+    R_hat diag=[1.1576]
+    [Diagnostics] HG Cosine Sim: 0.8535 | Norm(Est): 240.8501 | Norm(Oracle): 297.3688
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0128
+  [Trace] iter=240 | mode=online-online | ret_eval=76.4004 | batch=4 trajs | std_benefit=0.018984 | |benefit|=0.013965 | g1=8126.535789, g2=8017.958553, infl=8573.964878, gradK=240.850098
+  iter  240: return =   76.5257 (disc:   46.0487) ± 0.1850 | K = [0.5813 0.47  ]
+  [Trace] iter=241 | mode=online-online | ret_eval=76.7000 | batch=4 trajs | std_benefit=0.017197 | |benefit|=0.013065 | g1=7277.651712, g2=5613.475107, infl=7007.621461, gradK=1654.861085
+  [Trace] iter=242 | mode=online-online | ret_eval=77.0522 | batch=4 trajs | std_benefit=0.016951 | |benefit|=0.012760 | g1=7158.847687, g2=12162.086961, infl=7632.161049, gradK=4561.860923
+  [Trace] iter=243 | mode=online-online | ret_eval=76.6200 | batch=4 trajs | std_benefit=0.017309 | |benefit|=0.012970 | g1=7700.298943, g2=8435.130358, infl=6098.933866, gradK=2945.264249
+  [Trace] iter=244 | mode=online-online | ret_eval=76.9507 | batch=4 trajs | std_benefit=0.018008 | |benefit|=0.013295 | g1=8370.458699, g2=10139.014690, infl=6125.192198, gradK=387.257165
+  [Trace] iter=245 | mode=online-online | ret_eval=76.4381 | batch=4 trajs | std_benefit=0.015696 | |benefit|=0.011944 | g1=6999.510661, g2=8795.320737, infl=5869.965072, gradK=1460.408972
+  [Trace] iter=246 | mode=online-online | ret_eval=76.7617 | batch=4 trajs | std_benefit=0.018000 | |benefit|=0.013967 | g1=7521.027251, g2=6264.429292, infl=4222.010310, gradK=2613.236512
+  [Trace] iter=247 | mode=online-online | ret_eval=77.1337 | batch=4 trajs | std_benefit=0.016552 | |benefit|=0.012837 | g1=7286.534153, g2=7228.455857, infl=5271.205090, gradK=641.638150
+  [Trace] iter=248 | mode=online-online | ret_eval=77.5274 | batch=4 trajs | std_benefit=0.018103 | |benefit|=0.013562 | g1=6259.805811, g2=7499.491461, infl=4470.939103, gradK=1785.879521
+  [Trace] iter=249 | mode=online-online | ret_eval=77.1550 | batch=4 trajs | std_benefit=0.016629 | |benefit|=0.012469 | g1=6600.921267, g2=4295.656499, infl=3369.819654, gradK=1678.441326
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2200, ||ω̄||=0.2535, eigmin(Σ_k)=1.330e-05, rank(U_k)=1, eigmin(Ū)=4.270e-03, cond(Ū)=5.86e+04
+    Q_hat diag=[1.1342 1.1843]
+    R_hat diag=[1.1511]
+    [Diagnostics] HG Cosine Sim: 0.9997 | Norm(Est): 663.9310 | Norm(Oracle): 642.4926
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0080
+  [Trace] iter=250 | mode=online-online | ret_eval=77.0170 | batch=4 trajs | std_benefit=0.015890 | |benefit|=0.012069 | g1=7488.779326, g2=8946.531984, infl=6317.097434, gradK=663.931044
+  iter  250: return =   77.4343 (disc:   46.5737) ± 0.2630 | K = [0.4504 0.4539]
+  [Trace] iter=251 | mode=online-online | ret_eval=77.1320 | batch=4 trajs | std_benefit=0.018027 | |benefit|=0.013386 | g1=6857.612948, g2=6561.959024, infl=4914.654957, gradK=695.072585
+  [Trace] iter=252 | mode=online-online | ret_eval=76.9614 | batch=4 trajs | std_benefit=0.017581 | |benefit|=0.013368 | g1=7003.521770, g2=5653.943018, infl=3178.818436, gradK=1197.463005
+  [Trace] iter=253 | mode=online-online | ret_eval=76.6163 | batch=4 trajs | std_benefit=0.017014 | |benefit|=0.012786 | g1=7166.580846, g2=5117.784286, infl=3980.814157, gradK=240.139706
+  [Trace] iter=254 | mode=online-online | ret_eval=77.0705 | batch=4 trajs | std_benefit=0.020464 | |benefit|=0.014391 | g1=8215.315564, g2=18707.438895, infl=8811.220680, gradK=10017.699346
+  [Trace] iter=255 | mode=online-online | ret_eval=77.1538 | batch=4 trajs | std_benefit=0.018109 | |benefit|=0.013731 | g1=7451.250070, g2=10016.287406, infl=5002.857636, gradK=427.653980
+  [Trace] iter=256 | mode=online-online | ret_eval=76.9059 | batch=4 trajs | std_benefit=0.017984 | |benefit|=0.013754 | g1=6901.758834, g2=9264.453136, infl=5095.658366, gradK=2263.225920
+  [Trace] iter=257 | mode=online-online | ret_eval=77.1822 | batch=4 trajs | std_benefit=0.018470 | |benefit|=0.014189 | g1=6951.097058, g2=6281.698709, infl=4745.613928, gradK=1802.114779
+  [Trace] iter=258 | mode=online-online | ret_eval=77.5104 | batch=4 trajs | std_benefit=0.017799 | |benefit|=0.013605 | g1=6711.634765, g2=8469.186105, infl=5604.278443, gradK=1112.032161
+  [Trace] iter=259 | mode=online-online | ret_eval=77.2178 | batch=4 trajs | std_benefit=0.017415 | |benefit|=0.013059 | g1=5449.728469, g2=6851.044463, infl=3429.180431, gradK=749.853874
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1970, ||ω̄||=0.2653, eigmin(Σ_k)=1.502e-05, rank(U_k)=1, eigmin(Ū)=4.457e-03, cond(Ū)=5.84e+04
+    Q_hat diag=[1.1427 1.1917]
+    R_hat diag=[1.1593]
+    [Diagnostics] HG Cosine Sim: 0.9999 | Norm(Est): 678.3191 | Norm(Oracle): 576.0443
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0087
+  [Trace] iter=260 | mode=online-online | ret_eval=77.3679 | batch=4 trajs | std_benefit=0.018790 | |benefit|=0.014062 | g1=7294.740971, g2=15693.816573, infl=7317.541543, gradK=678.319148
+  iter  260: return =   77.1072 (disc:   46.9252) ± 0.1553 | K = [0.3907 0.4993]
+  [Trace] iter=261 | mode=online-online | ret_eval=77.3085 | batch=4 trajs | std_benefit=0.018425 | |benefit|=0.014158 | g1=6209.502097, g2=7871.168495, infl=4114.301380, gradK=2375.408632
+  [Trace] iter=262 | mode=online-online | ret_eval=77.4436 | batch=4 trajs | std_benefit=0.019302 | |benefit|=0.014078 | g1=7414.409242, g2=19413.191270, infl=6617.909271, gradK=6874.253646
+  [Trace] iter=263 | mode=online-online | ret_eval=77.5941 | batch=4 trajs | std_benefit=0.019345 | |benefit|=0.014083 | g1=6982.955777, g2=7840.246593, infl=3874.127766, gradK=1864.220547
+  [Trace] iter=264 | mode=online-online | ret_eval=77.6544 | batch=4 trajs | std_benefit=0.018916 | |benefit|=0.013670 | g1=6757.423874, g2=10732.746786, infl=4172.375955, gradK=3688.882984
+  [Trace] iter=265 | mode=online-online | ret_eval=77.8298 | batch=4 trajs | std_benefit=0.017471 | |benefit|=0.013429 | g1=6728.063075, g2=5696.164439, infl=3218.955709, gradK=151.063255
+  [Trace] iter=266 | mode=online-online | ret_eval=77.4885 | batch=4 trajs | std_benefit=0.019093 | |benefit|=0.014644 | g1=6389.117770, g2=6665.873062, infl=3150.376437, gradK=828.704612
+  [Trace] iter=267 | mode=online-online | ret_eval=77.3148 | batch=4 trajs | std_benefit=0.018954 | |benefit|=0.014761 | g1=6839.788956, g2=6138.365678, infl=3443.332470, gradK=295.314776
+  [Trace] iter=268 | mode=online-online | ret_eval=77.0019 | batch=4 trajs | std_benefit=0.018559 | |benefit|=0.014007 | g1=6778.619516, g2=11871.778515, infl=7002.724866, gradK=3781.702515
+  [Trace] iter=269 | mode=online-online | ret_eval=76.6580 | batch=4 trajs | std_benefit=0.019299 | |benefit|=0.014650 | g1=7352.254185, g2=13451.455641, infl=5429.152224, gradK=785.672016
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1892, ||ω̄||=0.2539, eigmin(Σ_k)=1.763e-05, rank(U_k)=1, eigmin(Ū)=4.635e-03, cond(Ū)=5.83e+04
+    Q_hat diag=[1.1348 1.184 ]
+    R_hat diag=[1.1517]
+    [Diagnostics] HG Cosine Sim: 0.9979 | Norm(Est): 674.8087 | Norm(Oracle): 590.2304
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0087
+  [Trace] iter=270 | mode=online-online | ret_eval=76.8486 | batch=4 trajs | std_benefit=0.021122 | |benefit|=0.015632 | g1=7125.998132, g2=9244.615563, infl=4538.623265, gradK=674.808666
+  iter  270: return =   76.7124 (disc:   46.4531) ± 0.0978 | K = [0.3913 0.3484]
+  [Trace] iter=271 | mode=online-online | ret_eval=76.4579 | batch=4 trajs | std_benefit=0.020022 | |benefit|=0.015045 | g1=6361.514276, g2=6957.966117, infl=3429.142116, gradK=1281.112546
+  [Trace] iter=272 | mode=online-online | ret_eval=76.7513 | batch=4 trajs | std_benefit=0.022275 | |benefit|=0.015911 | g1=7324.966724, g2=9868.292728, infl=3891.285796, gradK=3382.940278
+  [Trace] iter=273 | mode=online-online | ret_eval=77.1708 | batch=4 trajs | std_benefit=0.021243 | |benefit|=0.016391 | g1=6827.226523, g2=15492.570978, infl=6806.574683, gradK=2961.552243
+  [Trace] iter=274 | mode=online-online | ret_eval=76.9141 | batch=4 trajs | std_benefit=0.021470 | |benefit|=0.016702 | g1=7536.275666, g2=7737.129486, infl=5086.780793, gradK=1024.547917
+  [Trace] iter=275 | mode=online-online | ret_eval=77.3174 | batch=4 trajs | std_benefit=0.020574 | |benefit|=0.015175 | g1=6078.973468, g2=13287.406653, infl=5622.051194, gradK=4301.358147
+  [Trace] iter=276 | mode=online-online | ret_eval=77.0925 | batch=4 trajs | std_benefit=0.020239 | |benefit|=0.015288 | g1=6791.915243, g2=10657.569862, infl=4486.207774, gradK=647.663598
+  [Trace] iter=277 | mode=online-online | ret_eval=76.7760 | batch=4 trajs | std_benefit=0.020785 | |benefit|=0.015966 | g1=7030.283114, g2=7066.680837, infl=3055.621555, gradK=1898.327445
+  [Trace] iter=278 | mode=online-online | ret_eval=76.5182 | batch=4 trajs | std_benefit=0.020863 | |benefit|=0.015118 | g1=8931.272458, g2=21658.021011, infl=8695.154208, gradK=3169.217007
+  [Trace] iter=279 | mode=online-online | ret_eval=76.2050 | batch=4 trajs | std_benefit=0.022435 | |benefit|=0.015114 | g1=7294.990454, g2=12203.882780, infl=4958.411317, gradK=1976.785759
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2042, ||ω̄||=0.2658, eigmin(Σ_k)=1.613e-05, rank(U_k)=1, eigmin(Ū)=4.831e-03, cond(Ū)=5.80e+04
+    Q_hat diag=[1.1442 1.1904]
+    R_hat diag=[1.1605]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 3859.7523 | Norm(Oracle): 3425.1705
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0123
+  [Trace] iter=280 | mode=online-online | ret_eval=75.9707 | batch=4 trajs | std_benefit=0.022330 | |benefit|=0.015664 | g1=7612.760095, g2=24429.851998, infl=7935.057897, gradK=3859.752333
+  iter  280: return =   76.3542 (disc:   45.7225) ± 0.1847 | K = [0.5456 0.3521]
+  [Trace] iter=281 | mode=online-online | ret_eval=76.3093 | batch=4 trajs | std_benefit=0.022560 | |benefit|=0.016324 | g1=7966.734822, g2=26806.239904, infl=8842.322361, gradK=1249.219598
+  [Trace] iter=282 | mode=online-online | ret_eval=76.5805 | batch=4 trajs | std_benefit=0.023065 | |benefit|=0.015359 | g1=7708.014548, g2=26655.533899, infl=6695.339235, gradK=3566.605754
+  [Trace] iter=283 | mode=online-online | ret_eval=76.4291 | batch=4 trajs | std_benefit=0.021189 | |benefit|=0.014671 | g1=6976.229538, g2=18765.219872, infl=5734.217340, gradK=3781.339271
+  [Trace] iter=284 | mode=online-online | ret_eval=76.5963 | batch=4 trajs | std_benefit=0.026119 | |benefit|=0.016497 | g1=7438.135583, g2=24744.813532, infl=5792.009497, gradK=3710.849548
+  [Trace] iter=285 | mode=online-online | ret_eval=76.9649 | batch=4 trajs | std_benefit=0.021770 | |benefit|=0.014321 | g1=7172.052233, g2=17602.674964, infl=6027.638211, gradK=6092.078084
+  [Trace] iter=286 | mode=online-online | ret_eval=77.1865 | batch=4 trajs | std_benefit=0.021600 | |benefit|=0.013787 | g1=6160.119143, g2=16630.547988, infl=5692.913010, gradK=2201.875576
+  [Trace] iter=287 | mode=online-online | ret_eval=76.9472 | batch=4 trajs | std_benefit=0.019243 | |benefit|=0.012141 | g1=6685.243779, g2=23188.825324, infl=7243.814230, gradK=3763.403480
+  [Trace] iter=288 | mode=online-online | ret_eval=76.6556 | batch=4 trajs | std_benefit=0.018122 | |benefit|=0.012902 | g1=7973.746543, g2=12690.368073, infl=4890.174358, gradK=3771.835756
+  [Trace] iter=289 | mode=online-online | ret_eval=76.8601 | batch=4 trajs | std_benefit=0.019112 | |benefit|=0.014120 | g1=7029.622986, g2=15932.095729, infl=6440.004022, gradK=880.208080
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2085, ||ω̄||=0.2631, eigmin(Σ_k)=1.687e-05, rank(U_k)=1, eigmin(Ū)=4.899e-03, cond(Ū)=5.93e+04
+    Q_hat diag=[1.1424 1.1883]
+    R_hat diag=[1.1587]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 5411.5882 | Norm(Oracle): 4668.5237
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0096
+  [Trace] iter=290 | mode=online-online | ret_eval=76.6603 | batch=4 trajs | std_benefit=0.021737 | |benefit|=0.014863 | g1=7784.713479, g2=18670.418746, infl=5013.267405, gradK=5411.588212
+  iter  290: return =   76.8307 (disc:   46.2881) ± 0.1325 | K = [0.4998 0.4232]
+  [Trace] iter=291 | mode=online-online | ret_eval=76.3793 | batch=4 trajs | std_benefit=0.024114 | |benefit|=0.017253 | g1=7514.848758, g2=23109.010282, infl=6900.496111, gradK=2321.301063
+  [Trace] iter=292 | mode=online-online | ret_eval=75.8541 | batch=4 trajs | std_benefit=0.024047 | |benefit|=0.017398 | g1=6594.424440, g2=17035.865354, infl=5010.561868, gradK=7661.491627
+  [Trace] iter=293 | mode=online-online | ret_eval=75.5928 | batch=4 trajs | std_benefit=0.024490 | |benefit|=0.018376 | g1=7885.284225, g2=33222.218817, infl=10220.285136, gradK=8109.413876
+  [Trace] iter=294 | mode=online-online | ret_eval=75.7121 | batch=4 trajs | std_benefit=0.025418 | |benefit|=0.018631 | g1=8130.738663, g2=22325.191359, infl=10499.043402, gradK=1071.222377
+  [Trace] iter=295 | mode=online-online | ret_eval=75.5198 | batch=4 trajs | std_benefit=0.024895 | |benefit|=0.018308 | g1=8678.984140, g2=18335.533320, infl=8264.080867, gradK=1897.637723
+  [Trace] iter=296 | mode=online-online | ret_eval=75.8375 | batch=4 trajs | std_benefit=0.027476 | |benefit|=0.019266 | g1=8023.366686, g2=34001.466989, infl=9750.739799, gradK=781.640899
+  [Trace] iter=297 | mode=online-online | ret_eval=76.1174 | batch=4 trajs | std_benefit=0.029574 | |benefit|=0.019729 | g1=9620.944945, g2=30845.714524, infl=9285.864293, gradK=4790.713940
+  [Trace] iter=298 | mode=online-online | ret_eval=76.5347 | batch=4 trajs | std_benefit=0.026482 | |benefit|=0.019518 | g1=7011.887320, g2=17613.089978, infl=5387.202443, gradK=4045.286553
+  [Trace] iter=299 | mode=online-online | ret_eval=76.1443 | batch=4 trajs | std_benefit=0.025971 | |benefit|=0.018541 | g1=6970.477629, g2=16857.296618, infl=5415.362288, gradK=7284.211224
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2127, ||ω̄||=0.2666, eigmin(Σ_k)=1.509e-05, rank(U_k)=1, eigmin(Ū)=5.024e-03, cond(Ū)=5.98e+04
+    Q_hat diag=[1.1453 1.1899]
+    R_hat diag=[1.1615]
+    [Diagnostics] HG Cosine Sim: 0.9946 | Norm(Est): 1556.8804 | Norm(Oracle): 1358.2265
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0176
+  [Trace] iter=300 | mode=online-online | ret_eval=76.2732 | batch=4 trajs | std_benefit=0.026446 | |benefit|=0.018953 | g1=7793.377192, g2=15802.643394, infl=5808.134325, gradK=1556.880433
+  iter  300: return =   75.9827 (disc:   45.9419) ± 0.1742 | K = [0.6101 0.4578]
+  [Trace] iter=301 | mode=online-online | ret_eval=76.4278 | batch=4 trajs | std_benefit=0.024788 | |benefit|=0.018273 | g1=8114.251948, g2=27770.898559, infl=10919.325129, gradK=10668.487778
+  [Trace] iter=302 | mode=online-online | ret_eval=76.0335 | batch=4 trajs | std_benefit=0.023638 | |benefit|=0.017018 | g1=7125.101070, g2=22186.443316, infl=7327.194240, gradK=4432.615805
+  [Trace] iter=303 | mode=online-online | ret_eval=75.8501 | batch=4 trajs | std_benefit=0.025476 | |benefit|=0.018027 | g1=6532.659744, g2=19416.328506, infl=5733.041942, gradK=5993.812438
+  [Trace] iter=304 | mode=online-online | ret_eval=76.0845 | batch=4 trajs | std_benefit=0.025066 | |benefit|=0.017882 | g1=8896.490801, g2=24501.728193, infl=6645.867722, gradK=2515.830682
+  [Trace] iter=305 | mode=online-online | ret_eval=75.7466 | batch=4 trajs | std_benefit=0.027225 | |benefit|=0.018719 | g1=8251.676186, g2=27480.320895, infl=7613.150959, gradK=9896.048881
+  [Trace] iter=306 | mode=online-online | ret_eval=76.1494 | batch=4 trajs | std_benefit=0.025839 | |benefit|=0.018668 | g1=8999.332484, g2=21023.229353, infl=7012.761026, gradK=5010.615378
+  [Trace] iter=307 | mode=online-online | ret_eval=75.7853 | batch=4 trajs | std_benefit=0.026957 | |benefit|=0.019857 | g1=7235.887380, g2=21939.910781, infl=7352.534629, gradK=8321.234850
+  [Trace] iter=308 | mode=online-online | ret_eval=75.4850 | batch=4 trajs | std_benefit=0.028890 | |benefit|=0.020794 | g1=8709.681632, g2=25745.296848, infl=8476.025548, gradK=1300.716350
+  [Trace] iter=309 | mode=online-online | ret_eval=75.1649 | batch=4 trajs | std_benefit=0.031064 | |benefit|=0.021002 | g1=7598.421506, g2=47616.307521, infl=8508.150507, gradK=3279.199191
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1944, ||ω̄||=0.2615, eigmin(Σ_k)=1.842e-05, rank(U_k)=1, eigmin(Ū)=5.157e-03, cond(Ū)=6.02e+04
+    Q_hat diag=[1.1396 1.1904]
+    R_hat diag=[1.1557]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 5576.1883 | Norm(Oracle): 4884.8082
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0249
+  [Trace] iter=310 | mode=online-online | ret_eval=74.9970 | batch=4 trajs | std_benefit=0.027257 | |benefit|=0.019449 | g1=8891.738902, g2=39264.332136, infl=12433.002128, gradK=5576.188321
+  iter  310: return =   75.0105 (disc:   44.8593) ± 0.1012 | K = [0.7392 0.3438]
+  [Trace] iter=311 | mode=online-online | ret_eval=74.5361 | batch=4 trajs | std_benefit=0.028514 | |benefit|=0.020472 | g1=9665.945446, g2=39861.105497, infl=14750.575500, gradK=11017.560324
+  [Trace] iter=312 | mode=online-online | ret_eval=74.7278 | batch=4 trajs | std_benefit=0.032260 | |benefit|=0.020432 | g1=8951.202178, g2=30571.609050, infl=9255.588178, gradK=965.044383
+  [Trace] iter=313 | mode=online-online | ret_eval=75.1076 | batch=4 trajs | std_benefit=0.027815 | |benefit|=0.018718 | g1=9083.887742, g2=40382.369469, infl=10706.049899, gradK=3333.819097
+  [Trace] iter=314 | mode=online-online | ret_eval=74.6677 | batch=4 trajs | std_benefit=0.024200 | |benefit|=0.017201 | g1=7924.133671, g2=32108.821999, infl=11555.941653, gradK=5360.332026
+  [Trace] iter=315 | mode=online-online | ret_eval=75.1247 | batch=4 trajs | std_benefit=0.030717 | |benefit|=0.021385 | g1=9161.678105, g2=41953.060399, infl=10583.820762, gradK=11499.474509
+  [Trace] iter=316 | mode=online-online | ret_eval=75.2093 | batch=4 trajs | std_benefit=0.026462 | |benefit|=0.017726 | g1=8214.149370, g2=36077.090666, infl=9961.155659, gradK=4659.267148
+  [Trace] iter=317 | mode=online-online | ret_eval=75.6094 | batch=4 trajs | std_benefit=0.028127 | |benefit|=0.017917 | g1=7637.153205, g2=69422.245890, infl=15779.407793, gradK=37694.426943
+  [Trace] iter=318 | mode=online-online | ret_eval=75.9771 | batch=4 trajs | std_benefit=0.025958 | |benefit|=0.016562 | g1=7408.155854, g2=30818.232369, infl=10041.506917, gradK=1550.938836
+  [Trace] iter=319 | mode=online-online | ret_eval=75.6534 | batch=4 trajs | std_benefit=0.029288 | |benefit|=0.016317 | g1=8356.442400, g2=59162.630055, infl=11960.368300, gradK=40285.510221
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1855, ||ω̄||=0.2661, eigmin(Σ_k)=1.701e-05, rank(U_k)=1, eigmin(Ū)=5.238e-03, cond(Ū)=6.11e+04
+    Q_hat diag=[1.1433 1.1926]
+    R_hat diag=[1.1593]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 19909.2270 | Norm(Oracle): 17404.2261
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0226
+  [Trace] iter=320 | mode=online-online | ret_eval=75.8526 | batch=4 trajs | std_benefit=0.025947 | |benefit|=0.016457 | g1=7629.170579, g2=42378.951359, infl=10234.579133, gradK=19909.226964
+  iter  320: return =   75.5165 (disc:   45.6081) ± 0.1138 | K = [0.6724 0.4622]
+  [Trace] iter=321 | mode=online-online | ret_eval=75.7388 | batch=4 trajs | std_benefit=0.024160 | |benefit|=0.015061 | g1=7527.330486, g2=35955.543014, infl=10125.369200, gradK=2046.866734
+  [Trace] iter=322 | mode=online-online | ret_eval=75.9358 | batch=4 trajs | std_benefit=0.027139 | |benefit|=0.014783 | g1=8153.035993, g2=28993.453524, infl=9404.303193, gradK=3379.810758
+  [Trace] iter=323 | mode=online-online | ret_eval=75.6217 | batch=4 trajs | std_benefit=0.024527 | |benefit|=0.014479 | g1=8181.751181, g2=38082.274965, infl=10391.283518, gradK=6963.477080
+  [Trace] iter=324 | mode=online-online | ret_eval=76.0220 | batch=4 trajs | std_benefit=0.024784 | |benefit|=0.014613 | g1=8925.453011, g2=28832.080787, infl=7508.735594, gradK=2516.912902
+  [Trace] iter=325 | mode=online-online | ret_eval=75.7468 | batch=4 trajs | std_benefit=0.025689 | |benefit|=0.014161 | g1=7415.539088, g2=36359.018375, infl=6745.804017, gradK=11691.545068
+  [Trace] iter=326 | mode=online-online | ret_eval=75.9687 | batch=4 trajs | std_benefit=0.029970 | |benefit|=0.015050 | g1=8444.206442, g2=61371.793767, infl=11272.344112, gradK=16874.981427
+  [Trace] iter=327 | mode=online-online | ret_eval=76.0539 | batch=4 trajs | std_benefit=0.022813 | |benefit|=0.012749 | g1=7801.277798, g2=35350.513835, infl=7328.963479, gradK=4150.455550
+  [Trace] iter=328 | mode=online-online | ret_eval=76.3761 | batch=4 trajs | std_benefit=0.019724 | |benefit|=0.011755 | g1=7365.651797, g2=20766.367319, infl=6220.320183, gradK=3871.952038
+  [Trace] iter=329 | mode=online-online | ret_eval=76.1659 | batch=4 trajs | std_benefit=0.022370 | |benefit|=0.011392 | g1=7638.622766, g2=32580.514618, infl=7550.545719, gradK=6612.195317
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2069, ||ω̄||=0.2734, eigmin(Σ_k)=1.636e-05, rank(U_k)=1, eigmin(Ū)=5.385e-03, cond(Ū)=6.13e+04
+    Q_hat diag=[1.1482 1.1977]
+    R_hat diag=[1.164]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 10164.0407 | Norm(Oracle): 8981.2749
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0183
+  [Trace] iter=330 | mode=online-online | ret_eval=75.6839 | batch=4 trajs | std_benefit=0.025022 | |benefit|=0.013550 | g1=7377.436540, g2=35246.747391, infl=7669.835176, gradK=10164.040684
+  iter  330: return =   75.7902 (disc:   45.4516) ± 0.1930 | K = [0.6662 0.4056]
+  [Trace] iter=331 | mode=online-online | ret_eval=75.3955 | batch=4 trajs | std_benefit=0.029029 | |benefit|=0.014432 | g1=7514.221119, g2=47967.608161, infl=7648.106958, gradK=10114.162173
+  [Trace] iter=332 | mode=online-online | ret_eval=75.8023 | batch=4 trajs | std_benefit=0.026100 | |benefit|=0.014253 | g1=8601.647468, g2=37240.587820, infl=8373.802241, gradK=1650.622400
+  [Trace] iter=333 | mode=online-online | ret_eval=75.8087 | batch=4 trajs | std_benefit=0.026110 | |benefit|=0.014281 | g1=7809.137804, g2=39495.223449, infl=7733.227564, gradK=722.228474
+  [Trace] iter=334 | mode=online-online | ret_eval=76.1768 | batch=4 trajs | std_benefit=0.024646 | |benefit|=0.013336 | g1=8778.729786, g2=51495.192531, infl=8843.760908, gradK=11168.978323
+  [Trace] iter=335 | mode=online-online | ret_eval=75.9126 | batch=4 trajs | std_benefit=0.021730 | |benefit|=0.014521 | g1=8470.980841, g2=28341.011037, infl=8349.691968, gradK=3797.529611
+  [Trace] iter=336 | mode=online-online | ret_eval=75.4453 | batch=4 trajs | std_benefit=0.026931 | |benefit|=0.014525 | g1=7364.318945, g2=25305.870988, infl=6035.274520, gradK=3222.321728
+  [Trace] iter=337 | mode=online-online | ret_eval=75.3841 | batch=4 trajs | std_benefit=0.031594 | |benefit|=0.018208 | g1=7454.828666, g2=57890.960945, infl=9355.188731, gradK=8299.867625
+  [Trace] iter=338 | mode=online-online | ret_eval=75.5909 | batch=4 trajs | std_benefit=0.029513 | |benefit|=0.017680 | g1=7968.300868, g2=62272.560014, infl=12362.720320, gradK=24676.202864
+  [Trace] iter=339 | mode=online-online | ret_eval=75.6042 | batch=4 trajs | std_benefit=0.027506 | |benefit|=0.017403 | g1=7983.821776, g2=38212.376610, infl=8239.322488, gradK=11915.903202
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2015, ||ω̄||=0.2844, eigmin(Σ_k)=1.847e-05, rank(U_k)=1, eigmin(Ū)=5.533e-03, cond(Ū)=6.14e+04
+    Q_hat diag=[1.1561 1.205 ]
+    R_hat diag=[1.1716]
+    [Diagnostics] HG Cosine Sim: 0.9999 | Norm(Est): 5467.2831 | Norm(Oracle): 4818.4871
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0283
+  [Trace] iter=340 | mode=online-online | ret_eval=75.1404 | batch=4 trajs | std_benefit=0.025108 | |benefit|=0.016994 | g1=9165.917351, g2=23812.010810, infl=9553.214611, gradK=5467.283085
+  iter  340: return =   75.5273 (disc:   44.9914) ± 0.2148 | K = [0.7629 0.4003]
+  [Trace] iter=341 | mode=online-online | ret_eval=74.7166 | batch=4 trajs | std_benefit=0.026973 | |benefit|=0.018440 | g1=8467.168728, g2=43307.392162, infl=10241.002872, gradK=8672.164084
+  [Trace] iter=342 | mode=online-online | ret_eval=75.2623 | batch=4 trajs | std_benefit=0.029793 | |benefit|=0.021123 | g1=9303.457383, g2=36923.242807, infl=11149.772706, gradK=5790.409663
+  [Trace] iter=343 | mode=online-online | ret_eval=75.4838 | batch=4 trajs | std_benefit=0.030946 | |benefit|=0.020170 | g1=7873.021677, g2=45283.529257, infl=10659.331414, gradK=8135.896417
+  [Trace] iter=344 | mode=online-online | ret_eval=75.1207 | batch=4 trajs | std_benefit=0.033199 | |benefit|=0.022355 | g1=8382.282153, g2=36778.055692, infl=8578.828328, gradK=19275.490365
+  [Trace] iter=345 | mode=online-online | ret_eval=75.0133 | batch=4 trajs | std_benefit=0.034012 | |benefit|=0.022971 | g1=7126.295702, g2=27196.510046, infl=9636.427012, gradK=3545.209199
+  [Trace] iter=346 | mode=online-online | ret_eval=75.2847 | batch=4 trajs | std_benefit=0.032741 | |benefit|=0.023266 | g1=8420.641907, g2=45163.283764, infl=12639.553682, gradK=2851.597933
+  [Trace] iter=347 | mode=online-online | ret_eval=74.8056 | batch=4 trajs | std_benefit=0.033649 | |benefit|=0.023823 | g1=7496.771835, g2=27555.420838, infl=8478.442761, gradK=3866.152881
+  [Trace] iter=348 | mode=online-online | ret_eval=74.8213 | batch=4 trajs | std_benefit=0.036946 | |benefit|=0.024185 | g1=8541.114570, g2=46210.228910, infl=10841.659339, gradK=4544.781819
+  [Trace] iter=349 | mode=online-online | ret_eval=74.4962 | batch=4 trajs | std_benefit=0.031298 | |benefit|=0.023558 | g1=8252.022599, g2=48619.526383, infl=11989.122435, gradK=11742.283839
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1745, ||ω̄||=0.3019, eigmin(Σ_k)=2.014e-05, rank(U_k)=1, eigmin(Ū)=5.697e-03, cond(Ū)=6.14e+04
+    Q_hat diag=[1.1692 1.2156]
+    R_hat diag=[1.1842]
+    [Diagnostics] HG Cosine Sim: 0.9996 | Norm(Est): 4005.0402 | Norm(Oracle): 3439.2148
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0524
+  [Trace] iter=350 | mode=online-online | ret_eval=74.3508 | batch=4 trajs | std_benefit=0.034114 | |benefit|=0.025266 | g1=9064.769032, g2=40144.823335, infl=12606.270072, gradK=4005.040169
+  iter  350: return =   74.6329 (disc:   44.3032) ± 0.2781 | K = [0.8182 0.3104]
+  [Trace] iter=351 | mode=online-online | ret_eval=73.8085 | batch=4 trajs | std_benefit=0.031660 | |benefit|=0.022477 | g1=9678.867451, g2=38241.638599, infl=12096.855890, gradK=10898.088841
+  [Trace] iter=352 | mode=online-online | ret_eval=73.5553 | batch=4 trajs | std_benefit=0.032678 | |benefit|=0.022488 | g1=8957.390318, g2=56387.202852, infl=14319.931771, gradK=12765.451598
+  [Trace] iter=353 | mode=online-online | ret_eval=73.0633 | batch=4 trajs | std_benefit=0.034829 | |benefit|=0.022890 | g1=9171.811395, g2=95486.929085, infl=17842.320077, gradK=18924.380761
+  [Trace] iter=354 | mode=online-online | ret_eval=72.7935 | batch=4 trajs | std_benefit=0.031165 | |benefit|=0.019951 | g1=10181.956385, g2=57626.640290, infl=24345.411825, gradK=10556.639868
+  [Trace] iter=355 | mode=online-online | ret_eval=72.3558 | batch=4 trajs | std_benefit=0.040419 | |benefit|=0.023646 | g1=10741.490689, g2=156763.032778, infl=31061.212649, gradK=58724.572429
+  [Trace] iter=356 | mode=online-online | ret_eval=72.9056 | batch=4 trajs | std_benefit=0.036545 | |benefit|=0.023797 | g1=11145.964739, g2=190318.765081, infl=30620.929543, gradK=86875.794339
+  [Trace] iter=357 | mode=online-online | ret_eval=73.2444 | batch=4 trajs | std_benefit=0.033654 | |benefit|=0.022123 | g1=9562.537030, g2=82705.974090, infl=20171.247134, gradK=23979.510127
+  [Trace] iter=358 | mode=online-online | ret_eval=72.8359 | batch=4 trajs | std_benefit=0.035021 | |benefit|=0.021767 | g1=9603.558651, g2=83854.781466, infl=23336.175153, gradK=21605.036661
+  [Trace] iter=359 | mode=online-online | ret_eval=72.5212 | batch=4 trajs | std_benefit=0.034007 | |benefit|=0.023098 | g1=10500.453138, g2=44745.261870, infl=14048.897615, gradK=18298.688395
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1905, ||ω̄||=0.3270, eigmin(Σ_k)=1.961e-05, rank(U_k)=1, eigmin(Ū)=5.967e-03, cond(Ū)=6.01e+04
+    Q_hat diag=[1.1906 1.2267]
+    R_hat diag=[1.2049]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 19712.5751 | Norm(Oracle): 16585.0053
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.1804
+  [Trace] iter=360 | mode=online-online | ret_eval=72.9874 | batch=4 trajs | std_benefit=0.033686 | |benefit|=0.022451 | g1=11743.148501, g2=180985.669521, infl=34943.363860, gradK=19712.575077
+  iter  360: return =   72.5733 (disc:   43.1526) ± 0.0605 | K = [1.0222 0.2755]
+  [Trace] iter=361 | mode=online-online | ret_eval=72.7380 | batch=4 trajs | std_benefit=0.037136 | |benefit|=0.025885 | g1=11348.146544, g2=81646.522212, infl=18746.396125, gradK=12485.264761
+  [Trace] iter=362 | mode=online-online | ret_eval=72.4665 | batch=4 trajs | std_benefit=0.035643 | |benefit|=0.024325 | g1=10353.248382, g2=81385.976342, infl=25705.905669, gradK=14579.141113
+  [Trace] iter=363 | mode=online-online | ret_eval=72.9148 | batch=4 trajs | std_benefit=0.038630 | |benefit|=0.025180 | g1=10651.052751, g2=230164.124441, infl=43614.091613, gradK=31000.535647
+  [Trace] iter=364 | mode=online-online | ret_eval=73.1097 | batch=4 trajs | std_benefit=0.036496 | |benefit|=0.024976 | g1=10810.141777, g2=62961.166174, infl=19677.386443, gradK=12568.701912
+  [Trace] iter=365 | mode=online-online | ret_eval=73.5989 | batch=4 trajs | std_benefit=0.039822 | |benefit|=0.025293 | g1=10261.970211, g2=84127.082573, infl=18872.787494, gradK=20371.095378
+  [Trace] iter=366 | mode=online-online | ret_eval=73.1725 | batch=4 trajs | std_benefit=0.034038 | |benefit|=0.022843 | g1=8828.283942, g2=90833.323211, infl=15896.582692, gradK=50283.614905
+  [Trace] iter=367 | mode=online-online | ret_eval=72.6813 | batch=4 trajs | std_benefit=0.039801 | |benefit|=0.023955 | g1=9136.135985, g2=43346.767557, infl=10187.202154, gradK=18126.505859
+  [Trace] iter=368 | mode=online-online | ret_eval=72.3513 | batch=4 trajs | std_benefit=0.029719 | |benefit|=0.020783 | g1=11400.923985, g2=72419.284814, infl=22791.043653, gradK=27888.314492
+  [Trace] iter=369 | mode=online-online | ret_eval=72.8240 | batch=4 trajs | std_benefit=0.035441 | |benefit|=0.022554 | g1=10360.353093, g2=255258.646862, infl=41335.262609, gradK=21224.894136
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2004, ||ω̄||=0.3307, eigmin(Σ_k)=1.921e-05, rank(U_k)=1, eigmin(Ū)=6.080e-03, cond(Ū)=6.05e+04
+    Q_hat diag=[1.1949 1.2264]
+    R_hat diag=[1.209]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 41785.6971 | Norm(Oracle): 34871.0596
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.1519
+  [Trace] iter=370 | mode=online-online | ret_eval=72.3100 | batch=4 trajs | std_benefit=0.032215 | |benefit|=0.020805 | g1=10444.750831, g2=126874.855317, infl=30086.318137, gradK=41785.697138
+  iter  370: return =   72.7740 (disc:   42.5834) ± 0.1516 | K = [1.0116 0.1782]
+  [Trace] iter=371 | mode=online-online | ret_eval=72.7475 | batch=4 trajs | std_benefit=0.027144 | |benefit|=0.018652 | g1=11786.880473, g2=43068.134627, infl=19647.732621, gradK=11041.477630
+  [Trace] iter=372 | mode=online-online | ret_eval=72.1960 | batch=4 trajs | std_benefit=0.028710 | |benefit|=0.018717 | g1=11395.944306, g2=59343.433573, infl=23022.204031, gradK=2872.850688
+  [Trace] iter=373 | mode=online-online | ret_eval=71.7743 | batch=4 trajs | std_benefit=0.032638 | |benefit|=0.019195 | g1=10541.672585, g2=110756.231844, infl=20153.772841, gradK=23183.199021
+  [Trace] iter=374 | mode=online-online | ret_eval=72.3324 | batch=4 trajs | std_benefit=0.028072 | |benefit|=0.017339 | g1=11249.848516, g2=175027.348706, infl=37925.576848, gradK=74848.188474
+  [Trace] iter=375 | mode=online-online | ret_eval=71.7067 | batch=4 trajs | std_benefit=0.027950 | |benefit|=0.017195 | g1=11367.823266, g2=68481.911245, infl=18913.832619, gradK=6970.589832
+  [Trace] iter=376 | mode=online-online | ret_eval=72.0681 | batch=4 trajs | std_benefit=0.032900 | |benefit|=0.018241 | g1=10640.619554, g2=90423.870325, infl=24867.341180, gradK=44364.446428
+  [Trace] iter=377 | mode=online-online | ret_eval=72.6742 | batch=4 trajs | std_benefit=0.029866 | |benefit|=0.018861 | g1=9113.988868, g2=74485.633487, infl=16540.243668, gradK=20476.014145
+  [Trace] iter=378 | mode=online-online | ret_eval=72.2456 | batch=4 trajs | std_benefit=0.033255 | |benefit|=0.022275 | g1=10492.564873, g2=106463.093887, infl=25657.270960, gradK=22310.908408
+  [Trace] iter=379 | mode=online-online | ret_eval=72.2996 | batch=4 trajs | std_benefit=0.034938 | |benefit|=0.022925 | g1=9559.806302, g2=44215.014237, infl=13537.341537, gradK=8652.753773
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2057, ||ω̄||=0.3455, eigmin(Σ_k)=1.992e-05, rank(U_k)=1, eigmin(Ū)=6.208e-03, cond(Ū)=6.07e+04
+    Q_hat diag=[1.2073 1.2334]
+    R_hat diag=[1.221]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 66396.4504 | Norm(Oracle): 54393.3799
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.1644
+  [Trace] iter=380 | mode=online-online | ret_eval=71.7680 | batch=4 trajs | std_benefit=0.033763 | |benefit|=0.022553 | g1=11851.159772, g2=154249.206145, infl=36094.688690, gradK=66396.450448
+  iter  380: return =   72.3339 (disc:   42.1752) ± 0.1337 | K = [0.9629 0.0975]
+  [Trace] iter=381 | mode=online-online | ret_eval=71.8993 | batch=4 trajs | std_benefit=0.032978 | |benefit|=0.021821 | g1=10576.058162, g2=84686.523638, infl=21199.229949, gradK=8237.518284
+  [Trace] iter=382 | mode=online-online | ret_eval=72.4694 | batch=4 trajs | std_benefit=0.035479 | |benefit|=0.024471 | g1=11395.711655, g2=53915.458067, infl=19061.871720, gradK=15172.261949
+  [Trace] iter=383 | mode=online-online | ret_eval=72.7404 | batch=4 trajs | std_benefit=0.032340 | |benefit|=0.022338 | g1=11330.294739, g2=74832.621574, infl=24052.547605, gradK=24830.338991
+  [Trace] iter=384 | mode=online-online | ret_eval=73.2065 | batch=4 trajs | std_benefit=0.036338 | |benefit|=0.024964 | g1=11731.604590, g2=73197.674187, infl=23526.445796, gradK=15782.540279
+  [Trace] iter=385 | mode=online-online | ret_eval=72.8623 | batch=4 trajs | std_benefit=0.039360 | |benefit|=0.024658 | g1=9754.354294, g2=118837.300048, infl=20299.192832, gradK=5704.998979
+  [Trace] iter=386 | mode=online-online | ret_eval=73.3651 | batch=4 trajs | std_benefit=0.027922 | |benefit|=0.019914 | g1=9087.386188, g2=69224.685697, infl=20520.418489, gradK=25001.611871
+  [Trace] iter=387 | mode=online-online | ret_eval=72.8910 | batch=4 trajs | std_benefit=0.034033 | |benefit|=0.021100 | g1=9131.748595, g2=51454.841327, infl=13300.269888, gradK=12168.683442
+  [Trace] iter=388 | mode=online-online | ret_eval=72.4155 | batch=4 trajs | std_benefit=0.033936 | |benefit|=0.021067 | g1=11251.352898, g2=111348.726595, infl=30516.243877, gradK=7474.855334
+  [Trace] iter=389 | mode=online-online | ret_eval=72.7822 | batch=4 trajs | std_benefit=0.028669 | |benefit|=0.018695 | g1=8872.342358, g2=88143.540974, infl=24183.543797, gradK=16627.209359
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2146, ||ω̄||=0.3422, eigmin(Σ_k)=2.097e-05, rank(U_k)=1, eigmin(Ū)=6.330e-03, cond(Ū)=6.10e+04
+    Q_hat diag=[1.2052 1.2308]
+    R_hat diag=[1.2189]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 25097.1355 | Norm(Oracle): 20413.9716
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.1143
+  [Trace] iter=390 | mode=online-online | ret_eval=72.3079 | batch=4 trajs | std_benefit=0.025635 | |benefit|=0.017791 | g1=10476.717267, g2=53951.987384, infl=19609.602332, gradK=25097.135521
+  iter  390: return =   72.7728 (disc:   42.6690) ± 0.1510 | K = [0.8837 0.1114]
+  [Trace] iter=391 | mode=online-online | ret_eval=71.9749 | batch=4 trajs | std_benefit=0.029221 | |benefit|=0.016175 | g1=10773.054481, g2=55939.697120, infl=16576.799719, gradK=23626.087737
+  [Trace] iter=392 | mode=online-online | ret_eval=71.3875 | batch=4 trajs | std_benefit=0.028583 | |benefit|=0.018272 | g1=11778.667383, g2=56912.221573, infl=21591.920660, gradK=9949.419918
+  [Trace] iter=393 | mode=online-online | ret_eval=72.0445 | batch=4 trajs | std_benefit=0.030404 | |benefit|=0.019108 | g1=13237.116006, g2=176241.101647, infl=46021.014099, gradK=26755.519313
+  [Trace] iter=394 | mode=online-online | ret_eval=71.3809 | batch=4 trajs | std_benefit=0.028095 | |benefit|=0.018091 | g1=10665.457888, g2=61870.589583, infl=24352.292741, gradK=23079.861082
+  [Trace] iter=395 | mode=online-online | ret_eval=72.0324 | batch=4 trajs | std_benefit=0.026616 | |benefit|=0.017418 | g1=12848.428524, g2=96866.966991, infl=31291.177824, gradK=25099.172726
+  [Trace] iter=396 | mode=online-online | ret_eval=72.3686 | batch=4 trajs | std_benefit=0.029845 | |benefit|=0.018560 | g1=10031.029598, g2=37976.858501, infl=14563.405934, gradK=15120.319517
+  [Trace] iter=397 | mode=online-online | ret_eval=72.8219 | batch=4 trajs | std_benefit=0.029837 | |benefit|=0.019736 | g1=10392.468179, g2=63987.867710, infl=19905.488950, gradK=16449.730967
+  [Trace] iter=398 | mode=online-online | ret_eval=73.4156 | batch=4 trajs | std_benefit=0.033843 | |benefit|=0.021227 | g1=9089.653664, g2=75318.994764, infl=15833.821576, gradK=31278.866144
+  [Trace] iter=399 | mode=online-online | ret_eval=73.4647 | batch=4 trajs | std_benefit=0.032257 | |benefit|=0.019948 | g1=9940.740080, g2=61940.291689, infl=17557.218672, gradK=12372.676528
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2117, ||ω̄||=0.3393, eigmin(Σ_k)=1.734e-05, rank(U_k)=1, eigmin(Ū)=6.430e-03, cond(Ū)=6.15e+04
+    Q_hat diag=[1.2028 1.229 ]
+    R_hat diag=[1.2167]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 8947.3405 | Norm(Oracle): 7407.6187
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0826
+  [Trace] iter=400 | mode=online-online | ret_eval=73.0383 | batch=4 trajs | std_benefit=0.030596 | |benefit|=0.020350 | g1=9348.879226, g2=37150.870192, infl=14451.049560, gradK=8947.340453
+  iter  400: return =   73.3950 (disc:   43.2751) ± 0.0461 | K = [0.776  0.1145]
+  [Trace] iter=401 | mode=online-online | ret_eval=73.4684 | batch=4 trajs | std_benefit=0.033192 | |benefit|=0.019928 | g1=9803.949329, g2=99639.938213, infl=22227.597301, gradK=42971.446711
+  [Trace] iter=402 | mode=online-online | ret_eval=73.2931 | batch=4 trajs | std_benefit=0.030247 | |benefit|=0.021858 | g1=8055.650308, g2=36990.377170, infl=13617.538755, gradK=5914.351349
+  [Trace] iter=403 | mode=online-online | ret_eval=72.6580 | batch=4 trajs | std_benefit=0.034117 | |benefit|=0.023711 | g1=9329.463823, g2=47275.008979, infl=16113.499323, gradK=20164.016234
+  [Trace] iter=404 | mode=online-online | ret_eval=72.3308 | batch=4 trajs | std_benefit=0.034785 | |benefit|=0.023812 | g1=9478.669077, g2=93131.408515, infl=24170.840885, gradK=18709.074892
+  [Trace] iter=405 | mode=online-online | ret_eval=72.8971 | batch=4 trajs | std_benefit=0.035333 | |benefit|=0.023823 | g1=10159.239370, g2=93911.348634, infl=28928.231864, gradK=28790.619808
+  [Trace] iter=406 | mode=online-online | ret_eval=73.0425 | batch=4 trajs | std_benefit=0.027292 | |benefit|=0.020663 | g1=9306.615823, g2=59733.841008, infl=20609.717631, gradK=896.915449
+  [Trace] iter=407 | mode=online-online | ret_eval=73.6327 | batch=4 trajs | std_benefit=0.032142 | |benefit|=0.021178 | g1=9095.403555, g2=54061.214369, infl=13750.885960, gradK=8973.393697
+  [Trace] iter=408 | mode=online-online | ret_eval=73.1873 | batch=4 trajs | std_benefit=0.029757 | |benefit|=0.019204 | g1=9202.120400, g2=49445.390278, infl=14528.441041, gradK=15022.331009
+  [Trace] iter=409 | mode=online-online | ret_eval=73.5270 | batch=4 trajs | std_benefit=0.031081 | |benefit|=0.021290 | g1=9613.135948, g2=68810.903429, infl=15096.382565, gradK=23729.556503
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1893, ||ω̄||=0.5027, eigmin(Σ_k)=2.064e-05, rank(U_k)=1, eigmin(Ū)=3.886e-02, cond(Ū)=1.04e+04
+    Q_hat diag=[1.3287 1.3441]
+    R_hat diag=[1.3372]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 14810.8277 | Norm(Oracle): 11171.0598
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.1723
+  [Trace] iter=410 | mode=online-online | ret_eval=73.9986 | batch=4 trajs | std_benefit=0.028286 | |benefit|=0.017776 | g1=8649.188249, g2=75162.536539, infl=16352.960279, gradK=14810.827672
+  iter  410: return =   73.5863 (disc:   44.0854) ± 0.1259 | K = [0.6872 0.1759]
+  [Trace] iter=411 | mode=online-online | ret_eval=73.4981 | batch=4 trajs | std_benefit=0.026415 | |benefit|=0.016564 | g1=9199.273637, g2=66355.617866, infl=16685.746229, gradK=8669.316465
+  [Trace] iter=412 | mode=online-online | ret_eval=73.0442 | batch=4 trajs | std_benefit=0.025070 | |benefit|=0.015311 | g1=9575.433101, g2=60905.050116, infl=17616.093902, gradK=5654.175068
+  [Trace] iter=413 | mode=online-online | ret_eval=72.6418 | batch=4 trajs | std_benefit=0.024577 | |benefit|=0.015041 | g1=9207.967225, g2=59128.337603, infl=16529.600662, gradK=26949.590028
+  [Trace] iter=414 | mode=online-online | ret_eval=73.0770 | batch=4 trajs | std_benefit=0.021363 | |benefit|=0.012677 | g1=9917.578143, g2=108243.363443, infl=28394.278168, gradK=79568.891476
+  [Trace] iter=415 | mode=online-online | ret_eval=73.7442 | batch=4 trajs | std_benefit=0.022764 | |benefit|=0.011477 | g1=9529.332699, g2=87267.937538, infl=22267.812238, gradK=29335.007749
+  [Trace] iter=416 | mode=online-online | ret_eval=74.1166 | batch=4 trajs | std_benefit=0.029190 | |benefit|=0.012684 | g1=9156.574326, g2=106046.100255, infl=19925.954291, gradK=20794.351026
+  [Trace] iter=417 | mode=online-online | ret_eval=74.5860 | batch=4 trajs | std_benefit=0.019723 | |benefit|=0.010354 | g1=8694.804723, g2=51816.210375, infl=14189.737551, gradK=15326.558899
+  [Trace] iter=418 | mode=online-online | ret_eval=74.1908 | batch=4 trajs | std_benefit=0.020825 | |benefit|=0.010945 | g1=8378.467189, g2=72960.807801, infl=17041.259334, gradK=24627.990637
+  [Trace] iter=419 | mode=online-online | ret_eval=73.7083 | batch=4 trajs | std_benefit=0.024894 | |benefit|=0.011738 | g1=9201.140350, g2=70376.077492, infl=14021.452081, gradK=40676.558688
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1962, ||ω̄||=0.5049, eigmin(Σ_k)=1.815e-05, rank(U_k)=1, eigmin(Ū)=3.937e-02, cond(Ū)=1.05e+04
+    Q_hat diag=[1.3303 1.3462]
+    R_hat diag=[1.3387]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 29558.3348 | Norm(Oracle): 22355.7084
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.1726
+  [Trace] iter=420 | mode=online-online | ret_eval=73.1906 | batch=4 trajs | std_benefit=0.020575 | |benefit|=0.011324 | g1=9790.865313, g2=61885.298089, infl=18601.421971, gradK=29558.334790
+  iter  420: return =   73.7729 (disc:   43.3912) ± 0.1541 | K = [0.7708 0.1287]
+  [Trace] iter=421 | mode=online-online | ret_eval=73.6839 | batch=4 trajs | std_benefit=0.022271 | |benefit|=0.013026 | g1=9625.283712, g2=64594.232087, infl=18360.178458, gradK=25060.753689
+  [Trace] iter=422 | mode=online-online | ret_eval=73.2483 | batch=4 trajs | std_benefit=0.024849 | |benefit|=0.013259 | g1=9823.547611, g2=72024.755419, infl=17565.077443, gradK=7904.862909
+  [Trace] iter=423 | mode=online-online | ret_eval=73.5350 | batch=4 trajs | std_benefit=0.022536 | |benefit|=0.012797 | g1=9528.437823, g2=51969.839463, infl=15924.386119, gradK=2770.343282
+  [Trace] iter=424 | mode=online-online | ret_eval=73.9434 | batch=4 trajs | std_benefit=0.029317 | |benefit|=0.014722 | g1=8519.949346, g2=81810.418449, infl=17077.836256, gradK=8870.510707
+  [Trace] iter=425 | mode=online-online | ret_eval=74.5005 | batch=4 trajs | std_benefit=0.023344 | |benefit|=0.013573 | g1=8314.716343, g2=85463.980641, infl=18174.783671, gradK=18487.760991
+  [Trace] iter=426 | mode=online-online | ret_eval=74.1456 | batch=4 trajs | std_benefit=0.020218 | |benefit|=0.012874 | g1=8215.715108, g2=56547.086416, infl=17190.220335, gradK=7469.664075
+  [Trace] iter=427 | mode=online-online | ret_eval=73.5986 | batch=4 trajs | std_benefit=0.021000 | |benefit|=0.013047 | g1=8866.981670, g2=50026.655506, infl=16407.249788, gradK=10200.806675
+  [Trace] iter=428 | mode=online-online | ret_eval=73.1430 | batch=4 trajs | std_benefit=0.025331 | |benefit|=0.014681 | g1=8941.833243, g2=83461.106903, infl=20528.959451, gradK=25714.858028
+  [Trace] iter=429 | mode=online-online | ret_eval=72.8811 | batch=4 trajs | std_benefit=0.022915 | |benefit|=0.015249 | g1=9452.590724, g2=40673.753105, infl=15040.955640, gradK=1978.396032
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1936, ||ω̄||=0.5086, eigmin(Σ_k)=1.946e-05, rank(U_k)=1, eigmin(Ū)=3.979e-02, cond(Ū)=1.07e+04
+    Q_hat diag=[1.3329 1.3496]
+    R_hat diag=[1.3412]
+    [Diagnostics] HG Cosine Sim: 0.9997 | Norm(Est): 16905.7643 | Norm(Oracle): 12910.9458
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.2997
+  [Trace] iter=430 | mode=online-online | ret_eval=72.5219 | batch=4 trajs | std_benefit=0.026877 | |benefit|=0.015662 | g1=9142.963953, g2=105304.485347, infl=25403.789077, gradK=16905.764325
+  iter  430: return =   72.8571 (disc:   42.8195) ± 0.1772 | K = [0.8516 0.1073]
+  [Trace] iter=431 | mode=online-online | ret_eval=72.8525 | batch=4 trajs | std_benefit=0.025328 | |benefit|=0.014901 | g1=10417.384044, g2=87660.096108, infl=21785.603974, gradK=18693.086187
+  [Trace] iter=432 | mode=online-online | ret_eval=72.3889 | batch=4 trajs | std_benefit=0.022200 | |benefit|=0.012607 | g1=9870.359041, g2=117867.751328, infl=31197.366052, gradK=45821.902624
+  [Trace] iter=433 | mode=online-online | ret_eval=72.2742 | batch=4 trajs | std_benefit=0.023069 | |benefit|=0.011921 | g1=10276.870011, g2=63942.517449, infl=24423.556297, gradK=15846.589782
+  [Trace] iter=434 | mode=online-online | ret_eval=71.7957 | batch=4 trajs | std_benefit=0.024791 | |benefit|=0.012134 | g1=10773.306762, g2=106821.619362, infl=19505.550605, gradK=21593.993468
+  [Trace] iter=435 | mode=online-online | ret_eval=72.0212 | batch=4 trajs | std_benefit=0.024460 | |benefit|=0.013756 | g1=10426.723223, g2=142296.050001, infl=38164.581698, gradK=19401.380522
+  [Trace] iter=436 | mode=online-online | ret_eval=71.2430 | batch=4 trajs | std_benefit=0.021375 | |benefit|=0.012724 | g1=10733.711628, g2=90695.692243, infl=25593.241821, gradK=23082.074200
+  [Trace] iter=437 | mode=online-online | ret_eval=71.8612 | batch=4 trajs | std_benefit=0.023383 | |benefit|=0.013536 | g1=11123.891810, g2=96430.734337, infl=34465.525075, gradK=22325.405232
+  [Trace] iter=438 | mode=online-online | ret_eval=72.3060 | batch=4 trajs | std_benefit=0.026649 | |benefit|=0.015926 | g1=10287.537136, g2=138444.856543, infl=33719.622302, gradK=17303.818410
+  [Trace] iter=439 | mode=online-online | ret_eval=72.7422 | batch=4 trajs | std_benefit=0.022889 | |benefit|=0.015362 | g1=9612.018554, g2=75674.531411, infl=23588.779866, gradK=11487.823146
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1990, ||ω̄||=0.5063, eigmin(Σ_k)=1.884e-05, rank(U_k)=1, eigmin(Ū)=4.048e-02, cond(Ū)=1.07e+04
+    Q_hat diag=[1.3314 1.3474]
+    R_hat diag=[1.3397]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 26822.3388 | Norm(Oracle): 19775.5438
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.2906
+  [Trace] iter=440 | mode=online-online | ret_eval=73.1093 | batch=4 trajs | std_benefit=0.027700 | |benefit|=0.015356 | g1=9479.510858, g2=106597.484996, infl=23268.720226, gradK=26822.338780
+  iter  440: return =   72.7785 (disc:   43.3273) ± 0.1435 | K = [0.7948 0.1403]
+  [Trace] iter=441 | mode=online-online | ret_eval=72.8240 | batch=4 trajs | std_benefit=0.021879 | |benefit|=0.013110 | g1=9696.793642, g2=69500.102971, infl=22728.413498, gradK=6587.825350
+  [Trace] iter=442 | mode=online-online | ret_eval=73.2068 | batch=4 trajs | std_benefit=0.020966 | |benefit|=0.012251 | g1=10241.891052, g2=54632.894065, infl=20377.344152, gradK=8920.224835
+  [Trace] iter=443 | mode=online-online | ret_eval=72.6085 | batch=4 trajs | std_benefit=0.025938 | |benefit|=0.012816 | g1=9381.919574, g2=86469.041852, infl=17792.674442, gradK=12452.332727
+  [Trace] iter=444 | mode=online-online | ret_eval=72.2127 | batch=4 trajs | std_benefit=0.026486 | |benefit|=0.013284 | g1=9617.426309, g2=114522.187820, infl=22453.752839, gradK=33210.753673
+  [Trace] iter=445 | mode=online-online | ret_eval=71.6543 | batch=4 trajs | std_benefit=0.025289 | |benefit|=0.012918 | g1=9424.885373, g2=100933.581948, infl=22231.095169, gradK=43829.470427
+  [Trace] iter=446 | mode=online-online | ret_eval=71.1492 | batch=4 trajs | std_benefit=0.024413 | |benefit|=0.013090 | g1=9995.586078, g2=92216.957252, infl=36527.228756, gradK=38470.161153
+  [Trace] iter=447 | mode=online-online | ret_eval=71.7351 | batch=4 trajs | std_benefit=0.023691 | |benefit|=0.013323 | g1=10589.079683, g2=112350.767182, infl=29342.702769, gradK=37483.900480
+  [Trace] iter=448 | mode=online-online | ret_eval=72.2083 | batch=4 trajs | std_benefit=0.021412 | |benefit|=0.011733 | g1=10120.305450, g2=136674.667322, infl=32126.212155, gradK=64075.194359
+  [Trace] iter=449 | mode=online-online | ret_eval=71.6612 | batch=4 trajs | std_benefit=0.022435 | |benefit|=0.011293 | g1=10568.011706, g2=46956.714959, infl=16932.845647, gradK=5967.531084
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2071, ||ω̄||=0.5049, eigmin(Σ_k)=1.936e-05, rank(U_k)=1, eigmin(Ū)=4.107e-02, cond(Ū)=1.08e+04
+    Q_hat diag=[1.3305 1.346 ]
+    R_hat diag=[1.3388]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 60558.9098 | Norm(Oracle): 46116.7593
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.4385
+  [Trace] iter=450 | mode=online-online | ret_eval=72.1530 | batch=4 trajs | std_benefit=0.020089 | |benefit|=0.011403 | g1=11782.354598, g2=151579.454004, infl=39930.998720, gradK=60558.909830
+  iter  450: return =   71.6438 (disc:   42.5387) ± 0.0435 | K = [0.8739 0.0898]
+  [Trace] iter=451 | mode=online-online | ret_eval=72.7309 | batch=4 trajs | std_benefit=0.022395 | |benefit|=0.012508 | g1=9468.692859, g2=59354.129465, infl=18659.857834, gradK=23440.702812
+  [Trace] iter=452 | mode=online-online | ret_eval=72.1071 | batch=4 trajs | std_benefit=0.027710 | |benefit|=0.012013 | g1=9029.902301, g2=60252.167577, infl=15589.385356, gradK=6717.738419
+  [Trace] iter=453 | mode=online-online | ret_eval=72.7299 | batch=4 trajs | std_benefit=0.022657 | |benefit|=0.010777 | g1=9722.217045, g2=65482.791741, infl=19900.861436, gradK=9206.083705
+  [Trace] iter=454 | mode=online-online | ret_eval=73.3436 | batch=4 trajs | std_benefit=0.022122 | |benefit|=0.009972 | g1=10006.641063, g2=67792.814920, infl=20909.460841, gradK=16771.745741
+  [Trace] iter=455 | mode=online-online | ret_eval=72.8374 | batch=4 trajs | std_benefit=0.025099 | |benefit|=0.010888 | g1=10483.816466, g2=75687.860944, infl=22801.006203, gradK=8648.623763
+  [Trace] iter=456 | mode=online-online | ret_eval=72.3794 | batch=4 trajs | std_benefit=0.022745 | |benefit|=0.010265 | g1=10703.603733, g2=103323.256654, infl=28804.457713, gradK=20701.696881
+  [Trace] iter=457 | mode=online-online | ret_eval=72.7357 | batch=4 trajs | std_benefit=0.021027 | |benefit|=0.010874 | g1=10514.320365, g2=57017.106141, infl=24371.621581, gradK=10638.250454
+  [Trace] iter=458 | mode=online-online | ret_eval=73.2134 | batch=4 trajs | std_benefit=0.020357 | |benefit|=0.009752 | g1=8198.440854, g2=83330.361755, infl=24724.659977, gradK=17868.384589
+  [Trace] iter=459 | mode=online-online | ret_eval=73.6188 | batch=4 trajs | std_benefit=0.020415 | |benefit|=0.010255 | g1=8291.217132, g2=45754.723703, infl=17447.144235, gradK=12076.681737
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1892, ||ω̄||=0.5069, eigmin(Σ_k)=1.913e-05, rank(U_k)=1, eigmin(Ū)=4.136e-02, cond(Ū)=1.09e+04
+    Q_hat diag=[1.3319 1.348 ]
+    R_hat diag=[1.3401]
+    [Diagnostics] HG Cosine Sim: 0.9967 | Norm(Est): 3424.8628 | Norm(Oracle): 2895.2618
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.2000
+  [Trace] iter=460 | mode=online-online | ret_eval=73.3489 | batch=4 trajs | std_benefit=0.016928 | |benefit|=0.009235 | g1=9679.264884, g2=63669.166667, infl=20795.701280, gradK=3424.862803
+  iter  460: return =   73.8000 (disc:   43.5020) ± 0.1091 | K = [0.8085 0.169 ]
+  [Trace] iter=461 | mode=online-online | ret_eval=72.8633 | batch=4 trajs | std_benefit=0.021218 | |benefit|=0.009430 | g1=8138.232128, g2=61975.210198, infl=18511.653916, gradK=11539.348560
+  [Trace] iter=462 | mode=online-online | ret_eval=72.2082 | batch=4 trajs | std_benefit=0.021393 | |benefit|=0.010150 | g1=9151.960265, g2=55618.485459, infl=14230.842997, gradK=8120.823168
+  [Trace] iter=463 | mode=online-online | ret_eval=71.6703 | batch=4 trajs | std_benefit=0.018215 | |benefit|=0.010834 | g1=8853.965842, g2=63759.810574, infl=21852.155246, gradK=15689.851166
+  [Trace] iter=464 | mode=online-online | ret_eval=71.0692 | batch=4 trajs | std_benefit=0.021851 | |benefit|=0.012070 | g1=9989.550545, g2=83258.615988, infl=24670.608255, gradK=23793.555234
+  [Trace] iter=465 | mode=online-online | ret_eval=70.6697 | batch=4 trajs | std_benefit=0.026511 | |benefit|=0.013631 | g1=11128.156315, g2=106233.412462, infl=33815.102874, gradK=25318.397524
+  [Trace] iter=466 | mode=online-online | ret_eval=71.2488 | batch=4 trajs | std_benefit=0.026951 | |benefit|=0.013411 | g1=9989.185142, g2=164438.637275, infl=48483.721820, gradK=72231.459647
+  [Trace] iter=467 | mode=online-online | ret_eval=71.8291 | batch=4 trajs | std_benefit=0.027330 | |benefit|=0.014662 | g1=11542.650040, g2=147647.986829, infl=40713.101580, gradK=60763.613961
+  [Trace] iter=468 | mode=online-online | ret_eval=71.3284 | batch=4 trajs | std_benefit=0.021217 | |benefit|=0.013227 | g1=9478.535019, g2=63718.981412, infl=19425.044828, gradK=34225.413734
+  [Trace] iter=469 | mode=online-online | ret_eval=70.8779 | batch=4 trajs | std_benefit=0.023741 | |benefit|=0.014288 | g1=10517.149333, g2=67044.886501, infl=28171.501127, gradK=23121.194651
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1967, ||ω̄||=0.5040, eigmin(Σ_k)=2.156e-05, rank(U_k)=1, eigmin(Ū)=4.186e-02, cond(Ū)=1.10e+04
+    Q_hat diag=[1.3298 1.3451]
+    R_hat diag=[1.3382]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 39807.7301 | Norm(Oracle): 29506.3519
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.6791
+  [Trace] iter=470 | mode=online-online | ret_eval=70.3642 | batch=4 trajs | std_benefit=0.025990 | |benefit|=0.015043 | g1=10758.288381, g2=125914.012558, infl=47660.098129, gradK=39807.730070
+  iter  470: return =   70.9450 (disc:   40.9753) ± 0.1099 | K = [1.0419 0.0014]
+  [Trace] iter=471 | mode=online-online | ret_eval=69.5922 | batch=4 trajs | std_benefit=0.024767 | |benefit|=0.014344 | g1=12107.718040, g2=73983.770017, infl=35249.953292, gradK=28229.874505
+  [Trace] iter=472 | mode=online-online | ret_eval=70.3346 | batch=4 trajs | std_benefit=0.020762 | |benefit|=0.012116 | g1=13900.292781, g2=203769.317653, infl=56099.052955, gradK=10399.066257
+  [Trace] iter=473 | mode=online-online | ret_eval=70.9075 | batch=4 trajs | std_benefit=0.020408 | |benefit|=0.009274 | g1=12862.768244, g2=207716.492757, infl=63715.232617, gradK=35363.446614
+  [Trace] iter=474 | mode=online-online | ret_eval=71.3934 | batch=4 trajs | std_benefit=0.022676 | |benefit|=0.009342 | g1=11115.683189, g2=123361.584665, infl=26096.496118, gradK=8327.712746
+  [Trace] iter=475 | mode=online-online | ret_eval=71.8288 | batch=4 trajs | std_benefit=0.018155 | |benefit|=0.010156 | g1=11297.572843, g2=131986.412419, infl=45206.660982, gradK=21527.152058
+  [Trace] iter=476 | mode=online-online | ret_eval=71.6086 | batch=4 trajs | std_benefit=0.024607 | |benefit|=0.011148 | g1=10198.719866, g2=55175.539012, infl=21337.766722, gradK=13126.096105
+  [Trace] iter=477 | mode=online-online | ret_eval=72.1117 | batch=4 trajs | std_benefit=0.019862 | |benefit|=0.013988 | g1=10261.889716, g2=87021.780843, infl=38531.098005, gradK=24471.737402
+  [Trace] iter=478 | mode=online-online | ret_eval=72.6117 | batch=4 trajs | std_benefit=0.023907 | |benefit|=0.013228 | g1=9551.621412, g2=64728.522796, infl=27202.496055, gradK=15691.833000
+  [Trace] iter=479 | mode=online-online | ret_eval=72.1329 | batch=4 trajs | std_benefit=0.020451 | |benefit|=0.011562 | g1=9475.596415, g2=55039.684266, infl=25857.537151, gradK=9014.905444
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2011, ||ω̄||=0.5020, eigmin(Σ_k)=1.831e-05, rank(U_k)=1, eigmin(Ū)=4.228e-02, cond(Ū)=1.11e+04
+    Q_hat diag=[1.3285 1.3432]
+    R_hat diag=[1.3369]
+    [Diagnostics] HG Cosine Sim: 0.9934 | Norm(Est): 5388.7965 | Norm(Oracle): 3900.1856
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.3725
+  [Trace] iter=480 | mode=online-online | ret_eval=71.8590 | batch=4 trajs | std_benefit=0.017062 | |benefit|=0.009070 | g1=9315.925761, g2=49736.497294, infl=27645.080220, gradK=5388.796544
+  iter  480: return =   72.1836 (disc:   42.2831) ± 0.0403 | K = [0.8834 0.061 ]
+  [Trace] iter=481 | mode=online-online | ret_eval=72.3026 | batch=4 trajs | std_benefit=0.022320 | |benefit|=0.010042 | g1=10183.113714, g2=67241.494787, infl=23638.782742, gradK=14789.710959
+  [Trace] iter=482 | mode=online-online | ret_eval=72.1001 | batch=4 trajs | std_benefit=0.018745 | |benefit|=0.009327 | g1=9745.198916, g2=39020.119516, infl=18276.829307, gradK=6796.316824
+  [Trace] iter=483 | mode=online-online | ret_eval=72.5504 | batch=4 trajs | std_benefit=0.018682 | |benefit|=0.010842 | g1=10022.631716, g2=40069.912619, infl=22003.379131, gradK=9382.745911
+  [Trace] iter=484 | mode=online-online | ret_eval=73.2138 | batch=4 trajs | std_benefit=0.025739 | |benefit|=0.013125 | g1=9116.468425, g2=66305.016942, infl=20981.247582, gradK=1987.679647
+  [Trace] iter=485 | mode=online-online | ret_eval=73.5857 | batch=4 trajs | std_benefit=0.022199 | |benefit|=0.012883 | g1=8389.139711, g2=65676.851049, infl=21225.339416, gradK=16510.454453
+  [Trace] iter=486 | mode=online-online | ret_eval=73.8786 | batch=4 trajs | std_benefit=0.035520 | |benefit|=0.013484 | g1=8680.354293, g2=84255.448955, infl=16210.167512, gradK=37840.025151
+  [Trace] iter=487 | mode=online-online | ret_eval=73.4420 | batch=4 trajs | std_benefit=0.019912 | |benefit|=0.011460 | g1=8458.391697, g2=77007.067239, infl=22707.379032, gradK=7109.151395
+  [Trace] iter=488 | mode=online-online | ret_eval=73.0421 | batch=4 trajs | std_benefit=0.017952 | |benefit|=0.010000 | g1=7781.591320, g2=43832.959594, infl=14471.235662, gradK=9913.941715
+  [Trace] iter=489 | mode=online-online | ret_eval=72.5557 | batch=4 trajs | std_benefit=0.017250 | |benefit|=0.006911 | g1=8830.384553, g2=45510.161038, infl=17384.766519, gradK=7838.880989
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2063, ||ω̄||=0.5036, eigmin(Σ_k)=2.017e-05, rank(U_k)=1, eigmin(Ū)=4.252e-02, cond(Ū)=1.13e+04
+    Q_hat diag=[1.3297 1.3446]
+    R_hat diag=[1.338]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 12525.4204 | Norm(Oracle): 9509.6405
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.3167
+  [Trace] iter=490 | mode=online-online | ret_eval=73.0375 | batch=4 trajs | std_benefit=0.019489 | |benefit|=0.011284 | g1=10186.354592, g2=56982.627076, infl=26965.843800, gradK=12525.420414
+  iter  490: return =   72.5580 (disc:   43.2645) ± 0.1594 | K = [0.8402 0.1648]
+  [Trace] iter=491 | mode=online-online | ret_eval=73.5230 | batch=4 trajs | std_benefit=0.032272 | |benefit|=0.021051 | g1=10636.510999, g2=105027.305659, infl=22318.030901, gradK=59315.788272
+  [Trace] iter=492 | mode=online-online | ret_eval=73.0775 | batch=4 trajs | std_benefit=0.030626 | |benefit|=0.022700 | g1=9037.171424, g2=82355.604868, infl=23746.804642, gradK=31162.146913
+  [Trace] iter=493 | mode=online-online | ret_eval=72.6229 | batch=4 trajs | std_benefit=0.041672 | |benefit|=0.028973 | g1=8961.710212, g2=44446.810758, infl=16775.906284, gradK=11121.216459
+  [Trace] iter=494 | mode=online-online | ret_eval=72.9977 | batch=4 trajs | std_benefit=0.037606 | |benefit|=0.027249 | g1=9809.263133, g2=72353.528341, infl=27427.659040, gradK=12960.297848
+  [Trace] iter=495 | mode=online-online | ret_eval=73.4027 | batch=4 trajs | std_benefit=0.039453 | |benefit|=0.029563 | g1=9365.756240, g2=100212.280966, infl=28646.523025, gradK=37157.197854
+  [Trace] iter=496 | mode=online-online | ret_eval=73.8481 | batch=4 trajs | std_benefit=0.040199 | |benefit|=0.030137 | g1=7760.160093, g2=68118.103982, infl=25389.339172, gradK=12831.759829
+  [Trace] iter=497 | mode=online-online | ret_eval=74.2414 | batch=4 trajs | std_benefit=0.039838 | |benefit|=0.029251 | g1=7560.101611, g2=41458.134094, infl=15677.351237, gradK=6234.950861
+  [Trace] iter=498 | mode=online-online | ret_eval=73.9186 | batch=4 trajs | std_benefit=0.032820 | |benefit|=0.024851 | g1=6941.351874, g2=20189.872452, infl=9499.216814, gradK=4312.818968
+  [Trace] iter=499 | mode=online-online | ret_eval=73.5001 | batch=4 trajs | std_benefit=0.036248 | |benefit|=0.025326 | g1=7875.766467, g2=41107.161774, infl=14271.264502, gradK=15332.174428
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1959, ||ω̄||=0.5012, eigmin(Σ_k)=1.904e-05, rank(U_k)=1, eigmin(Ū)=4.271e-02, cond(Ū)=1.15e+04
+    Q_hat diag=[1.3279 1.3423]
+    R_hat diag=[1.3364]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 31513.8480 | Norm(Oracle): 23922.0716
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.2039
+  [Trace] iter=500 | mode=online-online | ret_eval=73.8932 | batch=4 trajs | std_benefit=0.034801 | |benefit|=0.024068 | g1=8841.691622, g2=52027.713009, infl=15816.869549, gradK=31513.847966
+  iter  500: return =   73.3403 (disc:   43.9811) ± 0.1300 | K = [0.7531 0.204 ]
+  [Trace] iter=501 | mode=online-online | ret_eval=73.4017 | batch=4 trajs | std_benefit=0.039103 | |benefit|=0.028552 | g1=8260.422996, g2=91683.934178, infl=25078.702383, gradK=6144.396410
+  [Trace] iter=502 | mode=online-online | ret_eval=73.0805 | batch=4 trajs | std_benefit=0.041103 | |benefit|=0.029783 | g1=7934.525451, g2=78733.573460, infl=21060.180680, gradK=28676.087854
+  [Trace] iter=503 | mode=online-online | ret_eval=72.9519 | batch=4 trajs | std_benefit=0.039371 | |benefit|=0.028984 | g1=7671.961030, g2=43879.875056, infl=20252.112281, gradK=2807.030399
+  [Trace] iter=504 | mode=online-online | ret_eval=73.3729 | batch=4 trajs | std_benefit=0.047500 | |benefit|=0.034201 | g1=9075.824026, g2=67708.217734, infl=18672.513942, gradK=26280.036881
+  [Trace] iter=505 | mode=online-online | ret_eval=73.4098 | batch=4 trajs | std_benefit=0.052850 | |benefit|=0.039420 | g1=9180.383935, g2=48064.430389, infl=18940.620615, gradK=6055.517504
+  [Trace] iter=506 | mode=online-online | ret_eval=73.0031 | batch=4 trajs | std_benefit=0.062642 | |benefit|=0.046490 | g1=8376.828269, g2=37230.373907, infl=15066.139199, gradK=6143.297048
+  [Trace] iter=507 | mode=online-online | ret_eval=72.7754 | batch=4 trajs | std_benefit=0.055395 | |benefit|=0.039771 | g1=8273.916951, g2=48573.383256, infl=16742.661510, gradK=4268.583802
+  [Trace] iter=508 | mode=online-online | ret_eval=72.1735 | batch=4 trajs | std_benefit=0.053144 | |benefit|=0.038075 | g1=9511.678091, g2=97536.248690, infl=23643.170078, gradK=32968.293565
+  [Trace] iter=509 | mode=online-online | ret_eval=71.7903 | batch=4 trajs | std_benefit=0.050751 | |benefit|=0.035171 | g1=8645.173755, g2=88706.717840, infl=23257.731941, gradK=3182.927733
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1919, ||ω̄||=0.5008, eigmin(Σ_k)=2.026e-05, rank(U_k)=1, eigmin(Ū)=4.283e-02, cond(Ū)=1.17e+04
+    Q_hat diag=[1.3276 1.3421]
+    R_hat diag=[1.336]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 35622.0700 | Norm(Oracle): 26707.3671
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.4389
+  [Trace] iter=510 | mode=online-online | ret_eval=72.1837 | batch=4 trajs | std_benefit=0.045172 | |benefit|=0.031424 | g1=8891.001188, g2=61391.951715, infl=18544.795554, gradK=35622.070001
+  iter  510: return =   71.6679 (disc:   42.5594) ± 0.1475 | K = [0.877  0.0924]
+  [Trace] iter=511 | mode=online-online | ret_eval=72.5907 | batch=4 trajs | std_benefit=0.040226 | |benefit|=0.029687 | g1=9042.225058, g2=53335.927817, infl=22094.769237, gradK=1618.626557
+  [Trace] iter=512 | mode=online-online | ret_eval=72.5750 | batch=4 trajs | std_benefit=0.037641 | |benefit|=0.026723 | g1=8391.218472, g2=143110.408921, infl=36684.164673, gradK=2379.258163
+  [Trace] iter=513 | mode=online-online | ret_eval=72.7220 | batch=4 trajs | std_benefit=0.039796 | |benefit|=0.028426 | g1=8699.762572, g2=112025.458790, infl=32722.301342, gradK=8484.330999
+  [Trace] iter=514 | mode=online-online | ret_eval=73.0864 | batch=4 trajs | std_benefit=0.037153 | |benefit|=0.027397 | g1=8848.199975, g2=78510.361325, infl=29504.193764, gradK=42563.134360
+  [Trace] iter=515 | mode=online-online | ret_eval=72.6682 | batch=4 trajs | std_benefit=0.046221 | |benefit|=0.034210 | g1=7503.656991, g2=55023.679036, infl=18710.228471, gradK=5551.758154
+  [Trace] iter=516 | mode=online-online | ret_eval=72.2069 | batch=4 trajs | std_benefit=0.039538 | |benefit|=0.029059 | g1=8551.808653, g2=61409.565657, infl=22444.915842, gradK=19530.626275
+  [Trace] iter=517 | mode=online-online | ret_eval=71.6835 | batch=4 trajs | std_benefit=0.041178 | |benefit|=0.028421 | g1=10337.308674, g2=101753.116336, infl=27768.577669, gradK=30922.041572
+  [Trace] iter=518 | mode=online-online | ret_eval=71.1045 | batch=4 trajs | std_benefit=0.029248 | |benefit|=0.021975 | g1=9798.817475, g2=81620.744615, infl=35540.723627, gradK=998.624213
+  [Trace] iter=519 | mode=online-online | ret_eval=71.5656 | batch=4 trajs | std_benefit=0.034812 | |benefit|=0.024854 | g1=8604.066376, g2=58715.512112, infl=20153.130048, gradK=19120.477073
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1859, ||ω̄||=0.5005, eigmin(Σ_k)=2.014e-05, rank(U_k)=1, eigmin(Ū)=4.304e-02, cond(Ū)=1.18e+04
+    Q_hat diag=[1.3274 1.3419]
+    R_hat diag=[1.3358]
+    [Diagnostics] HG Cosine Sim: 0.9997 | Norm(Est): 5841.5379 | Norm(Oracle): 4715.1997
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.4429
+  [Trace] iter=520 | mode=online-online | ret_eval=72.1583 | batch=4 trajs | std_benefit=0.034806 | |benefit|=0.024584 | g1=10164.850152, g2=55082.450569, infl=22894.976445, gradK=5841.537923
+  iter  520: return =   71.6363 (disc:   42.5193) ± 0.0839 | K = [0.908  0.1061]
+  [Trace] iter=521 | mode=online-online | ret_eval=71.5939 | batch=4 trajs | std_benefit=0.041360 | |benefit|=0.026968 | g1=8919.221510, g2=83610.731661, infl=26374.258873, gradK=47120.713214
+  [Trace] iter=522 | mode=online-online | ret_eval=72.2594 | batch=4 trajs | std_benefit=0.039030 | |benefit|=0.026884 | g1=9212.334436, g2=172811.420728, infl=38175.877600, gradK=94776.537012
+  [Trace] iter=523 | mode=online-online | ret_eval=72.6902 | batch=4 trajs | std_benefit=0.041995 | |benefit|=0.029689 | g1=8825.835752, g2=120412.817585, infl=23863.923664, gradK=28554.382118
+  [Trace] iter=524 | mode=online-online | ret_eval=72.1541 | batch=4 trajs | std_benefit=0.039332 | |benefit|=0.029296 | g1=8366.037280, g2=58815.987900, infl=23466.139987, gradK=16070.045955
+  [Trace] iter=525 | mode=online-online | ret_eval=71.5149 | batch=4 trajs | std_benefit=0.038912 | |benefit|=0.027460 | g1=9138.421152, g2=47054.804023, infl=21509.346326, gradK=15970.002501
+  [Trace] iter=526 | mode=online-online | ret_eval=72.0952 | batch=4 trajs | std_benefit=0.038287 | |benefit|=0.027973 | g1=9082.364987, g2=63982.829899, infl=27043.649394, gradK=7475.017643
+  [Trace] iter=527 | mode=online-online | ret_eval=72.0545 | batch=4 trajs | std_benefit=0.043363 | |benefit|=0.030787 | g1=10092.728196, g2=159891.731757, infl=35151.717611, gradK=17043.045098
+  [Trace] iter=528 | mode=online-online | ret_eval=72.7282 | batch=4 trajs | std_benefit=0.049104 | |benefit|=0.034441 | g1=9174.603162, g2=111825.271862, infl=29802.905522, gradK=54141.581452
+  [Trace] iter=529 | mode=online-online | ret_eval=72.9889 | batch=4 trajs | std_benefit=0.059516 | |benefit|=0.042522 | g1=8487.724604, g2=26860.105587, infl=16382.665815, gradK=3031.303503
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2007, ||ω̄||=0.4986, eigmin(Σ_k)=1.854e-05, rank(U_k)=1, eigmin(Ū)=4.323e-02, cond(Ū)=1.20e+04
+    Q_hat diag=[1.326  1.3403]
+    R_hat diag=[1.3345]
+    [Diagnostics] HG Cosine Sim: 0.9996 | Norm(Est): 10366.0704 | Norm(Oracle): 7669.5951
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.2797
+  [Trace] iter=530 | mode=online-online | ret_eval=73.3967 | batch=4 trajs | std_benefit=0.064298 | |benefit|=0.046570 | g1=9538.216046, g2=85061.967806, infl=25860.896840, gradK=10366.070416
+  iter  530: return =   73.0199 (disc:   43.5246) ± 0.3636 | K = [0.8786 0.2271]
+  [Trace] iter=531 | mode=online-online | ret_eval=73.7218 | batch=4 trajs | std_benefit=0.072398 | |benefit|=0.053586 | g1=8395.232774, g2=58112.139706, infl=25092.373902, gradK=7816.988421
+  [Trace] iter=532 | mode=online-online | ret_eval=73.9790 | batch=4 trajs | std_benefit=0.066659 | |benefit|=0.047980 | g1=9089.137227, g2=32554.796378, infl=11702.688094, gradK=1630.219752
+  [Trace] iter=533 | mode=online-online | ret_eval=74.2121 | batch=4 trajs | std_benefit=0.068372 | |benefit|=0.049163 | g1=6754.366331, g2=21317.990675, infl=9016.715777, gradK=1991.339813
+  [Trace] iter=534 | mode=online-online | ret_eval=74.5117 | batch=4 trajs | std_benefit=0.075208 | |benefit|=0.052871 | g1=7211.487171, g2=44653.299023, infl=14535.603812, gradK=3139.753730
+  [Trace] iter=535 | mode=online-online | ret_eval=74.9572 | batch=4 trajs | std_benefit=0.068024 | |benefit|=0.049987 | g1=7612.116378, g2=31954.232007, infl=16304.446146, gradK=5699.256632
+  [Trace] iter=536 | mode=online-online | ret_eval=74.6557 | batch=4 trajs | std_benefit=0.069647 | |benefit|=0.050030 | g1=6622.930072, g2=25952.969337, infl=9969.771410, gradK=6072.142660
+  [Trace] iter=537 | mode=online-online | ret_eval=74.8996 | batch=4 trajs | std_benefit=0.072227 | |benefit|=0.052975 | g1=7048.994010, g2=40637.675047, infl=16726.035605, gradK=10719.039594
+  [Trace] iter=538 | mode=online-online | ret_eval=74.5270 | batch=4 trajs | std_benefit=0.079030 | |benefit|=0.058448 | g1=6900.049791, g2=25040.755502, infl=9507.060043, gradK=7814.951113
+  [Trace] iter=539 | mode=online-online | ret_eval=74.7924 | batch=4 trajs | std_benefit=0.082581 | |benefit|=0.060024 | g1=8004.759788, g2=28134.383220, infl=17919.266316, gradK=3807.536904
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1935, ||ω̄||=0.5008, eigmin(Σ_k)=1.660e-05, rank(U_k)=1, eigmin(Ū)=4.331e-02, cond(Ū)=1.22e+04
+    Q_hat diag=[1.3276 1.3422]
+    R_hat diag=[1.3359]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 35600.4186 | Norm(Oracle): 27487.7914
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.1713
+  [Trace] iter=540 | mode=online-online | ret_eval=74.2506 | batch=4 trajs | std_benefit=0.085301 | |benefit|=0.060737 | g1=7621.205617, g2=80462.886942, infl=15439.941919, gradK=35600.418637
+  iter  540: return =   74.7810 (disc:   44.2512) ± 0.1359 | K = [0.897  0.3891]
+  [Trace] iter=541 | mode=online-online | ret_eval=73.9792 | batch=4 trajs | std_benefit=0.070803 | |benefit|=0.051444 | g1=7344.975666, g2=51899.095680, infl=14440.119233, gradK=14883.183922
+  [Trace] iter=542 | mode=online-online | ret_eval=73.6593 | batch=4 trajs | std_benefit=0.077839 | |benefit|=0.056525 | g1=8700.059139, g2=108605.492171, infl=19145.221296, gradK=14016.954399
+  [Trace] iter=543 | mode=online-online | ret_eval=74.1879 | batch=4 trajs | std_benefit=0.079043 | |benefit|=0.055136 | g1=8023.632849, g2=60265.857725, infl=14367.520144, gradK=16131.744570
+  [Trace] iter=544 | mode=online-online | ret_eval=73.7265 | batch=4 trajs | std_benefit=0.080710 | |benefit|=0.057822 | g1=6778.816850, g2=66454.126545, infl=17166.793987, gradK=36521.954681
+  [Trace] iter=545 | mode=online-online | ret_eval=73.4319 | batch=4 trajs | std_benefit=0.071444 | |benefit|=0.051386 | g1=7832.520919, g2=63331.327325, infl=19886.414145, gradK=22234.478041
+  [Trace] iter=546 | mode=online-online | ret_eval=73.6343 | batch=4 trajs | std_benefit=0.070590 | |benefit|=0.049503 | g1=9362.921405, g2=96403.879989, infl=26468.838138, gradK=49674.697067
+  [Trace] iter=547 | mode=online-online | ret_eval=73.9195 | batch=4 trajs | std_benefit=0.066199 | |benefit|=0.048145 | g1=7999.539550, g2=95001.673515, infl=23024.390983, gradK=6234.420547
+  [Trace] iter=548 | mode=online-online | ret_eval=74.2791 | batch=4 trajs | std_benefit=0.062156 | |benefit|=0.044679 | g1=8181.937421, g2=64107.023412, infl=21737.245222, gradK=37148.066574
+  [Trace] iter=549 | mode=online-online | ret_eval=73.8690 | batch=4 trajs | std_benefit=0.072180 | |benefit|=0.052569 | g1=7821.361010, g2=125473.321816, infl=27688.354576, gradK=34329.346864
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1947, ||ω̄||=0.5034, eigmin(Σ_k)=1.864e-05, rank(U_k)=1, eigmin(Ū)=4.348e-02, cond(Ū)=1.24e+04
+    Q_hat diag=[1.3295 1.3446]
+    R_hat diag=[1.3378]
+    [Diagnostics] HG Cosine Sim: 0.9999 | Norm(Est): 19128.5107 | Norm(Oracle): 14776.8363
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.2971
+  [Trace] iter=550 | mode=online-online | ret_eval=73.4629 | batch=4 trajs | std_benefit=0.077142 | |benefit|=0.055987 | g1=8130.643589, g2=86569.394604, infl=22941.235003, gradK=19128.510724
+  iter  550: return =   73.9706 (disc:   43.5445) ± 0.2199 | K = [1.0335 0.3539]
+  [Trace] iter=551 | mode=online-online | ret_eval=73.9579 | batch=4 trajs | std_benefit=0.069133 | |benefit|=0.049011 | g1=7294.696371, g2=46338.899389, infl=15229.286071, gradK=15343.661786
+  [Trace] iter=552 | mode=online-online | ret_eval=73.5793 | batch=4 trajs | std_benefit=0.061729 | |benefit|=0.043498 | g1=8336.830607, g2=68698.388630, infl=23086.814552, gradK=15882.212889
+  [Trace] iter=553 | mode=online-online | ret_eval=73.1461 | batch=4 trajs | std_benefit=0.060951 | |benefit|=0.044098 | g1=7841.424160, g2=44667.375575, infl=17777.249613, gradK=13042.688466
+  [Trace] iter=554 | mode=online-online | ret_eval=72.7798 | batch=4 trajs | std_benefit=0.058932 | |benefit|=0.042036 | g1=8667.227670, g2=110492.285664, infl=27133.862483, gradK=58435.700978
+  [Trace] iter=555 | mode=online-online | ret_eval=72.8529 | batch=4 trajs | std_benefit=0.051994 | |benefit|=0.037431 | g1=8879.098493, g2=81226.552972, infl=31384.603132, gradK=2933.951726
+  [Trace] iter=556 | mode=online-online | ret_eval=73.1209 | batch=4 trajs | std_benefit=0.055955 | |benefit|=0.040021 | g1=9492.684615, g2=101630.012511, infl=27236.565022, gradK=25526.132178
+  [Trace] iter=557 | mode=online-online | ret_eval=72.6725 | batch=4 trajs | std_benefit=0.062079 | |benefit|=0.044441 | g1=9817.183433, g2=132892.825046, infl=25747.829787, gradK=4857.340911
+  [Trace] iter=558 | mode=online-online | ret_eval=72.2253 | batch=4 trajs | std_benefit=0.060839 | |benefit|=0.044513 | g1=8443.010297, g2=57227.552291, infl=23518.316919, gradK=8471.363756
+  [Trace] iter=559 | mode=online-online | ret_eval=72.4158 | batch=4 trajs | std_benefit=0.063576 | |benefit|=0.045035 | g1=8389.316929, g2=70352.937466, infl=27264.514334, gradK=8754.980237
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1855, ||ω̄||=0.5033, eigmin(Σ_k)=1.965e-05, rank(U_k)=1, eigmin(Ū)=4.371e-02, cond(Ū)=1.25e+04
+    Q_hat diag=[1.3293 1.3446]
+    R_hat diag=[1.3376]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 19028.4871 | Norm(Oracle): 14179.0074
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.5735
+  [Trace] iter=560 | mode=online-online | ret_eval=72.8434 | batch=4 trajs | std_benefit=0.078073 | |benefit|=0.053743 | g1=9706.603928, g2=59836.493973, infl=24684.846103, gradK=19028.487061
+  iter  560: return =   72.5168 (disc:   43.0095) ± 0.1197 | K = [1.0481 0.2618]
+  [Trace] iter=561 | mode=online-online | ret_eval=73.2986 | batch=4 trajs | std_benefit=0.087180 | |benefit|=0.061380 | g1=10196.420864, g2=86300.819444, infl=31737.298894, gradK=13975.945474
+  [Trace] iter=562 | mode=online-online | ret_eval=72.6699 | batch=4 trajs | std_benefit=0.085817 | |benefit|=0.059080 | g1=7267.426449, g2=56598.173075, infl=23999.091187, gradK=17187.344198
+  [Trace] iter=563 | mode=online-online | ret_eval=72.2594 | batch=4 trajs | std_benefit=0.090406 | |benefit|=0.063793 | g1=9378.848018, g2=52155.732492, infl=24234.868257, gradK=10269.129440
+  [Trace] iter=564 | mode=online-online | ret_eval=71.8698 | batch=4 trajs | std_benefit=0.094999 | |benefit|=0.064678 | g1=9501.903297, g2=89673.889814, infl=39982.863150, gradK=19692.117204
+  [Trace] iter=565 | mode=online-online | ret_eval=71.3393 | batch=4 trajs | std_benefit=0.088863 | |benefit|=0.062445 | g1=8502.994023, g2=57888.930668, infl=24471.697825, gradK=13025.749425
+  [Trace] iter=566 | mode=online-online | ret_eval=71.7290 | batch=4 trajs | std_benefit=0.080573 | |benefit|=0.057116 | g1=9976.464032, g2=169800.396649, infl=53101.497221, gradK=14831.584481
+  [Trace] iter=567 | mode=online-online | ret_eval=72.3002 | batch=4 trajs | std_benefit=0.074211 | |benefit|=0.051892 | g1=9398.700770, g2=81150.212850, infl=35213.116403, gradK=31185.983428
+  [Trace] iter=568 | mode=online-online | ret_eval=72.6254 | batch=4 trajs | std_benefit=0.062664 | |benefit|=0.043274 | g1=10207.448118, g2=81252.817912, infl=31369.100231, gradK=11497.936325
+  [Trace] iter=569 | mode=online-online | ret_eval=73.0829 | batch=4 trajs | std_benefit=0.063897 | |benefit|=0.045231 | g1=7893.690655, g2=79448.088658, infl=32638.831598, gradK=3947.759622
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1903, ||ω̄||=0.5025, eigmin(Σ_k)=2.085e-05, rank(U_k)=1, eigmin(Ū)=4.386e-02, cond(Ū)=1.27e+04
+    Q_hat diag=[1.3289 1.3436]
+    R_hat diag=[1.3372]
+    [Diagnostics] HG Cosine Sim: 0.9997 | Norm(Est): 13934.6522 | Norm(Oracle): 10616.8196
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.4454
+  [Trace] iter=570 | mode=online-online | ret_eval=73.3129 | batch=4 trajs | std_benefit=0.068328 | |benefit|=0.049060 | g1=8263.228289, g2=60742.134677, infl=21992.725176, gradK=13934.652234
+  iter  570: return =   73.0051 (disc:   43.4031) ± 0.1125 | K = [1.0976 0.3746]
+  [Trace] iter=571 | mode=online-online | ret_eval=73.0421 | batch=4 trajs | std_benefit=0.072250 | |benefit|=0.053220 | g1=8041.478446, g2=48871.505278, infl=24098.513741, gradK=7315.416875
+  [Trace] iter=572 | mode=online-online | ret_eval=72.7340 | batch=4 trajs | std_benefit=0.062057 | |benefit|=0.045375 | g1=8863.636817, g2=40704.754327, infl=21126.972898, gradK=9548.027318
+  [Trace] iter=573 | mode=online-online | ret_eval=72.2279 | batch=4 trajs | std_benefit=0.059980 | |benefit|=0.043026 | g1=8753.663678, g2=50944.835426, infl=23091.340276, gradK=12235.219276
+  [Trace] iter=574 | mode=online-online | ret_eval=71.8349 | batch=4 trajs | std_benefit=0.051488 | |benefit|=0.037554 | g1=7790.614071, g2=169133.292081, infl=40768.103908, gradK=22837.332004
+  [Trace] iter=575 | mode=online-online | ret_eval=71.5359 | batch=4 trajs | std_benefit=0.044524 | |benefit|=0.031739 | g1=9321.389982, g2=108543.401703, infl=27048.921118, gradK=18730.288118
+  [Trace] iter=576 | mode=online-online | ret_eval=72.1068 | batch=4 trajs | std_benefit=0.047791 | |benefit|=0.035213 | g1=10613.282144, g2=124341.833738, infl=43455.516718, gradK=19193.785722
+  [Trace] iter=577 | mode=online-online | ret_eval=71.6414 | batch=4 trajs | std_benefit=0.046861 | |benefit|=0.032904 | g1=8620.542782, g2=139740.836139, infl=49718.284153, gradK=43128.075061
+  [Trace] iter=578 | mode=online-online | ret_eval=71.3194 | batch=4 trajs | std_benefit=0.045385 | |benefit|=0.032496 | g1=10356.570967, g2=107959.316311, infl=38465.089595, gradK=33956.547724
+  [Trace] iter=579 | mode=online-online | ret_eval=71.7146 | batch=4 trajs | std_benefit=0.053431 | |benefit|=0.037861 | g1=9064.349976, g2=129789.354872, infl=33934.298670, gradK=30573.074164
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1981, ||ω̄||=0.5001, eigmin(Σ_k)=1.910e-05, rank(U_k)=1, eigmin(Ū)=4.401e-02, cond(Ū)=1.29e+04
+    Q_hat diag=[1.3272 1.3414]
+    R_hat diag=[1.3355]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 39333.5901 | Norm(Oracle): 30004.8071
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 1.0588
+  [Trace] iter=580 | mode=online-online | ret_eval=71.4294 | batch=4 trajs | std_benefit=0.056093 | |benefit|=0.041240 | g1=10377.901373, g2=108153.231494, infl=30826.787695, gradK=39333.590067
+  iter  580: return =   71.7280 (disc:   41.7787) ± 0.0907 | K = [1.3635 0.2795]
+  [Trace] iter=581 | mode=online-online | ret_eval=71.8313 | batch=4 trajs | std_benefit=0.061512 | |benefit|=0.042875 | g1=9718.694656, g2=77168.740736, infl=41719.478118, gradK=13934.297164
+  [Trace] iter=582 | mode=online-online | ret_eval=72.2527 | batch=4 trajs | std_benefit=0.065081 | |benefit|=0.046008 | g1=9787.170820, g2=88566.506885, infl=33554.720647, gradK=8221.110043
+  [Trace] iter=583 | mode=online-online | ret_eval=72.2835 | batch=4 trajs | std_benefit=0.072385 | |benefit|=0.051119 | g1=9602.933342, g2=145071.524204, infl=44031.544083, gradK=12499.531749
+  [Trace] iter=584 | mode=online-online | ret_eval=71.8421 | batch=4 trajs | std_benefit=0.069465 | |benefit|=0.049300 | g1=8983.168879, g2=55467.081512, infl=30357.765786, gradK=25492.927590
+  [Trace] iter=585 | mode=online-online | ret_eval=71.5327 | batch=4 trajs | std_benefit=0.061100 | |benefit|=0.043025 | g1=9255.008224, g2=95417.797922, infl=32037.792691, gradK=31647.498991
+  [Trace] iter=586 | mode=online-online | ret_eval=71.9293 | batch=4 trajs | std_benefit=0.063830 | |benefit|=0.043600 | g1=10004.789056, g2=141891.134839, infl=53786.444630, gradK=39013.554601
+  [Trace] iter=587 | mode=online-online | ret_eval=71.6531 | batch=4 trajs | std_benefit=0.064495 | |benefit|=0.046743 | g1=9005.260088, g2=112442.588811, infl=29665.155025, gradK=36496.835497
+  [Trace] iter=588 | mode=online-online | ret_eval=71.9721 | batch=4 trajs | std_benefit=0.057116 | |benefit|=0.040368 | g1=9034.488561, g2=100707.019008, infl=35421.606544, gradK=15200.858715
+  [Trace] iter=589 | mode=online-online | ret_eval=71.5808 | batch=4 trajs | std_benefit=0.060846 | |benefit|=0.044043 | g1=9391.856817, g2=84048.765773, infl=35158.063412, gradK=19989.677404
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1694, ||ω̄||=0.4981, eigmin(Σ_k)=2.210e-05, rank(U_k)=1, eigmin(Ū)=4.417e-02, cond(Ū)=1.30e+04
+    Q_hat diag=[1.3259 1.3394]
+    R_hat diag=[1.3342]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 43528.1491 | Norm(Oracle): 32980.6270
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 1.3000
+  [Trace] iter=590 | mode=online-online | ret_eval=71.1103 | batch=4 trajs | std_benefit=0.054780 | |benefit|=0.039350 | g1=9900.677745, g2=91451.080078, infl=31386.976327, gradK=43528.149084
+  iter  590: return =   71.4390 (disc:   41.5252) ± 0.0732 | K = [1.4468 0.3052]
+  [Trace] iter=591 | mode=online-online | ret_eval=71.5261 | batch=4 trajs | std_benefit=0.056840 | |benefit|=0.040394 | g1=10059.752942, g2=96804.858851, infl=38962.956947, gradK=14347.359548
+  [Trace] iter=592 | mode=online-online | ret_eval=71.9780 | batch=4 trajs | std_benefit=0.057488 | |benefit|=0.042521 | g1=10055.031118, g2=147538.857207, infl=48629.597395, gradK=41684.407221
+  [Trace] iter=593 | mode=online-online | ret_eval=72.2410 | batch=4 trajs | std_benefit=0.052845 | |benefit|=0.038144 | g1=9235.285236, g2=79456.759764, infl=30264.953455, gradK=35582.327041
+  [Trace] iter=594 | mode=online-online | ret_eval=72.6342 | batch=4 trajs | std_benefit=0.048917 | |benefit|=0.035154 | g1=9273.246256, g2=55743.821335, infl=27568.467792, gradK=10268.751873
+  [Trace] iter=595 | mode=online-online | ret_eval=73.1294 | batch=4 trajs | std_benefit=0.042516 | |benefit|=0.029358 | g1=9586.403710, g2=82180.638904, infl=29399.029159, gradK=25618.355029
+  [Trace] iter=596 | mode=online-online | ret_eval=72.8215 | batch=4 trajs | std_benefit=0.037569 | |benefit|=0.025615 | g1=7831.491998, g2=65519.230588, infl=20561.938227, gradK=17104.601301
+  [Trace] iter=597 | mode=online-online | ret_eval=73.2495 | batch=4 trajs | std_benefit=0.027950 | |benefit|=0.019139 | g1=8489.862246, g2=79948.408675, infl=24633.538764, gradK=28166.641293
+  [Trace] iter=598 | mode=online-online | ret_eval=73.5636 | batch=4 trajs | std_benefit=0.023495 | |benefit|=0.016564 | g1=7393.133688, g2=55239.848393, infl=16780.791805, gradK=10696.439429
+  [Trace] iter=599 | mode=online-online | ret_eval=74.0617 | batch=4 trajs | std_benefit=0.021031 | |benefit|=0.014040 | g1=7365.675556, g2=83070.412690, infl=24144.637731, gradK=12236.460597
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1899, ||ω̄||=0.4978, eigmin(Σ_k)=1.900e-05, rank(U_k)=1, eigmin(Ū)=4.426e-02, cond(Ū)=1.32e+04
+    Q_hat diag=[1.3257 1.339 ]
+    R_hat diag=[1.3341]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 13900.6773 | Norm(Oracle): 10549.9992
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.4203
+  [Trace] iter=600 | mode=online-online | ret_eval=74.3299 | batch=4 trajs | std_benefit=0.026994 | |benefit|=0.015651 | g1=7160.540257, g2=81962.256867, infl=23778.338033, gradK=13900.677272
+  iter  600: return =   73.9132 (disc:   44.2511) ± 0.2193 | K = [1.1692 0.5979]
+  [Trace] iter=601 | mode=online-online | ret_eval=74.3135 | batch=4 trajs | std_benefit=0.028034 | |benefit|=0.019024 | g1=6590.579995, g2=49227.059403, infl=13851.735226, gradK=3348.572628
+  [Trace] iter=602 | mode=online-online | ret_eval=74.6476 | batch=4 trajs | std_benefit=0.030357 | |benefit|=0.020924 | g1=7140.084672, g2=126339.058430, infl=23942.172044, gradK=5536.957989
+  [Trace] iter=603 | mode=online-online | ret_eval=74.8599 | batch=4 trajs | std_benefit=0.035705 | |benefit|=0.025070 | g1=6964.671508, g2=69590.990358, infl=16717.837437, gradK=22980.736678
+  [Trace] iter=604 | mode=online-online | ret_eval=74.8418 | batch=4 trajs | std_benefit=0.038944 | |benefit|=0.027468 | g1=6982.764116, g2=52819.034827, infl=15717.386445, gradK=7086.718902
+  [Trace] iter=605 | mode=online-online | ret_eval=75.1316 | batch=4 trajs | std_benefit=0.040334 | |benefit|=0.028827 | g1=6992.278290, g2=27029.784176, infl=13998.152095, gradK=2303.600929
+  [Trace] iter=606 | mode=online-online | ret_eval=75.4401 | batch=4 trajs | std_benefit=0.048638 | |benefit|=0.036388 | g1=6296.252831, g2=39030.442162, infl=11469.587757, gradK=6396.742738
+  [Trace] iter=607 | mode=online-online | ret_eval=75.7770 | batch=4 trajs | std_benefit=0.057267 | |benefit|=0.042459 | g1=5753.943742, g2=22085.411898, infl=8819.269902, gradK=4566.213326
+  [Trace] iter=608 | mode=online-online | ret_eval=76.0455 | batch=4 trajs | std_benefit=0.061759 | |benefit|=0.045359 | g1=6751.064901, g2=31458.522658, infl=10082.832267, gradK=12747.162096
+  [Trace] iter=609 | mode=online-online | ret_eval=75.8026 | batch=4 trajs | std_benefit=0.073590 | |benefit|=0.054515 | g1=5893.840597, g2=40258.849993, infl=9439.696373, gradK=2042.408221
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2242, ||ω̄||=0.4983, eigmin(Σ_k)=1.595e-05, rank(U_k)=1, eigmin(Ū)=4.436e-02, cond(Ū)=1.34e+04
+    Q_hat diag=[1.3261 1.3395]
+    R_hat diag=[1.3344]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 40280.9543 | Norm(Oracle): 30573.6741
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.1628
+  [Trace] iter=610 | mode=online-online | ret_eval=75.4428 | batch=4 trajs | std_benefit=0.080800 | |benefit|=0.059199 | g1=6341.743213, g2=61902.656627, infl=13039.152695, gradK=40280.954333
+  iter  610: return =   75.7146 (disc:   45.1710) ± 0.1038 | K = [0.9933 0.6547]
+  [Trace] iter=611 | mode=online-online | ret_eval=75.1694 | batch=4 trajs | std_benefit=0.085358 | |benefit|=0.061799 | g1=5918.376782, g2=30370.620777, infl=9527.715578, gradK=11230.908604
+  [Trace] iter=612 | mode=online-online | ret_eval=75.4685 | batch=4 trajs | std_benefit=0.081211 | |benefit|=0.058577 | g1=6613.689896, g2=62401.755461, infl=17423.839350, gradK=24626.563048
+  [Trace] iter=613 | mode=online-online | ret_eval=75.1718 | batch=4 trajs | std_benefit=0.086753 | |benefit|=0.061970 | g1=6231.141847, g2=31538.378715, infl=10037.334111, gradK=6646.530048
+  [Trace] iter=614 | mode=online-online | ret_eval=75.3856 | batch=4 trajs | std_benefit=0.078598 | |benefit|=0.056147 | g1=6864.775482, g2=48594.462725, infl=11503.496554, gradK=22501.091638
+  [Trace] iter=615 | mode=online-online | ret_eval=75.3152 | batch=4 trajs | std_benefit=0.080872 | |benefit|=0.059363 | g1=5965.627435, g2=39489.876249, infl=11382.596265, gradK=5922.605948
+  [Trace] iter=616 | mode=online-online | ret_eval=75.5791 | batch=4 trajs | std_benefit=0.091151 | |benefit|=0.065066 | g1=6628.000302, g2=30324.830622, infl=9881.355741, gradK=3045.869615
+  [Trace] iter=617 | mode=online-online | ret_eval=75.8993 | batch=4 trajs | std_benefit=0.099927 | |benefit|=0.071520 | g1=5132.603678, g2=28424.202527, infl=12760.088069, gradK=6680.849473
+  [Trace] iter=618 | mode=online-online | ret_eval=75.5877 | batch=4 trajs | std_benefit=0.102161 | |benefit|=0.074703 | g1=5909.863201, g2=52375.051819, infl=11825.546394, gradK=27858.402256
+  [Trace] iter=619 | mode=online-online | ret_eval=75.8161 | batch=4 trajs | std_benefit=0.085666 | |benefit|=0.061147 | g1=6072.868346, g2=31167.942366, infl=13187.311711, gradK=17423.969769
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2006, ||ω̄||=0.4976, eigmin(Σ_k)=1.707e-05, rank(U_k)=1, eigmin(Ū)=4.451e-02, cond(Ū)=1.36e+04
+    Q_hat diag=[1.3256 1.339 ]
+    R_hat diag=[1.3338]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 25084.7400 | Norm(Oracle): 19168.6420
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.1329
+  [Trace] iter=620 | mode=online-online | ret_eval=75.5356 | batch=4 trajs | std_benefit=0.095227 | |benefit|=0.069551 | g1=6026.665680, g2=53319.710170, infl=16119.044762, gradK=25084.740033
+  iter  620: return =   75.9072 (disc:   45.2796) ± 0.2550 | K = [0.9091 0.6068]
+  [Trace] iter=621 | mode=online-online | ret_eval=75.1901 | batch=4 trajs | std_benefit=0.092652 | |benefit|=0.068819 | g1=6328.069359, g2=46291.537725, infl=11568.071026, gradK=6866.641578
+  [Trace] iter=622 | mode=online-online | ret_eval=75.0359 | batch=4 trajs | std_benefit=0.100808 | |benefit|=0.073862 | g1=5967.047088, g2=35169.568313, infl=10381.439160, gradK=8204.838238
+  [Trace] iter=623 | mode=online-online | ret_eval=75.2988 | batch=4 trajs | std_benefit=0.110129 | |benefit|=0.077347 | g1=5755.443999, g2=29530.899670, infl=10720.686392, gradK=4205.230652
+  [Trace] iter=624 | mode=online-online | ret_eval=75.5565 | batch=4 trajs | std_benefit=0.111445 | |benefit|=0.080249 | g1=5397.328315, g2=42320.730327, infl=10745.512353, gradK=5650.927542
+  [Trace] iter=625 | mode=online-online | ret_eval=75.1772 | batch=4 trajs | std_benefit=0.118908 | |benefit|=0.087111 | g1=5529.978962, g2=27790.304878, infl=10319.784940, gradK=8475.729145
+  [Trace] iter=626 | mode=online-online | ret_eval=75.3884 | batch=4 trajs | std_benefit=0.119160 | |benefit|=0.084885 | g1=5801.301639, g2=50559.552548, infl=13802.009103, gradK=7638.805520
+  [Trace] iter=627 | mode=online-online | ret_eval=75.2410 | batch=4 trajs | std_benefit=0.111854 | |benefit|=0.080879 | g1=6963.659464, g2=34265.341211, infl=11467.686299, gradK=7943.061484
+  [Trace] iter=628 | mode=online-online | ret_eval=75.4995 | batch=4 trajs | std_benefit=0.100264 | |benefit|=0.069694 | g1=5333.237051, g2=34054.213290, infl=9782.183179, gradK=10623.385005
+  [Trace] iter=629 | mode=online-online | ret_eval=75.0529 | batch=4 trajs | std_benefit=0.095685 | |benefit|=0.068848 | g1=6104.656099, g2=30086.083219, infl=12020.196854, gradK=8862.937605
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1923, ||ω̄||=0.4986, eigmin(Σ_k)=1.749e-05, rank(U_k)=1, eigmin(Ū)=4.463e-02, cond(Ū)=1.37e+04
+    Q_hat diag=[1.3264 1.3397]
+    R_hat diag=[1.3346]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 10118.8016 | Norm(Oracle): 7748.0810
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.1760
+  [Trace] iter=630 | mode=online-online | ret_eval=75.4779 | batch=4 trajs | std_benefit=0.100856 | |benefit|=0.072828 | g1=6416.207073, g2=31935.522917, infl=10114.202367, gradK=10118.801628
+  iter  630: return =   75.0014 (disc:   45.2209) ± 0.1979 | K = [0.8723 0.5527]
+  [Trace] iter=631 | mode=online-online | ret_eval=75.7956 | batch=4 trajs | std_benefit=0.094964 | |benefit|=0.067633 | g1=6362.324399, g2=52151.073391, infl=14891.184695, gradK=6213.492152
+  [Trace] iter=632 | mode=online-online | ret_eval=75.9448 | batch=4 trajs | std_benefit=0.098254 | |benefit|=0.072844 | g1=5680.344372, g2=36684.733929, infl=8925.639285, gradK=18066.336077
+  [Trace] iter=633 | mode=online-online | ret_eval=75.7807 | batch=4 trajs | std_benefit=0.089526 | |benefit|=0.066360 | g1=6461.505954, g2=40096.008564, infl=11748.417955, gradK=19221.502616
+  [Trace] iter=634 | mode=online-online | ret_eval=75.3496 | batch=4 trajs | std_benefit=0.071899 | |benefit|=0.052713 | g1=6074.119337, g2=43170.398853, infl=14220.616275, gradK=11493.622322
+  [Trace] iter=635 | mode=online-online | ret_eval=75.7193 | batch=4 trajs | std_benefit=0.058613 | |benefit|=0.042771 | g1=5828.597814, g2=29792.364144, infl=9953.263877, gradK=7834.526631
+  [Trace] iter=636 | mode=online-online | ret_eval=76.1375 | batch=4 trajs | std_benefit=0.058302 | |benefit|=0.042293 | g1=5863.889610, g2=39040.876532, infl=13001.233691, gradK=5273.336461
+  [Trace] iter=637 | mode=online-online | ret_eval=76.3020 | batch=4 trajs | std_benefit=0.062384 | |benefit|=0.047748 | g1=5946.342019, g2=23873.602925, infl=7987.138146, gradK=6028.636960
+  [Trace] iter=638 | mode=online-online | ret_eval=76.7155 | batch=4 trajs | std_benefit=0.060915 | |benefit|=0.046143 | g1=5512.247139, g2=20363.933023, infl=6190.757208, gradK=4728.567459
+  [Trace] iter=639 | mode=online-online | ret_eval=76.3343 | batch=4 trajs | std_benefit=0.060828 | |benefit|=0.045221 | g1=4733.254650, g2=17271.180025, infl=4699.621615, gradK=4620.491306
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1925, ||ω̄||=0.4977, eigmin(Σ_k)=1.640e-05, rank(U_k)=1, eigmin(Ū)=4.470e-02, cond(Ū)=1.39e+04
+    Q_hat diag=[1.3256 1.339 ]
+    R_hat diag=[1.3339]
+    [Diagnostics] HG Cosine Sim: 0.9994 | Norm(Est): 4198.2604 | Norm(Oracle): 3211.5769
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0946
+  [Trace] iter=640 | mode=online-online | ret_eval=76.3133 | batch=4 trajs | std_benefit=0.054307 | |benefit|=0.041110 | g1=5752.662864, g2=27402.234518, infl=7767.718590, gradK=4198.260410
+  iter  640: return =   76.3545 (disc:   45.9391) ± 0.2352 | K = [0.8182 0.6872]
+  [Trace] iter=641 | mode=online-online | ret_eval=76.5471 | batch=4 trajs | std_benefit=0.054014 | |benefit|=0.041634 | g1=5411.970170, g2=45325.609248, infl=8910.822098, gradK=4932.613130
+  [Trace] iter=642 | mode=online-online | ret_eval=76.3929 | batch=4 trajs | std_benefit=0.065450 | |benefit|=0.048165 | g1=5170.732475, g2=42044.102085, infl=8245.072191, gradK=2129.570816
+  [Trace] iter=643 | mode=online-online | ret_eval=76.0275 | batch=4 trajs | std_benefit=0.068179 | |benefit|=0.052265 | g1=5155.494072, g2=45918.943404, infl=7548.603896, gradK=26361.318249
+  [Trace] iter=644 | mode=online-online | ret_eval=75.8537 | batch=4 trajs | std_benefit=0.067430 | |benefit|=0.050606 | g1=5591.549395, g2=31041.459776, infl=8380.685287, gradK=4535.728039
+  [Trace] iter=645 | mode=online-online | ret_eval=75.5187 | batch=4 trajs | std_benefit=0.074935 | |benefit|=0.055956 | g1=5954.028767, g2=36866.314989, infl=11901.859922, gradK=2724.264461
+  [Trace] iter=646 | mode=online-online | ret_eval=75.8553 | batch=4 trajs | std_benefit=0.072952 | |benefit|=0.054835 | g1=6353.033612, g2=49625.099323, infl=10799.115133, gradK=11174.623231
+  [Trace] iter=647 | mode=online-online | ret_eval=76.1173 | batch=4 trajs | std_benefit=0.075513 | |benefit|=0.055740 | g1=5929.264291, g2=50835.056725, infl=13349.156037, gradK=6942.444183
+  [Trace] iter=648 | mode=online-online | ret_eval=76.4646 | batch=4 trajs | std_benefit=0.083969 | |benefit|=0.064548 | g1=6343.454289, g2=67757.542583, infl=11634.513485, gradK=15378.769005
+  [Trace] iter=649 | mode=online-online | ret_eval=76.1375 | batch=4 trajs | std_benefit=0.087860 | |benefit|=0.067641 | g1=5288.371610, g2=23070.155598, infl=7485.037822, gradK=1879.872228
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1922, ||ω̄||=0.4974, eigmin(Σ_k)=1.594e-05, rank(U_k)=1, eigmin(Ū)=4.483e-02, cond(Ū)=1.41e+04
+    Q_hat diag=[1.3253 1.3388]
+    R_hat diag=[1.3338]
+    [Diagnostics] HG Cosine Sim: 0.9999 | Norm(Est): 1742.7110 | Norm(Oracle): 1308.6581
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.1334
+  [Trace] iter=650 | mode=online-online | ret_eval=76.0350 | batch=4 trajs | std_benefit=0.087850 | |benefit|=0.065192 | g1=5488.117420, g2=27258.357316, infl=7508.080903, gradK=1742.711049
+  iter  650: return =   75.9915 (disc:   45.6693) ± 0.2303 | K = [0.9551 0.7395]
+  [Trace] iter=651 | mode=online-online | ret_eval=75.6465 | batch=4 trajs | std_benefit=0.086695 | |benefit|=0.064133 | g1=6135.626963, g2=43152.323334, infl=11792.302662, gradK=8035.635660
+  [Trace] iter=652 | mode=online-online | ret_eval=75.5109 | batch=4 trajs | std_benefit=0.082568 | |benefit|=0.060940 | g1=6477.749412, g2=68385.686166, infl=15068.267857, gradK=6052.518607
+  [Trace] iter=653 | mode=online-online | ret_eval=75.4267 | batch=4 trajs | std_benefit=0.081351 | |benefit|=0.061148 | g1=6647.456671, g2=37692.020062, infl=10581.762076, gradK=8320.108628
+  [Trace] iter=654 | mode=online-online | ret_eval=75.7685 | batch=4 trajs | std_benefit=0.078158 | |benefit|=0.059966 | g1=5826.345114, g2=75117.660123, infl=12306.022459, gradK=21540.994722
+  [Trace] iter=655 | mode=online-online | ret_eval=75.3670 | batch=4 trajs | std_benefit=0.082903 | |benefit|=0.062096 | g1=5093.954596, g2=59641.800800, infl=11757.765282, gradK=14843.325968
+  [Trace] iter=656 | mode=online-online | ret_eval=75.4997 | batch=4 trajs | std_benefit=0.086532 | |benefit|=0.064108 | g1=6009.746427, g2=30321.688995, infl=8669.380255, gradK=2356.700599
+  [Trace] iter=657 | mode=online-online | ret_eval=75.0793 | batch=4 trajs | std_benefit=0.080871 | |benefit|=0.059793 | g1=6275.741704, g2=37466.996593, infl=9065.115227, gradK=24335.923637
+  [Trace] iter=658 | mode=online-online | ret_eval=75.5258 | batch=4 trajs | std_benefit=0.078591 | |benefit|=0.058920 | g1=6240.753960, g2=39498.698973, infl=10382.360438, gradK=10703.015891
+  [Trace] iter=659 | mode=online-online | ret_eval=75.1846 | batch=4 trajs | std_benefit=0.076785 | |benefit|=0.056933 | g1=6389.273964, g2=52252.334051, infl=9219.463083, gradK=15407.099894
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2023, ||ω̄||=0.4970, eigmin(Σ_k)=1.707e-05, rank(U_k)=1, eigmin(Ū)=4.492e-02, cond(Ū)=1.43e+04
+    Q_hat diag=[1.325  1.3386]
+    R_hat diag=[1.3334]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 11381.9866 | Norm(Oracle): 8503.2846
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.2478
+  [Trace] iter=660 | mode=online-online | ret_eval=74.8948 | batch=4 trajs | std_benefit=0.073859 | |benefit|=0.054727 | g1=6354.854436, g2=54343.934900, infl=15374.968235, gradK=11381.986594
+  iter  660: return =   75.1133 (disc:   44.7025) ± 0.0703 | K = [1.138  0.6752]
+  [Trace] iter=661 | mode=online-online | ret_eval=75.1303 | batch=4 trajs | std_benefit=0.079635 | |benefit|=0.057993 | g1=6184.712612, g2=109200.907334, infl=16414.709524, gradK=53023.125145
+  [Trace] iter=662 | mode=online-online | ret_eval=75.4964 | batch=4 trajs | std_benefit=0.081245 | |benefit|=0.060139 | g1=5723.929465, g2=110640.489665, infl=14759.731030, gradK=56893.987657
+  [Trace] iter=663 | mode=online-online | ret_eval=75.8299 | batch=4 trajs | std_benefit=0.087291 | |benefit|=0.063946 | g1=6524.571959, g2=79115.094567, infl=14546.873427, gradK=13937.916277
+  [Trace] iter=664 | mode=online-online | ret_eval=75.5908 | batch=4 trajs | std_benefit=0.089741 | |benefit|=0.066133 | g1=6150.780871, g2=29909.199184, infl=8669.286768, gradK=694.811140
+  [Trace] iter=665 | mode=online-online | ret_eval=75.2925 | batch=4 trajs | std_benefit=0.095722 | |benefit|=0.070927 | g1=6284.479984, g2=81069.276275, infl=17201.803499, gradK=5701.445034
+  [Trace] iter=666 | mode=online-online | ret_eval=75.5573 | batch=4 trajs | std_benefit=0.109744 | |benefit|=0.079306 | g1=6010.716751, g2=55046.104483, infl=15782.484455, gradK=2697.857228
+  [Trace] iter=667 | mode=online-online | ret_eval=75.2568 | batch=4 trajs | std_benefit=0.126653 | |benefit|=0.090622 | g1=5551.312614, g2=41494.166736, infl=11907.844504, gradK=14773.726251
+  [Trace] iter=668 | mode=online-online | ret_eval=75.4762 | batch=4 trajs | std_benefit=0.126994 | |benefit|=0.093597 | g1=6901.119909, g2=43457.590321, infl=9944.045264, gradK=19789.459426
+  [Trace] iter=669 | mode=online-online | ret_eval=75.7621 | batch=4 trajs | std_benefit=0.125224 | |benefit|=0.091706 | g1=5867.035090, g2=65716.890643, infl=10993.252057, gradK=13875.967525
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2080, ||ω̄||=0.4968, eigmin(Σ_k)=1.698e-05, rank(U_k)=1, eigmin(Ū)=4.507e-02, cond(Ū)=1.45e+04
+    Q_hat diag=[1.3248 1.3385]
+    R_hat diag=[1.3332]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 12958.6658 | Norm(Oracle): 10143.9226
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.1533
+  [Trace] iter=670 | mode=online-online | ret_eval=76.0333 | batch=4 trajs | std_benefit=0.119084 | |benefit|=0.087719 | g1=5650.534854, g2=38222.033892, infl=9001.243816, gradK=12958.665779
+  iter  670: return =   75.7752 (disc:   45.6961) ± 0.1094 | K = [0.896  0.7092]
+  [Trace] iter=671 | mode=online-online | ret_eval=76.3891 | batch=4 trajs | std_benefit=0.107510 | |benefit|=0.077817 | g1=5885.206972, g2=76952.965286, infl=12786.969064, gradK=12485.523523
+  [Trace] iter=672 | mode=online-online | ret_eval=76.3684 | batch=4 trajs | std_benefit=0.088334 | |benefit|=0.063824 | g1=5159.156562, g2=38842.444065, infl=8088.435155, gradK=1190.847883
+  [Trace] iter=673 | mode=online-online | ret_eval=76.4204 | batch=4 trajs | std_benefit=0.072258 | |benefit|=0.053669 | g1=5403.439951, g2=15565.469950, infl=5724.554192, gradK=714.536520
+  [Trace] iter=674 | mode=online-online | ret_eval=76.1974 | batch=4 trajs | std_benefit=0.065946 | |benefit|=0.049281 | g1=5399.864237, g2=27564.622402, infl=6741.023578, gradK=14374.769225
+  [Trace] iter=675 | mode=online-online | ret_eval=75.8634 | batch=4 trajs | std_benefit=0.058869 | |benefit|=0.044767 | g1=5818.770651, g2=46501.181098, infl=10614.609211, gradK=3101.504754
+  [Trace] iter=676 | mode=online-online | ret_eval=75.5292 | batch=4 trajs | std_benefit=0.061585 | |benefit|=0.047007 | g1=6131.162449, g2=50446.419885, infl=10985.666791, gradK=8406.240126
+  [Trace] iter=677 | mode=online-online | ret_eval=75.2792 | batch=4 trajs | std_benefit=0.052811 | |benefit|=0.040011 | g1=5076.578438, g2=29819.149911, infl=8570.698332, gradK=5226.255302
+  [Trace] iter=678 | mode=online-online | ret_eval=75.5570 | batch=4 trajs | std_benefit=0.057845 | |benefit|=0.044090 | g1=5174.061929, g2=60729.746901, infl=12883.525062, gradK=24957.914315
+  [Trace] iter=679 | mode=online-online | ret_eval=75.7577 | batch=4 trajs | std_benefit=0.058356 | |benefit|=0.044971 | g1=5268.843980, g2=39914.926237, infl=10835.254854, gradK=1908.164364
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2006, ||ω̄||=0.4975, eigmin(Σ_k)=1.607e-05, rank(U_k)=1, eigmin(Ū)=4.519e-02, cond(Ū)=1.47e+04
+    Q_hat diag=[1.3253 1.339 ]
+    R_hat diag=[1.3337]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 13173.4465 | Norm(Oracle): 10036.1093
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.1413
+  [Trace] iter=680 | mode=online-online | ret_eval=76.2383 | batch=4 trajs | std_benefit=0.057756 | |benefit|=0.043560 | g1=5527.998597, g2=43080.031989, infl=9043.100613, gradK=13173.446481
+  iter  680: return =   75.7704 (disc:   45.8619) ± 0.0836 | K = [0.8473 0.6717]
+  [Trace] iter=681 | mode=online-online | ret_eval=75.7517 | batch=4 trajs | std_benefit=0.053853 | |benefit|=0.041306 | g1=5669.936061, g2=28208.413773, infl=8759.527235, gradK=6166.869106
+  [Trace] iter=682 | mode=online-online | ret_eval=75.4581 | batch=4 trajs | std_benefit=0.062987 | |benefit|=0.046656 | g1=4713.876032, g2=45798.516256, infl=8110.488659, gradK=21823.481377
+  [Trace] iter=683 | mode=online-online | ret_eval=75.7864 | batch=4 trajs | std_benefit=0.064329 | |benefit|=0.047453 | g1=5857.040212, g2=48730.364091, infl=8433.923816, gradK=7107.625656
+  [Trace] iter=684 | mode=online-online | ret_eval=75.9834 | batch=4 trajs | std_benefit=0.070918 | |benefit|=0.053192 | g1=5821.591632, g2=67509.149509, infl=12438.510312, gradK=31179.895965
+  [Trace] iter=685 | mode=online-online | ret_eval=76.4373 | batch=4 trajs | std_benefit=0.075896 | |benefit|=0.054449 | g1=4612.252339, g2=36246.588862, infl=7237.341911, gradK=7515.763676
+  [Trace] iter=686 | mode=online-online | ret_eval=76.7227 | batch=4 trajs | std_benefit=0.074971 | |benefit|=0.054916 | g1=4997.130467, g2=28098.422735, infl=7144.807752, gradK=3104.742246
+  [Trace] iter=687 | mode=online-online | ret_eval=76.7948 | batch=4 trajs | std_benefit=0.087171 | |benefit|=0.065866 | g1=5245.290101, g2=36796.725263, infl=9927.248786, gradK=13138.900471
+  [Trace] iter=688 | mode=online-online | ret_eval=76.9513 | batch=4 trajs | std_benefit=0.097900 | |benefit|=0.073987 | g1=5111.169481, g2=16486.825479, infl=5335.505576, gradK=2719.566107
+  [Trace] iter=689 | mode=online-online | ret_eval=76.6163 | batch=4 trajs | std_benefit=0.088059 | |benefit|=0.066169 | g1=5290.792378, g2=24793.140395, infl=8003.545978, gradK=8214.418795
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1929, ||ω̄||=0.4967, eigmin(Σ_k)=1.539e-05, rank(U_k)=1, eigmin(Ū)=4.526e-02, cond(Ū)=1.49e+04
+    Q_hat diag=[1.3247 1.3384]
+    R_hat diag=[1.3331]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 2013.4021 | Norm(Oracle): 1535.7982
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0941
+  [Trace] iter=690 | mode=online-online | ret_eval=76.9162 | batch=4 trajs | std_benefit=0.079053 | |benefit|=0.060042 | g1=4242.646355, g2=24476.175162, infl=6294.036882, gradK=2013.402053
+  iter  690: return =   76.5511 (disc:   46.4085) ± 0.1359 | K = [0.8019 0.7947]
+  [Trace] iter=691 | mode=online-online | ret_eval=76.5352 | batch=4 trajs | std_benefit=0.088312 | |benefit|=0.064634 | g1=5044.391866, g2=46387.025091, infl=9967.495105, gradK=5666.258650
+  [Trace] iter=692 | mode=online-online | ret_eval=76.7039 | batch=4 trajs | std_benefit=0.078782 | |benefit|=0.058789 | g1=5145.421238, g2=28350.678353, infl=7273.454965, gradK=9375.052578
+  [Trace] iter=693 | mode=online-online | ret_eval=76.5537 | batch=4 trajs | std_benefit=0.082230 | |benefit|=0.061171 | g1=4980.510272, g2=28649.547567, infl=8348.530048, gradK=11627.005361
+  [Trace] iter=694 | mode=online-online | ret_eval=76.7381 | batch=4 trajs | std_benefit=0.084923 | |benefit|=0.063634 | g1=5407.401144, g2=44118.332954, infl=10502.977096, gradK=4479.140379
+  [Trace] iter=695 | mode=online-online | ret_eval=76.9940 | batch=4 trajs | std_benefit=0.099419 | |benefit|=0.073669 | g1=4683.800689, g2=29937.798351, infl=5283.546272, gradK=951.164131
+  [Trace] iter=696 | mode=online-online | ret_eval=77.2011 | batch=4 trajs | std_benefit=0.104764 | |benefit|=0.077862 | g1=4138.782751, g2=24976.892497, infl=7797.253386, gradK=1076.399728
+  [Trace] iter=697 | mode=online-online | ret_eval=77.5331 | batch=4 trajs | std_benefit=0.104320 | |benefit|=0.077901 | g1=4643.044980, g2=22825.303939, infl=4823.031957, gradK=9759.816560
+  [Trace] iter=698 | mode=online-online | ret_eval=77.1550 | batch=4 trajs | std_benefit=0.107837 | |benefit|=0.080598 | g1=4596.969637, g2=19459.392833, infl=4730.484743, gradK=1922.368852
+  [Trace] iter=699 | mode=online-online | ret_eval=77.4413 | batch=4 trajs | std_benefit=0.123654 | |benefit|=0.089461 | g1=4821.119634, g2=26404.158413, infl=7683.092162, gradK=9665.053561
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2052, ||ω̄||=0.4974, eigmin(Σ_k)=1.439e-05, rank(U_k)=1, eigmin(Ū)=4.541e-02, cond(Ū)=1.50e+04
+    Q_hat diag=[1.3253 1.3389]
+    R_hat diag=[1.3337]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 12422.2679 | Norm(Oracle): 9372.4000
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0579
+  [Trace] iter=700 | mode=online-online | ret_eval=77.6204 | batch=4 trajs | std_benefit=0.130865 | |benefit|=0.096213 | g1=4595.842795, g2=21148.166243, infl=5483.404083, gradK=12422.267918
+  iter  700: return =   77.3473 (disc:   47.0821) ± 0.2730 | K = [0.5945 0.8077]
+  [Trace] iter=701 | mode=online-online | ret_eval=77.4580 | batch=4 trajs | std_benefit=0.122574 | |benefit|=0.090072 | g1=3673.959622, g2=12985.153859, infl=4076.212766, gradK=4082.658837
+  [Trace] iter=702 | mode=online-online | ret_eval=77.5957 | batch=4 trajs | std_benefit=0.129507 | |benefit|=0.096002 | g1=4093.379738, g2=21485.641061, infl=6408.624692, gradK=2998.723541
+  [Trace] iter=703 | mode=online-online | ret_eval=77.7727 | batch=4 trajs | std_benefit=0.120308 | |benefit|=0.087789 | g1=4190.704798, g2=16704.183660, infl=4132.002908, gradK=5186.510463
+  [Trace] iter=704 | mode=online-online | ret_eval=77.5681 | batch=4 trajs | std_benefit=0.110343 | |benefit|=0.084143 | g1=4399.894898, g2=27256.581772, infl=5520.357549, gradK=11168.337767
+  [Trace] iter=705 | mode=online-online | ret_eval=77.4175 | batch=4 trajs | std_benefit=0.106682 | |benefit|=0.078179 | g1=3843.510851, g2=13238.752346, infl=4834.541452, gradK=2099.553465
+  [Trace] iter=706 | mode=online-online | ret_eval=77.6204 | batch=4 trajs | std_benefit=0.102940 | |benefit|=0.076077 | g1=4275.955365, g2=19672.086548, infl=5509.882797, gradK=3959.852534
+  [Trace] iter=707 | mode=online-online | ret_eval=77.9453 | batch=4 trajs | std_benefit=0.096445 | |benefit|=0.071624 | g1=4330.268246, g2=22486.335657, infl=5154.304327, gradK=10601.506314
+  [Trace] iter=708 | mode=online-online | ret_eval=77.6586 | batch=4 trajs | std_benefit=0.095014 | |benefit|=0.070836 | g1=4027.157580, g2=19550.233272, infl=4932.084032, gradK=3294.129068
+  [Trace] iter=709 | mode=online-online | ret_eval=77.7865 | batch=4 trajs | std_benefit=0.106670 | |benefit|=0.080137 | g1=4185.007360, g2=29686.362565, infl=5253.711015, gradK=6471.874266
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2001, ||ω̄||=0.4942, eigmin(Σ_k)=1.418e-05, rank(U_k)=1, eigmin(Ū)=4.566e-02, cond(Ū)=1.52e+04
+    Q_hat diag=[1.3227 1.3366]
+    R_hat diag=[1.3312]
+    [Diagnostics] HG Cosine Sim: 0.9942 | Norm(Est): 1147.1727 | Norm(Oracle): 976.8028
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0418
+  [Trace] iter=710 | mode=online-online | ret_eval=77.7480 | batch=4 trajs | std_benefit=0.093325 | |benefit|=0.071438 | g1=3980.912450, g2=20476.732896, infl=4744.631700, gradK=1147.172684
+  iter  710: return =   77.7401 (disc:   47.1560) ± 0.1773 | K = [0.5445 0.7669]
+  [Trace] iter=711 | mode=online-online | ret_eval=77.9577 | batch=4 trajs | std_benefit=0.093335 | |benefit|=0.070176 | g1=5369.780585, g2=32857.430733, infl=7702.315376, gradK=8448.823602
+  [Trace] iter=712 | mode=online-online | ret_eval=77.7358 | batch=4 trajs | std_benefit=0.085891 | |benefit|=0.063903 | g1=3862.871911, g2=12870.962942, infl=4057.357079, gradK=1820.941969
+  [Trace] iter=713 | mode=online-online | ret_eval=77.9004 | batch=4 trajs | std_benefit=0.083923 | |benefit|=0.063639 | g1=4495.450524, g2=28941.890622, infl=6726.211132, gradK=8377.401568
+  [Trace] iter=714 | mode=online-online | ret_eval=78.1956 | batch=4 trajs | std_benefit=0.085524 | |benefit|=0.063620 | g1=3962.737152, g2=26711.254707, infl=5958.737177, gradK=5761.356891
+  [Trace] iter=715 | mode=online-online | ret_eval=77.9968 | batch=4 trajs | std_benefit=0.081631 | |benefit|=0.062251 | g1=3954.409860, g2=22538.513676, infl=3598.332917, gradK=1672.906444
+  [Trace] iter=716 | mode=online-online | ret_eval=77.8033 | batch=4 trajs | std_benefit=0.089051 | |benefit|=0.065883 | g1=4317.435288, g2=10341.340905, infl=3230.416896, gradK=719.667136
+  [Trace] iter=717 | mode=online-online | ret_eval=77.5534 | batch=4 trajs | std_benefit=0.087588 | |benefit|=0.065749 | g1=4163.362456, g2=15518.998862, infl=4273.367065, gradK=1200.667022
+  [Trace] iter=718 | mode=online-online | ret_eval=77.4176 | batch=4 trajs | std_benefit=0.093524 | |benefit|=0.070554 | g1=4020.963332, g2=25338.533486, infl=5028.205881, gradK=3178.950370
+  [Trace] iter=719 | mode=online-online | ret_eval=77.6489 | batch=4 trajs | std_benefit=0.096367 | |benefit|=0.071828 | g1=4736.068168, g2=30250.521150, infl=6329.584732, gradK=14045.516573
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2053, ||ω̄||=0.4907, eigmin(Σ_k)=1.416e-05, rank(U_k)=1, eigmin(Ū)=4.584e-02, cond(Ū)=1.53e+04
+    Q_hat diag=[1.32   1.3338]
+    R_hat diag=[1.3286]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 4498.5604 | Norm(Oracle): 3453.1501
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0430
+  [Trace] iter=720 | mode=online-online | ret_eval=77.3583 | batch=4 trajs | std_benefit=0.096926 | |benefit|=0.072123 | g1=4665.931387, g2=24220.698858, infl=5461.804101, gradK=4498.560370
+  iter  720: return =   77.7336 (disc:   46.8581) ± 0.1180 | K = [0.5621 0.6878]
+  [Trace] iter=721 | mode=online-online | ret_eval=77.0556 | batch=4 trajs | std_benefit=0.085728 | |benefit|=0.063365 | g1=4648.105735, g2=22139.951149, infl=4712.257964, gradK=4488.121782
+  [Trace] iter=722 | mode=online-online | ret_eval=76.8919 | batch=4 trajs | std_benefit=0.094881 | |benefit|=0.071148 | g1=4658.462116, g2=31654.147828, infl=6640.946122, gradK=5826.340161
+  [Trace] iter=723 | mode=online-online | ret_eval=76.8298 | batch=4 trajs | std_benefit=0.092543 | |benefit|=0.068726 | g1=5185.582844, g2=33729.762197, infl=8482.029613, gradK=329.844637
+  [Trace] iter=724 | mode=online-online | ret_eval=76.5421 | batch=4 trajs | std_benefit=0.101478 | |benefit|=0.074227 | g1=4581.485418, g2=34356.570908, infl=6081.301565, gradK=13335.918824
+  [Trace] iter=725 | mode=online-online | ret_eval=76.9727 | batch=4 trajs | std_benefit=0.097451 | |benefit|=0.072573 | g1=4895.461310, g2=19194.355206, infl=6199.951353, gradK=6963.845506
+  [Trace] iter=726 | mode=online-online | ret_eval=76.5456 | batch=4 trajs | std_benefit=0.100897 | |benefit|=0.074874 | g1=4333.966493, g2=14467.423473, infl=4911.036834, gradK=4795.272600
+  [Trace] iter=727 | mode=online-online | ret_eval=76.4516 | batch=4 trajs | std_benefit=0.090092 | |benefit|=0.066077 | g1=4610.613013, g2=27074.132007, infl=6986.145607, gradK=812.500879
+  [Trace] iter=728 | mode=online-online | ret_eval=76.6801 | batch=4 trajs | std_benefit=0.084692 | |benefit|=0.063414 | g1=5051.871562, g2=34454.371899, infl=9055.500533, gradK=11788.467832
+  [Trace] iter=729 | mode=online-online | ret_eval=76.4476 | batch=4 trajs | std_benefit=0.073789 | |benefit|=0.055924 | g1=4599.270666, g2=22937.826227, infl=6285.515604, gradK=4886.064026
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2182, ||ω̄||=0.4890, eigmin(Σ_k)=1.502e-05, rank(U_k)=1, eigmin(Ū)=4.596e-02, cond(Ū)=1.55e+04
+    Q_hat diag=[1.3187 1.3326]
+    R_hat diag=[1.3273]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 3680.8507 | Norm(Oracle): 2821.6518
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.0822
+  [Trace] iter=730 | mode=online-online | ret_eval=76.0885 | batch=4 trajs | std_benefit=0.064671 | |benefit|=0.048968 | g1=5080.683496, g2=16137.788806, infl=5002.388240, gradK=3680.850664
+  iter  730: return =   76.2410 (disc:   45.7871) ± 0.2537 | K = [0.7716 0.6088]
+  [Trace] iter=731 | mode=online-online | ret_eval=76.4959 | batch=4 trajs | std_benefit=0.059922 | |benefit|=0.045657 | g1=5347.575058, g2=37292.588135, infl=6798.286239, gradK=3251.320181
+  [Trace] iter=732 | mode=online-online | ret_eval=76.4282 | batch=4 trajs | std_benefit=0.065305 | |benefit|=0.049487 | g1=4739.487986, g2=23450.353781, infl=6380.872901, gradK=3924.783912
+  [Trace] iter=733 | mode=online-online | ret_eval=76.1446 | batch=4 trajs | std_benefit=0.063272 | |benefit|=0.048577 | g1=4446.304999, g2=27441.851884, infl=7597.506710, gradK=3394.714529
+  [Trace] iter=734 | mode=online-online | ret_eval=75.7439 | batch=4 trajs | std_benefit=0.071334 | |benefit|=0.053839 | g1=4858.413901, g2=43328.773585, infl=11212.838759, gradK=16627.433186
+  [Trace] iter=735 | mode=online-online | ret_eval=75.6510 | batch=4 trajs | std_benefit=0.074098 | |benefit|=0.055895 | g1=5093.492714, g2=45780.948708, infl=9550.521573, gradK=23113.853914
+  [Trace] iter=736 | mode=online-online | ret_eval=75.4208 | batch=4 trajs | std_benefit=0.078318 | |benefit|=0.059185 | g1=4909.440542, g2=26328.546159, infl=6498.738941, gradK=3372.944514
+  [Trace] iter=737 | mode=online-online | ret_eval=75.1238 | batch=4 trajs | std_benefit=0.088388 | |benefit|=0.067275 | g1=5642.708783, g2=60982.412551, infl=12429.963914, gradK=22112.413797
+  [Trace] iter=738 | mode=online-online | ret_eval=74.7166 | batch=4 trajs | std_benefit=0.090418 | |benefit|=0.067097 | g1=5382.644324, g2=67252.998317, infl=12922.538278, gradK=27743.180160
+  [Trace] iter=739 | mode=online-online | ret_eval=74.5275 | batch=4 trajs | std_benefit=0.084173 | |benefit|=0.063456 | g1=5602.405454, g2=47432.630559, infl=13096.555324, gradK=9031.399406
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1985, ||ω̄||=0.4882, eigmin(Σ_k)=1.971e-05, rank(U_k)=1, eigmin(Ū)=4.606e-02, cond(Ū)=1.57e+04
+    Q_hat diag=[1.318  1.3319]
+    R_hat diag=[1.3267]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 6743.1019 | Norm(Oracle): 5099.1726
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.2450
+  [Trace] iter=740 | mode=online-online | ret_eval=74.5232 | batch=4 trajs | std_benefit=0.076584 | |benefit|=0.057941 | g1=6244.042321, g2=68238.340573, infl=14633.314697, gradK=6743.101924
+  iter  740: return =   74.5330 (disc:   44.4270) ± 0.2260 | K = [0.9536 0.444 ]
+  [Trace] iter=741 | mode=online-online | ret_eval=74.3191 | batch=4 trajs | std_benefit=0.067578 | |benefit|=0.050258 | g1=5717.875029, g2=32851.866603, infl=9552.923284, gradK=2792.977946
+  [Trace] iter=742 | mode=online-online | ret_eval=74.2918 | batch=4 trajs | std_benefit=0.077827 | |benefit|=0.057228 | g1=5177.988454, g2=91172.712896, infl=16552.399193, gradK=19974.482337
+  [Trace] iter=743 | mode=online-online | ret_eval=74.0729 | batch=4 trajs | std_benefit=0.082228 | |benefit|=0.060722 | g1=6036.346469, g2=59398.387130, infl=13761.428506, gradK=7987.084616
+  [Trace] iter=744 | mode=online-online | ret_eval=74.5268 | batch=4 trajs | std_benefit=0.084068 | |benefit|=0.062890 | g1=6616.548837, g2=55922.770772, infl=20674.355000, gradK=12695.430378
+  [Trace] iter=745 | mode=online-online | ret_eval=74.1347 | batch=4 trajs | std_benefit=0.091257 | |benefit|=0.065974 | g1=5510.477661, g2=69033.796884, infl=17729.054181, gradK=21108.903987
+  [Trace] iter=746 | mode=online-online | ret_eval=73.7140 | batch=4 trajs | std_benefit=0.092171 | |benefit|=0.067289 | g1=7050.729658, g2=79641.622621, infl=21347.186015, gradK=5807.103880
+  [Trace] iter=747 | mode=online-online | ret_eval=73.2660 | batch=4 trajs | std_benefit=0.086247 | |benefit|=0.063723 | g1=6191.969849, g2=86329.530038, infl=19706.846249, gradK=33918.139458
+  [Trace] iter=748 | mode=online-online | ret_eval=73.0102 | batch=4 trajs | std_benefit=0.084827 | |benefit|=0.061469 | g1=5882.822548, g2=61019.437759, infl=17105.707032, gradK=17193.958909
+  [Trace] iter=749 | mode=online-online | ret_eval=72.5591 | batch=4 trajs | std_benefit=0.090004 | |benefit|=0.065850 | g1=6611.697143, g2=57331.388195, infl=15506.614523, gradK=11475.198446
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1968, ||ω̄||=0.4874, eigmin(Σ_k)=1.939e-05, rank(U_k)=1, eigmin(Ū)=4.613e-02, cond(Ū)=1.59e+04
+    Q_hat diag=[1.3174 1.3313]
+    R_hat diag=[1.3261]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 13726.2893 | Norm(Oracle): 10669.8469
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.6644
+  [Trace] iter=750 | mode=online-online | ret_eval=72.1862 | batch=4 trajs | std_benefit=0.090417 | |benefit|=0.065406 | g1=7620.523316, g2=76181.188520, infl=29193.689988, gradK=13726.289306
+  iter  750: return =   72.5435 (disc:   42.4365) ± 0.2104 | K = [1.2673 0.323 ]
+  [Trace] iter=751 | mode=online-online | ret_eval=72.4179 | batch=4 trajs | std_benefit=0.086990 | |benefit|=0.060648 | g1=8079.040770, g2=68264.651096, infl=26938.208685, gradK=5099.865233
+  [Trace] iter=752 | mode=online-online | ret_eval=71.9937 | batch=4 trajs | std_benefit=0.085029 | |benefit|=0.062790 | g1=7064.016531, g2=112652.994244, infl=31595.368486, gradK=15997.500517
+  [Trace] iter=753 | mode=online-online | ret_eval=72.2756 | batch=4 trajs | std_benefit=0.084578 | |benefit|=0.061703 | g1=7243.044687, g2=90699.623757, infl=26128.786201, gradK=20127.462608
+  [Trace] iter=754 | mode=online-online | ret_eval=72.7842 | batch=4 trajs | std_benefit=0.102930 | |benefit|=0.074128 | g1=7959.460869, g2=107080.655100, infl=33568.713508, gradK=49659.553233
+  [Trace] iter=755 | mode=online-online | ret_eval=72.3244 | batch=4 trajs | std_benefit=0.100959 | |benefit|=0.071185 | g1=6453.251562, g2=133832.110839, infl=27136.984065, gradK=81386.032056
+  [Trace] iter=756 | mode=online-online | ret_eval=72.2896 | batch=4 trajs | std_benefit=0.097080 | |benefit|=0.068820 | g1=6637.607021, g2=94268.067723, infl=30837.319694, gradK=3296.225923
+  [Trace] iter=757 | mode=online-online | ret_eval=71.8145 | batch=4 trajs | std_benefit=0.103821 | |benefit|=0.074322 | g1=7185.844928, g2=85038.099058, infl=31791.624362, gradK=31741.322605
+  [Trace] iter=758 | mode=online-online | ret_eval=72.2279 | batch=4 trajs | std_benefit=0.104624 | |benefit|=0.075731 | g1=7589.091179, g2=140392.224722, infl=41944.346478, gradK=10136.850420
+  [Trace] iter=759 | mode=online-online | ret_eval=72.7527 | batch=4 trajs | std_benefit=0.104426 | |benefit|=0.073532 | g1=7646.464791, g2=98118.504343, infl=27442.730615, gradK=15258.919632
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1907, ||ω̄||=0.4857, eigmin(Σ_k)=2.084e-05, rank(U_k)=1, eigmin(Ū)=4.636e-02, cond(Ū)=1.60e+04
+    Q_hat diag=[1.3162 1.3298]
+    R_hat diag=[1.3249]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 43402.7025 | Norm(Oracle): 32635.8794
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.6048
+  [Trace] iter=760 | mode=online-online | ret_eval=72.2191 | batch=4 trajs | std_benefit=0.089332 | |benefit|=0.066037 | g1=7401.768306, g2=141981.259961, infl=37604.674997, gradK=43402.702497
+  iter  760: return =   72.6021 (disc:   42.4741) ± 0.2193 | K = [1.2432 0.3209]
+  [Trace] iter=761 | mode=online-online | ret_eval=71.7299 | batch=4 trajs | std_benefit=0.080216 | |benefit|=0.058166 | g1=6445.062318, g2=103209.327295, infl=33302.841876, gradK=19536.518343
+  [Trace] iter=762 | mode=online-online | ret_eval=71.3344 | batch=4 trajs | std_benefit=0.079796 | |benefit|=0.058018 | g1=7888.941109, g2=107017.817491, infl=44091.278016, gradK=15773.402349
+  [Trace] iter=763 | mode=online-online | ret_eval=71.8007 | batch=4 trajs | std_benefit=0.077250 | |benefit|=0.054698 | g1=7903.668181, g2=93986.876778, infl=47227.054051, gradK=13611.929185
+  [Trace] iter=764 | mode=online-online | ret_eval=72.1845 | batch=4 trajs | std_benefit=0.072237 | |benefit|=0.051907 | g1=7102.874580, g2=77481.441534, infl=27660.401746, gradK=3018.620060
+  [Trace] iter=765 | mode=online-online | ret_eval=71.7188 | batch=4 trajs | std_benefit=0.084715 | |benefit|=0.058563 | g1=8345.576271, g2=153432.127512, infl=47237.104352, gradK=6200.415006
+  [Trace] iter=766 | mode=online-online | ret_eval=72.0695 | batch=4 trajs | std_benefit=0.086461 | |benefit|=0.060299 | g1=8199.806320, g2=97250.682196, infl=35400.649645, gradK=6791.128739
+  [Trace] iter=767 | mode=online-online | ret_eval=72.5104 | batch=4 trajs | std_benefit=0.090266 | |benefit|=0.062410 | g1=7305.436417, g2=107186.055095, infl=38146.642656, gradK=19989.750616
+  [Trace] iter=768 | mode=online-online | ret_eval=72.0078 | batch=4 trajs | std_benefit=0.095834 | |benefit|=0.067666 | g1=6870.739675, g2=93050.939337, infl=31485.276192, gradK=18879.516485
+  [Trace] iter=769 | mode=online-online | ret_eval=72.3466 | batch=4 trajs | std_benefit=0.095864 | |benefit|=0.066895 | g1=7775.638305, g2=72190.994571, infl=29736.097580, gradK=32522.735451
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1937, ||ω̄||=0.4847, eigmin(Σ_k)=2.067e-05, rank(U_k)=1, eigmin(Ū)=4.651e-02, cond(Ū)=1.61e+04
+    Q_hat diag=[1.3156 1.3288]
+    R_hat diag=[1.3243]
+    [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 35674.8105 | Norm(Oracle): 27563.5142
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.6636
+  [Trace] iter=770 | mode=online-online | ret_eval=71.8080 | batch=4 trajs | std_benefit=0.101975 | |benefit|=0.072805 | g1=6793.483135, g2=93133.178025, infl=38951.317544, gradK=35674.810494
+  iter  770: return =   72.0805 (disc:   42.1386) ± 0.1972 | K = [1.2549 0.2831]
+  [Trace] iter=771 | mode=online-online | ret_eval=72.3256 | batch=4 trajs | std_benefit=0.104129 | |benefit|=0.072049 | g1=7488.478458, g2=109325.006624, infl=46656.580620, gradK=2388.709848
+  [Trace] iter=772 | mode=online-online | ret_eval=72.7747 | batch=4 trajs | std_benefit=0.107297 | |benefit|=0.074890 | g1=6973.300632, g2=54790.497286, infl=26616.817768, gradK=17360.520797
+  [Trace] iter=773 | mode=online-online | ret_eval=73.1887 | batch=4 trajs | std_benefit=0.101761 | |benefit|=0.070643 | g1=7139.717876, g2=58300.891273, infl=28651.371135, gradK=1326.812920
+  [Trace] iter=774 | mode=online-online | ret_eval=73.4842 | batch=4 trajs | std_benefit=0.117627 | |benefit|=0.083705 | g1=6225.344920, g2=56475.656699, infl=31528.681516, gradK=9103.871510
+  [Trace] iter=775 | mode=online-online | ret_eval=73.1579 | batch=4 trajs | std_benefit=0.100500 | |benefit|=0.070511 | g1=6606.896295, g2=27624.347887, infl=13666.441606, gradK=13659.624020
+  [Trace] iter=776 | mode=online-online | ret_eval=72.7201 | batch=4 trajs | std_benefit=0.090158 | |benefit|=0.063567 | g1=7118.221408, g2=56238.391534, infl=28752.325630, gradK=13605.998610
+  [Trace] iter=777 | mode=online-online | ret_eval=73.2501 | batch=4 trajs | std_benefit=0.084496 | |benefit|=0.058167 | g1=6410.453580, g2=32332.567515, infl=17126.984415, gradK=9843.104229
+  [Trace] iter=778 | mode=online-online | ret_eval=73.6329 | batch=4 trajs | std_benefit=0.067506 | |benefit|=0.048043 | g1=6461.988029, g2=39517.452499, infl=17508.035513, gradK=6582.536945
+  [Trace] iter=779 | mode=online-online | ret_eval=73.4182 | batch=4 trajs | std_benefit=0.057049 | |benefit|=0.039544 | g1=6354.000825, g2=24547.630273, infl=13458.952737, gradK=2187.871842
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.2017, ||ω̄||=0.4850, eigmin(Σ_k)=1.946e-05, rank(U_k)=1, eigmin(Ū)=4.657e-02, cond(Ū)=1.63e+04
+    Q_hat diag=[1.3157 1.3292]
+    R_hat diag=[1.3244]
+    [Diagnostics] HG Cosine Sim: 0.9998 | Norm(Est): 9957.2600 | Norm(Oracle): 7379.5926
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.3929
+  [Trace] iter=780 | mode=online-online | ret_eval=72.9456 | batch=4 trajs | std_benefit=0.041061 | |benefit|=0.029304 | g1=5923.496412, g2=31428.304152, infl=17654.520791, gradK=9957.260011
+  iter  780: return =   73.3393 (disc:   43.0995) ± 0.1043 | K = [1.1421 0.358 ]
+  [Trace] iter=781 | mode=online-online | ret_eval=72.8452 | batch=4 trajs | std_benefit=0.036274 | |benefit|=0.026627 | g1=7280.978074, g2=42626.892763, infl=22430.480370, gradK=7142.379621
+  [Trace] iter=782 | mode=online-online | ret_eval=72.4289 | batch=4 trajs | std_benefit=0.034077 | |benefit|=0.024002 | g1=5506.538451, g2=20755.589021, infl=14948.953809, gradK=5548.377347
+  [Trace] iter=783 | mode=online-online | ret_eval=72.7798 | batch=4 trajs | std_benefit=0.033902 | |benefit|=0.024553 | g1=7314.718323, g2=41192.670791, infl=19660.483828, gradK=2778.761660
+  [Trace] iter=784 | mode=online-online | ret_eval=73.1985 | batch=4 trajs | std_benefit=0.045135 | |benefit|=0.032054 | g1=6495.630787, g2=40653.702456, infl=18014.891176, gradK=17839.357868
+  [Trace] iter=785 | mode=online-online | ret_eval=73.6030 | batch=4 trajs | std_benefit=0.047626 | |benefit|=0.034048 | g1=6085.739904, g2=19606.192107, infl=15597.794746, gradK=4107.595683
+  [Trace] iter=786 | mode=online-online | ret_eval=73.5338 | batch=4 trajs | std_benefit=0.049669 | |benefit|=0.035629 | g1=6469.947964, g2=57521.883116, infl=22615.646470, gradK=6459.835190
+  [Trace] iter=787 | mode=online-online | ret_eval=73.1192 | batch=4 trajs | std_benefit=0.046733 | |benefit|=0.033142 | g1=6694.337452, g2=39318.855842, infl=20455.556852, gradK=13344.002940
+  [Trace] iter=788 | mode=online-online | ret_eval=72.7082 | batch=4 trajs | std_benefit=0.045167 | |benefit|=0.032395 | g1=6516.377264, g2=43021.177193, infl=20734.990353, gradK=25102.741770
+  [Trace] iter=789 | mode=online-online | ret_eval=73.0886 | batch=4 trajs | std_benefit=0.052375 | |benefit|=0.037101 | g1=6996.365879, g2=81226.069557, infl=20792.903187, gradK=31137.024706
+  [Dynamics Estimator] Estimating A, B, C via OLS...
+  [IRL-RLS 2pmg] ||ω_k||=0.1873, ||ω̄||=0.4851, eigmin(Σ_k)=2.214e-05, rank(U_k)=1, eigmin(Ū)=4.666e-02, cond(Ū)=1.65e+04
+    Q_hat diag=[1.3158 1.3294]
+    R_hat diag=[1.3245]
+    [Diagnostics] HG Cosine Sim: 0.9998 | Norm(Est): 10087.1368 | Norm(Oracle): 7776.7790
+    [Diagnostics] Reward Pearson Corr: 1.0000 | Var(Δr): 0.4986
+  [Trace] iter=790 | mode=online-online | ret_eval=73.3612 | batch=4 trajs | std_benefit=0.057810 | |benefit|=0.041622 | g1=5742.691564, g2=86737.881576, infl=28948.311670, gradK=10087.136800
+  iter  790: return =   73.0659 (disc:   43.4221) ± 0.1041 | K = [1.1874 0.4293]
+  [Trace] iter=791 | mode=online-online | ret_eval=72.9011 | batch=4 trajs | std_benefit=0.066629 | |benefit|=0.047887 | g1=6647.797106, g2=89605.317869, infl=23039.524943, gradK=3201.330506
+  [Trace] iter=792 | mode=online-online | ret_eval=73.2589 | batch=4 trajs | std_benefit=0.078563 | |benefit|=0.054792 | g1=6459.542487, g2=78523.056457, infl=33250.606153, gradK=32877.929480
+  [Trace] iter=793 | mode=online-online | ret_eval=72.9605 | batch=4 trajs | std_benefit=0.077439 | |benefit|=0.055904 | g1=7422.225589, g2=71183.723914, infl=27715.321780, gradK=7788.173914
+  [Trace] iter=794 | mode=online-online | ret_eval=73.2893 | batch=4 trajs | std_benefit=0.081709 | |benefit|=0.057544 | g1=6701.446315, g2=64696.543121, infl=28746.418718, gradK=4119.952223
+  [Trace] iter=795 | mode=online-online | ret_eval=73.7161 | batch=4 trajs | std_benefit=0.074941 | |benefit|=0.053881 | g1=7043.425309, g2=67276.971185, infl=29984.112300, gradK=20472.641278
+  [Trace] iter=796 | mode=online-online | ret_eval=73.4110 | batch=4 trajs | std_benefit=0.077827 | |benefit|=0.055362 | g1=6040.200297, g2=50323.945274, infl=20470.693399, gradK=21854.698873
+  [Trace] iter=797 | mode=online-online | ret_eval=73.7368 | batch=4 trajs | std_benefit=0.070340 | |benefit|=0.050059 | g1=6122.069778, g2=72226.219605, infl=25652.000058, gradK=22911.618702
+  [Trace] iter=798 | mode=online-online | ret_eval=74.1264 | batch=4 trajs | std_benefit=0.063818 | |benefit|=0.046312 | g1=7211.620512, g2=40361.929218, infl=19831.979476, gradK=4911.911968
+  [Trace] iter=799 | mode=online-online | ret_eval=73.6791 | batch=4 trajs | std_benefit=0.056483 | |benefit|=0.041444 | g1=6814.891650, g2=43974.183052, infl=16183.949071, gradK=26084.349500
+=== Best iter 152 | best return = 79.0553 | K = [0.1863 0.7067] ===
+=== Saved to data/internal/2pmg_continuous/test7-1gate1e-4critic10epsode4lr0.05weights0.50.5beta0.01sigmaleader1e-3_online-online/stats_irl_unknown_recursive_rls_seed1.pkl ===

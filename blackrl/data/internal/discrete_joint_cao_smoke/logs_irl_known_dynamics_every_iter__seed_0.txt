@@ -1,0 +1,1985 @@
+=== Mode: irl_known_dynamics_every_iter / Seed: 0 ===
+
+=== Initial Evaluation (Before Training) ===
+Leader Performance (vs Best Response): 21.0000 ± 2.4900
+Discounted Leader Performance: 10.8627 ± 1.6574
+
+=== Leader Iteration 0 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Initializing Learner Model...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 7.142184e-02
+  FEM residual norm: 1.077686e-01
+  Q Mean: 8.1129
+  Reward weights θ: [-1.      0.8999  1.     -1.      0.8774  1.     -1.     -1.      1.
+ -0.8687 -1.     -1.      0.7319 -1.     -1.      1.     -0.8773 -0.7427]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  0.900  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1:  0.877  b=2:  1.000
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -0.869  b=1: -1.000  b=2: -1.000
+
+State 2:
+  Leader action 0: b=0:  0.732  b=1: -1.000  b=2: -1.000
+  Leader action 1: b=0:  1.000  b=1: -0.877  b=2: -0.743
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=5.740e-04).
+Step 2.1: Online reward aggregation rank=16)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 4381.825648
+    Term 1 (policy gradient): 88.568478 (2.0%)
+    Term 2 (follower influence): 4470.142453 (102.0%)
+  Mean Q-value: 1.418258
+  Mean Advantage: 0.000000
+  Mean Advantage (follower-centered): -0.000000
+  Mean |Advantage| (follower-centered): 0.210750
+  Mean influence-grad norm: 0.185431
+  Mean term2 sample scale: 0.178755
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad= 11.4205, current_π=0.5000, update=+0.1142, new_π≈0.6142
+      Action 1: grad=-11.4205, current_π=0.5000, update=-0.1142, new_π≈0.3858
+    State 1:
+      Action 0: grad=3098.3881, current_π=0.5000, update=+30.9839, new_π≈31.4839
+      Action 1: grad=-3098.3881, current_π=0.5000, update=-30.9839, new_π≈-30.4839
+    State 2:
+      Action 0: grad= -7.6634, current_π=0.5000, update=-0.0766, new_π≈0.4234
+      Action 1: grad=  7.6634, current_π=0.5000, update=+0.0766, new_π≈0.5766
+  [Diagnostics] HG Cosine Sim: 1.0000 | Norm(Est): 4381.8256 | Norm(Oracle): 14246.6692
+  [Diagnostics] Reward Pearson Corr: 0.3027 (Weighted: 0.0000) | Var(Δr): 0.3967
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 0 ---
+State 0: P(a=0)=0.5050  P(a=1)=0.4950
+State 1: P(a=0)=0.5050  P(a=1)=0.4950
+State 2: P(a=0)=0.4950  P(a=1)=0.5050
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 22.6000 ± 2.6533
+Discounted Leader Performance: 12.1362 ± 1.1859
+
+=== Leader Iteration 1 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 4.744061e-02
+  FEM residual norm: 9.188827e-02
+  Q Mean: 8.7241
+  Reward weights θ: [-1.      0.9448  1.     -0.9866  0.9555  1.     -1.     -1.      1.
+ -0.9867 -1.     -0.9515  1.     -0.7821 -1.      1.     -0.86   -0.8168]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  0.945  b=2:  1.000
+  Leader action 1: b=0: -0.987  b=1:  0.956  b=2:  1.000
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -0.987  b=1: -1.000  b=2: -0.951
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -0.782  b=2: -1.000
+  Leader action 1: b=0:  1.000  b=1: -0.860  b=2: -0.817
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=7.026e-04).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 1811.115425
+    Term 1 (policy gradient): 87.895829 (4.9%)
+    Term 2 (follower influence): 1898.868509 (104.8%)
+  Mean Q-value: 2.701425
+  Mean Advantage: -0.000000
+  Mean Advantage (follower-centered): -0.000000
+  Mean |Advantage| (follower-centered): 0.210691
+  Mean influence-grad norm: 0.080610
+  Mean term2 sample scale: 0.077205
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad= 10.4521, current_π=0.5050, update=+0.1045, new_π≈0.6095
+      Action 1: grad=-10.4521, current_π=0.4950, update=-0.1045, new_π≈0.3905
+    State 1:
+      Action 0: grad=1279.9859, current_π=0.5050, update=+12.7999, new_π≈13.3049
+      Action 1: grad=-1279.9859, current_π=0.4950, update=-12.7999, new_π≈-12.3049
+    State 2:
+      Action 0: grad=-39.9544, current_π=0.4950, update=-0.3995, new_π≈0.0955
+      Action 1: grad= 39.9544, current_π=0.5050, update=+0.3995, new_π≈0.9045
+  [Diagnostics] HG Cosine Sim: 0.9995 | Norm(Est): 1811.1154 | Norm(Oracle): 14280.5799
+  [Diagnostics] Reward Pearson Corr: 0.1916 (Weighted: 0.0000) | Var(Δr): 0.4358
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 1 ---
+State 0: P(a=0)=0.5100  P(a=1)=0.4900
+State 1: P(a=0)=0.5095  P(a=1)=0.4905
+State 2: P(a=0)=0.4907  P(a=1)=0.5093
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 22.4000 ± 2.7276
+Discounted Leader Performance: 11.3165 ± 1.5265
+
+=== Leader Iteration 2 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 8.454607e-02
+  FEM residual norm: 1.470528e-01
+  Q Mean: 8.1765
+  Reward weights θ: [-1.      0.4277  0.8026 -1.      0.5635  1.     -1.     -1.      1.
+ -0.0088  0.1517  0.032   0.8514 -0.9903 -1.      1.     -0.8403 -0.7126]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  0.428  b=2:  0.803
+  Leader action 1: b=0: -1.000  b=1:  0.564  b=2:  1.000
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -0.009  b=1:  0.152  b=2:  0.032
+
+State 2:
+  Leader action 0: b=0:  0.851  b=1: -0.990  b=2: -1.000
+  Leader action 1: b=0:  1.000  b=1: -0.840  b=2: -0.713
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=1.721e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 1004.574036
+    Term 1 (policy gradient): 88.520489 (8.8%)
+    Term 2 (follower influence): 1092.797111 (108.8%)
+  Mean Q-value: 3.865651
+  Mean Advantage: -0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.210843
+  Mean influence-grad norm: 0.049130
+  Mean term2 sample scale: 0.046402
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad= 10.9395, current_π=0.5100, update=+0.1094, new_π≈0.6194
+      Action 1: grad=-10.9395, current_π=0.4900, update=-0.1094, new_π≈0.3806
+    State 1:
+      Action 0: grad=708.7651, current_π=0.5095, update=+7.0877, new_π≈7.5972
+      Action 1: grad=-708.7651, current_π=0.4905, update=-7.0877, new_π≈-6.5972
+    State 2:
+      Action 0: grad=-46.0088, current_π=0.4907, update=-0.4601, new_π≈0.0306
+      Action 1: grad= 46.0088, current_π=0.5093, update=+0.4601, new_π≈0.9694
+  [Diagnostics] HG Cosine Sim: 0.9978 | Norm(Est): 1004.5740 | Norm(Oracle): 14309.3286
+  [Diagnostics] Reward Pearson Corr: 0.1992 (Weighted: 0.0000) | Var(Δr): 0.4340
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 2 ---
+State 0: P(a=0)=0.5150  P(a=1)=0.4850
+State 1: P(a=0)=0.5136  P(a=1)=0.4864
+State 2: P(a=0)=0.4861  P(a=1)=0.5139
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 24.6000 ± 3.1686
+Discounted Leader Performance: 12.5454 ± 1.4946
+
+=== Leader Iteration 3 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 1.171550e-01
+  FEM residual norm: 1.791644e-01
+  Q Mean: 7.5958
+  Reward weights θ: [-1.      0.9972  1.     -1.      0.7574  0.6561 -1.     -1.      1.
+ -0.9573 -1.     -0.8663  1.     -0.9183 -0.6979  0.8166 -1.     -1.    ]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  0.997  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1:  0.757  b=2:  0.656
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -0.957  b=1: -1.000  b=2: -0.866
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -0.918  b=2: -0.698
+  Leader action 1: b=0:  0.817  b=1: -1.000  b=2: -1.000
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=1.205e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 895.020648
+    Term 1 (policy gradient): 89.005184 (9.9%)
+    Term 2 (follower influence): 982.960023 (109.8%)
+  Mean Q-value: 4.923163
+  Mean Advantage: 0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.211258
+  Mean influence-grad norm: 0.047367
+  Mean term2 sample scale: 0.044199
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad= 10.4741, current_π=0.5150, update=+0.1047, new_π≈0.6197
+      Action 1: grad=-10.4741, current_π=0.4850, update=-0.1047, new_π≈0.3803
+    State 1:
+      Action 0: grad=626.2054, current_π=0.5136, update=+6.2621, new_π≈6.7756
+      Action 1: grad=-626.2054, current_π=0.4864, update=-6.2621, new_π≈-5.7756
+    State 2:
+      Action 0: grad=-91.0389, current_π=0.4861, update=-0.9104, new_π≈-0.4243
+      Action 1: grad= 91.0389, current_π=0.5139, update=+0.9104, new_π≈1.4243
+  [Diagnostics] HG Cosine Sim: 0.9895 | Norm(Est): 895.0206 | Norm(Oracle): 14335.0178
+  [Diagnostics] Reward Pearson Corr: 0.2255 (Weighted: 0.0000) | Var(Δr): 0.4249
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 3 ---
+State 0: P(a=0)=0.5199  P(a=1)=0.4801
+State 1: P(a=0)=0.5174  P(a=1)=0.4826
+State 2: P(a=0)=0.4816  P(a=1)=0.5184
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 23.2000 ± 3.0265
+Discounted Leader Performance: 11.6814 ± 1.8229
+
+=== Leader Iteration 4 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 1.006783e-01
+  FEM residual norm: 1.186947e-01
+  Q Mean: 9.0021
+  Reward weights θ: [-0.9767  0.3001  1.     -1.      0.4131  0.967  -0.7916 -1.      1.
+  0.5732  0.6535  0.5674  1.     -0.9639 -0.9279  1.     -0.9161 -0.765 ]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -0.977  b=1:  0.300  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1:  0.413  b=2:  0.967
+
+State 1:
+  Leader action 0: b=0: -0.792  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0:  0.573  b=1:  0.654  b=2:  0.567
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -0.964  b=2: -0.928
+  Leader action 1: b=0:  1.000  b=1: -0.916  b=2: -0.765
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=1.591e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 1010.367512
+    Term 1 (policy gradient): 90.094731 (8.9%)
+    Term 2 (follower influence): 1096.974010 (108.6%)
+  Mean Q-value: 5.896292
+  Mean Advantage: 0.000000
+  Mean Advantage (follower-centered): -0.000000
+  Mean |Advantage| (follower-centered): 0.212014
+  Mean influence-grad norm: 0.059209
+  Mean term2 sample scale: 0.054599
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad=  7.0984, current_π=0.5199, update=+0.0710, new_π≈0.5909
+      Action 1: grad= -7.0984, current_π=0.4801, update=-0.0710, new_π≈0.4091
+    State 1:
+      Action 0: grad=685.0646, current_π=0.5174, update=+6.8506, new_π≈7.3680
+      Action 1: grad=-685.0646, current_π=0.4826, update=-6.8506, new_π≈-6.3680
+    State 2:
+      Action 0: grad=-202.6261, current_π=0.4816, update=-2.0263, new_π≈-1.5446
+      Action 1: grad=202.6261, current_π=0.5184, update=+2.0263, new_π≈2.5446
+  [Diagnostics] HG Cosine Sim: 0.9589 | Norm(Est): 1010.3675 | Norm(Oracle): 14345.2608
+  [Diagnostics] Reward Pearson Corr: 0.2522 (Weighted: 0.0000) | Var(Δr): 0.4152
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 4 ---
+State 0: P(a=0)=0.5248  P(a=1)=0.4752
+State 1: P(a=0)=0.5211  P(a=1)=0.4789
+State 2: P(a=0)=0.4774  P(a=1)=0.5226
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 21.1000 ± 3.1129
+Discounted Leader Performance: 11.0806 ± 1.9432
+
+=== Leader Iteration 5 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 6.874120e-02
+  FEM residual norm: 1.382198e-01
+  Q Mean: 7.9320
+  Reward weights θ: [-1.      0.7484  0.6388 -1.      1.      1.     -1.     -1.      1.
+ -1.     -0.7313 -1.      1.     -0.9131 -0.8943  1.     -1.     -0.7069]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  0.748  b=2:  0.639
+  Leader action 1: b=0: -1.000  b=1:  1.000  b=2:  1.000
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1: -0.731  b=2: -1.000
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -0.913  b=2: -0.894
+  Leader action 1: b=0:  1.000  b=1: -1.000  b=2: -0.707
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=2.079e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 1414.518197
+    Term 1 (policy gradient): 91.329336 (6.5%)
+    Term 2 (follower influence): 1500.716194 (106.1%)
+  Mean Q-value: 6.784643
+  Mean Advantage: -0.000000
+  Mean Advantage (follower-centered): -0.000000
+  Mean |Advantage| (follower-centered): 0.212458
+  Mean influence-grad norm: 0.087491
+  Mean term2 sample scale: 0.079867
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad= 14.0786, current_π=0.5248, update=+0.1408, new_π≈0.6656
+      Action 1: grad=-14.0786, current_π=0.4752, update=-0.1408, new_π≈0.3344
+    State 1:
+      Action 0: grad=944.0624, current_π=0.5211, update=+9.4406, new_π≈9.9617
+      Action 1: grad=-944.0624, current_π=0.4789, update=-9.4406, new_π≈-8.9617
+    State 2:
+      Action 0: grad=-330.1195, current_π=0.4774, update=-3.3012, new_π≈-2.8238
+      Action 1: grad=330.1195, current_π=0.5226, update=+3.3012, new_π≈3.8238
+  [Diagnostics] HG Cosine Sim: 0.9439 | Norm(Est): 1414.5182 | Norm(Oracle): 14353.5038
+  [Diagnostics] Reward Pearson Corr: 0.2908 (Weighted: 0.0000) | Var(Δr): 0.4013
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 5 ---
+State 0: P(a=0)=0.5297  P(a=1)=0.4703
+State 1: P(a=0)=0.5248  P(a=1)=0.4752
+State 2: P(a=0)=0.4732  P(a=1)=0.5268
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 24.4000 ± 2.6907
+Discounted Leader Performance: 12.1205 ± 1.6741
+
+=== Leader Iteration 6 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 9.234297e-02
+  FEM residual norm: 1.432441e-01
+  Q Mean: 8.9296
+  Reward weights θ: [-0.9213  0.7165  1.     -1.      0.6514  0.9427 -1.     -1.      1.
+  0.0697  0.1504  0.211   1.     -1.     -0.7208  1.     -0.9612 -0.7814]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -0.921  b=1:  0.716  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1:  0.651  b=2:  0.943
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0:  0.070  b=1:  0.150  b=2:  0.211
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -1.000  b=2: -0.721
+  Leader action 1: b=0:  1.000  b=1: -0.961  b=2: -0.781
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=4.631e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 1886.291353
+    Term 1 (policy gradient): 92.730158 (4.9%)
+    Term 2 (follower influence): 1971.578820 (104.5%)
+  Mean Q-value: 7.599925
+  Mean Advantage: 0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.212954
+  Mean influence-grad norm: 0.126058
+  Mean term2 sample scale: 0.113864
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad= 21.0445, current_π=0.5297, update=+0.2104, new_π≈0.7401
+      Action 1: grad=-21.0445, current_π=0.4703, update=-0.2104, new_π≈0.2599
+    State 1:
+      Action 0: grad=1228.0789, current_π=0.5248, update=+12.2808, new_π≈12.8056
+      Action 1: grad=-1228.0789, current_π=0.4752, update=-12.2808, new_π≈-11.8056
+    State 2:
+      Action 0: grad=-520.0259, current_π=0.4732, update=-5.2003, new_π≈-4.7270
+      Action 1: grad=520.0259, current_π=0.5268, update=+5.2003, new_π≈5.7270
+  [Diagnostics] HG Cosine Sim: 0.9207 | Norm(Est): 1886.2914 | Norm(Oracle): 14355.5728
+  [Diagnostics] Reward Pearson Corr: 0.3318 (Weighted: 0.0000) | Var(Δr): 0.3866
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 6 ---
+State 0: P(a=0)=0.5346  P(a=1)=0.4654
+State 1: P(a=0)=0.5287  P(a=1)=0.4713
+State 2: P(a=0)=0.4690  P(a=1)=0.5310
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 22.3000 ± 3.3779
+Discounted Leader Performance: 12.1242 ± 2.1762
+
+=== Leader Iteration 7 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 7.281349e-02
+  FEM residual norm: 1.340767e-01
+  Q Mean: 7.8931
+  Reward weights θ: [-1.      1.      0.9622 -1.      0.6946  0.6524 -1.     -1.      1.
+ -1.     -0.8035 -1.      0.9863 -1.     -1.      1.     -0.9486 -1.    ]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  1.000  b=2:  0.962
+  Leader action 1: b=0: -1.000  b=1:  0.695  b=2:  0.652
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1: -0.803  b=2: -1.000
+
+State 2:
+  Leader action 0: b=0:  0.986  b=1: -1.000  b=2: -1.000
+  Leader action 1: b=0:  1.000  b=1: -0.949  b=2: -1.000
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=2.826e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 2094.528193
+    Term 1 (policy gradient): 93.195495 (4.4%)
+    Term 2 (follower influence): 2178.520333 (104.0%)
+  Mean Q-value: 8.341356
+  Mean Advantage: -0.000000
+  Mean Advantage (follower-centered): -0.000000
+  Mean |Advantage| (follower-centered): 0.213136
+  Mean influence-grad norm: 0.148638
+  Mean term2 sample scale: 0.133296
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad= 25.8229, current_π=0.5346, update=+0.2582, new_π≈0.7929
+      Action 1: grad=-25.8229, current_π=0.4654, update=-0.2582, new_π≈0.2071
+    State 1:
+      Action 0: grad=1333.9816, current_π=0.5287, update=+13.3398, new_π≈13.8685
+      Action 1: grad=-1333.9816, current_π=0.4713, update=-13.3398, new_π≈-12.8685
+    State 2:
+      Action 0: grad=-642.9234, current_π=0.4690, update=-6.4292, new_π≈-5.9603
+      Action 1: grad=642.9234, current_π=0.5310, update=+6.4292, new_π≈6.9603
+  [Diagnostics] HG Cosine Sim: 0.9007 | Norm(Est): 2094.5282 | Norm(Oracle): 14359.1059
+  [Diagnostics] Reward Pearson Corr: 0.3483 (Weighted: 0.0000) | Var(Δr): 0.3809
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 7 ---
+State 0: P(a=0)=0.5396  P(a=1)=0.4604
+State 1: P(a=0)=0.5327  P(a=1)=0.4673
+State 2: P(a=0)=0.4646  P(a=1)=0.5354
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 23.7000 ± 3.0348
+Discounted Leader Performance: 12.1027 ± 1.5602
+
+=== Leader Iteration 8 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 8.055996e-02
+  FEM residual norm: 1.324353e-01
+  Q Mean: 8.5013
+  Reward weights θ: [-1.      0.7856  1.     -0.7701  0.7799  1.     -1.     -1.      1.
+ -0.1039 -0.1751 -0.2746  1.     -0.5126 -0.7641  0.79   -1.     -1.    ]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  0.786  b=2:  1.000
+  Leader action 1: b=0: -0.770  b=1:  0.780  b=2:  1.000
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -0.104  b=1: -0.175  b=2: -0.275
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -0.513  b=2: -0.764
+  Leader action 1: b=0:  0.790  b=1: -1.000  b=2: -1.000
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=3.208e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 2460.385407
+    Term 1 (policy gradient): 94.212484 (3.8%)
+    Term 2 (follower influence): 2544.226595 (103.4%)
+  Mean Q-value: 9.022256
+  Mean Advantage: 0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.213595
+  Mean influence-grad norm: 0.180387
+  Mean term2 sample scale: 0.161351
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad= 31.2088, current_π=0.5396, update=+0.3121, new_π≈0.8517
+      Action 1: grad=-31.2088, current_π=0.4604, update=-0.3121, new_π≈0.1483
+    State 1:
+      Action 0: grad=1547.0677, current_π=0.5327, update=+15.4707, new_π≈16.0034
+      Action 1: grad=-1547.0677, current_π=0.4673, update=-15.4707, new_π≈-15.0034
+    State 2:
+      Action 0: grad=-795.2080, current_π=0.4646, update=-7.9521, new_π≈-7.4875
+      Action 1: grad=795.2080, current_π=0.5354, update=+7.9521, new_π≈8.4875
+  [Diagnostics] HG Cosine Sim: 0.8892 | Norm(Est): 2460.3854 | Norm(Oracle): 14356.3354
+  [Diagnostics] Reward Pearson Corr: 0.3775 (Weighted: 0.0000) | Var(Δr): 0.3707
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 8 ---
+State 0: P(a=0)=0.5445  P(a=1)=0.4555
+State 1: P(a=0)=0.5370  P(a=1)=0.4630
+State 2: P(a=0)=0.4600  P(a=1)=0.5400
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 23.9000 ± 2.8089
+Discounted Leader Performance: 12.0855 ± 1.2857
+
+=== Leader Iteration 9 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 8.855801e-02
+  FEM residual norm: 1.601922e-01
+  Q Mean: 7.5698
+  Reward weights θ: [-1.      0.803   1.     -1.      1.      1.     -1.     -1.      1.
+ -0.986  -0.8751 -1.      1.     -0.6937 -0.7761  0.5027 -1.     -1.    ]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  0.803  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1:  1.000  b=2:  1.000
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -0.986  b=1: -0.875  b=2: -1.000
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -0.694  b=2: -0.776
+  Leader action 1: b=0:  0.503  b=1: -1.000  b=2: -1.000
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=4.622e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 2967.361186
+    Term 1 (policy gradient): 95.864395 (3.2%)
+    Term 2 (follower influence): 3052.609759 (102.9%)
+  Mean Q-value: 9.653903
+  Mean Advantage: -0.000000
+  Mean Advantage (follower-centered): -0.000000
+  Mean |Advantage| (follower-centered): 0.214247
+  Mean influence-grad norm: 0.219131
+  Mean term2 sample scale: 0.196244
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad= 40.0868, current_π=0.5445, update=+0.4009, new_π≈0.9454
+      Action 1: grad=-40.0868, current_π=0.4555, update=-0.4009, new_π≈0.0546
+    State 1:
+      Action 0: grad=1863.2855, current_π=0.5370, update=+18.6329, new_π≈19.1698
+      Action 1: grad=-1863.2855, current_π=0.4630, update=-18.6329, new_π≈-18.1698
+    State 2:
+      Action 0: grad=-963.9380, current_π=0.4600, update=-9.6394, new_π≈-9.1793
+      Action 1: grad=963.9380, current_π=0.5400, update=+9.6394, new_π≈10.1793
+  [Diagnostics] HG Cosine Sim: 0.8880 | Norm(Est): 2967.3612 | Norm(Oracle): 14344.4508
+  [Diagnostics] Reward Pearson Corr: 0.4170 (Weighted: 0.0000) | Var(Δr): 0.3571
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 9 ---
+State 0: P(a=0)=0.5495  P(a=1)=0.4505
+State 1: P(a=0)=0.5414  P(a=1)=0.4586
+State 2: P(a=0)=0.4554  P(a=1)=0.5446
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 23.1000 ± 2.3854
+Discounted Leader Performance: 12.2797 ± 1.5464
+
+=== Leader Iteration 10 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 8.847931e-02
+  FEM residual norm: 1.688161e-01
+  Q Mean: 8.1082
+  Reward weights θ: [-1.      1.      1.     -1.      0.7541  0.5866 -0.8164 -1.      1.
+ -0.5974 -0.7168 -0.5628  1.     -0.939  -0.7708  1.     -0.9048 -0.8427]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  1.000  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1:  0.754  b=2:  0.587
+
+State 1:
+  Leader action 0: b=0: -0.816  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -0.597  b=1: -0.717  b=2: -0.563
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -0.939  b=2: -0.771
+  Leader action 1: b=0:  1.000  b=1: -0.905  b=2: -0.843
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=7.244e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 3870.287980
+    Term 1 (policy gradient): 98.271852 (2.5%)
+    Term 2 (follower influence): 3958.778210 (102.3%)
+  Mean Q-value: 10.245980
+  Mean Advantage: 0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.215293
+  Mean influence-grad norm: 0.280345
+  Mean term2 sample scale: 0.252301
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad= 54.8128, current_π=0.5495, update=+0.5481, new_π≈1.0977
+      Action 1: grad=-54.8128, current_π=0.4505, update=-0.5481, new_π≈-0.0977
+    State 1:
+      Action 0: grad=2463.5976, current_π=0.5414, update=+24.6360, new_π≈25.1773
+      Action 1: grad=-2463.5976, current_π=0.4586, update=-24.6360, new_π≈-24.1773
+    State 2:
+      Action 0: grad=-1190.4818, current_π=0.4554, update=-11.9048, new_π≈-11.4494
+      Action 1: grad=1190.4818, current_π=0.5446, update=+11.9048, new_π≈12.4494
+  [Diagnostics] HG Cosine Sim: 0.9002 | Norm(Est): 3870.2880 | Norm(Oracle): 14327.7545
+  [Diagnostics] Reward Pearson Corr: 0.4731 (Weighted: 0.0000) | Var(Δr): 0.3375
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 10 ---
+State 0: P(a=0)=0.5545  P(a=1)=0.4455
+State 1: P(a=0)=0.5460  P(a=1)=0.4540
+State 2: P(a=0)=0.4506  P(a=1)=0.5494
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 26.3000 ± 4.2438
+Discounted Leader Performance: 13.5603 ± 2.2554
+
+=== Leader Iteration 11 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 7.198449e-02
+  FEM residual norm: 1.348243e-01
+  Q Mean: 8.1005
+  Reward weights θ: [-1.      1.      0.9809 -1.      0.8335  0.701  -0.8705 -1.      1.
+ -1.     -1.     -1.      1.     -0.9948 -1.      1.     -1.     -1.    ]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  1.000  b=2:  0.981
+  Leader action 1: b=0: -1.000  b=1:  0.834  b=2:  0.701
+
+State 1:
+  Leader action 0: b=0: -0.870  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1: -1.000  b=2: -1.000
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -0.995  b=2: -1.000
+  Leader action 1: b=0:  1.000  b=1: -1.000  b=2: -1.000
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=5.769e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 4342.905647
+    Term 1 (policy gradient): 99.624800 (2.3%)
+    Term 2 (follower influence): 4432.473564 (102.1%)
+  Mean Q-value: 10.794456
+  Mean Advantage: 0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.215782
+  Mean influence-grad norm: 0.316439
+  Mean term2 sample scale: 0.285103
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad= 63.5486, current_π=0.5545, update=+0.6355, new_π≈1.1900
+      Action 1: grad=-63.5486, current_π=0.4455, update=-0.6355, new_π≈-0.1900
+    State 1:
+      Action 0: grad=2762.5358, current_π=0.5460, update=+27.6254, new_π≈28.1713
+      Action 1: grad=-2762.5358, current_π=0.4540, update=-27.6254, new_π≈-27.1713
+    State 2:
+      Action 0: grad=-1339.6912, current_π=0.4506, update=-13.3969, new_π≈-12.9463
+      Action 1: grad=1339.6912, current_π=0.5494, update=+13.3969, new_π≈13.9463
+  [Diagnostics] HG Cosine Sim: 0.8996 | Norm(Est): 4342.9056 | Norm(Oracle): 14305.6878
+  [Diagnostics] Reward Pearson Corr: 0.5054 (Weighted: 0.0000) | Var(Δr): 0.3259
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 11 ---
+State 0: P(a=0)=0.5595  P(a=1)=0.4405
+State 1: P(a=0)=0.5507  P(a=1)=0.4493
+State 2: P(a=0)=0.4457  P(a=1)=0.5543
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 25.9000 ± 3.5903
+Discounted Leader Performance: 13.5733 ± 2.2674
+
+=== Leader Iteration 12 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 5.896664e-02
+  FEM residual norm: 9.691204e-02
+  Q Mean: 8.3372
+  Reward weights θ: [-1.      1.      1.     -1.      1.      0.8513 -0.9594 -1.      1.
+ -0.7667 -0.887  -1.      0.8917 -0.7457 -1.      1.     -0.7237 -0.9151]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  1.000  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1:  1.000  b=2:  0.851
+
+State 1:
+  Leader action 0: b=0: -0.959  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -0.767  b=1: -0.887  b=2: -1.000
+
+State 2:
+  Leader action 0: b=0:  0.892  b=1: -0.746  b=2: -1.000
+  Leader action 1: b=0:  1.000  b=1: -0.724  b=2: -0.915
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=5.567e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 4823.033727
+    Term 1 (policy gradient): 101.273946 (2.1%)
+    Term 2 (follower influence): 4914.606521 (101.9%)
+  Mean Q-value: 11.304198
+  Mean Advantage: -0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.216310
+  Mean influence-grad norm: 0.348047
+  Mean term2 sample scale: 0.314425
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad= 73.4879, current_π=0.5595, update=+0.7349, new_π≈1.2943
+      Action 1: grad=-73.4879, current_π=0.4405, update=-0.7349, new_π≈-0.2943
+    State 1:
+      Action 0: grad=3090.4217, current_π=0.5507, update=+30.9042, new_π≈31.4549
+      Action 1: grad=-3090.4217, current_π=0.4493, update=-30.9042, new_π≈-30.4549
+    State 2:
+      Action 0: grad=-1440.3889, current_π=0.4457, update=-14.4039, new_π≈-13.9582
+      Action 1: grad=1440.3889, current_π=0.5543, update=+14.4039, new_π≈14.9582
+  [Diagnostics] HG Cosine Sim: 0.9062 | Norm(Est): 4823.0337 | Norm(Oracle): 14277.1380
+  [Diagnostics] Reward Pearson Corr: 0.5356 (Weighted: 0.0000) | Var(Δr): 0.3149
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 12 ---
+State 0: P(a=0)=0.5645  P(a=1)=0.4355
+State 1: P(a=0)=0.5556  P(a=1)=0.4444
+State 2: P(a=0)=0.4408  P(a=1)=0.5592
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 25.3000 ± 2.4104
+Discounted Leader Performance: 13.2018 ± 1.7014
+
+=== Leader Iteration 13 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 1.158606e-01
+  FEM residual norm: 1.875539e-01
+  Q Mean: 8.1437
+  Reward weights θ: [-1.      1.      0.8266 -1.      1.      0.8822 -1.     -1.      1.
+ -1.     -0.9847 -1.      1.     -0.9619 -1.      1.     -0.8117 -0.8715]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  1.000  b=2:  0.827
+  Leader action 1: b=0: -1.000  b=1:  1.000  b=2:  0.882
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1: -0.985  b=2: -1.000
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -0.962  b=2: -1.000
+  Leader action 1: b=0:  1.000  b=1: -0.812  b=2: -0.872
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=1.006e-02).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 5079.435069
+    Term 1 (policy gradient): 102.274774 (2.0%)
+    Term 2 (follower influence): 5172.268612 (101.8%)
+  Mean Q-value: 11.773823
+  Mean Advantage: 0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.216617
+  Mean influence-grad norm: 0.365456
+  Mean term2 sample scale: 0.330639
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad= 78.9424, current_π=0.5645, update=+0.7894, new_π≈1.3539
+      Action 1: grad=-78.9424, current_π=0.4355, update=-0.7894, new_π≈-0.3539
+    State 1:
+      Action 0: grad=3264.7739, current_π=0.5556, update=+32.6477, new_π≈33.2034
+      Action 1: grad=-3264.7739, current_π=0.4444, update=-32.6477, new_π≈-32.2034
+    State 2:
+      Action 0: grad=-1495.1087, current_π=0.4408, update=-14.9511, new_π≈-14.5103
+      Action 1: grad=1495.1087, current_π=0.5592, update=+14.9511, new_π≈15.5103
+  [Diagnostics] HG Cosine Sim: 0.9090 | Norm(Est): 5079.4351 | Norm(Oracle): 14244.5821
+  [Diagnostics] Reward Pearson Corr: 0.5457 (Weighted: 0.0000) | Var(Δr): 0.3110
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 13 ---
+State 0: P(a=0)=0.5696  P(a=1)=0.4304
+State 1: P(a=0)=0.5606  P(a=1)=0.4394
+State 2: P(a=0)=0.4357  P(a=1)=0.5643
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 25.5000 ± 4.3417
+Discounted Leader Performance: 13.0781 ± 2.3779
+
+=== Leader Iteration 14 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 8.036023e-02
+  FEM residual norm: 1.462523e-01
+  Q Mean: 7.9060
+  Reward weights θ: [-1.      0.9688  0.7814 -1.      1.      0.9049 -0.899  -1.      1.
+ -1.     -1.     -1.      0.9111 -1.     -1.      1.     -0.9982 -0.8505]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  0.969  b=2:  0.781
+  Leader action 1: b=0: -1.000  b=1:  1.000  b=2:  0.905
+
+State 1:
+  Leader action 0: b=0: -0.899  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1: -1.000  b=2: -1.000
+
+State 2:
+  Leader action 0: b=0:  0.911  b=1: -1.000  b=2: -1.000
+  Leader action 1: b=0:  1.000  b=1: -0.998  b=2: -0.851
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=6.541e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 5465.228097
+    Term 1 (policy gradient): 104.458793 (1.9%)
+    Term 2 (follower influence): 5560.380049 (101.7%)
+  Mean Q-value: 12.222296
+  Mean Advantage: 0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.217268
+  Mean influence-grad norm: 0.390984
+  Mean term2 sample scale: 0.354970
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad= 87.6218, current_π=0.5696, update=+0.8762, new_π≈1.4458
+      Action 1: grad=-87.6218, current_π=0.4304, update=-0.8762, new_π≈-0.4458
+    State 1:
+      Action 0: grad=3523.6536, current_π=0.5606, update=+35.2365, new_π≈35.7972
+      Action 1: grad=-3523.6536, current_π=0.4394, update=-35.2365, new_π≈-34.7972
+    State 2:
+      Action 0: grad=-1584.4705, current_π=0.4357, update=-15.8447, new_π≈-15.4090
+      Action 1: grad=1584.4705, current_π=0.5643, update=+15.8447, new_π≈16.4090
+  [Diagnostics] HG Cosine Sim: 0.9118 | Norm(Est): 5465.2281 | Norm(Oracle): 14194.2969
+  [Diagnostics] Reward Pearson Corr: 0.5761 (Weighted: 0.0000) | Var(Δr): 0.2993
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 14 ---
+State 0: P(a=0)=0.5748  P(a=1)=0.4252
+State 1: P(a=0)=0.5658  P(a=1)=0.4342
+State 2: P(a=0)=0.4305  P(a=1)=0.5695
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 27.4000 ± 3.8000
+Discounted Leader Performance: 14.1483 ± 1.8311
+
+=== Leader Iteration 15 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 1.607479e-01
+  FEM residual norm: 3.057997e-01
+  Q Mean: 7.4690
+  Reward weights θ: [-0.828   0.5405  1.     -1.     -0.3716  0.0315 -1.     -1.      1.
+  0.9869  0.702   1.      1.     -1.     -1.      1.     -0.8798 -0.9634]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -0.828  b=1:  0.541  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1: -0.372  b=2:  0.031
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0:  0.987  b=1:  0.702  b=2:  1.000
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -1.000  b=2: -1.000
+  Leader action 1: b=0:  1.000  b=1: -0.880  b=2: -0.963
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=6.474e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 6031.068014
+    Term 1 (policy gradient): 106.533477 (1.8%)
+    Term 2 (follower influence): 6128.781369 (101.6%)
+  Mean Q-value: 12.645333
+  Mean Advantage: 0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.217785
+  Mean influence-grad norm: 0.425433
+  Mean term2 sample scale: 0.387667
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad= 96.9491, current_π=0.5748, update=+0.9695, new_π≈1.5443
+      Action 1: grad=-96.9491, current_π=0.4252, update=-0.9695, new_π≈-0.5443
+    State 1:
+      Action 0: grad=3914.1111, current_π=0.5658, update=+39.1411, new_π≈39.7069
+      Action 1: grad=-3914.1111, current_π=0.4342, update=-39.1411, new_π≈-38.7069
+    State 2:
+      Action 0: grad=-1690.3330, current_π=0.4305, update=-16.9033, new_π≈-16.4728
+      Action 1: grad=1690.3330, current_π=0.5695, update=+16.9033, new_π≈17.4728
+  [Diagnostics] HG Cosine Sim: 0.9178 | Norm(Est): 6031.0680 | Norm(Oracle): 14139.8676
+  [Diagnostics] Reward Pearson Corr: 0.6023 (Weighted: 0.0000) | Var(Δr): 0.2886
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 15 ---
+State 0: P(a=0)=0.5801  P(a=1)=0.4199
+State 1: P(a=0)=0.5710  P(a=1)=0.4290
+State 2: P(a=0)=0.4253  P(a=1)=0.5747
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 24.9000 ± 3.5057
+Discounted Leader Performance: 13.1612 ± 1.9597
+
+=== Leader Iteration 16 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 5.792993e-02
+  FEM residual norm: 1.135275e-01
+  Q Mean: 7.9588
+  Reward weights θ: [-1.      1.      0.7625 -1.      1.      0.8274 -0.8223 -1.      1.
+ -1.     -1.     -0.932   1.     -0.949  -0.6584  1.     -1.     -0.8738]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  1.000  b=2:  0.763
+  Leader action 1: b=0: -1.000  b=1:  1.000  b=2:  0.827
+
+State 1:
+  Leader action 0: b=0: -0.822  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1: -1.000  b=2: -0.932
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -0.949  b=2: -0.658
+  Leader action 1: b=0:  1.000  b=1: -1.000  b=2: -0.874
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=8.341e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 6778.720076
+    Term 1 (policy gradient): 109.647691 (1.6%)
+    Term 2 (follower influence): 6880.262819 (101.5%)
+  Mean Q-value: 13.055417
+  Mean Advantage: 0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.218585
+  Mean influence-grad norm: 0.467132
+  Mean term2 sample scale: 0.428098
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad=106.6491, current_π=0.5801, update=+1.0665, new_π≈1.6465
+      Action 1: grad=-106.6491, current_π=0.4199, update=-1.0665, new_π≈-0.6465
+    State 1:
+      Action 0: grad=4444.0551, current_π=0.5710, update=+44.4406, new_π≈45.0115
+      Action 1: grad=-4444.0551, current_π=0.4290, update=-44.4406, new_π≈-44.0115
+    State 2:
+      Action 0: grad=-1792.9091, current_π=0.4253, update=-17.9291, new_π≈-17.5038
+      Action 1: grad=1792.9091, current_π=0.5747, update=+17.9291, new_π≈18.5038
+  [Diagnostics] HG Cosine Sim: 0.9271 | Norm(Est): 6778.7201 | Norm(Oracle): 14073.2385
+  [Diagnostics] Reward Pearson Corr: 0.6319 (Weighted: 0.0000) | Var(Δr): 0.2758
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 16 ---
+State 0: P(a=0)=0.5854  P(a=1)=0.4146
+State 1: P(a=0)=0.5762  P(a=1)=0.4238
+State 2: P(a=0)=0.4199  P(a=1)=0.5801
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 27.0000 ± 3.5777
+Discounted Leader Performance: 14.0294 ± 1.8515
+
+=== Leader Iteration 17 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 1.234738e-01
+  FEM residual norm: 1.497452e-01
+  Q Mean: 8.6162
+  Reward weights θ: [-0.9889  0.5104  1.     -0.9037  0.3556  1.     -0.965  -1.      1.
+  0.7863  0.7096  0.5454  1.     -0.7197 -0.7426  0.7824 -1.     -0.9793]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -0.989  b=1:  0.510  b=2:  1.000
+  Leader action 1: b=0: -0.904  b=1:  0.356  b=2:  1.000
+
+State 1:
+  Leader action 0: b=0: -0.965  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0:  0.786  b=1:  0.710  b=2:  0.545
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -0.720  b=2: -0.743
+  Leader action 1: b=0:  0.782  b=1: -1.000  b=2: -0.979
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=1.018e-02).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 7133.452444
+    Term 1 (policy gradient): 111.516634 (1.6%)
+    Term 2 (follower influence): 7236.763118 (101.4%)
+  Mean Q-value: 13.444132
+  Mean Advantage: -0.000000
+  Mean Advantage (follower-centered): -0.000000
+  Mean |Advantage| (follower-centered): 0.219030
+  Mean influence-grad norm: 0.492808
+  Mean term2 sample scale: 0.452477
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad=113.2733, current_π=0.5854, update=+1.1327, new_π≈1.7181
+      Action 1: grad=-113.2733, current_π=0.4146, update=-1.1327, new_π≈-0.7181
+    State 1:
+      Action 0: grad=4674.3029, current_π=0.5762, update=+46.7430, new_π≈47.3193
+      Action 1: grad=-4674.3029, current_π=0.4238, update=-46.7430, new_π≈-46.3193
+    State 2:
+      Action 0: grad=-1892.3882, current_π=0.4199, update=-18.9239, new_π≈-18.5039
+      Action 1: grad=1892.3882, current_π=0.5801, update=+18.9239, new_π≈19.5039
+  [Diagnostics] HG Cosine Sim: 0.9267 | Norm(Est): 7133.4524 | Norm(Oracle): 14003.6150
+  [Diagnostics] Reward Pearson Corr: 0.6474 (Weighted: 0.0000) | Var(Δr): 0.2683
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 17 ---
+State 0: P(a=0)=0.5908  P(a=1)=0.4092
+State 1: P(a=0)=0.5816  P(a=1)=0.4184
+State 2: P(a=0)=0.4146  P(a=1)=0.5854
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 25.1000 ± 3.7537
+Discounted Leader Performance: 13.2076 ± 2.1684
+
+=== Leader Iteration 18 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 1.122566e-01
+  FEM residual norm: 2.040543e-01
+  Q Mean: 7.7496
+  Reward weights θ: [-1.      1.      0.778  -1.      1.      0.8444 -0.8879 -1.      1.
+ -0.9682 -1.     -1.      0.8457 -1.     -1.      1.     -0.76   -0.8976]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  1.000  b=2:  0.778
+  Leader action 1: b=0: -1.000  b=1:  1.000  b=2:  0.844
+
+State 1:
+  Leader action 0: b=0: -0.888  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -0.968  b=1: -1.000  b=2: -1.000
+
+State 2:
+  Leader action 0: b=0:  0.846  b=1: -1.000  b=2: -1.000
+  Leader action 1: b=0:  1.000  b=1: -0.760  b=2: -0.898
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=1.368e-02).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 7549.555890
+    Term 1 (policy gradient): 114.006179 (1.5%)
+    Term 2 (follower influence): 7655.772544 (101.4%)
+  Mean Q-value: 13.820206
+  Mean Advantage: 0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.219521
+  Mean influence-grad norm: 0.512872
+  Mean term2 sample scale: 0.472962
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad=114.8196, current_π=0.5908, update=+1.1482, new_π≈1.7390
+      Action 1: grad=-114.8196, current_π=0.4092, update=-1.1482, new_π≈-0.7390
+    State 1:
+      Action 0: grad=4974.0718, current_π=0.5816, update=+49.7407, new_π≈50.3223
+      Action 1: grad=-4974.0718, current_π=0.4184, update=-49.7407, new_π≈-49.3223
+    State 2:
+      Action 0: grad=-1934.7669, current_π=0.4146, update=-19.3477, new_π≈-18.9331
+      Action 1: grad=1934.7669, current_π=0.5854, update=+19.3477, new_π≈19.9331
+  [Diagnostics] HG Cosine Sim: 0.9318 | Norm(Est): 7549.5559 | Norm(Oracle): 13921.2582
+  [Diagnostics] Reward Pearson Corr: 0.6615 (Weighted: 0.0000) | Var(Δr): 0.2616
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 18 ---
+State 0: P(a=0)=0.5962  P(a=1)=0.4038
+State 1: P(a=0)=0.5870  P(a=1)=0.4130
+State 2: P(a=0)=0.4091  P(a=1)=0.5909
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 27.7000 ± 3.5791
+Discounted Leader Performance: 14.2147 ± 2.0302
+
+=== Leader Iteration 19 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 8.469221e-02
+  FEM residual norm: 1.567781e-01
+  Q Mean: 7.8119
+  Reward weights θ: [-1.      1.      0.7019 -1.      1.      0.8076 -1.     -1.      1.
+ -1.     -0.9534 -0.9186  1.     -0.9194 -0.9653  1.     -0.8726 -1.    ]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  1.000  b=2:  0.702
+  Leader action 1: b=0: -1.000  b=1:  1.000  b=2:  0.808
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1: -0.953  b=2: -0.919
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -0.919  b=2: -0.965
+  Leader action 1: b=0:  1.000  b=1: -0.873  b=2: -1.000
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=8.909e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 7989.200295
+    Term 1 (policy gradient): 116.578322 (1.5%)
+    Term 2 (follower influence): 8098.032213 (101.4%)
+  Mean Q-value: 14.185696
+  Mean Advantage: -0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.220004
+  Mean influence-grad norm: 0.538665
+  Mean term2 sample scale: 0.498407
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad=117.0076, current_π=0.5962, update=+1.1701, new_π≈1.7663
+      Action 1: grad=-117.0076, current_π=0.4038, update=-1.1701, new_π≈-0.7663
+    State 1:
+      Action 0: grad=5275.8495, current_π=0.5870, update=+52.7585, new_π≈53.3455
+      Action 1: grad=-5275.8495, current_π=0.4130, update=-52.7585, new_π≈-52.3455
+    State 2:
+      Action 0: grad=-2016.2792, current_π=0.4091, update=-20.1628, new_π≈-19.7537
+      Action 1: grad=2016.2792, current_π=0.5909, update=+20.1628, new_π≈20.7537
+  [Diagnostics] HG Cosine Sim: 0.9339 | Norm(Est): 7989.2003 | Norm(Oracle): 13830.6920
+  [Diagnostics] Reward Pearson Corr: 0.6779 (Weighted: 0.0000) | Var(Δr): 0.2531
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 19 ---
+State 0: P(a=0)=0.6017  P(a=1)=0.3983
+State 1: P(a=0)=0.5925  P(a=1)=0.4075
+State 2: P(a=0)=0.4037  P(a=1)=0.5963
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 25.0000 ± 3.0984
+Discounted Leader Performance: 13.1783 ± 2.1203
+
+=== Leader Iteration 20 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 8.735972e-02
+  FEM residual norm: 1.606066e-01
+  Q Mean: 8.8528
+  Reward weights θ: [-1.      1.      0.985  -1.      1.      0.9165 -1.     -1.      1.
+ -0.393  -0.3746 -0.4516  1.     -1.     -0.9249  1.     -1.     -0.8714]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  1.000  b=2:  0.985
+  Leader action 1: b=0: -1.000  b=1:  1.000  b=2:  0.916
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -0.393  b=1: -0.375  b=2: -0.452
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -1.000  b=2: -0.925
+  Leader action 1: b=0:  1.000  b=1: -1.000  b=2: -0.871
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=8.676e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 8460.061233
+    Term 1 (policy gradient): 119.440188 (1.4%)
+    Term 2 (follower influence): 8571.885028 (101.3%)
+  Mean Q-value: 14.542451
+  Mean Advantage: -0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.220420
+  Mean influence-grad norm: 0.567692
+  Mean term2 sample scale: 0.526619
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad=119.3657, current_π=0.6017, update=+1.1937, new_π≈1.7953
+      Action 1: grad=-119.3657, current_π=0.3983, update=-1.1937, new_π≈-0.7953
+    State 1:
+      Action 0: grad=5599.8091, current_π=0.5925, update=+55.9981, new_π≈56.5906
+      Action 1: grad=-5599.8091, current_π=0.4075, update=-55.9981, new_π≈-55.5906
+    State 2:
+      Action 0: grad=-2101.0016, current_π=0.4037, update=-21.0100, new_π≈-20.6063
+      Action 1: grad=2101.0016, current_π=0.5963, update=+21.0100, new_π≈21.6063
+  [Diagnostics] HG Cosine Sim: 0.9361 | Norm(Est): 8460.0612 | Norm(Oracle): 13730.8874
+  [Diagnostics] Reward Pearson Corr: 0.6917 (Weighted: 0.0000) | Var(Δr): 0.2452
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 20 ---
+State 0: P(a=0)=0.6072  P(a=1)=0.3928
+State 1: P(a=0)=0.5981  P(a=1)=0.4019
+State 2: P(a=0)=0.3982  P(a=1)=0.6018
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 29.6000 ± 2.3749
+Discounted Leader Performance: 15.3389 ± 1.7436
+
+=== Leader Iteration 21 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 1.554300e-01
+  FEM residual norm: 2.573486e-01
+  Q Mean: 7.4508
+  Reward weights θ: [-1.      1.      1.     -1.      0.3137  0.3121 -1.     -1.      1.
+ -0.107  -0.2094 -0.2307  0.6895 -1.     -1.      1.     -0.8371 -0.8972]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  1.000  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1:  0.314  b=2:  0.312
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -0.107  b=1: -0.209  b=2: -0.231
+
+State 2:
+  Leader action 0: b=0:  0.690  b=1: -1.000  b=2: -1.000
+  Leader action 1: b=0:  1.000  b=1: -0.837  b=2: -0.897
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=1.175e-02).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 8724.331110
+    Term 1 (policy gradient): 121.386942 (1.4%)
+    Term 2 (follower influence): 8838.238947 (101.3%)
+  Mean Q-value: 14.882038
+  Mean Advantage: 0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.220652
+  Mean influence-grad norm: 0.582375
+  Mean term2 sample scale: 0.541237
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad=116.7306, current_π=0.6072, update=+1.1673, new_π≈1.7745
+      Action 1: grad=-116.7306, current_π=0.3928, update=-1.1673, new_π≈-0.7745
+    State 1:
+      Action 0: grad=5787.3330, current_π=0.5981, update=+57.8733, new_π≈58.4714
+      Action 1: grad=-5787.3330, current_π=0.4019, update=-57.8733, new_π≈-57.4714
+    State 2:
+      Action 0: grad=-2133.1028, current_π=0.3982, update=-21.3310, new_π≈-20.9329
+      Action 1: grad=2133.1028, current_π=0.6018, update=+21.3310, new_π≈21.9329
+  [Diagnostics] HG Cosine Sim: 0.9381 | Norm(Est): 8724.3311 | Norm(Oracle): 13629.1086
+  [Diagnostics] Reward Pearson Corr: 0.6986 (Weighted: 0.0000) | Var(Δr): 0.2411
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 21 ---
+State 0: P(a=0)=0.6127  P(a=1)=0.3873
+State 1: P(a=0)=0.6036  P(a=1)=0.3964
+State 2: P(a=0)=0.3926  P(a=1)=0.6074
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 25.8000 ± 4.1425
+Discounted Leader Performance: 13.4395 ± 2.1046
+
+=== Leader Iteration 22 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 9.199286e-02
+  FEM residual norm: 1.719795e-01
+  Q Mean: 7.8931
+  Reward weights θ: [-1.      1.      0.6688 -1.      1.      0.8822 -0.6012 -1.      1.
+ -0.914  -1.     -1.      1.     -1.     -0.8345  1.     -0.9014 -1.    ]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  1.000  b=2:  0.669
+  Leader action 1: b=0: -1.000  b=1:  1.000  b=2:  0.882
+
+State 1:
+  Leader action 0: b=0: -0.601  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -0.914  b=1: -1.000  b=2: -1.000
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -1.000  b=2: -0.835
+  Leader action 1: b=0:  1.000  b=1: -0.901  b=2: -1.000
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=8.998e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 8821.591652
+    Term 1 (policy gradient): 123.707011 (1.4%)
+    Term 2 (follower influence): 8937.958043 (101.3%)
+  Mean Q-value: 15.214767
+  Mean Advantage: -0.000000
+  Mean Advantage (follower-centered): -0.000000
+  Mean |Advantage| (follower-centered): 0.220804
+  Mean influence-grad norm: 0.588158
+  Mean term2 sample scale: 0.547103
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad=117.3289, current_π=0.6127, update=+1.1733, new_π≈1.7860
+      Action 1: grad=-117.3289, current_π=0.3873, update=-1.1733, new_π≈-0.7860
+    State 1:
+      Action 0: grad=5866.5887, current_π=0.6036, update=+58.6659, new_π≈59.2695
+      Action 1: grad=-5866.5887, current_π=0.3964, update=-58.6659, new_π≈-58.2695
+    State 2:
+      Action 0: grad=-2116.5091, current_π=0.3926, update=-21.1651, new_π≈-20.7725
+      Action 1: grad=2116.5091, current_π=0.6074, update=+21.1651, new_π≈21.7725
+  [Diagnostics] HG Cosine Sim: 0.9405 | Norm(Est): 8821.5917 | Norm(Oracle): 13512.4443
+  [Diagnostics] Reward Pearson Corr: 0.7053 (Weighted: 0.0000) | Var(Δr): 0.2375
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 22 ---
+State 0: P(a=0)=0.6183  P(a=1)=0.3817
+State 1: P(a=0)=0.6092  P(a=1)=0.3908
+State 2: P(a=0)=0.3871  P(a=1)=0.6129
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 27.8000 ± 2.4000
+Discounted Leader Performance: 14.5128 ± 1.4122
+
+=== Leader Iteration 23 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 1.328955e-01
+  FEM residual norm: 1.885430e-01
+  Q Mean: 9.5599
+  Reward weights θ: [-1.      0.8196  1.     -0.8807  1.      0.9839 -1.     -1.      1.
+  0.6681  0.6338  0.7205  1.     -0.8013 -0.7458  1.     -0.8497 -1.    ]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  0.820  b=2:  1.000
+  Leader action 1: b=0: -0.881  b=1:  1.000  b=2:  0.984
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0:  0.668  b=1:  0.634  b=2:  0.720
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -0.801  b=2: -0.746
+  Leader action 1: b=0:  1.000  b=1: -0.850  b=2: -1.000
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=8.735e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 8969.503662
+    Term 1 (policy gradient): 125.683361 (1.4%)
+    Term 2 (follower influence): 9088.275041 (101.3%)
+  Mean Q-value: 15.534715
+  Mean Advantage: -0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.220842
+  Mean influence-grad norm: 0.594458
+  Mean term2 sample scale: 0.553322
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad=116.8415, current_π=0.6183, update=+1.1684, new_π≈1.7867
+      Action 1: grad=-116.8415, current_π=0.3817, update=-1.1684, new_π≈-0.7867
+    State 1:
+      Action 0: grad=5993.3575, current_π=0.6092, update=+59.9336, new_π≈60.5428
+      Action 1: grad=-5993.3575, current_π=0.3908, update=-59.9336, new_π≈-59.5428
+    State 2:
+      Action 0: grad=-2071.7172, current_π=0.3871, update=-20.7172, new_π≈-20.3301
+      Action 1: grad=2071.7172, current_π=0.6129, update=+20.7172, new_π≈21.3301
+  [Diagnostics] HG Cosine Sim: 0.9450 | Norm(Est): 8969.5037 | Norm(Oracle): 13391.4884
+  [Diagnostics] Reward Pearson Corr: 0.7109 (Weighted: 0.0000) | Var(Δr): 0.2342
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 23 ---
+State 0: P(a=0)=0.6238  P(a=1)=0.3762
+State 1: P(a=0)=0.6149  P(a=1)=0.3851
+State 2: P(a=0)=0.3815  P(a=1)=0.6185
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 28.8000 ± 3.7363
+Discounted Leader Performance: 15.1279 ± 2.1682
+
+=== Leader Iteration 24 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 1.048280e-01
+  FEM residual norm: 1.634208e-01
+  Q Mean: 8.4950
+  Reward weights θ: [-1.      0.7268  0.75   -0.7333  1.      1.     -0.8498 -1.      1.
+ -0.2343 -0.0226 -0.1407  1.     -0.998  -1.      1.     -0.8621 -1.    ]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  0.727  b=2:  0.750
+  Leader action 1: b=0: -0.733  b=1:  1.000  b=2:  1.000
+
+State 1:
+  Leader action 0: b=0: -0.850  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -0.234  b=1: -0.023  b=2: -0.141
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -0.998  b=2: -1.000
+  Leader action 1: b=0:  1.000  b=1: -0.862  b=2: -1.000
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=9.611e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 9059.914268
+    Term 1 (policy gradient): 127.472122 (1.4%)
+    Term 2 (follower influence): 9180.647258 (101.3%)
+  Mean Q-value: 15.842069
+  Mean Advantage: 0.000000
+  Mean Advantage (follower-centered): -0.000000
+  Mean |Advantage| (follower-centered): 0.220899
+  Mean influence-grad norm: 0.601705
+  Mean term2 sample scale: 0.559973
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad=118.0010, current_π=0.6238, update=+1.1800, new_π≈1.8038
+      Action 1: grad=-118.0010, current_π=0.3762, update=-1.1800, new_π≈-0.8038
+    State 1:
+      Action 0: grad=6065.8655, current_π=0.6149, update=+60.6587, new_π≈61.2735
+      Action 1: grad=-6065.8655, current_π=0.3851, update=-60.6587, new_π≈-60.2735
+    State 2:
+      Action 0: grad=-2057.2736, current_π=0.3815, update=-20.5727, new_π≈-20.1912
+      Action 1: grad=2057.2736, current_π=0.6185, update=+20.5727, new_π≈21.1912
+  [Diagnostics] HG Cosine Sim: 0.9469 | Norm(Est): 9059.9143 | Norm(Oracle): 13265.5447
+  [Diagnostics] Reward Pearson Corr: 0.7157 (Weighted: 0.0000) | Var(Δr): 0.2312
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 24 ---
+State 0: P(a=0)=0.6293  P(a=1)=0.3707
+State 1: P(a=0)=0.6205  P(a=1)=0.3795
+State 2: P(a=0)=0.3760  P(a=1)=0.6240
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 28.3000 ± 3.3779
+Discounted Leader Performance: 14.7177 ± 1.8167
+
+=== Leader Iteration 25 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 1.029043e-01
+  FEM residual norm: 1.724928e-01
+  Q Mean: 8.2560
+  Reward weights θ: [-1.      0.6218  0.6183 -0.9193  1.      1.     -1.     -1.      1.
+  0.2092  0.0263 -0.0852  1.     -1.     -1.      1.     -1.     -0.96  ]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  0.622  b=2:  0.618
+  Leader action 1: b=0: -0.919  b=1:  1.000  b=2:  1.000
+
+State 1:
+  Leader action 0: b=0: -1.000  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0:  0.209  b=1:  0.026  b=2: -0.085
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -1.000  b=2: -1.000
+  Leader action 1: b=0:  1.000  b=1: -1.000  b=2: -0.960
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=9.826e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 9300.644210
+    Term 1 (policy gradient): 130.073070 (1.4%)
+    Term 2 (follower influence): 9424.449215 (101.3%)
+  Mean Q-value: 16.146003
+  Mean Advantage: -0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.220836
+  Mean influence-grad norm: 0.614467
+  Mean term2 sample scale: 0.571903
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad=116.4771, current_π=0.6293, update=+1.1648, new_π≈1.7941
+      Action 1: grad=-116.4771, current_π=0.3707, update=-1.1648, new_π≈-0.7941
+    State 1:
+      Action 0: grad=6257.4392, current_π=0.6205, update=+62.5744, new_π≈63.1949
+      Action 1: grad=-6257.4392, current_π=0.3795, update=-62.5744, new_π≈-62.1949
+    State 2:
+      Action 0: grad=-2020.3660, current_π=0.3760, update=-20.2037, new_π≈-19.8277
+      Action 1: grad=2020.3660, current_π=0.6240, update=+20.2037, new_π≈20.8277
+  [Diagnostics] HG Cosine Sim: 0.9515 | Norm(Est): 9300.6442 | Norm(Oracle): 13125.0574
+  [Diagnostics] Reward Pearson Corr: 0.7236 (Weighted: 0.0000) | Var(Δr): 0.2262
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 25 ---
+State 0: P(a=0)=0.6349  P(a=1)=0.3651
+State 1: P(a=0)=0.6262  P(a=1)=0.3738
+State 2: P(a=0)=0.3705  P(a=1)=0.6295
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 30.9000 ± 3.3302
+Discounted Leader Performance: 16.2551 ± 2.0344
+
+=== Leader Iteration 26 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 1.435574e-01
+  FEM residual norm: 1.740046e-01
+  Q Mean: 9.5448
+  Reward weights θ: [-1.      0.9035  1.     -1.      0.9221  1.     -0.924  -1.      1.
+  0.8841  0.7674  0.5916  0.9113 -1.     -0.8833  1.     -0.7599 -0.6919]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  0.904  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1:  0.922  b=2:  1.000
+
+State 1:
+  Leader action 0: b=0: -0.924  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0:  0.884  b=1:  0.767  b=2:  0.592
+
+State 2:
+  Leader action 0: b=0:  0.911  b=1: -1.000  b=2: -0.883
+  Leader action 1: b=0:  1.000  b=1: -0.760  b=2: -0.692
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=9.480e-03).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 9539.751653
+    Term 1 (policy gradient): 132.892178 (1.4%)
+    Term 2 (follower influence): 9666.782710 (101.3%)
+  Mean Q-value: 16.449284
+  Mean Advantage: -0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.220749
+  Mean influence-grad norm: 0.630187
+  Mean term2 sample scale: 0.585995
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad=119.9176, current_π=0.6349, update=+1.1992, new_π≈1.8340
+      Action 1: grad=-119.9176, current_π=0.3651, update=-1.1992, new_π≈-0.8340
+    State 1:
+      Action 0: grad=6447.8141, current_π=0.6262, update=+64.4781, new_π≈65.1043
+      Action 1: grad=-6447.8141, current_π=0.3738, update=-64.4781, new_π≈-64.1043
+    State 2:
+      Action 0: grad=-1978.5711, current_π=0.3705, update=-19.7857, new_π≈-19.4152
+      Action 1: grad=1978.5711, current_π=0.6295, update=+19.7857, new_π≈20.4152
+  [Diagnostics] HG Cosine Sim: 0.9559 | Norm(Est): 9539.7517 | Norm(Oracle): 12976.8586
+  [Diagnostics] Reward Pearson Corr: 0.7323 (Weighted: 0.0000) | Var(Δr): 0.2206
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 26 ---
+State 0: P(a=0)=0.6404  P(a=1)=0.3596
+State 1: P(a=0)=0.6319  P(a=1)=0.3681
+State 2: P(a=0)=0.3650  P(a=1)=0.6350
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 30.4000 ± 5.1420
+Discounted Leader Performance: 15.2195 ± 2.6749
+
+=== Leader Iteration 27 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 1.045297e-01
+  FEM residual norm: 1.862146e-01
+  Q Mean: 7.5016
+  Reward weights θ: [-1.      1.      0.6611 -1.      1.      0.5486 -0.9337 -1.      1.
+ -1.     -0.9888 -1.      1.     -1.     -1.      1.     -1.     -1.    ]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  1.000  b=2:  0.661
+  Leader action 1: b=0: -1.000  b=1:  1.000  b=2:  0.549
+
+State 1:
+  Leader action 0: b=0: -0.934  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1: -0.989  b=2: -1.000
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -1.000  b=2: -1.000
+  Leader action 1: b=0:  1.000  b=1: -1.000  b=2: -1.000
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=1.106e-02).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 9525.730653
+    Term 1 (policy gradient): 134.781290 (1.4%)
+    Term 2 (follower influence): 9654.637731 (101.4%)
+  Mean Q-value: 16.743485
+  Mean Advantage: -0.000000
+  Mean Advantage (follower-centered): -0.000000
+  Mean |Advantage| (follower-centered): 0.220559
+  Mean influence-grad norm: 0.636623
+  Mean term2 sample scale: 0.590533
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad=125.9376, current_π=0.6404, update=+1.2594, new_π≈1.8997
+      Action 1: grad=-125.9376, current_π=0.3596, update=-1.2594, new_π≈-0.8997
+    State 1:
+      Action 0: grad=6442.6438, current_π=0.6319, update=+64.4264, new_π≈65.0583
+      Action 1: grad=-6442.6438, current_π=0.3681, update=-64.4264, new_π≈-64.0583
+    State 2:
+      Action 0: grad=-1961.1865, current_π=0.3650, update=-19.6119, new_π≈-19.2469
+      Action 1: grad=1961.1865, current_π=0.6350, update=+19.6119, new_π≈20.2469
+  [Diagnostics] HG Cosine Sim: 0.9565 | Norm(Est): 9525.7307 | Norm(Oracle): 12826.9950
+  [Diagnostics] Reward Pearson Corr: 0.7388 (Weighted: 0.0000) | Var(Δr): 0.2168
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 27 ---
+State 0: P(a=0)=0.6459  P(a=1)=0.3541
+State 1: P(a=0)=0.6375  P(a=1)=0.3625
+State 2: P(a=0)=0.3595  P(a=1)=0.6405
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 29.7000 ± 3.2879
+Discounted Leader Performance: 15.4192 ± 1.7305
+
+=== Leader Iteration 28 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 1.272937e-01
+  FEM residual norm: 1.566515e-01
+  Q Mean: 8.7876
+  Reward weights θ: [-0.8883  1.      1.     -1.      0.5919  0.5645 -0.9968 -1.      1.
+  0.3057  0.2911  0.2789  1.     -1.     -1.      1.     -0.8882 -0.93  ]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -0.888  b=1:  1.000  b=2:  1.000
+  Leader action 1: b=0: -1.000  b=1:  0.592  b=2:  0.565
+
+State 1:
+  Leader action 0: b=0: -0.997  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0:  0.306  b=1:  0.291  b=2:  0.279
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -1.000  b=2: -1.000
+  Leader action 1: b=0:  1.000  b=1: -0.888  b=2: -0.930
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=1.029e-02).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 9462.826560
+    Term 1 (policy gradient): 136.336731 (1.4%)
+    Term 2 (follower influence): 9593.366625 (101.4%)
+  Mean Q-value: 17.027079
+  Mean Advantage: 0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.220295
+  Mean influence-grad norm: 0.638687
+  Mean term2 sample scale: 0.591010
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad=129.0886, current_π=0.6459, update=+1.2909, new_π≈1.9367
+      Action 1: grad=-129.0886, current_π=0.3541, update=-1.2909, new_π≈-0.9367
+    State 1:
+      Action 0: grad=6404.7846, current_π=0.6375, update=+64.0478, new_π≈64.6854
+      Action 1: grad=-6404.7846, current_π=0.3625, update=-64.0478, new_π≈-63.6854
+    State 2:
+      Action 0: grad=-1932.5148, current_π=0.3595, update=-19.3251, new_π≈-18.9656
+      Action 1: grad=1932.5148, current_π=0.6405, update=+19.3251, new_π≈19.9656
+  [Diagnostics] HG Cosine Sim: 0.9572 | Norm(Est): 9462.8266 | Norm(Oracle): 12672.2367
+  [Diagnostics] Reward Pearson Corr: 0.7435 (Weighted: 0.0000) | Var(Δr): 0.2141
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 28 ---
+State 0: P(a=0)=0.6513  P(a=1)=0.3487
+State 1: P(a=0)=0.6432  P(a=1)=0.3568
+State 2: P(a=0)=0.3542  P(a=1)=0.6458
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 29.2000 ± 3.2802
+Discounted Leader Performance: 14.9735 ± 2.4578
+
+=== Leader Iteration 29 (Mode: irl_known_dynamics_every_iter) ===
+Computing Best Response (SoftVI) for current leader...
+Step 0: Recomputing SoftVI with learned reward for current leader...
+Step 1: Skipping rollout collection (known dynamics mode).
+Step 2: Generating expert trajectories & Running MDCE IRL (known-dynamics every-iter mode)...
+
+--- IRL (known-dynamics, Convex MDCE) ---
+  Solver status: optimal
+  FEM residual (max abs): 8.404927e-02
+  FEM residual norm: 1.794796e-01
+  Q Mean: 7.1087
+  Reward weights θ: [-1.      1.      0.7098 -1.      0.5909  0.1811 -0.747  -1.      1.
+ -0.8713 -1.     -0.9328  1.     -1.     -0.8106  1.     -1.     -1.    ]
+
+Learned Reward Function: r_F(s, a, b)
+--------------------------------------------------------------------------------
+
+State 0:
+  Leader action 0: b=0: -1.000  b=1:  1.000  b=2:  0.710
+  Leader action 1: b=0: -1.000  b=1:  0.591  b=2:  0.181
+
+State 1:
+  Leader action 0: b=0: -0.747  b=1: -1.000  b=2:  1.000
+  Leader action 1: b=0: -0.871  b=1: -1.000  b=2: -0.933
+
+State 2:
+  Leader action 0: b=0:  1.000  b=1: -1.000  b=2: -0.811
+  Leader action 1: b=0:  1.000  b=1: -1.000  b=2: -1.000
+Follower policy updated (known-dynamics convex MDCE).
+Step 2.1: Recomputing SoftVI from joint_cao aggregated reward (norm=1.206e-02).
+Step 2.1: Online reward aggregation rank=17)
+Step 3: Updating leader's Critic (10 updates)...
+Step 4: Estimating leader's gradient...
+  Gradient Norm: 9531.025055
+    Term 1 (policy gradient): 138.582413 (1.5%)
+    Term 2 (follower influence): 9663.928958 (101.4%)
+  Mean Q-value: 17.308865
+  Mean Advantage: -0.000000
+  Mean Advantage (follower-centered): 0.000000
+  Mean |Advantage| (follower-centered): 0.220008
+  Mean influence-grad norm: 0.650054
+  Mean term2 sample scale: 0.599864
+  Nonzero ratios: benefit=100.0% influence=100.0%
+  Policy Gradients (per state-action):
+    State 0:
+      Action 0: grad=134.2314, current_π=0.6513, update=+1.3423, new_π≈1.9937
+      Action 1: grad=-134.2314, current_π=0.3487, update=-1.3423, new_π≈-0.9937
+    State 1:
+      Action 0: grad=6460.6230, current_π=0.6432, update=+64.6062, new_π≈65.2494
+      Action 1: grad=-6460.6230, current_π=0.3568, update=-64.6062, new_π≈-64.2494
+    State 2:
+      Action 0: grad=-1913.7794, current_π=0.3542, update=-19.1378, new_π≈-18.7836
+      Action 1: grad=1913.7794, current_π=0.6458, update=+19.1378, new_π≈19.7836
+  [Diagnostics] HG Cosine Sim: 0.9586 | Norm(Est): 9531.0251 | Norm(Oracle): 12508.2937
+  [Diagnostics] Reward Pearson Corr: 0.7514 (Weighted: 0.0000) | Var(Δr): 0.2091
+Step 5: Updating leader's Actor...
+
+--- Leader Policy at Iteration 29 ---
+State 0: P(a=0)=0.6568  P(a=1)=0.3432
+State 1: P(a=0)=0.6488  P(a=1)=0.3512
+State 2: P(a=0)=0.3488  P(a=1)=0.6512
+------------------------------------------------------------
+Recomputing Best Response (SoftVI) for updated leader policy...
+Leader Performance (vs Best Response): 28.1000 ± 2.3854
+Discounted Leader Performance: 14.2175 ± 1.2561

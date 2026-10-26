@@ -1,0 +1,1820 @@
+warning: `VIRTUAL_ENV=/hdd/shigekikusaka/blackrl/.venv` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+
+=== Conf Continuous | mode=irl_joint_pooled | seed=2 ===
+  iter    0 (pre-update eval): eval=-216.6179±59.7706 | μ = [0.631 0.649 0.907 0.546 0.8   0.864 0.594 0.528 0.637 0.829 0.781 0.575
+ 0.716 0.835 0.711 0.817]
+    [Joint-IRL] iter    0: ||mean residual|| = 59.755832 (best 59.755832) over 1 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 53.246790 (best 53.246790) over 1 envs
+  [Joint-IRL] re-solved over 1 envs in 1.74s | Q_hat diag=[1.177  0.8934 1.0381 1.9334 1.1023 1.173  1.3824 1.1626]
+    [Diagnostics] HG Cosine Sim: 0.3496 | Norm(Est): 58.4813 | Norm(Oracle): 7714.6570
+    [Diagnostics] Reward Pearson Corr: 0.8535 | Var(Δr): 89096.7521
+    [Term-wise] Est: ||dir||=5.752e+01 ||infl||=1.644e+00 ratio=2.858e-02 | Oracle: ||dir||=5.807e+01 ||infl||=7.695e+03 ratio=1.325e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.6097 | cos(dir_est, dir_oracle)=0.9999
+  iter    0: train=-171.3435±42.9044 eval=-211.1984±67.8833 | μ = [0.608 0.626 0.874 0.508 0.77  0.834 0.563 0.509 0.624 0.8   0.757 0.564
+ 0.697 0.811 0.697 0.794]
+    [Diagnostics] HG Cosine Sim: 0.4405 | Norm(Est): 60.2631 | Norm(Oracle): 9070.1971
+    [Diagnostics] Reward Pearson Corr: 0.9105 | Var(Δr): 119039.9036
+    [Term-wise] Est: ||dir||=5.940e+01 ||infl||=2.311e+00 ratio=3.891e-02 | Oracle: ||dir||=6.072e+01 ||infl||=9.040e+03 ratio=1.489e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.2232 | cos(dir_est, dir_oracle)=0.9969
+    [Diagnostics] HG Cosine Sim: 0.2673 | Norm(Est): 56.4305 | Norm(Oracle): 9518.2805
+    [Diagnostics] Reward Pearson Corr: 0.8658 | Var(Δr): 99491.3948
+    [Term-wise] Est: ||dir||=5.537e+01 ||infl||=1.926e+00 ratio=3.479e-02 | Oracle: ||dir||=5.576e+01 ||infl||=9.503e+03 ratio=1.704e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.5173 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.3028 | Norm(Est): 53.2825 | Norm(Oracle): 7619.2351
+    [Diagnostics] Reward Pearson Corr: 0.8417 | Var(Δr): 98237.2257
+    [Term-wise] Est: ||dir||=5.231e+01 ||infl||=2.967e+00 ratio=5.672e-02 | Oracle: ||dir||=5.254e+01 ||infl||=7.603e+03 ratio=1.447e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.4337 | cos(dir_est, dir_oracle)=0.9995
+    [Diagnostics] HG Cosine Sim: 0.4174 | Norm(Est): 55.4101 | Norm(Oracle): 9071.6994
+    [Diagnostics] Reward Pearson Corr: 0.8857 | Var(Δr): 60765.0128
+    [Term-wise] Est: ||dir||=5.423e+01 ||infl||=1.840e+00 ratio=3.393e-02 | Oracle: ||dir||=6.067e+01 ||infl||=9.039e+03 ratio=1.490e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.2898 | cos(dir_est, dir_oracle)=0.9859
+    [Diagnostics] HG Cosine Sim: 0.2495 | Norm(Est): 49.3467 | Norm(Oracle): 7811.1410
+    [Diagnostics] Reward Pearson Corr: 0.8728 | Var(Δr): 67503.2932
+    [Term-wise] Est: ||dir||=4.842e+01 ||infl||=2.180e+00 ratio=4.503e-02 | Oracle: ||dir||=4.931e+01 ||infl||=7.798e+03 ratio=1.581e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.3312 | cos(dir_est, dir_oracle)=0.9960
+    [Diagnostics] HG Cosine Sim: 0.3296 | Norm(Est): 53.4116 | Norm(Oracle): 7093.2155
+    [Diagnostics] Reward Pearson Corr: 0.8590 | Var(Δr): 61924.8203
+    [Term-wise] Est: ||dir||=5.191e+01 ||infl||=2.182e+00 ratio=4.203e-02 | Oracle: ||dir||=6.897e+01 ||infl||=7.072e+03 ratio=1.025e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.1378 | cos(dir_est, dir_oracle)=0.9469
+    [Diagnostics] HG Cosine Sim: 0.9114 | Norm(Est): 122.1426 | Norm(Oracle): 10220.8044
+    [Diagnostics] Reward Pearson Corr: 0.8823 | Var(Δr): 55291.2012
+    [Term-wise] Est: ||dir||=1.174e+02 ||infl||=6.863e+00 ratio=5.845e-02 | Oracle: ||dir||=2.298e+02 ||infl||=1.000e+04 ratio=4.353e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.7236 | cos(dir_est, dir_oracle)=0.9820
+    [Diagnostics] HG Cosine Sim: 0.3414 | Norm(Est): 46.3700 | Norm(Oracle): 8041.1018
+    [Diagnostics] Reward Pearson Corr: 0.8637 | Var(Δr): 75219.7573
+    [Term-wise] Est: ||dir||=4.524e+01 ||infl||=2.600e+00 ratio=5.747e-02 | Oracle: ||dir||=5.311e+01 ||infl||=8.022e+03 ratio=1.510e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.4750 | cos(dir_est, dir_oracle)=0.9547
+    [Diagnostics] HG Cosine Sim: 0.5842 | Norm(Est): 54.5387 | Norm(Oracle): 7432.6733
+    [Diagnostics] Reward Pearson Corr: 0.8719 | Var(Δr): 69011.1235
+    [Term-wise] Est: ||dir||=5.422e+01 ||infl||=4.400e+00 ratio=8.116e-02 | Oracle: ||dir||=7.318e+01 ||infl||=7.381e+03 ratio=1.009e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0684 | cos(dir_est, dir_oracle)=0.9698
+    [Joint-IRL] iter    0: ||mean residual|| = 45.621178 (best 45.621178) over 11 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 36.123097 (best 36.123097) over 11 envs
+  [Joint-IRL] re-solved over 11 envs in 7.02s | Q_hat diag=[0.9677 1.0232 1.2582 2.7265 1.2342 1.3032 1.533  1.2673]
+    [Diagnostics] HG Cosine Sim: 0.5478 | Norm(Est): 52.9133 | Norm(Oracle): 4801.2105
+    [Diagnostics] Reward Pearson Corr: 0.8925 | Var(Δr): 64994.4485
+    [Term-wise] Est: ||dir||=5.128e+01 ||infl||=3.447e+00 ratio=6.722e-02 | Oracle: ||dir||=6.631e+01 ||infl||=4.762e+03 ratio=7.181e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.7533 | cos(dir_est, dir_oracle)=0.9749
+  iter   10: train=-142.0222±48.3030 eval=-169.5243±46.6395 | μ = [0.417 0.428 0.475 0.214 0.443 0.541 0.276 0.32  0.511 0.558 0.635 0.461
+ 0.534 0.633 0.571 0.619]
+    [Diagnostics] HG Cosine Sim: 0.6094 | Norm(Est): 53.6793 | Norm(Oracle): 4589.1623
+    [Diagnostics] Reward Pearson Corr: 0.8900 | Var(Δr): 44233.8089
+    [Term-wise] Est: ||dir||=5.166e+01 ||infl||=3.554e+00 ratio=6.879e-02 | Oracle: ||dir||=6.762e+01 ||infl||=4.540e+03 ratio=6.714e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.1095 | cos(dir_est, dir_oracle)=0.9776
+    [Diagnostics] HG Cosine Sim: 0.3971 | Norm(Est): 60.0178 | Norm(Oracle): 4638.4123
+    [Diagnostics] Reward Pearson Corr: 0.9124 | Var(Δr): 72378.2854
+    [Term-wise] Est: ||dir||=6.011e+01 ||infl||=2.485e+00 ratio=4.134e-02 | Oracle: ||dir||=8.905e+01 ||infl||=4.605e+03 ratio=5.171e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.4048 | cos(dir_est, dir_oracle)=0.9784
+    [Diagnostics] HG Cosine Sim: 0.2906 | Norm(Est): 41.8085 | Norm(Oracle): 5463.0797
+    [Diagnostics] Reward Pearson Corr: 0.9219 | Var(Δr): 58880.8703
+    [Term-wise] Est: ||dir||=4.069e+01 ||infl||=4.159e+00 ratio=1.022e-01 | Oracle: ||dir||=4.728e+01 ||infl||=5.450e+03 ratio=1.153e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.6320 | cos(dir_est, dir_oracle)=0.9822
+    [Diagnostics] HG Cosine Sim: 0.1803 | Norm(Est): 32.5497 | Norm(Oracle): 4013.4492
+    [Diagnostics] Reward Pearson Corr: 0.9146 | Var(Δr): 68018.1490
+    [Term-wise] Est: ||dir||=3.209e+01 ||infl||=3.024e+00 ratio=9.426e-02 | Oracle: ||dir||=3.227e+01 ||infl||=4.009e+03 ratio=1.242e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.5461 | cos(dir_est, dir_oracle)=0.9981
+    [Diagnostics] HG Cosine Sim: 0.5437 | Norm(Est): 68.2303 | Norm(Oracle): 7246.3376
+    [Diagnostics] Reward Pearson Corr: 0.9141 | Var(Δr): 39628.2269
+    [Term-wise] Est: ||dir||=6.830e+01 ||infl||=5.250e+00 ratio=7.687e-02 | Oracle: ||dir||=9.931e+01 ||infl||=7.191e+03 ratio=7.240e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.1360 | cos(dir_est, dir_oracle)=0.9894
+    [Diagnostics] HG Cosine Sim: 0.0867 | Norm(Est): 29.3245 | Norm(Oracle): 4122.3204
+    [Diagnostics] Reward Pearson Corr: 0.8929 | Var(Δr): 26471.4141
+    [Term-wise] Est: ||dir||=2.830e+01 ||infl||=1.753e+00 ratio=6.194e-02 | Oracle: ||dir||=2.900e+01 ||infl||=4.119e+03 ratio=1.420e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.1295 | cos(dir_est, dir_oracle)=0.9857
+    [Diagnostics] HG Cosine Sim: 0.1247 | Norm(Est): 28.6531 | Norm(Oracle): 3963.6007
+    [Diagnostics] Reward Pearson Corr: 0.9239 | Var(Δr): 54140.9301
+    [Term-wise] Est: ||dir||=2.759e+01 ||infl||=2.359e+00 ratio=8.549e-02 | Oracle: ||dir||=2.761e+01 ||infl||=3.960e+03 ratio=1.434e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.2092 | cos(dir_est, dir_oracle)=0.9963
+    [Diagnostics] HG Cosine Sim: 0.1690 | Norm(Est): 25.4676 | Norm(Oracle): 3108.5586
+    [Diagnostics] Reward Pearson Corr: 0.9110 | Var(Δr): 51009.7295
+    [Term-wise] Est: ||dir||=2.430e+01 ||infl||=3.648e+00 ratio=1.501e-01 | Oracle: ||dir||=2.442e+01 ||infl||=3.106e+03 ratio=1.272e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.7176 | cos(dir_est, dir_oracle)=0.9995
+    [Diagnostics] HG Cosine Sim: 0.3121 | Norm(Est): 23.6255 | Norm(Oracle): 3648.5219
+    [Diagnostics] Reward Pearson Corr: 0.9297 | Var(Δr): 49089.9523
+    [Term-wise] Est: ||dir||=2.183e+01 ||infl||=4.243e+00 ratio=1.944e-01 | Oracle: ||dir||=2.252e+01 ||infl||=3.642e+03 ratio=1.617e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.5276 | cos(dir_est, dir_oracle)=0.9942
+    [Joint-IRL] iter    0: ||mean residual|| = 34.195547 (best 34.195547) over 21 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 27.330539 (best 27.330539) over 21 envs
+  [Joint-IRL] re-solved over 21 envs in 15.02s | Q_hat diag=[0.9083 1.1517 1.4088 6.1907 1.3539 1.4594 1.7385 1.4201]
+    [Diagnostics] HG Cosine Sim: 0.3898 | Norm(Est): 43.6424 | Norm(Oracle): 2602.1505
+    [Diagnostics] Reward Pearson Corr: 0.9816 | Var(Δr): 47214.8085
+    [Term-wise] Est: ||dir||=4.139e+01 ||infl||=4.175e+00 ratio=1.009e-01 | Oracle: ||dir||=5.861e+01 ||infl||=2.579e+03 ratio=4.401e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.3703 | cos(dir_est, dir_oracle)=0.9864
+  iter   20: train=-116.6264±47.3247 eval=-136.7202±46.1712 | μ = [0.221 0.226 0.183 0.    0.169 0.142 0.013 0.1   0.424 0.314 0.46  0.366
+ 0.402 0.534 0.47  0.474]
+    [Diagnostics] HG Cosine Sim: 0.8485 | Norm(Est): 41.2544 | Norm(Oracle): 3255.3467
+    [Diagnostics] Reward Pearson Corr: 0.9785 | Var(Δr): 36394.3484
+    [Term-wise] Est: ||dir||=3.975e+01 ||infl||=5.667e+00 ratio=1.426e-01 | Oracle: ||dir||=5.399e+01 ||infl||=3.207e+03 ratio=5.940e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.2649 | cos(dir_est, dir_oracle)=0.9890
+    [Diagnostics] HG Cosine Sim: 0.2010 | Norm(Est): 19.7456 | Norm(Oracle): 2502.0564
+    [Diagnostics] Reward Pearson Corr: 0.9726 | Var(Δr): 32119.8981
+    [Term-wise] Est: ||dir||=1.884e+01 ||infl||=3.656e+00 ratio=1.940e-01 | Oracle: ||dir||=1.963e+01 ||infl||=2.498e+03 ratio=1.273e+02
+    [Term-wise] cos(infl_est, infl_oracle)=0.6070 | cos(dir_est, dir_oracle)=0.9868
+    [Diagnostics] HG Cosine Sim: 0.8580 | Norm(Est): 86.4995 | Norm(Oracle): 3300.2513
+    [Diagnostics] Reward Pearson Corr: 0.9781 | Var(Δr): 35415.5857
+    [Term-wise] Est: ||dir||=8.628e+01 ||infl||=4.574e+00 ratio=5.301e-02 | Oracle: ||dir||=1.244e+02 ||infl||=3.195e+03 ratio=2.569e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.2880 | cos(dir_est, dir_oracle)=0.9980
+    [Diagnostics] HG Cosine Sim: 0.4788 | Norm(Est): 52.6386 | Norm(Oracle): 2331.3778
+    [Diagnostics] Reward Pearson Corr: 0.9745 | Var(Δr): 51691.4214
+    [Term-wise] Est: ||dir||=5.243e+01 ||infl||=2.864e+00 ratio=5.464e-02 | Oracle: ||dir||=7.345e+01 ||infl||=2.292e+03 ratio=3.121e+01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.3880 | cos(dir_est, dir_oracle)=0.9947
+    [Diagnostics] HG Cosine Sim: 0.9196 | Norm(Est): 164.0742 | Norm(Oracle): 3823.4599
+    [Diagnostics] Reward Pearson Corr: 0.9763 | Var(Δr): 54963.5336
+    [Term-wise] Est: ||dir||=1.573e+02 ||infl||=1.062e+01 ratio=6.751e-02 | Oracle: ||dir||=2.283e+02 ||infl||=3.612e+03 ratio=1.582e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.5044 | cos(dir_est, dir_oracle)=0.9994
+    [Diagnostics] HG Cosine Sim: 0.6779 | Norm(Est): 74.5782 | Norm(Oracle): 3500.3944
+    [Diagnostics] Reward Pearson Corr: 0.9671 | Var(Δr): 41467.9726
+    [Term-wise] Est: ||dir||=7.442e+01 ||infl||=2.314e+01 ratio=3.110e-01 | Oracle: ||dir||=9.399e+01 ||infl||=3.436e+03 ratio=3.656e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0290 | cos(dir_est, dir_oracle)=0.9979
+    [Diagnostics] HG Cosine Sim: 0.2506 | Norm(Est): 23.6855 | Norm(Oracle): 2774.9909
+    [Diagnostics] Reward Pearson Corr: 0.9767 | Var(Δr): 27849.8918
+    [Term-wise] Est: ||dir||=2.484e+01 ||infl||=4.775e+00 ratio=1.922e-01 | Oracle: ||dir||=3.590e+01 ||infl||=2.766e+03 ratio=7.706e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.2439 | cos(dir_est, dir_oracle)=0.9760
+    [Diagnostics] HG Cosine Sim: 0.1877 | Norm(Est): 23.9002 | Norm(Oracle): 2172.4817
+    [Diagnostics] Reward Pearson Corr: 0.9760 | Var(Δr): 34436.3105
+    [Term-wise] Est: ||dir||=2.197e+01 ||infl||=4.095e+00 ratio=1.864e-01 | Oracle: ||dir||=2.983e+01 ||infl||=2.167e+03 ratio=7.264e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.5977 | cos(dir_est, dir_oracle)=0.9710
+    [Diagnostics] HG Cosine Sim: 0.2393 | Norm(Est): 21.6026 | Norm(Oracle): 2487.3492
+    [Diagnostics] Reward Pearson Corr: 0.9857 | Var(Δr): 66001.2237
+    [Term-wise] Est: ||dir||=2.130e+01 ||infl||=3.018e+00 ratio=1.417e-01 | Oracle: ||dir||=2.469e+01 ||infl||=2.477e+03 ratio=1.003e+02
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0885 | cos(dir_est, dir_oracle)=0.9733
+    [Joint-IRL] iter    0: ||mean residual|| = 26.479960 (best 26.479960) over 31 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 19.462762 (best 19.462762) over 31 envs
+  [Joint-IRL] re-solved over 31 envs in 17.15s | Q_hat diag=[ 0.7399  1.6027  1.5415 12.2216  1.5796  1.7077  1.6262  1.6847]
+    [Diagnostics] HG Cosine Sim: 0.9076 | Norm(Est): 121.8493 | Norm(Oracle): 2367.1154
+    [Diagnostics] Reward Pearson Corr: 0.9903 | Var(Δr): 27972.1635
+    [Term-wise] Est: ||dir||=1.209e+02 ||infl||=2.150e+01 ratio=1.778e-01 | Oracle: ||dir||=1.638e+02 ||infl||=2.217e+03 ratio=1.354e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0361 | cos(dir_est, dir_oracle)=0.9990
+  iter   30: train=-119.4604±46.0346 eval=-131.9870±57.7087 | μ = [0.112 0.115 0.    0.    0.    0.    0.    0.    0.422 0.182 0.494 0.34
+ 0.349 0.546 0.418 0.526]
+    [Diagnostics] HG Cosine Sim: 0.4233 | Norm(Est): 48.4241 | Norm(Oracle): 1617.6564
+    [Diagnostics] Reward Pearson Corr: 0.9940 | Var(Δr): 33014.9476
+    [Term-wise] Est: ||dir||=4.792e+01 ||infl||=1.274e+01 ratio=2.659e-01 | Oracle: ||dir||=6.236e+01 ||infl||=1.589e+03 ratio=2.548e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0128 | cos(dir_est, dir_oracle)=0.9964
+    [Diagnostics] HG Cosine Sim: 0.8860 | Norm(Est): 189.0016 | Norm(Oracle): 2579.0005
+    [Diagnostics] Reward Pearson Corr: 0.9915 | Var(Δr): 30443.0131
+    [Term-wise] Est: ||dir||=1.883e+02 ||infl||=2.705e+01 ratio=1.437e-01 | Oracle: ||dir||=2.400e+02 ||infl||=2.364e+03 ratio=9.851e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0585 | cos(dir_est, dir_oracle)=0.9996
+    [Diagnostics] HG Cosine Sim: 0.7567 | Norm(Est): 40.2529 | Norm(Oracle): 1436.2066
+    [Diagnostics] Reward Pearson Corr: 0.9904 | Var(Δr): 26061.1061
+    [Term-wise] Est: ||dir||=3.651e+01 ||infl||=1.440e+01 ratio=3.945e-01 | Oracle: ||dir||=4.858e+01 ||infl||=1.395e+03 ratio=2.871e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0424 | cos(dir_est, dir_oracle)=0.9910
+    [Diagnostics] HG Cosine Sim: 0.7915 | Norm(Est): 65.6505 | Norm(Oracle): 2057.6626
+    [Diagnostics] Reward Pearson Corr: 0.9916 | Var(Δr): 21668.8841
+    [Term-wise] Est: ||dir||=5.135e+01 ||infl||=3.059e+01 ratio=5.957e-01 | Oracle: ||dir||=6.334e+01 ||infl||=2.001e+03 ratio=3.160e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.2419 | cos(dir_est, dir_oracle)=0.9972
+    [Diagnostics] HG Cosine Sim: 0.3804 | Norm(Est): 98.1380 | Norm(Oracle): 1615.1599
+    [Diagnostics] Reward Pearson Corr: 0.9934 | Var(Δr): 29466.6702
+    [Term-wise] Est: ||dir||=9.521e+01 ||infl||=5.823e+00 ratio=6.115e-02 | Oracle: ||dir||=1.258e+02 ||infl||=1.573e+03 ratio=1.250e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.5878 | cos(dir_est, dir_oracle)=0.9991
+    [Diagnostics] HG Cosine Sim: 0.5456 | Norm(Est): 25.8625 | Norm(Oracle): 1495.0852
+    [Diagnostics] Reward Pearson Corr: 0.9935 | Var(Δr): 29760.6687
+    [Term-wise] Est: ||dir||=2.386e+01 ||infl||=8.609e+00 ratio=3.608e-01 | Oracle: ||dir||=2.726e+01 ||infl||=1.479e+03 ratio=5.427e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.3166 | cos(dir_est, dir_oracle)=0.9852
+    [Diagnostics] HG Cosine Sim: 0.7110 | Norm(Est): 113.4049 | Norm(Oracle): 2094.2079
+    [Diagnostics] Reward Pearson Corr: 0.9910 | Var(Δr): 22677.4408
+    [Term-wise] Est: ||dir||=1.100e+02 ||infl||=1.178e+01 ratio=1.071e-01 | Oracle: ||dir||=1.407e+02 ||infl||=1.997e+03 ratio=1.419e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.2576 | cos(dir_est, dir_oracle)=0.9993
+    [Diagnostics] HG Cosine Sim: 0.8483 | Norm(Est): 68.6040 | Norm(Oracle): 1872.1786
+    [Diagnostics] Reward Pearson Corr: 0.9930 | Var(Δr): 23863.7630
+    [Term-wise] Est: ||dir||=6.758e+01 ||infl||=1.488e+01 ratio=2.201e-01 | Oracle: ||dir||=8.677e+01 ||infl||=1.792e+03 ratio=2.065e+01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2320 | cos(dir_est, dir_oracle)=0.9977
+    [Diagnostics] HG Cosine Sim: 0.7686 | Norm(Est): 61.3078 | Norm(Oracle): 1640.3114
+    [Diagnostics] Reward Pearson Corr: 0.9889 | Var(Δr): 22631.1958
+    [Term-wise] Est: ||dir||=6.849e+01 ||infl||=1.315e+01 ratio=1.920e-01 | Oracle: ||dir||=9.026e+01 ||infl||=1.572e+03 ratio=1.742e+01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2548 | cos(dir_est, dir_oracle)=0.9976
+    [Joint-IRL] iter    0: ||mean residual|| = 19.482496 (best 19.482496) over 41 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 13.577114 (best 13.577114) over 41 envs
+  [Joint-IRL] re-solved over 41 envs in 21.22s | Q_hat diag=[ 0.5449  3.0681  1.536  12.6946  1.8971  2.0746  1.1841  2.0366]
+    [Diagnostics] HG Cosine Sim: 0.9041 | Norm(Est): 160.7739 | Norm(Oracle): 1568.7734
+    [Diagnostics] Reward Pearson Corr: 0.9849 | Var(Δr): 31150.5102
+    [Term-wise] Est: ||dir||=1.504e+02 ||infl||=5.332e+01 ratio=3.545e-01 | Oracle: ||dir||=1.787e+02 ||infl||=1.409e+03 ratio=7.884e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2195 | cos(dir_est, dir_oracle)=0.9984
+  iter   40: train=-136.7736±56.8647 eval=-128.1243±50.6261 | μ = [0.076 0.069 0.    0.    0.    0.    0.    0.    0.416 0.131 0.615 0.341
+ 0.381 0.587 0.393 0.66 ]
+    [Diagnostics] HG Cosine Sim: 0.5473 | Norm(Est): 91.9795 | Norm(Oracle): 923.6824
+    [Diagnostics] Reward Pearson Corr: 0.9784 | Var(Δr): 21375.1147
+    [Term-wise] Est: ||dir||=9.528e+01 ||infl||=2.720e+01 ratio=2.854e-01 | Oracle: ||dir||=1.100e+02 ||infl||=8.806e+02 ratio=8.008e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3026 | cos(dir_est, dir_oracle)=0.9969
+    [Diagnostics] HG Cosine Sim: 0.6307 | Norm(Est): 219.5821 | Norm(Oracle): 1095.4836
+    [Diagnostics] Reward Pearson Corr: 0.9820 | Var(Δr): 26223.6710
+    [Term-wise] Est: ||dir||=2.207e+02 ||infl||=3.627e+01 ratio=1.643e-01 | Oracle: ||dir||=2.561e+02 ||infl||=9.520e+02 ratio=3.717e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0482 | cos(dir_est, dir_oracle)=0.9991
+    [Diagnostics] HG Cosine Sim: 0.1775 | Norm(Est): 47.0000 | Norm(Oracle): 668.1585
+    [Diagnostics] Reward Pearson Corr: 0.9777 | Var(Δr): 17968.6245
+    [Term-wise] Est: ||dir||=3.976e+01 ||infl||=2.219e+01 ratio=5.582e-01 | Oracle: ||dir||=3.897e+01 ||infl||=6.541e+02 ratio=1.678e+01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2171 | cos(dir_est, dir_oracle)=0.9955
+    [Diagnostics] HG Cosine Sim: 0.6852 | Norm(Est): 59.9581 | Norm(Oracle): 1011.4254
+    [Diagnostics] Reward Pearson Corr: 0.9832 | Var(Δr): 26066.8599
+    [Term-wise] Est: ||dir||=4.577e+01 ||infl||=3.118e+01 ratio=6.812e-01 | Oracle: ||dir||=5.266e+01 ||infl||=9.645e+02 ratio=1.831e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0418 | cos(dir_est, dir_oracle)=0.9949
+    [Diagnostics] HG Cosine Sim: 0.7688 | Norm(Est): 162.9364 | Norm(Oracle): 1654.7789
+    [Diagnostics] Reward Pearson Corr: 0.9873 | Var(Δr): 34190.8798
+    [Term-wise] Est: ||dir||=1.459e+02 ||infl||=5.735e+01 ratio=3.930e-01 | Oracle: ||dir||=1.798e+02 ||infl||=1.496e+03 ratio=8.318e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0942 | cos(dir_est, dir_oracle)=0.9995
+    [Diagnostics] HG Cosine Sim: 0.4962 | Norm(Est): 109.8750 | Norm(Oracle): 1092.5147
+    [Diagnostics] Reward Pearson Corr: 0.9890 | Var(Δr): 24854.8649
+    [Term-wise] Est: ||dir||=1.102e+02 ||infl||=2.939e+01 ratio=2.667e-01 | Oracle: ||dir||=1.288e+02 ||infl||=1.035e+03 ratio=8.036e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1008 | cos(dir_est, dir_oracle)=0.9990
+    [Diagnostics] HG Cosine Sim: 0.9680 | Norm(Est): 187.8942 | Norm(Oracle): 1978.2300
+    [Diagnostics] Reward Pearson Corr: 0.9809 | Var(Δr): 28500.5789
+    [Term-wise] Est: ||dir||=1.825e+02 ||infl||=2.973e+01 ratio=1.629e-01 | Oracle: ||dir||=2.264e+02 ||infl||=1.755e+03 ratio=7.752e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0591 | cos(dir_est, dir_oracle)=0.9995
+    [Diagnostics] HG Cosine Sim: 0.4694 | Norm(Est): 214.0908 | Norm(Oracle): 1102.5114
+    [Diagnostics] Reward Pearson Corr: 0.9882 | Var(Δr): 35971.6591
+    [Term-wise] Est: ||dir||=2.069e+02 ||infl||=5.412e+01 ratio=2.616e-01 | Oracle: ||dir||=2.212e+02 ||infl||=1.020e+03 ratio=4.613e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1466 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.8415 | Norm(Est): 154.3369 | Norm(Oracle): 1216.4800
+    [Diagnostics] Reward Pearson Corr: 0.9895 | Var(Δr): 26194.2580
+    [Term-wise] Est: ||dir||=1.648e+02 ||infl||=2.945e+01 ratio=1.787e-01 | Oracle: ||dir||=1.930e+02 ||infl||=1.060e+03 ratio=5.490e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2085 | cos(dir_est, dir_oracle)=0.9997
+    [Joint-IRL] iter    0: ||mean residual|| = 13.162590 (best 13.162590) over 51 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 12.339558 (best 12.339558) over 51 envs
+  [Joint-IRL] re-solved over 51 envs in 30.04s | Q_hat diag=[ 0.5204  3.1199  1.5559 38.814   1.9523  2.1804  1.1011  2.188 ]
+    [Diagnostics] HG Cosine Sim: 0.6599 | Norm(Est): 202.9335 | Norm(Oracle): 1249.4542
+    [Diagnostics] Reward Pearson Corr: 0.9723 | Var(Δr): 6721.7705
+    [Term-wise] Est: ||dir||=1.905e+02 ||infl||=7.107e+01 ratio=3.731e-01 | Oracle: ||dir||=2.166e+02 ||infl||=1.137e+03 ratio=5.249e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3507 | cos(dir_est, dir_oracle)=0.9997
+  iter   50: train=-136.7069±56.8609 eval=-145.7333±53.7350 | μ = [0.059 0.045 0.    0.    0.    0.    0.    0.    0.464 0.109 0.736 0.267
+ 0.331 0.772 0.419 0.758]
+    [Diagnostics] HG Cosine Sim: 0.7405 | Norm(Est): 79.5766 | Norm(Oracle): 1278.2454
+    [Diagnostics] Reward Pearson Corr: 0.9786 | Var(Δr): 7314.0835
+    [Term-wise] Est: ||dir||=6.190e+01 ||infl||=3.031e+01 ratio=4.897e-01 | Oracle: ||dir||=7.463e+01 ||infl||=1.227e+03 ratio=1.645e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.6265 | cos(dir_est, dir_oracle)=0.9937
+    [Diagnostics] HG Cosine Sim: 0.5894 | Norm(Est): 129.3954 | Norm(Oracle): 935.1540
+    [Diagnostics] Reward Pearson Corr: 0.9767 | Var(Δr): 4814.6015
+    [Term-wise] Est: ||dir||=1.300e+02 ||infl||=3.082e+01 ratio=2.371e-01 | Oracle: ||dir||=1.547e+02 ||infl||=8.666e+02 ratio=5.603e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4409 | cos(dir_est, dir_oracle)=0.9993
+    [Diagnostics] HG Cosine Sim: 0.6207 | Norm(Est): 135.8036 | Norm(Oracle): 1013.1984
+    [Diagnostics] Reward Pearson Corr: 0.9826 | Var(Δr): 8651.0682
+    [Term-wise] Est: ||dir||=1.209e+02 ||infl||=6.466e+01 ratio=5.347e-01 | Oracle: ||dir||=1.330e+02 ||infl||=9.461e+02 ratio=7.114e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3144 | cos(dir_est, dir_oracle)=0.9989
+    [Diagnostics] HG Cosine Sim: 0.7506 | Norm(Est): 162.9293 | Norm(Oracle): 1090.0436
+    [Diagnostics] Reward Pearson Corr: 0.9695 | Var(Δr): 4478.1549
+    [Term-wise] Est: ||dir||=1.471e+02 ||infl||=5.466e+01 ratio=3.717e-01 | Oracle: ||dir||=1.616e+02 ||infl||=9.781e+02 ratio=6.053e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2532 | cos(dir_est, dir_oracle)=0.9990
+    [Diagnostics] HG Cosine Sim: 0.8831 | Norm(Est): 149.5975 | Norm(Oracle): 1330.8352
+    [Diagnostics] Reward Pearson Corr: 0.9684 | Var(Δr): 6214.8935
+    [Term-wise] Est: ||dir||=1.404e+02 ||infl||=3.101e+01 ratio=2.209e-01 | Oracle: ||dir||=1.531e+02 ||infl||=1.198e+03 ratio=7.825e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4017 | cos(dir_est, dir_oracle)=0.9987
+    [Diagnostics] HG Cosine Sim: 0.8755 | Norm(Est): 366.5540 | Norm(Oracle): 1951.9900
+    [Diagnostics] Reward Pearson Corr: 0.9700 | Var(Δr): 5187.6672
+    [Term-wise] Est: ||dir||=3.593e+02 ||infl||=3.169e+01 ratio=8.820e-02 | Oracle: ||dir||=4.182e+02 ||infl||=1.590e+03 ratio=3.802e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0781 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.5473 | Norm(Est): 68.1366 | Norm(Oracle): 1029.2443
+    [Diagnostics] Reward Pearson Corr: 0.9761 | Var(Δr): 5061.2844
+    [Term-wise] Est: ||dir||=7.285e+01 ||infl||=3.293e+01 ratio=4.521e-01 | Oracle: ||dir||=7.580e+01 ||infl||=1.007e+03 ratio=1.329e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.4777 | cos(dir_est, dir_oracle)=0.9996
+    [Diagnostics] HG Cosine Sim: 0.9590 | Norm(Est): 598.2414 | Norm(Oracle): 2242.1515
+    [Diagnostics] Reward Pearson Corr: 0.9627 | Var(Δr): 5278.1577
+    [Term-wise] Est: ||dir||=5.826e+02 ||infl||=4.826e+01 ratio=8.283e-02 | Oracle: ||dir||=6.507e+02 ||infl||=1.623e+03 ratio=2.494e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4235 | cos(dir_est, dir_oracle)=0.9984
+    [Diagnostics] HG Cosine Sim: 0.7939 | Norm(Est): 138.1698 | Norm(Oracle): 1199.0487
+    [Diagnostics] Reward Pearson Corr: 0.9741 | Var(Δr): 6465.8458
+    [Term-wise] Est: ||dir||=1.366e+02 ||infl||=3.492e+01 ratio=2.557e-01 | Oracle: ||dir||=1.450e+02 ||infl||=1.094e+03 ratio=7.545e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2628 | cos(dir_est, dir_oracle)=0.9999
+    [Joint-IRL] iter    0: ||mean residual|| = 12.105049 (best 12.105049) over 61 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 11.781747 (best 11.673086) over 61 envs
+  [Joint-IRL] re-solved over 61 envs in 30.21s | Q_hat diag=[  0.5067   3.1334   1.6865 100.       1.9658   2.393    1.1082   2.3058]
+    [Diagnostics] HG Cosine Sim: 0.3818 | Norm(Est): 80.0353 | Norm(Oracle): 497.6400
+    [Diagnostics] Reward Pearson Corr: 0.9676 | Var(Δr): 228108.3611
+    [Term-wise] Est: ||dir||=6.377e+01 ||infl||=5.043e+01 ratio=7.907e-01 | Oracle: ||dir||=5.293e+01 ||infl||=4.813e+02 ratio=9.093e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1354 | cos(dir_est, dir_oracle)=0.9965
+  iter   60: train=-128.5711±49.5260 eval=-128.8429±56.5062 | μ = [0.048 0.04  0.    0.    0.    0.    0.    0.    0.377 0.093 0.778 0.256
+ 0.685 0.853 0.367 0.779]
+    [Diagnostics] HG Cosine Sim: 0.2473 | Norm(Est): 164.6206 | Norm(Oracle): 1459.3053
+    [Diagnostics] Reward Pearson Corr: 0.9659 | Var(Δr): 198216.7620
+    [Term-wise] Est: ||dir||=1.653e+02 ||infl||=5.312e+01 ratio=3.213e-01 | Oracle: ||dir||=1.802e+02 ||infl||=1.423e+03 ratio=7.900e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0687 | cos(dir_est, dir_oracle)=0.9992
+    [Diagnostics] HG Cosine Sim: 0.5476 | Norm(Est): 135.3126 | Norm(Oracle): 1161.2342
+    [Diagnostics] Reward Pearson Corr: 0.9629 | Var(Δr): 286308.3102
+    [Term-wise] Est: ||dir||=8.872e+01 ||infl||=9.290e+01 ratio=1.047e+00 | Oracle: ||dir||=8.214e+01 ||infl||=1.101e+03 ratio=1.340e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0814 | cos(dir_est, dir_oracle)=0.9994
+    [Diagnostics] HG Cosine Sim: 0.4487 | Norm(Est): 258.5908 | Norm(Oracle): 1168.0243
+    [Diagnostics] Reward Pearson Corr: 0.9613 | Var(Δr): 199555.3857
+    [Term-wise] Est: ||dir||=2.485e+02 ||infl||=7.037e+01 ratio=2.832e-01 | Oracle: ||dir||=2.951e+02 ||infl||=1.052e+03 ratio=3.566e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1153 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.6966 | Norm(Est): 325.1304 | Norm(Oracle): 947.8610
+    [Diagnostics] Reward Pearson Corr: 0.9649 | Var(Δr): 272422.0306
+    [Term-wise] Est: ||dir||=2.735e+02 ||infl||=1.682e+02 ratio=6.149e-01 | Oracle: ||dir||=3.012e+02 ||infl||=7.866e+02 ratio=2.611e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3336 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.7001 | Norm(Est): 270.1978 | Norm(Oracle): 1134.7247
+    [Diagnostics] Reward Pearson Corr: 0.9676 | Var(Δr): 361860.2942
+    [Term-wise] Est: ||dir||=2.510e+02 ||infl||=8.831e+01 ratio=3.519e-01 | Oracle: ||dir||=2.799e+02 ||infl||=9.162e+02 ratio=3.273e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2654 | cos(dir_est, dir_oracle)=0.9993
+    [Diagnostics] HG Cosine Sim: 0.5966 | Norm(Est): 91.4155 | Norm(Oracle): 1038.7300
+    [Diagnostics] Reward Pearson Corr: 0.9537 | Var(Δr): 276059.8349
+    [Term-wise] Est: ||dir||=8.198e+01 ||infl||=4.162e+01 ratio=5.078e-01 | Oracle: ||dir||=8.884e+01 ||infl||=9.821e+02 ratio=1.105e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0378 | cos(dir_est, dir_oracle)=0.9984
+    [Diagnostics] HG Cosine Sim: 0.6735 | Norm(Est): 139.7955 | Norm(Oracle): 1137.7986
+    [Diagnostics] Reward Pearson Corr: 0.9588 | Var(Δr): 246422.3105
+    [Term-wise] Est: ||dir||=1.314e+02 ||infl||=5.426e+01 ratio=4.128e-01 | Oracle: ||dir||=1.289e+02 ||infl||=1.070e+03 ratio=8.304e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4591 | cos(dir_est, dir_oracle)=0.9980
+    [Diagnostics] HG Cosine Sim: 0.7578 | Norm(Est): 144.4033 | Norm(Oracle): 1054.7817
+    [Diagnostics] Reward Pearson Corr: 0.9614 | Var(Δr): 229590.0842
+    [Term-wise] Est: ||dir||=1.318e+02 ||infl||=6.448e+01 ratio=4.894e-01 | Oracle: ||dir||=1.309e+02 ||infl||=9.680e+02 ratio=7.396e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3445 | cos(dir_est, dir_oracle)=0.9967
+    [Diagnostics] HG Cosine Sim: 0.2798 | Norm(Est): 158.5960 | Norm(Oracle): 1297.2821
+    [Diagnostics] Reward Pearson Corr: 0.9774 | Var(Δr): 410574.1525
+    [Term-wise] Est: ||dir||=1.234e+02 ||infl||=1.050e+02 ratio=8.509e-01 | Oracle: ||dir||=1.467e+02 ||infl||=1.241e+03 ratio=8.461e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0645 | cos(dir_est, dir_oracle)=0.9983
+    [Joint-IRL] iter    0: ||mean residual|| = 11.933230 (best 11.933230) over 71 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 11.399256 (best 11.399256) over 71 envs
+  [Joint-IRL] re-solved over 71 envs in 46.60s | Q_hat diag=[ 0.4968  3.1016  1.756  38.6027  1.9612  2.5651  1.1354  2.3652]
+    [Diagnostics] HG Cosine Sim: 0.5205 | Norm(Est): 128.9990 | Norm(Oracle): 977.6836
+    [Diagnostics] Reward Pearson Corr: 0.9649 | Var(Δr): 7058.9733
+    [Term-wise] Est: ||dir||=1.303e+02 ||infl||=4.379e+01 ratio=3.361e-01 | Oracle: ||dir||=1.414e+02 ||infl||=9.215e+02 ratio=6.516e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2361 | cos(dir_est, dir_oracle)=0.9989
+  iter   70: train=-147.8747±49.0910 eval=-142.2477±47.3777 | μ = [0.041 0.04  0.    0.    0.    0.    0.    0.    0.325 0.082 0.84  0.122
+ 0.892 0.99  0.319 0.805]
+    [Diagnostics] HG Cosine Sim: 0.6158 | Norm(Est): 164.2466 | Norm(Oracle): 1370.6849
+    [Diagnostics] Reward Pearson Corr: 0.9661 | Var(Δr): 5903.1809
+    [Term-wise] Est: ||dir||=1.625e+02 ||infl||=4.679e+01 ratio=2.880e-01 | Oracle: ||dir||=1.943e+02 ||infl||=1.284e+03 ratio=6.609e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3902 | cos(dir_est, dir_oracle)=0.9967
+    [Diagnostics] HG Cosine Sim: 0.7096 | Norm(Est): 63.6497 | Norm(Oracle): 1285.9059
+    [Diagnostics] Reward Pearson Corr: 0.9752 | Var(Δr): 4289.7828
+    [Term-wise] Est: ||dir||=5.007e+01 ||infl||=3.542e+01 ratio=7.074e-01 | Oracle: ||dir||=5.801e+01 ||infl||=1.253e+03 ratio=2.160e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.5349 | cos(dir_est, dir_oracle)=0.9938
+    [Diagnostics] HG Cosine Sim: 0.9395 | Norm(Est): 299.4849 | Norm(Oracle): 1517.3057
+    [Diagnostics] Reward Pearson Corr: 0.9574 | Var(Δr): 5403.5281
+    [Term-wise] Est: ||dir||=2.895e+02 ||infl||=5.637e+01 ratio=1.947e-01 | Oracle: ||dir||=3.127e+02 ||infl||=1.228e+03 ratio=3.929e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2292 | cos(dir_est, dir_oracle)=0.9993
+    [Diagnostics] HG Cosine Sim: 0.8138 | Norm(Est): 484.9539 | Norm(Oracle): 1353.3622
+    [Diagnostics] Reward Pearson Corr: 0.9725 | Var(Δr): 8407.0177
+    [Term-wise] Est: ||dir||=4.956e+02 ||infl||=5.849e+01 ratio=1.180e-01 | Oracle: ||dir||=4.610e+02 ||infl||=1.020e+03 ratio=2.214e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1096 | cos(dir_est, dir_oracle)=0.9996
+    [Diagnostics] HG Cosine Sim: 0.0931 | Norm(Est): 35.4570 | Norm(Oracle): 764.2085
+    [Diagnostics] Reward Pearson Corr: 0.9909 | Var(Δr): 12469.0733
+    [Term-wise] Est: ||dir||=3.651e+01 ||infl||=2.414e+01 ratio=6.611e-01 | Oracle: ||dir||=3.538e+01 ||infl||=7.701e+02 ratio=2.177e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.4016 | cos(dir_est, dir_oracle)=0.9961
+    [Diagnostics] HG Cosine Sim: 0.6403 | Norm(Est): 85.5612 | Norm(Oracle): 749.4043
+    [Diagnostics] Reward Pearson Corr: 0.9796 | Var(Δr): 4146.9246
+    [Term-wise] Est: ||dir||=8.374e+01 ||infl||=4.048e+01 ratio=4.834e-01 | Oracle: ||dir||=7.420e+01 ||infl||=7.027e+02 ratio=9.470e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0333 | cos(dir_est, dir_oracle)=0.9899
+    [Diagnostics] HG Cosine Sim: 0.5056 | Norm(Est): 94.5074 | Norm(Oracle): 797.7920
+    [Diagnostics] Reward Pearson Corr: 0.9863 | Var(Δr): 4755.4944
+    [Term-wise] Est: ||dir||=9.295e+01 ||infl||=3.638e+01 ratio=3.913e-01 | Oracle: ||dir||=1.014e+02 ||infl||=7.604e+02 ratio=7.499e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2836 | cos(dir_est, dir_oracle)=0.9992
+    [Diagnostics] HG Cosine Sim: 0.9432 | Norm(Est): 222.5351 | Norm(Oracle): 1648.5393
+    [Diagnostics] Reward Pearson Corr: 0.9762 | Var(Δr): 8208.4432
+    [Term-wise] Est: ||dir||=2.219e+02 ||infl||=4.478e+01 ratio=2.018e-01 | Oracle: ||dir||=2.621e+02 ||infl||=1.404e+03 ratio=5.357e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1510 | cos(dir_est, dir_oracle)=0.9982
+    [Diagnostics] HG Cosine Sim: 0.7461 | Norm(Est): 223.3740 | Norm(Oracle): 762.4974
+    [Diagnostics] Reward Pearson Corr: 0.9819 | Var(Δr): 4671.9515
+    [Term-wise] Est: ||dir||=2.210e+02 ||infl||=6.655e+01 ratio=3.011e-01 | Oracle: ||dir||=2.040e+02 ||infl||=6.414e+02 ratio=3.144e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3637 | cos(dir_est, dir_oracle)=0.9943
+    [Joint-IRL] iter    0: ||mean residual|| = 11.262193 (best 11.262193) over 81 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 11.035118 (best 11.035118) over 81 envs
+  [Joint-IRL] re-solved over 81 envs in 43.84s | Q_hat diag=[ 0.4831  2.9518  1.7371 12.5965  1.9816  2.7146  1.2268  2.484 ]
+    [Diagnostics] HG Cosine Sim: 0.7995 | Norm(Est): 62.8523 | Norm(Oracle): 841.3705
+    [Diagnostics] Reward Pearson Corr: 0.9874 | Var(Δr): 30260.9568
+    [Term-wise] Est: ||dir||=6.326e+01 ||infl||=2.190e+01 ratio=3.461e-01 | Oracle: ||dir||=6.348e+01 ||infl||=7.988e+02 ratio=1.258e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.3797 | cos(dir_est, dir_oracle)=0.9947
+  iter   80: train=-152.6381±48.0852 eval=-147.3758±54.4596 | μ = [0.029 0.039 0.    0.    0.    0.    0.    0.    0.232 0.066 0.866 0.
+ 1.    0.961 0.265 0.883]
+    [Diagnostics] HG Cosine Sim: 0.3960 | Norm(Est): 129.1917 | Norm(Oracle): 826.8122
+    [Diagnostics] Reward Pearson Corr: 0.9880 | Var(Δr): 25867.0976
+    [Term-wise] Est: ||dir||=1.391e+02 ||infl||=3.188e+01 ratio=2.292e-01 | Oracle: ||dir||=1.537e+02 ||infl||=7.925e+02 ratio=5.156e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3912 | cos(dir_est, dir_oracle)=0.9978
+    [Diagnostics] HG Cosine Sim: 0.4604 | Norm(Est): 97.9911 | Norm(Oracle): 927.3757
+    [Diagnostics] Reward Pearson Corr: 0.9801 | Var(Δr): 18241.0885
+    [Term-wise] Est: ||dir||=1.003e+02 ||infl||=2.323e+01 ratio=2.316e-01 | Oracle: ||dir||=1.122e+02 ||infl||=8.921e+02 ratio=7.950e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3857 | cos(dir_est, dir_oracle)=0.9988
+    [Diagnostics] HG Cosine Sim: 0.8196 | Norm(Est): 134.5651 | Norm(Oracle): 1177.2558
+    [Diagnostics] Reward Pearson Corr: 0.9921 | Var(Δr): 43423.8472
+    [Term-wise] Est: ||dir||=1.360e+02 ||infl||=2.938e+01 ratio=2.160e-01 | Oracle: ||dir||=1.590e+02 ||infl||=1.053e+03 ratio=6.625e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1228 | cos(dir_est, dir_oracle)=0.9986
+    [Diagnostics] HG Cosine Sim: 0.5687 | Norm(Est): 90.3935 | Norm(Oracle): 1127.5957
+    [Diagnostics] Reward Pearson Corr: 0.9739 | Var(Δr): 18971.9845
+    [Term-wise] Est: ||dir||=8.584e+01 ||infl||=2.291e+01 ratio=2.669e-01 | Oracle: ||dir||=9.825e+01 ||infl||=1.062e+03 ratio=1.081e+01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.3535 | cos(dir_est, dir_oracle)=0.9977
+    [Diagnostics] HG Cosine Sim: 0.4682 | Norm(Est): 70.0294 | Norm(Oracle): 738.9102
+    [Diagnostics] Reward Pearson Corr: 0.9821 | Var(Δr): 24222.4927
+    [Term-wise] Est: ||dir||=6.931e+01 ||infl||=2.340e+01 ratio=3.377e-01 | Oracle: ||dir||=6.787e+01 ||infl||=7.217e+02 ratio=1.063e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.5155 | cos(dir_est, dir_oracle)=0.9989
+    [Diagnostics] HG Cosine Sim: 0.4532 | Norm(Est): 100.7052 | Norm(Oracle): 927.4616
+    [Diagnostics] Reward Pearson Corr: 0.9868 | Var(Δr): 32162.5767
+    [Term-wise] Est: ||dir||=9.734e+01 ||infl||=4.963e+01 ratio=5.098e-01 | Oracle: ||dir||=1.030e+02 ||infl||=9.052e+02 ratio=8.788e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4478 | cos(dir_est, dir_oracle)=0.9937
+    [Diagnostics] HG Cosine Sim: -0.2024 | Norm(Est): 38.3631 | Norm(Oracle): 530.1310
+    [Diagnostics] Reward Pearson Corr: 0.9917 | Var(Δr): 28349.8582
+    [Term-wise] Est: ||dir||=3.217e+01 ||infl||=1.480e+01 ratio=4.600e-01 | Oracle: ||dir||=3.164e+01 ||infl||=5.400e+02 ratio=1.707e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0820 | cos(dir_est, dir_oracle)=0.9971
+    [Diagnostics] HG Cosine Sim: 0.2883 | Norm(Est): 38.2350 | Norm(Oracle): 760.9965
+    [Diagnostics] Reward Pearson Corr: 0.9847 | Var(Δr): 22525.6287
+    [Term-wise] Est: ||dir||=3.557e+01 ||infl||=1.573e+01 ratio=4.422e-01 | Oracle: ||dir||=3.786e+01 ||infl||=7.525e+02 ratio=1.987e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.2677 | cos(dir_est, dir_oracle)=0.9914
+    [Diagnostics] HG Cosine Sim: -0.1238 | Norm(Est): 27.4834 | Norm(Oracle): 681.5832
+    [Diagnostics] Reward Pearson Corr: 0.9846 | Var(Δr): 27017.1063
+    [Term-wise] Est: ||dir||=3.054e+01 ||infl||=1.108e+01 ratio=3.628e-01 | Oracle: ||dir||=3.068e+01 ||infl||=6.912e+02 ratio=2.253e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.4875 | cos(dir_est, dir_oracle)=0.9980
+    [Joint-IRL] iter    0: ||mean residual|| = 11.299785 (best 11.299785) over 91 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 10.890392 (best 10.890392) over 91 envs
+  [Joint-IRL] re-solved over 91 envs in 54.43s | Q_hat diag=[0.4474 2.4908 1.5939 4.2875 1.9418 3.1201 1.427  2.5991]
+    [Diagnostics] HG Cosine Sim: 0.0067 | Norm(Est): 36.6456 | Norm(Oracle): 615.9260
+    [Diagnostics] Reward Pearson Corr: 0.9162 | Var(Δr): 31219.6544
+    [Term-wise] Est: ||dir||=3.766e+01 ||infl||=6.193e+00 ratio=1.644e-01 | Oracle: ||dir||=3.991e+01 ||infl||=6.191e+02 ratio=1.551e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.5090 | cos(dir_est, dir_oracle)=0.9975
+  iter   90: train=-136.9563±44.0290 eval=-137.7862±46.4440 | μ = [0.013 0.024 0.    0.    0.    0.    0.    0.    0.242 0.046 0.798 0.03
+ 0.856 0.937 0.243 0.803]
+    [Diagnostics] HG Cosine Sim: 0.8106 | Norm(Est): 111.7890 | Norm(Oracle): 906.3897
+    [Diagnostics] Reward Pearson Corr: 0.9283 | Var(Δr): 29893.1453
+    [Term-wise] Est: ||dir||=1.143e+02 ||infl||=1.103e+01 ratio=9.648e-02 | Oracle: ||dir||=1.114e+02 ||infl||=8.217e+02 ratio=7.378e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1200 | cos(dir_est, dir_oracle)=0.9995
+    [Diagnostics] HG Cosine Sim: 0.8541 | Norm(Est): 175.9647 | Norm(Oracle): 1146.1233
+    [Diagnostics] Reward Pearson Corr: 0.8817 | Var(Δr): 25786.3367
+    [Term-wise] Est: ||dir||=1.546e+02 ||infl||=5.153e+01 ratio=3.333e-01 | Oracle: ||dir||=1.794e+02 ||infl||=1.003e+03 ratio=5.591e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4841 | cos(dir_est, dir_oracle)=0.9993
+    [Diagnostics] HG Cosine Sim: 0.3292 | Norm(Est): 70.3260 | Norm(Oracle): 644.6153
+    [Diagnostics] Reward Pearson Corr: 0.8605 | Var(Δr): 43449.7672
+    [Term-wise] Est: ||dir||=7.239e+01 ||infl||=1.623e+01 ratio=2.242e-01 | Oracle: ||dir||=8.069e+01 ||infl||=6.313e+02 ratio=7.823e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.6250 | cos(dir_est, dir_oracle)=0.9986
+    [Diagnostics] HG Cosine Sim: 0.8725 | Norm(Est): 119.8391 | Norm(Oracle): 1026.4665
+    [Diagnostics] Reward Pearson Corr: 0.9174 | Var(Δr): 62591.8836
+    [Term-wise] Est: ||dir||=1.192e+02 ||infl||=2.996e+01 ratio=2.514e-01 | Oracle: ||dir||=1.328e+02 ||infl||=9.178e+02 ratio=6.910e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2452 | cos(dir_est, dir_oracle)=0.9986
+    [Diagnostics] HG Cosine Sim: 0.5786 | Norm(Est): 149.3249 | Norm(Oracle): 1224.6159
+    [Diagnostics] Reward Pearson Corr: 0.9299 | Var(Δr): 52630.2201
+    [Term-wise] Est: ||dir||=1.412e+02 ||infl||=1.963e+01 ratio=1.391e-01 | Oracle: ||dir||=1.602e+02 ||infl||=1.137e+03 ratio=7.101e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5907 | cos(dir_est, dir_oracle)=0.9964
+    [Diagnostics] HG Cosine Sim: 0.6177 | Norm(Est): 111.5514 | Norm(Oracle): 1387.6151
+    [Diagnostics] Reward Pearson Corr: 0.8918 | Var(Δr): 48094.4467
+    [Term-wise] Est: ||dir||=1.135e+02 ||infl||=4.957e+01 ratio=4.365e-01 | Oracle: ||dir||=1.251e+02 ||infl||=1.335e+03 ratio=1.067e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.4426 | cos(dir_est, dir_oracle)=0.9992
+    [Diagnostics] HG Cosine Sim: 0.8232 | Norm(Est): 139.0193 | Norm(Oracle): 1407.9122
+    [Diagnostics] Reward Pearson Corr: 0.9184 | Var(Δr): 60543.3122
+    [Term-wise] Est: ||dir||=1.438e+02 ||infl||=4.748e+01 ratio=3.302e-01 | Oracle: ||dir||=1.657e+02 ||infl||=1.291e+03 ratio=7.790e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2858 | cos(dir_est, dir_oracle)=0.9990
+    [Diagnostics] HG Cosine Sim: 0.8493 | Norm(Est): 128.5174 | Norm(Oracle): 881.3994
+    [Diagnostics] Reward Pearson Corr: 0.9057 | Var(Δr): 33881.4297
+    [Term-wise] Est: ||dir||=1.371e+02 ||infl||=2.105e+01 ratio=1.535e-01 | Oracle: ||dir||=1.485e+02 ||infl||=7.634e+02 ratio=5.140e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2185 | cos(dir_est, dir_oracle)=0.9960
+    [Diagnostics] HG Cosine Sim: 0.9353 | Norm(Est): 423.1777 | Norm(Oracle): 1846.0237
+    [Diagnostics] Reward Pearson Corr: 0.9161 | Var(Δr): 61661.8681
+    [Term-wise] Est: ||dir||=4.199e+02 ||infl||=2.629e+01 ratio=6.262e-02 | Oracle: ||dir||=4.528e+02 ||infl||=1.438e+03 ratio=3.175e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4236 | cos(dir_est, dir_oracle)=0.9997
+    [Joint-IRL] iter    0: ||mean residual|| = 10.860255 (best 10.860255) over 101 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 10.384169 (best 10.384169) over 101 envs
+  [Joint-IRL] re-solved over 101 envs in 53.04s | Q_hat diag=[0.4083 1.9621 1.3716 1.6952 1.7439 3.5944 2.2114 2.4586]
+    [Diagnostics] HG Cosine Sim: 0.8533 | Norm(Est): 135.6945 | Norm(Oracle): 1196.8143
+    [Diagnostics] Reward Pearson Corr: 0.7855 | Var(Δr): 48913.8477
+    [Term-wise] Est: ||dir||=1.299e+02 ||infl||=3.551e+01 ratio=2.733e-01 | Oracle: ||dir||=1.505e+02 ||infl||=1.079e+03 ratio=7.170e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4052 | cos(dir_est, dir_oracle)=0.9988
+  iter  100: train=-144.0510±58.6463 eval=-148.6043±38.3913 | μ = [0.009 0.024 0.    0.    0.    0.    0.    0.    0.206 0.04  0.885 0.044
+ 1.    0.994 0.215 0.775]
+    [Diagnostics] HG Cosine Sim: 0.7101 | Norm(Est): 294.0635 | Norm(Oracle): 819.9167
+    [Diagnostics] Reward Pearson Corr: 0.7460 | Var(Δr): 39723.7771
+    [Term-wise] Est: ||dir||=2.991e+02 ||infl||=4.794e+01 ratio=1.603e-01 | Oracle: ||dir||=2.939e+02 ||infl||=6.536e+02 ratio=2.224e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2071 | cos(dir_est, dir_oracle)=0.9922
+    [Diagnostics] HG Cosine Sim: 0.8027 | Norm(Est): 68.7520 | Norm(Oracle): 811.0464
+    [Diagnostics] Reward Pearson Corr: 0.7693 | Var(Δr): 82038.7201
+    [Term-wise] Est: ||dir||=6.919e+01 ||infl||=1.823e+01 ratio=2.635e-01 | Oracle: ||dir||=7.799e+01 ||infl||=7.560e+02 ratio=9.694e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4078 | cos(dir_est, dir_oracle)=0.9958
+    [Diagnostics] HG Cosine Sim: 0.6655 | Norm(Est): 42.5056 | Norm(Oracle): 669.8238
+    [Diagnostics] Reward Pearson Corr: 0.7808 | Var(Δr): 64373.7472
+    [Term-wise] Est: ||dir||=4.516e+01 ||infl||=1.509e+01 ratio=3.342e-01 | Oracle: ||dir||=4.645e+01 ||infl||=6.455e+02 ratio=1.390e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.3201 | cos(dir_est, dir_oracle)=0.9970
+    [Diagnostics] HG Cosine Sim: 0.7774 | Norm(Est): 111.2706 | Norm(Oracle): 691.6918
+    [Diagnostics] Reward Pearson Corr: 0.7782 | Var(Δr): 74475.2622
+    [Term-wise] Est: ||dir||=1.154e+02 ||infl||=1.321e+01 ratio=1.145e-01 | Oracle: ||dir||=1.088e+02 ||infl||=6.134e+02 ratio=5.637e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0432 | cos(dir_est, dir_oracle)=0.9995
+    [Diagnostics] HG Cosine Sim: 0.3912 | Norm(Est): 55.3216 | Norm(Oracle): 620.1258
+    [Diagnostics] Reward Pearson Corr: 0.8044 | Var(Δr): 62540.4499
+    [Term-wise] Est: ||dir||=5.476e+01 ||infl||=1.740e+01 ratio=3.177e-01 | Oracle: ||dir||=5.452e+01 ||infl||=6.096e+02 ratio=1.118e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.4803 | cos(dir_est, dir_oracle)=0.9968
+    [Diagnostics] HG Cosine Sim: 0.3633 | Norm(Est): 38.1686 | Norm(Oracle): 583.2578
+    [Diagnostics] Reward Pearson Corr: 0.7935 | Var(Δr): 49914.5293
+    [Term-wise] Est: ||dir||=4.736e+01 ||infl||=2.045e+01 ratio=4.317e-01 | Oracle: ||dir||=5.117e+01 ||infl||=5.773e+02 ratio=1.128e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.4476 | cos(dir_est, dir_oracle)=0.9977
+    [Diagnostics] HG Cosine Sim: 0.9087 | Norm(Est): 186.1448 | Norm(Oracle): 1142.6929
+    [Diagnostics] Reward Pearson Corr: 0.8310 | Var(Δr): 49438.5951
+    [Term-wise] Est: ||dir||=1.790e+02 ||infl||=1.895e+01 ratio=1.059e-01 | Oracle: ||dir||=1.997e+02 ||infl||=9.654e+02 ratio=4.833e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3971 | cos(dir_est, dir_oracle)=0.9993
+    [Diagnostics] HG Cosine Sim: 0.2747 | Norm(Est): 98.4187 | Norm(Oracle): 645.2755
+    [Diagnostics] Reward Pearson Corr: 0.7624 | Var(Δr): 51565.4479
+    [Term-wise] Est: ||dir||=1.026e+02 ||infl||=9.651e+00 ratio=9.408e-02 | Oracle: ||dir||=1.116e+02 ||infl||=6.268e+02 ratio=5.618e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4089 | cos(dir_est, dir_oracle)=0.9993
+    [Diagnostics] HG Cosine Sim: 0.2506 | Norm(Est): 33.5567 | Norm(Oracle): 693.2889
+    [Diagnostics] Reward Pearson Corr: 0.8021 | Var(Δr): 34218.2895
+    [Term-wise] Est: ||dir||=3.748e+01 ||infl||=1.432e+01 ratio=3.820e-01 | Oracle: ||dir||=3.930e+01 ||infl||=6.933e+02 ratio=1.764e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.5727 | cos(dir_est, dir_oracle)=0.9965
+    [Joint-IRL] iter    0: ||mean residual|| = 10.447939 (best 10.447939) over 111 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 10.072333 (best 10.072333) over 111 envs
+  [Joint-IRL] re-solved over 111 envs in 72.22s | Q_hat diag=[0.3574 1.5712 1.1991 0.9834 1.5659 4.3581 5.1508 2.1045]
+    [Diagnostics] HG Cosine Sim: 0.8331 | Norm(Est): 89.2970 | Norm(Oracle): 695.5231
+    [Diagnostics] Reward Pearson Corr: 0.6292 | Var(Δr): 65058.2671
+    [Term-wise] Est: ||dir||=8.456e+01 ||infl||=7.037e+00 ratio=8.322e-02 | Oracle: ||dir||=9.761e+01 ||infl||=6.160e+02 ratio=6.310e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.7207 | cos(dir_est, dir_oracle)=0.9988
+  iter  110: train=-137.9311±50.1779 eval=-144.6130±56.7433 | μ = [0.003 0.021 0.    0.    0.    0.    0.    0.    0.195 0.029 0.84  0.095
+ 1.    0.924 0.213 0.754]
+    [Diagnostics] HG Cosine Sim: 0.7106 | Norm(Est): 108.7752 | Norm(Oracle): 932.8672
+    [Diagnostics] Reward Pearson Corr: 0.6675 | Var(Δr): 61581.2414
+    [Term-wise] Est: ||dir||=1.043e+02 ||infl||=1.629e+01 ratio=1.562e-01 | Oracle: ||dir||=1.186e+02 ||infl||=8.583e+02 ratio=7.235e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.6193 | cos(dir_est, dir_oracle)=0.9974
+    [Diagnostics] HG Cosine Sim: 0.6000 | Norm(Est): 105.4321 | Norm(Oracle): 850.8994
+    [Diagnostics] Reward Pearson Corr: 0.6579 | Var(Δr): 60544.7198
+    [Term-wise] Est: ||dir||=9.385e+01 ||infl||=2.974e+01 ratio=3.169e-01 | Oracle: ||dir||=1.009e+02 ||infl||=8.011e+02 ratio=7.941e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5470 | cos(dir_est, dir_oracle)=0.9971
+    [Diagnostics] HG Cosine Sim: -0.1127 | Norm(Est): 25.1970 | Norm(Oracle): 531.3642
+    [Diagnostics] Reward Pearson Corr: 0.7109 | Var(Δr): 43083.2353
+    [Term-wise] Est: ||dir||=2.873e+01 ||infl||=7.445e+00 ratio=2.591e-01 | Oracle: ||dir||=3.062e+01 ||infl||=5.379e+02 ratio=1.757e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.6399 | cos(dir_est, dir_oracle)=0.9884
+    [Diagnostics] HG Cosine Sim: 0.7845 | Norm(Est): 147.8390 | Norm(Oracle): 1080.8176
+    [Diagnostics] Reward Pearson Corr: 0.6961 | Var(Δr): 63635.8526
+    [Term-wise] Est: ||dir||=1.449e+02 ||infl||=4.233e+01 ratio=2.921e-01 | Oracle: ||dir||=1.654e+02 ||infl||=9.745e+02 ratio=5.893e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5065 | cos(dir_est, dir_oracle)=0.9989
+    [Diagnostics] HG Cosine Sim: 0.4341 | Norm(Est): 79.9746 | Norm(Oracle): 775.3162
+    [Diagnostics] Reward Pearson Corr: 0.7007 | Var(Δr): 85701.4094
+    [Term-wise] Est: ||dir||=7.633e+01 ||infl||=1.587e+01 ratio=2.080e-01 | Oracle: ||dir||=8.020e+01 ||infl||=7.481e+02 ratio=9.328e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4373 | cos(dir_est, dir_oracle)=0.9976
+    [Diagnostics] HG Cosine Sim: 0.5332 | Norm(Est): 49.4115 | Norm(Oracle): 580.2134
+    [Diagnostics] Reward Pearson Corr: 0.7373 | Var(Δr): 43980.5464
+    [Term-wise] Est: ||dir||=4.892e+01 ||infl||=1.131e+01 ratio=2.311e-01 | Oracle: ||dir||=5.134e+01 ||infl||=5.557e+02 ratio=1.082e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.2767 | cos(dir_est, dir_oracle)=0.9988
+    [Diagnostics] HG Cosine Sim: 0.5080 | Norm(Est): 146.8341 | Norm(Oracle): 942.0484
+    [Diagnostics] Reward Pearson Corr: 0.7131 | Var(Δr): 45532.9530
+    [Term-wise] Est: ||dir||=1.441e+02 ||infl||=2.440e+01 ratio=1.693e-01 | Oracle: ||dir||=1.541e+02 ||infl||=8.804e+02 ratio=5.713e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5787 | cos(dir_est, dir_oracle)=0.9986
+    [Diagnostics] HG Cosine Sim: 0.8131 | Norm(Est): 62.9624 | Norm(Oracle): 937.3128
+    [Diagnostics] Reward Pearson Corr: 0.7121 | Var(Δr): 46263.2143
+    [Term-wise] Est: ||dir||=5.878e+01 ||infl||=2.457e+01 ratio=4.181e-01 | Oracle: ||dir||=6.582e+01 ||infl||=8.962e+02 ratio=1.362e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.6247 | cos(dir_est, dir_oracle)=0.9963
+    [Diagnostics] HG Cosine Sim: -0.0585 | Norm(Est): 30.5627 | Norm(Oracle): 431.4935
+    [Diagnostics] Reward Pearson Corr: 0.7277 | Var(Δr): 40591.2946
+    [Term-wise] Est: ||dir||=3.220e+01 ||infl||=9.533e+00 ratio=2.961e-01 | Oracle: ||dir||=3.114e+01 ||infl||=4.402e+02 ratio=1.414e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.4809 | cos(dir_est, dir_oracle)=0.9967
+    [Joint-IRL] iter    0: ||mean residual|| = 9.724466 (best 9.724466) over 121 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 9.315700 (best 9.315700) over 121 envs
+  [Joint-IRL] re-solved over 121 envs in 62.83s | Q_hat diag=[ 0.3381  1.306   1.1513  0.8339  1.5794  4.6894 15.2346  2.0362]
+    [Diagnostics] HG Cosine Sim: 0.8648 | Norm(Est): 240.4254 | Norm(Oracle): 1014.2848
+    [Diagnostics] Reward Pearson Corr: 0.5133 | Var(Δr): 55198.3177
+    [Term-wise] Est: ||dir||=2.354e+02 ||infl||=1.560e+01 ratio=6.625e-02 | Oracle: ||dir||=2.658e+02 ||infl||=7.958e+02 ratio=2.994e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5219 | cos(dir_est, dir_oracle)=0.9994
+  iter  120: train=-147.4804±51.9350 eval=-144.1414±52.8524 | μ = [0.    0.016 0.    0.    0.    0.    0.    0.    0.184 0.021 0.825 0.124
+ 0.977 0.939 0.232 0.822]
+    [Diagnostics] HG Cosine Sim: 0.3552 | Norm(Est): 113.9561 | Norm(Oracle): 633.1433
+    [Diagnostics] Reward Pearson Corr: 0.5206 | Var(Δr): 52307.7304
+    [Term-wise] Est: ||dir||=1.168e+02 ||infl||=1.699e+01 ratio=1.455e-01 | Oracle: ||dir||=1.183e+02 ||infl||=6.113e+02 ratio=5.165e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.6437 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.6523 | Norm(Est): 221.2365 | Norm(Oracle): 1532.8698
+    [Diagnostics] Reward Pearson Corr: 0.5486 | Var(Δr): 56483.6777
+    [Term-wise] Est: ||dir||=2.165e+02 ||infl||=2.852e+01 ratio=1.318e-01 | Oracle: ||dir||=2.384e+02 ||infl||=1.387e+03 ratio=5.818e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3417 | cos(dir_est, dir_oracle)=0.9988
+    [Diagnostics] HG Cosine Sim: 0.4211 | Norm(Est): 107.2468 | Norm(Oracle): 513.6252
+    [Diagnostics] Reward Pearson Corr: 0.5300 | Var(Δr): 71765.5739
+    [Term-wise] Est: ||dir||=1.015e+02 ||infl||=2.129e+01 ratio=2.098e-01 | Oracle: ||dir||=1.138e+02 ||infl||=4.781e+02 ratio=4.203e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2216 | cos(dir_est, dir_oracle)=0.9993
+    [Diagnostics] HG Cosine Sim: 0.9180 | Norm(Est): 216.6278 | Norm(Oracle): 1226.4173
+    [Diagnostics] Reward Pearson Corr: 0.5302 | Var(Δr): 68895.0291
+    [Term-wise] Est: ||dir||=2.022e+02 ||infl||=2.132e+01 ratio=1.054e-01 | Oracle: ||dir||=2.331e+02 ||infl||=1.017e+03 ratio=4.362e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.7218 | cos(dir_est, dir_oracle)=0.9966
+    [Diagnostics] HG Cosine Sim: 0.9014 | Norm(Est): 168.3551 | Norm(Oracle): 1614.4211
+    [Diagnostics] Reward Pearson Corr: 0.6288 | Var(Δr): 43587.3026
+    [Term-wise] Est: ||dir||=1.500e+02 ||infl||=3.248e+01 ratio=2.166e-01 | Oracle: ||dir||=1.791e+02 ||infl||=1.458e+03 ratio=8.142e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.7119 | cos(dir_est, dir_oracle)=0.9975
+    [Diagnostics] HG Cosine Sim: 0.7252 | Norm(Est): 333.9088 | Norm(Oracle): 959.8440
+    [Diagnostics] Reward Pearson Corr: 0.5812 | Var(Δr): 42109.9208
+    [Term-wise] Est: ||dir||=3.395e+02 ||infl||=2.045e+01 ratio=6.024e-02 | Oracle: ||dir||=3.789e+02 ||infl||=7.431e+02 ratio=1.961e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3611 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.6202 | Norm(Est): 68.2671 | Norm(Oracle): 646.4644
+    [Diagnostics] Reward Pearson Corr: 0.5255 | Var(Δr): 43555.7096
+    [Term-wise] Est: ||dir||=7.057e+01 ||infl||=2.503e+01 ratio=3.547e-01 | Oracle: ||dir||=7.407e+01 ||infl||=6.154e+02 ratio=8.308e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4592 | cos(dir_est, dir_oracle)=0.9983
+    [Diagnostics] HG Cosine Sim: 0.8506 | Norm(Est): 133.0627 | Norm(Oracle): 1393.0507
+    [Diagnostics] Reward Pearson Corr: 0.6070 | Var(Δr): 49958.5764
+    [Term-wise] Est: ||dir||=1.245e+02 ||infl||=2.836e+01 ratio=2.277e-01 | Oracle: ||dir||=1.382e+02 ||infl||=1.288e+03 ratio=9.323e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.6487 | cos(dir_est, dir_oracle)=0.9993
+    [Diagnostics] HG Cosine Sim: 0.8617 | Norm(Est): 100.1054 | Norm(Oracle): 942.0830
+    [Diagnostics] Reward Pearson Corr: 0.7272 | Var(Δr): 29731.2345
+    [Term-wise] Est: ||dir||=8.930e+01 ||infl||=2.289e+01 ratio=2.563e-01 | Oracle: ||dir||=1.029e+02 ||infl||=8.559e+02 ratio=8.321e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5610 | cos(dir_est, dir_oracle)=0.9965
+    [Joint-IRL] iter    0: ||mean residual|| = 9.193229 (best 9.193229) over 131 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 7.319932 (best 7.319932) over 131 envs
+  [Joint-IRL] re-solved over 131 envs in 79.85s | Q_hat diag=[ 0.2523  0.9225  1.0141  0.5088  1.9566  8.0194 24.6918  2.485 ]
+    [Diagnostics] HG Cosine Sim: 0.7838 | Norm(Est): 125.9301 | Norm(Oracle): 642.5753
+    [Diagnostics] Reward Pearson Corr: 0.6456 | Var(Δr): 50030.5165
+    [Term-wise] Est: ||dir||=1.166e+02 ||infl||=2.215e+01 ratio=1.900e-01 | Oracle: ||dir||=1.245e+02 ||infl||=5.541e+02 ratio=4.451e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5062 | cos(dir_est, dir_oracle)=0.9995
+  iter  130: train=-149.6908±49.6166 eval=-148.2538±58.5692 | μ = [0.    0.015 0.    0.    0.    0.    0.    0.    0.157 0.018 0.936 0.127
+ 1.    1.    0.22  0.976]
+    [Diagnostics] HG Cosine Sim: 0.5394 | Norm(Est): 169.6504 | Norm(Oracle): 940.3875
+    [Diagnostics] Reward Pearson Corr: 0.5033 | Var(Δr): 88800.8623
+    [Term-wise] Est: ||dir||=1.721e+02 ||infl||=2.235e+01 ratio=1.299e-01 | Oracle: ||dir||=1.925e+02 ||infl||=8.625e+02 ratio=4.480e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4624 | cos(dir_est, dir_oracle)=0.9996
+    [Diagnostics] HG Cosine Sim: 0.6142 | Norm(Est): 122.9875 | Norm(Oracle): 698.6952
+    [Diagnostics] Reward Pearson Corr: 0.6538 | Var(Δr): 47400.2852
+    [Term-wise] Est: ||dir||=1.198e+02 ||infl||=4.858e+01 ratio=4.054e-01 | Oracle: ||dir||=1.224e+02 ||infl||=6.354e+02 ratio=5.191e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2491 | cos(dir_est, dir_oracle)=0.9989
+    [Diagnostics] HG Cosine Sim: 0.9670 | Norm(Est): 370.1215 | Norm(Oracle): 1171.2612
+    [Diagnostics] Reward Pearson Corr: 0.5737 | Var(Δr): 74446.2937
+    [Term-wise] Est: ||dir||=3.743e+02 ||infl||=3.707e+01 ratio=9.903e-02 | Oracle: ||dir||=4.057e+02 ||infl||=7.884e+02 ratio=1.944e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0428 | cos(dir_est, dir_oracle)=0.9987
+    [Diagnostics] HG Cosine Sim: 0.6294 | Norm(Est): 91.6603 | Norm(Oracle): 311.7130
+    [Diagnostics] Reward Pearson Corr: 0.6452 | Var(Δr): 48661.3553
+    [Term-wise] Est: ||dir||=9.480e+01 ||infl||=2.148e+01 ratio=2.266e-01 | Oracle: ||dir||=9.215e+01 ||infl||=2.663e+02 ratio=2.890e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1131 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.5416 | Norm(Est): 91.6261 | Norm(Oracle): 872.4427
+    [Diagnostics] Reward Pearson Corr: 0.6143 | Var(Δr): 37599.0237
+    [Term-wise] Est: ||dir||=8.191e+01 ||infl||=4.361e+01 ratio=5.324e-01 | Oracle: ||dir||=8.893e+01 ||infl||=8.247e+02 ratio=9.274e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1356 | cos(dir_est, dir_oracle)=0.9990
+    [Diagnostics] HG Cosine Sim: 0.6295 | Norm(Est): 81.3726 | Norm(Oracle): 630.6423
+    [Diagnostics] Reward Pearson Corr: 0.5362 | Var(Δr): 53590.9716
+    [Term-wise] Est: ||dir||=6.513e+01 ||infl||=4.594e+01 ratio=7.054e-01 | Oracle: ||dir||=6.648e+01 ||infl||=5.968e+02 ratio=8.977e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4133 | cos(dir_est, dir_oracle)=0.9968
+    [Diagnostics] HG Cosine Sim: 0.6652 | Norm(Est): 89.2419 | Norm(Oracle): 600.3256
+    [Diagnostics] Reward Pearson Corr: 0.6494 | Var(Δr): 47975.9469
+    [Term-wise] Est: ||dir||=8.959e+01 ||infl||=2.226e+01 ratio=2.485e-01 | Oracle: ||dir||=9.198e+01 ||infl||=5.505e+02 ratio=5.985e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4650 | cos(dir_est, dir_oracle)=0.9988
+    [Diagnostics] HG Cosine Sim: 0.9322 | Norm(Est): 160.2614 | Norm(Oracle): 935.4900
+    [Diagnostics] Reward Pearson Corr: 0.4939 | Var(Δr): 72208.9285
+    [Term-wise] Est: ||dir||=1.501e+02 ||infl||=2.689e+01 ratio=1.792e-01 | Oracle: ||dir||=1.648e+02 ||infl||=7.847e+02 ratio=4.761e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4773 | cos(dir_est, dir_oracle)=0.9969
+    [Diagnostics] HG Cosine Sim: 0.9032 | Norm(Est): 215.5167 | Norm(Oracle): 1125.4028
+    [Diagnostics] Reward Pearson Corr: 0.5697 | Var(Δr): 60821.8326
+    [Term-wise] Est: ||dir||=2.117e+02 ||infl||=2.902e+01 ratio=1.370e-01 | Oracle: ||dir||=2.424e+02 ||infl||=9.214e+02 ratio=3.800e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4977 | cos(dir_est, dir_oracle)=0.9977
+    [Joint-IRL] iter    0: ||mean residual|| = 7.109425 (best 7.109425) over 141 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 7.225408 (best 7.109425) over 141 envs
+  [Joint-IRL] re-solved over 141 envs in 74.15s | Q_hat diag=[0.2444 0.9127 0.999  0.4954 1.8723 8.289  8.0568 2.3073]
+    [Diagnostics] HG Cosine Sim: 0.3391 | Norm(Est): 38.9554 | Norm(Oracle): 371.9721
+    [Diagnostics] Reward Pearson Corr: 0.6516 | Var(Δr): 42460.5488
+    [Term-wise] Est: ||dir||=3.860e+01 ||infl||=7.632e+00 ratio=1.977e-01 | Oracle: ||dir||=3.752e+01 ||infl||=3.632e+02 ratio=9.681e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3913 | cos(dir_est, dir_oracle)=0.9975
+  iter  140: train=-148.7463±45.9905 eval=-150.2191±58.6055 | μ = [0.    0.012 0.    0.    0.    0.    0.    0.    0.158 0.015 0.974 0.149
+ 0.978 0.928 0.253 0.974]
+    [Diagnostics] HG Cosine Sim: 0.6476 | Norm(Est): 221.0278 | Norm(Oracle): 650.6472
+    [Diagnostics] Reward Pearson Corr: 0.6509 | Var(Δr): 26611.7919
+    [Term-wise] Est: ||dir||=2.217e+02 ||infl||=2.980e+01 ratio=1.344e-01 | Oracle: ||dir||=2.332e+02 ||infl||=5.466e+02 ratio=2.344e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5874 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.9266 | Norm(Est): 264.5058 | Norm(Oracle): 1026.9524
+    [Diagnostics] Reward Pearson Corr: 0.5736 | Var(Δr): 81292.3446
+    [Term-wise] Est: ||dir||=2.639e+02 ||infl||=3.258e+01 ratio=1.234e-01 | Oracle: ||dir||=2.861e+02 ||infl||=7.763e+02 ratio=2.713e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3134 | cos(dir_est, dir_oracle)=0.9995
+    [Diagnostics] HG Cosine Sim: 0.3729 | Norm(Est): 51.2645 | Norm(Oracle): 515.3200
+    [Diagnostics] Reward Pearson Corr: 0.6211 | Var(Δr): 55577.1672
+    [Term-wise] Est: ||dir||=5.751e+01 ||infl||=2.283e+01 ratio=3.969e-01 | Oracle: ||dir||=5.459e+01 ||infl||=5.081e+02 ratio=9.308e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4203 | cos(dir_est, dir_oracle)=0.9996
+    [Diagnostics] HG Cosine Sim: 0.3010 | Norm(Est): 99.8526 | Norm(Oracle): 491.7075
+    [Diagnostics] Reward Pearson Corr: 0.6358 | Var(Δr): 45816.9665
+    [Term-wise] Est: ||dir||=9.969e+01 ||infl||=9.515e+00 ratio=9.544e-02 | Oracle: ||dir||=1.009e+02 ||infl||=4.762e+02 ratio=4.718e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.6947 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.9266 | Norm(Est): 438.4883 | Norm(Oracle): 894.6589
+    [Diagnostics] Reward Pearson Corr: 0.6013 | Var(Δr): 78432.3537
+    [Term-wise] Est: ||dir||=4.375e+02 ||infl||=1.612e+01 ratio=3.686e-02 | Oracle: ||dir||=4.621e+02 ||infl||=5.001e+02 ratio=1.082e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1545 | cos(dir_est, dir_oracle)=0.9996
+    [Diagnostics] HG Cosine Sim: 0.8082 | Norm(Est): 85.0789 | Norm(Oracle): 537.1954
+    [Diagnostics] Reward Pearson Corr: 0.6194 | Var(Δr): 49288.9809
+    [Term-wise] Est: ||dir||=8.647e+01 ||infl||=7.498e+00 ratio=8.671e-02 | Oracle: ||dir||=8.971e+01 ||infl||=4.665e+02 ratio=5.200e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0459 | cos(dir_est, dir_oracle)=0.9995
+    [Diagnostics] HG Cosine Sim: 0.8807 | Norm(Est): 330.8993 | Norm(Oracle): 1206.6941
+    [Diagnostics] Reward Pearson Corr: 0.5640 | Var(Δr): 71856.2133
+    [Term-wise] Est: ||dir||=3.309e+02 ||infl||=2.648e+01 ratio=8.003e-02 | Oracle: ||dir||=3.529e+02 ||infl||=9.062e+02 ratio=2.568e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2610 | cos(dir_est, dir_oracle)=0.9983
+    [Diagnostics] HG Cosine Sim: 0.5836 | Norm(Est): 50.1954 | Norm(Oracle): 597.4683
+    [Diagnostics] Reward Pearson Corr: 0.6506 | Var(Δr): 45574.9675
+    [Term-wise] Est: ||dir||=4.901e+01 ||infl||=1.294e+01 ratio=2.640e-01 | Oracle: ||dir||=5.382e+01 ||infl||=5.732e+02 ratio=1.065e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.6561 | cos(dir_est, dir_oracle)=0.9964
+    [Diagnostics] HG Cosine Sim: 0.7059 | Norm(Est): 62.9414 | Norm(Oracle): 496.4833
+    [Diagnostics] Reward Pearson Corr: 0.6105 | Var(Δr): 59607.4788
+    [Term-wise] Est: ||dir||=6.378e+01 ||infl||=1.924e+01 ratio=3.016e-01 | Oracle: ||dir||=6.964e+01 ||infl||=4.537e+02 ratio=6.515e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2978 | cos(dir_est, dir_oracle)=0.9973
+    [Joint-IRL] iter    0: ||mean residual|| = 7.314304 (best 7.314304) over 151 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 7.478347 (best 7.314304) over 151 envs
+  [Joint-IRL] re-solved over 151 envs in 102.39s | Q_hat diag=[0.211  0.8407 0.8859 0.4298 1.4337 6.5778 3.1277 1.6208]
+    [Diagnostics] HG Cosine Sim: 0.8756 | Norm(Est): 142.1244 | Norm(Oracle): 535.6740
+    [Diagnostics] Reward Pearson Corr: 0.7099 | Var(Δr): 43827.4708
+    [Term-wise] Est: ||dir||=1.524e+02 ||infl||=1.815e+01 ratio=1.191e-01 | Oracle: ||dir||=1.551e+02 ||infl||=4.077e+02 ratio=2.629e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2083 | cos(dir_est, dir_oracle)=0.9988
+  iter  150: train=-144.2276±51.1737 eval=-167.9395±59.5720 | μ = [0.    0.011 0.    0.    0.    0.    0.    0.    0.149 0.012 1.    0.181
+ 1.    0.972 0.22  0.945]
+    [Diagnostics] HG Cosine Sim: 0.7645 | Norm(Est): 242.8643 | Norm(Oracle): 838.7596
+    [Diagnostics] Reward Pearson Corr: 0.6101 | Var(Δr): 54332.3518
+    [Term-wise] Est: ||dir||=2.359e+02 ||infl||=2.842e+01 ratio=1.205e-01 | Oracle: ||dir||=2.474e+02 ||infl||=6.732e+02 ratio=2.722e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4698 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.7960 | Norm(Est): 144.1694 | Norm(Oracle): 719.5443
+    [Diagnostics] Reward Pearson Corr: 0.6307 | Var(Δr): 59398.7331
+    [Term-wise] Est: ||dir||=1.365e+02 ||infl||=1.320e+01 ratio=9.667e-02 | Oracle: ||dir||=1.464e+02 ||infl||=6.070e+02 ratio=4.147e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5183 | cos(dir_est, dir_oracle)=0.9989
+    [Diagnostics] HG Cosine Sim: 0.6561 | Norm(Est): 274.0349 | Norm(Oracle): 1074.1531
+    [Diagnostics] Reward Pearson Corr: 0.6656 | Var(Δr): 62353.0865
+    [Term-wise] Est: ||dir||=2.746e+02 ||infl||=3.883e+01 ratio=1.414e-01 | Oracle: ||dir||=2.995e+02 ||infl||=9.271e+02 ratio=3.095e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4580 | cos(dir_est, dir_oracle)=0.9985
+    [Diagnostics] HG Cosine Sim: 0.5236 | Norm(Est): 114.6401 | Norm(Oracle): 515.2519
+    [Diagnostics] Reward Pearson Corr: 0.5910 | Var(Δr): 73250.4380
+    [Term-wise] Est: ||dir||=1.066e+02 ||infl||=1.661e+01 ratio=1.559e-01 | Oracle: ||dir||=1.074e+02 ||infl||=4.660e+02 ratio=4.340e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3584 | cos(dir_est, dir_oracle)=0.9985
+    [Diagnostics] HG Cosine Sim: 0.7345 | Norm(Est): 171.6045 | Norm(Oracle): 730.4628
+    [Diagnostics] Reward Pearson Corr: 0.6826 | Var(Δr): 33410.6281
+    [Term-wise] Est: ||dir||=1.735e+02 ||infl||=2.033e+01 ratio=1.172e-01 | Oracle: ||dir||=1.815e+02 ||infl||=6.183e+02 ratio=3.406e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3300 | cos(dir_est, dir_oracle)=0.9979
+    [Diagnostics] HG Cosine Sim: 0.5620 | Norm(Est): 73.8720 | Norm(Oracle): 471.8384
+    [Diagnostics] Reward Pearson Corr: 0.4966 | Var(Δr): 83071.8958
+    [Term-wise] Est: ||dir||=8.086e+01 ||infl||=1.894e+01 ratio=2.343e-01 | Oracle: ||dir||=8.465e+01 ||infl||=4.346e+02 ratio=5.134e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1343 | cos(dir_est, dir_oracle)=0.9986
+    [Diagnostics] HG Cosine Sim: 0.6592 | Norm(Est): 66.1827 | Norm(Oracle): 690.5782
+    [Diagnostics] Reward Pearson Corr: 0.6430 | Var(Δr): 51201.5184
+    [Term-wise] Est: ||dir||=6.335e+01 ||infl||=1.756e+01 ratio=2.773e-01 | Oracle: ||dir||=7.003e+01 ||infl||=6.480e+02 ratio=9.253e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3794 | cos(dir_est, dir_oracle)=0.9955
+    [Diagnostics] HG Cosine Sim: 0.3418 | Norm(Est): 49.3070 | Norm(Oracle): 443.3834
+    [Diagnostics] Reward Pearson Corr: 0.6659 | Var(Δr): 46239.9020
+    [Term-wise] Est: ||dir||=4.765e+01 ||infl||=1.387e+01 ratio=2.912e-01 | Oracle: ||dir||=4.652e+01 ||infl||=4.348e+02 ratio=9.346e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4937 | cos(dir_est, dir_oracle)=0.9986
+    [Diagnostics] HG Cosine Sim: 0.8888 | Norm(Est): 199.4285 | Norm(Oracle): 946.4011
+    [Diagnostics] Reward Pearson Corr: 0.6583 | Var(Δr): 52473.8582
+    [Term-wise] Est: ||dir||=1.960e+02 ||infl||=2.235e+01 ratio=1.140e-01 | Oracle: ||dir||=2.193e+02 ||infl||=7.662e+02 ratio=3.493e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5557 | cos(dir_est, dir_oracle)=0.9995
+    [Joint-IRL] iter    0: ||mean residual|| = 7.494579 (best 7.494579) over 161 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 7.408717 (best 7.408717) over 161 envs
+  [Joint-IRL] re-solved over 161 envs in 89.84s | Q_hat diag=[0.1766 0.684  0.796  0.3499 1.2621 4.693  1.2314 1.2437]
+    [Diagnostics] HG Cosine Sim: 0.4112 | Norm(Est): 54.9414 | Norm(Oracle): 512.3658
+    [Diagnostics] Reward Pearson Corr: 0.6786 | Var(Δr): 45447.0182
+    [Term-wise] Est: ||dir||=6.100e+01 ||infl||=2.003e+01 ratio=3.283e-01 | Oracle: ||dir||=6.196e+01 ||infl||=4.945e+02 ratio=7.981e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2146 | cos(dir_est, dir_oracle)=0.9973
+  iter  160: train=-142.0830±50.5842 eval=-152.2670±48.8606 | μ = [0.    0.013 0.    0.    0.    0.    0.    0.    0.104 0.01  0.983 0.181
+ 0.963 1.    0.207 0.951]
+    [Diagnostics] HG Cosine Sim: 0.4552 | Norm(Est): 86.9966 | Norm(Oracle): 462.2230
+    [Diagnostics] Reward Pearson Corr: 0.5795 | Var(Δr): 58730.2988
+    [Term-wise] Est: ||dir||=8.874e+01 ||infl||=9.178e+00 ratio=1.034e-01 | Oracle: ||dir||=9.293e+01 ||infl||=4.255e+02 ratio=4.579e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1399 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.5840 | Norm(Est): 44.0278 | Norm(Oracle): 589.7770
+    [Diagnostics] Reward Pearson Corr: 0.6137 | Var(Δr): 67881.2406
+    [Term-wise] Est: ||dir||=4.558e+01 ||infl||=1.226e+01 ratio=2.690e-01 | Oracle: ||dir||=5.002e+01 ||infl||=5.594e+02 ratio=1.118e+01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0104 | cos(dir_est, dir_oracle)=0.9956
+    [Diagnostics] HG Cosine Sim: 0.6558 | Norm(Est): 311.2748 | Norm(Oracle): 847.7336
+    [Diagnostics] Reward Pearson Corr: 0.6138 | Var(Δr): 86708.3428
+    [Term-wise] Est: ||dir||=3.060e+02 ||infl||=2.810e+01 ratio=9.183e-02 | Oracle: ||dir||=3.115e+02 ||infl||=6.813e+02 ratio=2.187e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1385 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.8124 | Norm(Est): 110.6086 | Norm(Oracle): 616.0134
+    [Diagnostics] Reward Pearson Corr: 0.6108 | Var(Δr): 86806.1168
+    [Term-wise] Est: ||dir||=1.056e+02 ||infl||=1.171e+01 ratio=1.109e-01 | Oracle: ||dir||=1.137e+02 ||infl||=5.284e+02 ratio=4.645e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5157 | cos(dir_est, dir_oracle)=0.9993
+    [Diagnostics] HG Cosine Sim: 0.5904 | Norm(Est): 160.5452 | Norm(Oracle): 485.9936
+    [Diagnostics] Reward Pearson Corr: 0.6057 | Var(Δr): 52836.1065
+    [Term-wise] Est: ||dir||=1.641e+02 ||infl||=1.892e+01 ratio=1.153e-01 | Oracle: ||dir||=1.732e+02 ||infl||=4.132e+02 ratio=2.386e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2824 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.9388 | Norm(Est): 144.2264 | Norm(Oracle): 773.8413
+    [Diagnostics] Reward Pearson Corr: 0.6276 | Var(Δr): 64473.2761
+    [Term-wise] Est: ||dir||=1.487e+02 ||infl||=1.231e+01 ratio=8.278e-02 | Oracle: ||dir||=1.674e+02 ||infl||=6.180e+02 ratio=3.691e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2902 | cos(dir_est, dir_oracle)=0.9993
+    [Diagnostics] HG Cosine Sim: 0.5695 | Norm(Est): 53.3188 | Norm(Oracle): 417.5064
+    [Diagnostics] Reward Pearson Corr: 0.6158 | Var(Δr): 75312.1297
+    [Term-wise] Est: ||dir||=5.135e+01 ||infl||=7.678e+00 ratio=1.495e-01 | Oracle: ||dir||=5.442e+01 ||infl||=3.892e+02 ratio=7.152e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3231 | cos(dir_est, dir_oracle)=0.9986
+    [Diagnostics] HG Cosine Sim: 0.5805 | Norm(Est): 191.9983 | Norm(Oracle): 735.5721
+    [Diagnostics] Reward Pearson Corr: 0.6431 | Var(Δr): 54625.3517
+    [Term-wise] Est: ||dir||=1.899e+02 ||infl||=1.378e+01 ratio=7.256e-02 | Oracle: ||dir||=2.004e+02 ||infl||=6.435e+02 ratio=3.211e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5265 | cos(dir_est, dir_oracle)=0.9996
+    [Diagnostics] HG Cosine Sim: 0.8202 | Norm(Est): 170.2420 | Norm(Oracle): 903.4464
+    [Diagnostics] Reward Pearson Corr: 0.6228 | Var(Δr): 94476.8329
+    [Term-wise] Est: ||dir||=1.545e+02 ||infl||=2.092e+01 ratio=1.355e-01 | Oracle: ||dir||=1.766e+02 ||infl||=7.608e+02 ratio=4.309e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3796 | cos(dir_est, dir_oracle)=0.9987
+    [Joint-IRL] iter    0: ||mean residual|| = 7.403171 (best 7.403171) over 171 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 7.145838 (best 7.145838) over 171 envs
+  [Joint-IRL] re-solved over 171 envs in 114.80s | Q_hat diag=[0.141  0.4871 0.7249 0.2637 1.0819 2.7736 0.6146 0.9343]
+    [Diagnostics] HG Cosine Sim: 0.7352 | Norm(Est): 78.3542 | Norm(Oracle): 397.4747
+    [Diagnostics] Reward Pearson Corr: 0.6151 | Var(Δr): 94695.3046
+    [Term-wise] Est: ||dir||=7.715e+01 ||infl||=1.290e+01 ratio=1.672e-01 | Oracle: ||dir||=8.478e+01 ||infl||=3.368e+02 ratio=3.972e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0763 | cos(dir_est, dir_oracle)=0.9981
+  iter  170: train=-147.7811±55.4304 eval=-149.9210±57.8011 | μ = [0.    0.008 0.    0.    0.002 0.    0.    0.    0.131 0.008 0.981 0.204
+ 0.925 0.987 0.221 1.   ]
+    [Diagnostics] HG Cosine Sim: 0.8477 | Norm(Est): 471.7942 | Norm(Oracle): 820.9729
+    [Diagnostics] Reward Pearson Corr: 0.6838 | Var(Δr): 44677.6803
+    [Term-wise] Est: ||dir||=4.700e+02 ||infl||=1.269e+01 ratio=2.700e-02 | Oracle: ||dir||=4.957e+02 ||infl||=4.803e+02 ratio=9.688e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.2719 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.7711 | Norm(Est): 109.3550 | Norm(Oracle): 548.3972
+    [Diagnostics] Reward Pearson Corr: 0.7165 | Var(Δr): 52209.1286
+    [Term-wise] Est: ||dir||=1.057e+02 ||infl||=6.711e+00 ratio=6.348e-02 | Oracle: ||dir||=1.124e+02 ||infl||=4.680e+02 ratio=4.162e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.7920 | cos(dir_est, dir_oracle)=0.9994
+    [Diagnostics] HG Cosine Sim: 0.9217 | Norm(Est): 143.4824 | Norm(Oracle): 770.7193
+    [Diagnostics] Reward Pearson Corr: 0.7027 | Var(Δr): 52568.0800
+    [Term-wise] Est: ||dir||=1.409e+02 ||infl||=1.662e+01 ratio=1.180e-01 | Oracle: ||dir||=1.502e+02 ||infl||=6.383e+02 ratio=4.249e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3571 | cos(dir_est, dir_oracle)=0.9995
+    [Diagnostics] HG Cosine Sim: 0.8356 | Norm(Est): 136.5276 | Norm(Oracle): 801.2588
+    [Diagnostics] Reward Pearson Corr: 0.6453 | Var(Δr): 68592.1599
+    [Term-wise] Est: ||dir||=1.325e+02 ||infl||=1.542e+01 ratio=1.164e-01 | Oracle: ||dir||=1.408e+02 ||infl||=6.890e+02 ratio=4.895e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3294 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.5059 | Norm(Est): 45.8757 | Norm(Oracle): 398.5695
+    [Diagnostics] Reward Pearson Corr: 0.6933 | Var(Δr): 54620.8675
+    [Term-wise] Est: ||dir||=4.684e+01 ||infl||=4.557e+00 ratio=9.728e-02 | Oracle: ||dir||=5.034e+01 ||infl||=3.750e+02 ratio=7.449e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3657 | cos(dir_est, dir_oracle)=0.9976
+    [Diagnostics] HG Cosine Sim: 0.7375 | Norm(Est): 72.6143 | Norm(Oracle): 664.1865
+    [Diagnostics] Reward Pearson Corr: 0.6299 | Var(Δr): 70900.1014
+    [Term-wise] Est: ||dir||=7.041e+01 ||infl||=1.404e+01 ratio=1.994e-01 | Oracle: ||dir||=7.747e+01 ||infl||=6.080e+02 ratio=7.848e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1945 | cos(dir_est, dir_oracle)=0.9985
+    [Diagnostics] HG Cosine Sim: 0.8431 | Norm(Est): 163.1518 | Norm(Oracle): 759.9566
+    [Diagnostics] Reward Pearson Corr: 0.6720 | Var(Δr): 55989.5173
+    [Term-wise] Est: ||dir||=1.565e+02 ||infl||=1.479e+01 ratio=9.448e-02 | Oracle: ||dir||=1.758e+02 ||infl||=6.222e+02 ratio=3.540e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.6930 | cos(dir_est, dir_oracle)=0.9991
+    [Diagnostics] HG Cosine Sim: 0.5173 | Norm(Est): 40.0027 | Norm(Oracle): 526.2619
+    [Diagnostics] Reward Pearson Corr: 0.6763 | Var(Δr): 68225.6295
+    [Term-wise] Est: ||dir||=3.854e+01 ||infl||=1.059e+01 ratio=2.749e-01 | Oracle: ||dir||=4.106e+01 ||infl||=5.108e+02 ratio=1.244e+01
+    [Term-wise] cos(infl_est, infl_oracle)=0.7064 | cos(dir_est, dir_oracle)=0.9958
+    [Diagnostics] HG Cosine Sim: 0.2874 | Norm(Est): 47.9505 | Norm(Oracle): 276.6646
+    [Diagnostics] Reward Pearson Corr: 0.6357 | Var(Δr): 63032.7069
+    [Term-wise] Est: ||dir||=4.803e+01 ||infl||=6.071e+00 ratio=1.264e-01 | Oracle: ||dir||=5.047e+01 ||infl||=2.674e+02 ratio=5.297e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2578 | cos(dir_est, dir_oracle)=0.9986
+    [Joint-IRL] iter    0: ||mean residual|| = 7.005133 (best 7.005133) over 181 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 6.216958 (best 6.216958) over 181 envs
+  [Joint-IRL] re-solved over 181 envs in 102.48s | Q_hat diag=[0.112  0.3152 0.7154 0.1816 0.919  1.9066 0.3142 0.7733]
+    [Diagnostics] HG Cosine Sim: 0.7125 | Norm(Est): 214.9134 | Norm(Oracle): 577.6419
+    [Diagnostics] Reward Pearson Corr: 0.5689 | Var(Δr): 87694.0189
+    [Term-wise] Est: ||dir||=2.140e+02 ||infl||=1.264e+01 ratio=5.910e-02 | Oracle: ||dir||=2.301e+02 ||infl||=4.475e+02 ratio=1.945e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4859 | cos(dir_est, dir_oracle)=0.9998
+  iter  180: train=-151.5228±48.8719 eval=-165.7233±59.9245 | μ = [0.    0.004 0.    0.    0.    0.    0.    0.    0.159 0.006 0.957 0.219
+ 0.899 1.    0.236 1.   ]
+    [Diagnostics] HG Cosine Sim: 0.8422 | Norm(Est): 167.7790 | Norm(Oracle): 701.4162
+    [Diagnostics] Reward Pearson Corr: 0.7247 | Var(Δr): 60425.8365
+    [Term-wise] Est: ||dir||=1.689e+02 ||infl||=8.440e+00 ratio=4.998e-02 | Oracle: ||dir||=1.841e+02 ||infl||=5.561e+02 ratio=3.020e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2206 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.7795 | Norm(Est): 63.8181 | Norm(Oracle): 508.8548
+    [Diagnostics] Reward Pearson Corr: 0.6693 | Var(Δr): 73766.9401
+    [Term-wise] Est: ||dir||=5.839e+01 ||infl||=7.741e+00 ratio=1.326e-01 | Oracle: ||dir||=6.308e+01 ||infl||=4.614e+02 ratio=7.314e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.6906 | cos(dir_est, dir_oracle)=0.9986
+    [Diagnostics] HG Cosine Sim: 0.7743 | Norm(Est): 83.1204 | Norm(Oracle): 515.0508
+    [Diagnostics] Reward Pearson Corr: 0.6033 | Var(Δr): 71139.5450
+    [Term-wise] Est: ||dir||=8.138e+01 ||infl||=7.922e+00 ratio=9.734e-02 | Oracle: ||dir||=8.861e+01 ||infl||=4.518e+02 ratio=5.099e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.6398 | cos(dir_est, dir_oracle)=0.9990
+    [Diagnostics] HG Cosine Sim: 0.8965 | Norm(Est): 79.2058 | Norm(Oracle): 657.0262
+    [Diagnostics] Reward Pearson Corr: 0.6250 | Var(Δr): 67800.5513
+    [Term-wise] Est: ||dir||=7.408e+01 ||infl||=1.078e+01 ratio=1.455e-01 | Oracle: ||dir||=8.082e+01 ||infl||=5.891e+02 ratio=7.288e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.8081 | cos(dir_est, dir_oracle)=0.9991
+    [Diagnostics] HG Cosine Sim: 0.3602 | Norm(Est): 38.9877 | Norm(Oracle): 331.5249
+    [Diagnostics] Reward Pearson Corr: 0.6780 | Var(Δr): 51081.2244
+    [Term-wise] Est: ||dir||=4.174e+01 ||infl||=7.035e+00 ratio=1.685e-01 | Oracle: ||dir||=4.360e+01 ||infl||=3.196e+02 ratio=7.330e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2636 | cos(dir_est, dir_oracle)=0.9978
+    [Diagnostics] HG Cosine Sim: 0.8002 | Norm(Est): 233.2149 | Norm(Oracle): 442.9972
+    [Diagnostics] Reward Pearson Corr: 0.6296 | Var(Δr): 55284.9098
+    [Term-wise] Est: ||dir||=2.326e+02 ||infl||=6.885e+00 ratio=2.960e-02 | Oracle: ||dir||=2.505e+02 ||infl||=2.861e+02 ratio=1.142e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3773 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.5463 | Norm(Est): 77.9669 | Norm(Oracle): 409.3571
+    [Diagnostics] Reward Pearson Corr: 0.5917 | Var(Δr): 75647.8864
+    [Term-wise] Est: ||dir||=7.909e+01 ||infl||=9.273e+00 ratio=1.172e-01 | Oracle: ||dir||=8.301e+01 ||infl||=3.737e+02 ratio=4.502e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5335 | cos(dir_est, dir_oracle)=0.9984
+    [Diagnostics] HG Cosine Sim: 0.8236 | Norm(Est): 195.6258 | Norm(Oracle): 739.0657
+    [Diagnostics] Reward Pearson Corr: 0.6467 | Var(Δr): 60739.2354
+    [Term-wise] Est: ||dir||=1.943e+02 ||infl||=1.544e+01 ratio=7.943e-02 | Oracle: ||dir||=2.166e+02 ||infl||=5.729e+02 ratio=2.645e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0342 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.8256 | Norm(Est): 78.3227 | Norm(Oracle): 499.0317
+    [Diagnostics] Reward Pearson Corr: 0.6572 | Var(Δr): 51396.0517
+    [Term-wise] Est: ||dir||=7.828e+01 ||infl||=7.743e+00 ratio=9.891e-02 | Oracle: ||dir||=8.370e+01 ||infl||=4.341e+02 ratio=5.186e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4686 | cos(dir_est, dir_oracle)=0.9991
+    [Joint-IRL] iter    0: ||mean residual|| = 6.410300 (best 6.410300) over 191 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 5.752665 (best 5.752665) over 191 envs
+  [Joint-IRL] re-solved over 191 envs in 102.60s | Q_hat diag=[0.0823 0.2312 0.6746 0.1142 0.8227 1.0313 0.2245 0.6358]
+    [Diagnostics] HG Cosine Sim: 0.9453 | Norm(Est): 141.8330 | Norm(Oracle): 727.0337
+    [Diagnostics] Reward Pearson Corr: 0.6905 | Var(Δr): 71454.4546
+    [Term-wise] Est: ||dir||=1.389e+02 ||infl||=1.083e+01 ratio=7.799e-02 | Oracle: ||dir||=1.531e+02 ||infl||=5.835e+02 ratio=3.811e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2833 | cos(dir_est, dir_oracle)=0.9996
+  iter  190: train=-161.8255±62.4289 eval=-146.8778±47.4298 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.191 0.005 0.989 0.224
+ 0.942 0.999 0.247 1.   ]
+    [Diagnostics] HG Cosine Sim: 0.9295 | Norm(Est): 142.6318 | Norm(Oracle): 669.3978
+    [Diagnostics] Reward Pearson Corr: 0.6393 | Var(Δr): 98973.0893
+    [Term-wise] Est: ||dir||=1.368e+02 ||infl||=7.933e+00 ratio=5.798e-02 | Oracle: ||dir||=1.457e+02 ||infl||=5.361e+02 ratio=3.679e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.8119 | cos(dir_est, dir_oracle)=0.9996
+    [Diagnostics] HG Cosine Sim: 0.7437 | Norm(Est): 196.9089 | Norm(Oracle): 562.8455
+    [Diagnostics] Reward Pearson Corr: 0.6207 | Var(Δr): 61598.4604
+    [Term-wise] Est: ||dir||=1.949e+02 ||infl||=4.812e+00 ratio=2.469e-02 | Oracle: ||dir||=2.120e+02 ||infl||=4.312e+02 ratio=2.034e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.8383 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.8874 | Norm(Est): 143.5245 | Norm(Oracle): 661.6191
+    [Diagnostics] Reward Pearson Corr: 0.6379 | Var(Δr): 85699.8294
+    [Term-wise] Est: ||dir||=1.337e+02 ||infl||=1.119e+01 ratio=8.372e-02 | Oracle: ||dir||=1.445e+02 ||infl||=5.373e+02 ratio=3.718e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.8568 | cos(dir_est, dir_oracle)=0.9995
+    [Diagnostics] HG Cosine Sim: 0.5190 | Norm(Est): 107.3275 | Norm(Oracle): 442.6723
+    [Diagnostics] Reward Pearson Corr: 0.6435 | Var(Δr): 76004.5383
+    [Term-wise] Est: ||dir||=1.092e+02 ||infl||=4.343e+00 ratio=3.976e-02 | Oracle: ||dir||=1.161e+02 ||infl||=3.892e+02 ratio=3.351e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.8634 | cos(dir_est, dir_oracle)=0.9982
+    [Diagnostics] HG Cosine Sim: 0.3086 | Norm(Est): 51.2652 | Norm(Oracle): 259.6440
+    [Diagnostics] Reward Pearson Corr: 0.6243 | Var(Δr): 94392.3542
+    [Term-wise] Est: ||dir||=5.506e+01 ||infl||=6.264e+00 ratio=1.138e-01 | Oracle: ||dir||=5.627e+01 ||infl||=2.497e+02 ratio=4.437e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2912 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.8705 | Norm(Est): 292.7082 | Norm(Oracle): 658.8935
+    [Diagnostics] Reward Pearson Corr: 0.6250 | Var(Δr): 82613.6391
+    [Term-wise] Est: ||dir||=2.928e+02 ||infl||=4.492e+00 ratio=1.534e-02 | Oracle: ||dir||=3.104e+02 ||infl||=4.105e+02 ratio=1.323e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.5229 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.8730 | Norm(Est): 307.0704 | Norm(Oracle): 538.7488
+    [Diagnostics] Reward Pearson Corr: 0.6587 | Var(Δr): 52063.2773
+    [Term-wise] Est: ||dir||=2.995e+02 ||infl||=8.073e+00 ratio=2.695e-02 | Oracle: ||dir||=3.322e+02 ||infl||=2.975e+02 ratio=8.955e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.6060 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.8672 | Norm(Est): 144.0928 | Norm(Oracle): 896.0825
+    [Diagnostics] Reward Pearson Corr: 0.6634 | Var(Δr): 62600.8924
+    [Term-wise] Est: ||dir||=1.374e+02 ||infl||=1.470e+01 ratio=1.070e-01 | Oracle: ||dir||=1.515e+02 ||infl||=7.739e+02 ratio=5.107e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.7892 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.8392 | Norm(Est): 82.8263 | Norm(Oracle): 375.9123
+    [Diagnostics] Reward Pearson Corr: 0.7000 | Var(Δr): 46916.6074
+    [Term-wise] Est: ||dir||=8.122e+01 ||infl||=2.745e+00 ratio=3.380e-02 | Oracle: ||dir||=8.895e+01 ||infl||=3.046e+02 ratio=3.425e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5635 | cos(dir_est, dir_oracle)=0.9987
+    [Joint-IRL] iter    0: ||mean residual|| = 5.611388 (best 5.611388) over 201 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 3.894925 (best 3.894925) over 201 envs
+  [Joint-IRL] re-solved over 201 envs in 120.71s | Q_hat diag=[0.049  0.1713 0.6231 0.0649 0.8296 0.8283 0.197  0.5957]
+    [Diagnostics] HG Cosine Sim: 0.7687 | Norm(Est): 184.0972 | Norm(Oracle): 455.2283
+    [Diagnostics] Reward Pearson Corr: 0.6286 | Var(Δr): 67284.2959
+    [Term-wise] Est: ||dir||=1.894e+02 ||infl||=8.131e+00 ratio=4.292e-02 | Oracle: ||dir||=1.992e+02 ||infl||=3.307e+02 ratio=1.660e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1024 | cos(dir_est, dir_oracle)=0.9999
+  iter  200: train=-152.9884±52.3312 eval=-162.6559±64.2288 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.211 0.004 0.985 0.221
+ 0.987 0.989 0.266 0.994]
+    [Diagnostics] HG Cosine Sim: 0.9111 | Norm(Est): 155.9473 | Norm(Oracle): 495.8063
+    [Diagnostics] Reward Pearson Corr: 0.6348 | Var(Δr): 49935.6057
+    [Term-wise] Est: ||dir||=1.541e+02 ||infl||=2.888e+00 ratio=1.874e-02 | Oracle: ||dir||=1.633e+02 ||infl||=3.532e+02 ratio=2.163e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.6987 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.9831 | Norm(Est): 346.8165 | Norm(Oracle): 877.6424
+    [Diagnostics] Reward Pearson Corr: 0.6434 | Var(Δr): 68577.0136
+    [Term-wise] Est: ||dir||=3.356e+02 ||infl||=1.474e+01 ratio=4.392e-02 | Oracle: ||dir||=3.595e+02 ||infl||=5.297e+02 ratio=1.473e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.8176 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.8498 | Norm(Est): 210.2212 | Norm(Oracle): 477.6549
+    [Diagnostics] Reward Pearson Corr: 0.5692 | Var(Δr): 73178.3945
+    [Term-wise] Est: ||dir||=2.105e+02 ||infl||=3.296e+00 ratio=1.566e-02 | Oracle: ||dir||=2.247e+02 ||infl||=3.092e+02 ratio=1.376e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1480 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.7418 | Norm(Est): 201.7941 | Norm(Oracle): 633.1892
+    [Diagnostics] Reward Pearson Corr: 0.6019 | Var(Δr): 123005.0238
+    [Term-wise] Est: ||dir||=1.980e+02 ||infl||=5.809e+00 ratio=2.934e-02 | Oracle: ||dir||=2.083e+02 ||infl||=4.986e+02 ratio=2.394e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.7019 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.8777 | Norm(Est): 144.5754 | Norm(Oracle): 421.3209
+    [Diagnostics] Reward Pearson Corr: 0.6495 | Var(Δr): 49650.4509
+    [Term-wise] Est: ||dir||=1.434e+02 ||infl||=2.967e+00 ratio=2.069e-02 | Oracle: ||dir||=1.473e+02 ||infl||=2.999e+02 ratio=2.035e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.6261 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.7182 | Norm(Est): 85.7878 | Norm(Oracle): 410.1581
+    [Diagnostics] Reward Pearson Corr: 0.6155 | Var(Δr): 83558.2321
+    [Term-wise] Est: ||dir||=8.470e+01 ||infl||=3.745e+00 ratio=4.422e-02 | Oracle: ||dir||=9.060e+01 ||infl||=3.524e+02 ratio=3.890e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.6731 | cos(dir_est, dir_oracle)=0.9994
+    [Diagnostics] HG Cosine Sim: 0.8356 | Norm(Est): 92.3603 | Norm(Oracle): 419.5548
+    [Diagnostics] Reward Pearson Corr: 0.5871 | Var(Δr): 70969.3038
+    [Term-wise] Est: ||dir||=8.650e+01 ||infl||=7.177e+00 ratio=8.297e-02 | Oracle: ||dir||=8.935e+01 ||infl||=3.491e+02 ratio=3.908e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.8085 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.7067 | Norm(Est): 111.4884 | Norm(Oracle): 293.1229
+    [Diagnostics] Reward Pearson Corr: 0.5855 | Var(Δr): 66654.0507
+    [Term-wise] Est: ||dir||=1.099e+02 ||infl||=4.054e+00 ratio=3.689e-02 | Oracle: ||dir||=1.164e+02 ||infl||=2.292e+02 ratio=1.969e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.8204 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.7846 | Norm(Est): 66.9268 | Norm(Oracle): 307.8431
+    [Diagnostics] Reward Pearson Corr: 0.5991 | Var(Δr): 63816.7195
+    [Term-wise] Est: ||dir||=6.673e+01 ||infl||=3.232e+00 ratio=4.843e-02 | Oracle: ||dir||=7.106e+01 ||infl||=2.554e+02 ratio=3.594e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2180 | cos(dir_est, dir_oracle)=0.9993
+    [Joint-IRL] iter    0: ||mean residual|| = 3.882981 (best 3.882981) over 211 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 2.627674 (best 2.627674) over 211 envs
+  [Joint-IRL] re-solved over 211 envs in 103.72s | Q_hat diag=[0.0293 0.2055 0.5389 0.0315 0.8795 0.8677 0.2466 0.6091]
+    [Diagnostics] HG Cosine Sim: 0.8139 | Norm(Est): 76.1438 | Norm(Oracle): 345.5683
+    [Diagnostics] Reward Pearson Corr: 0.5834 | Var(Δr): 71232.7172
+    [Term-wise] Est: ||dir||=6.913e+01 ||infl||=1.172e+01 ratio=1.695e-01 | Oracle: ||dir||=7.226e+01 ||infl||=2.925e+02 ratio=4.048e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.7582 | cos(dir_est, dir_oracle)=0.9996
+  iter  210: train=-147.8211±43.0152 eval=-139.2045±48.6644 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.236 0.004 0.941 0.219
+ 1.    0.996 0.276 0.974]
+    [Diagnostics] HG Cosine Sim: 0.6677 | Norm(Est): 47.0705 | Norm(Oracle): 398.1683
+    [Diagnostics] Reward Pearson Corr: 0.6214 | Var(Δr): 66413.9899
+    [Term-wise] Est: ||dir||=4.225e+01 ||infl||=1.318e+01 ratio=3.120e-01 | Oracle: ||dir||=4.266e+01 ||infl||=3.781e+02 ratio=8.864e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.7937 | cos(dir_est, dir_oracle)=0.9995
+    [Diagnostics] HG Cosine Sim: 0.9704 | Norm(Est): 325.1687 | Norm(Oracle): 666.8101
+    [Diagnostics] Reward Pearson Corr: 0.5233 | Var(Δr): 90611.1951
+    [Term-wise] Est: ||dir||=3.246e+02 ||infl||=4.843e+00 ratio=1.492e-02 | Oracle: ||dir||=3.399e+02 ||infl||=3.478e+02 ratio=1.023e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3791 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.4388 | Norm(Est): 36.2275 | Norm(Oracle): 213.9077
+    [Diagnostics] Reward Pearson Corr: 0.6161 | Var(Δr): 78601.5673
+    [Term-wise] Est: ||dir||=3.640e+01 ||infl||=5.817e+00 ratio=1.598e-01 | Oracle: ||dir||=3.675e+01 ||infl||=2.038e+02 ratio=5.545e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.7217 | cos(dir_est, dir_oracle)=0.9996
+    [Diagnostics] HG Cosine Sim: 0.9518 | Norm(Est): 706.5092 | Norm(Oracle): 968.4007
+    [Diagnostics] Reward Pearson Corr: 0.5898 | Var(Δr): 54205.7096
+    [Term-wise] Est: ||dir||=7.036e+02 ||infl||=8.674e+00 ratio=1.233e-02 | Oracle: ||dir||=7.334e+02 ||infl||=3.561e+02 ratio=4.855e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.8780 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.9301 | Norm(Est): 277.3003 | Norm(Oracle): 556.4835
+    [Diagnostics] Reward Pearson Corr: 0.5500 | Var(Δr): 77293.9294
+    [Term-wise] Est: ||dir||=2.761e+02 ||infl||=6.943e+00 ratio=2.515e-02 | Oracle: ||dir||=2.951e+02 ||infl||=3.054e+02 ratio=1.035e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.6770 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.9542 | Norm(Est): 316.3670 | Norm(Oracle): 885.2573
+    [Diagnostics] Reward Pearson Corr: 0.6496 | Var(Δr): 62282.6601
+    [Term-wise] Est: ||dir||=3.070e+02 ||infl||=1.469e+01 ratio=4.784e-02 | Oracle: ||dir||=3.237e+02 ||infl||=5.843e+02 ratio=1.805e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.7718 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.9908 | Norm(Est): 1378.4880 | Norm(Oracle): 1680.4781
+    [Diagnostics] Reward Pearson Corr: 0.6205 | Var(Δr): 63885.9369
+    [Term-wise] Est: ||dir||=1.370e+03 ||infl||=1.233e+01 ratio=9.001e-03 | Oracle: ||dir||=1.463e+03 ||infl||=3.084e+02 ratio=2.109e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.8630 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.9708 | Norm(Est): 253.1468 | Norm(Oracle): 693.7904
+    [Diagnostics] Reward Pearson Corr: 0.6849 | Var(Δr): 47800.1988
+    [Term-wise] Est: ||dir||=2.480e+02 ||infl||=1.171e+01 ratio=4.722e-02 | Oracle: ||dir||=2.647e+02 ||infl||=4.416e+02 ratio=1.668e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.6231 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.9448 | Norm(Est): 302.7500 | Norm(Oracle): 525.5596
+    [Diagnostics] Reward Pearson Corr: 0.5816 | Var(Δr): 66015.3313
+    [Term-wise] Est: ||dir||=3.076e+02 ||infl||=8.236e+00 ratio=2.678e-02 | Oracle: ||dir||=3.231e+02 ||infl||=2.478e+02 ratio=7.669e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0681 | cos(dir_est, dir_oracle)=1.0000
+    [Joint-IRL] iter    0: ||mean residual|| = 2.552031 (best 2.552031) over 221 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 2.210836 (best 2.210836) over 221 envs
+  [Joint-IRL] re-solved over 221 envs in 156.17s | Q_hat diag=[0.0226 0.2081 0.5013 0.026  0.9739 0.8124 0.6879 0.624 ]
+    [Diagnostics] HG Cosine Sim: 0.9008 | Norm(Est): 172.5161 | Norm(Oracle): 415.9193
+    [Diagnostics] Reward Pearson Corr: 0.6376 | Var(Δr): 71983.1425
+    [Term-wise] Est: ||dir||=1.650e+02 ||infl||=1.008e+01 ratio=6.110e-02 | Oracle: ||dir||=1.729e+02 ||infl||=2.727e+02 ratio=1.578e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.8041 | cos(dir_est, dir_oracle)=0.9998
+  iter  220: train=-154.5033±53.5605 eval=-152.7319±48.8564 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.239 0.003 0.996 0.222
+ 1.    0.967 0.281 1.   ]
+    [Diagnostics] HG Cosine Sim: 0.8259 | Norm(Est): 75.0434 | Norm(Oracle): 242.5693
+    [Diagnostics] Reward Pearson Corr: 0.6217 | Var(Δr): 79959.9942
+    [Term-wise] Est: ||dir||=7.491e+01 ||infl||=8.085e+00 ratio=1.079e-01 | Oracle: ||dir||=7.747e+01 ||infl||=1.840e+02 ratio=2.376e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1881 | cos(dir_est, dir_oracle)=0.9996
+    [Diagnostics] HG Cosine Sim: 0.6637 | Norm(Est): 47.5530 | Norm(Oracle): 223.1225
+    [Diagnostics] Reward Pearson Corr: 0.6847 | Var(Δr): 60964.4865
+    [Term-wise] Est: ||dir||=4.731e+01 ||infl||=7.392e+00 ratio=1.562e-01 | Oracle: ||dir||=4.795e+01 ||infl||=1.979e+02 ratio=4.126e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.6082 | cos(dir_est, dir_oracle)=0.9996
+    [Diagnostics] HG Cosine Sim: 0.5604 | Norm(Est): 78.0321 | Norm(Oracle): 256.8395
+    [Diagnostics] Reward Pearson Corr: 0.6490 | Var(Δr): 72989.0077
+    [Term-wise] Est: ||dir||=7.499e+01 ||infl||=6.385e+00 ratio=8.514e-02 | Oracle: ||dir||=8.239e+01 ||infl||=2.247e+02 ratio=2.727e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.7194 | cos(dir_est, dir_oracle)=0.9990
+    [Diagnostics] HG Cosine Sim: 0.7669 | Norm(Est): 150.6352 | Norm(Oracle): 357.6140
+    [Diagnostics] Reward Pearson Corr: 0.6749 | Var(Δr): 61990.0221
+    [Term-wise] Est: ||dir||=1.507e+02 ||infl||=1.446e+01 ratio=9.594e-02 | Oracle: ||dir||=1.584e+02 ||infl||=2.620e+02 ratio=1.654e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3678 | cos(dir_est, dir_oracle)=0.9993
+    [Diagnostics] HG Cosine Sim: 0.9043 | Norm(Est): 140.1978 | Norm(Oracle): 378.5820
+    [Diagnostics] Reward Pearson Corr: 0.6138 | Var(Δr): 58166.2649
+    [Term-wise] Est: ||dir||=1.400e+02 ||infl||=7.562e+00 ratio=5.401e-02 | Oracle: ||dir||=1.442e+02 ||infl||=2.556e+02 ratio=1.772e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2593 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.9040 | Norm(Est): 218.7436 | Norm(Oracle): 426.9410
+    [Diagnostics] Reward Pearson Corr: 0.5380 | Var(Δr): 103925.0604
+    [Term-wise] Est: ||dir||=2.167e+02 ||infl||=5.385e+00 ratio=2.485e-02 | Oracle: ||dir||=2.228e+02 ||infl||=2.425e+02 ratio=1.088e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5895 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.7925 | Norm(Est): 86.6604 | Norm(Oracle): 333.2745
+    [Diagnostics] Reward Pearson Corr: 0.5842 | Var(Δr): 93280.8077
+    [Term-wise] Est: ||dir||=7.789e+01 ||infl||=1.128e+01 ratio=1.448e-01 | Oracle: ||dir||=7.884e+01 ||infl||=2.772e+02 ratio=3.516e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.7991 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.5430 | Norm(Est): 56.2396 | Norm(Oracle): 378.8820
+    [Diagnostics] Reward Pearson Corr: 0.7338 | Var(Δr): 64400.0555
+    [Term-wise] Est: ||dir||=5.484e+01 ||infl||=1.081e+01 ratio=1.971e-01 | Oracle: ||dir||=5.660e+01 ||infl||=3.586e+02 ratio=6.337e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.8230 | cos(dir_est, dir_oracle)=0.9994
+    [Diagnostics] HG Cosine Sim: 0.8359 | Norm(Est): 211.9720 | Norm(Oracle): 360.9750
+    [Diagnostics] Reward Pearson Corr: 0.6088 | Var(Δr): 85255.9983
+    [Term-wise] Est: ||dir||=2.087e+02 ||infl||=9.619e+00 ratio=4.609e-02 | Oracle: ||dir||=2.146e+02 ||infl||=2.165e+02 ratio=1.009e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3726 | cos(dir_est, dir_oracle)=0.9999
+    [Joint-IRL] iter    0: ||mean residual|| = 2.142620 (best 2.142620) over 231 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 2.074813 (best 2.074813) over 231 envs
+  [Joint-IRL] re-solved over 231 envs in 140.21s | Q_hat diag=[0.0216 0.2051 0.5113 0.0249 0.9265 0.7748 2.1118 0.6411]
+    [Diagnostics] HG Cosine Sim: 0.9647 | Norm(Est): 347.2442 | Norm(Oracle): 451.6973
+    [Diagnostics] Reward Pearson Corr: 0.6327 | Var(Δr): 44346.3930
+    [Term-wise] Est: ||dir||=3.535e+02 ||infl||=1.519e+01 ratio=4.298e-02 | Oracle: ||dir||=3.725e+02 ||infl||=1.444e+02 ratio=3.877e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.4004 | cos(dir_est, dir_oracle)=1.0000
+  iter  230: train=-152.3734±48.1451 eval=-157.7182±44.3758 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.223 0.003 1.    0.223
+ 0.978 0.968 0.282 1.   ]
+    [Diagnostics] HG Cosine Sim: 0.8260 | Norm(Est): 191.0441 | Norm(Oracle): 486.2323
+    [Diagnostics] Reward Pearson Corr: 0.6081 | Var(Δr): 45705.7531
+    [Term-wise] Est: ||dir||=1.952e+02 ||infl||=1.204e+01 ratio=6.169e-02 | Oracle: ||dir||=2.054e+02 ||infl||=3.414e+02 ratio=1.662e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3513 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.7712 | Norm(Est): 74.9051 | Norm(Oracle): 234.7867
+    [Diagnostics] Reward Pearson Corr: 0.6211 | Var(Δr): 39949.6328
+    [Term-wise] Est: ||dir||=7.237e+01 ||infl||=5.503e+00 ratio=7.604e-02 | Oracle: ||dir||=7.509e+01 ||infl||=1.831e+02 ratio=2.438e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3516 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.9653 | Norm(Est): 169.0297 | Norm(Oracle): 434.8031
+    [Diagnostics] Reward Pearson Corr: 0.5523 | Var(Δr): 69357.9345
+    [Term-wise] Est: ||dir||=1.664e+02 ||infl||=8.458e+00 ratio=5.083e-02 | Oracle: ||dir||=1.727e+02 ||infl||=2.733e+02 ratio=1.583e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5497 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.8163 | Norm(Est): 129.3505 | Norm(Oracle): 296.5157
+    [Diagnostics] Reward Pearson Corr: 0.6009 | Var(Δr): 90536.0850
+    [Term-wise] Est: ||dir||=1.294e+02 ||infl||=5.130e+00 ratio=3.965e-02 | Oracle: ||dir||=1.349e+02 ||infl||=2.028e+02 ratio=1.503e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4359 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.9480 | Norm(Est): 379.8775 | Norm(Oracle): 840.6646
+    [Diagnostics] Reward Pearson Corr: 0.6238 | Var(Δr): 49412.6734
+    [Term-wise] Est: ||dir||=3.768e+02 ||infl||=1.262e+01 ratio=3.348e-02 | Oracle: ||dir||=3.963e+02 ||infl||=4.869e+02 ratio=1.229e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.7060 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.9701 | Norm(Est): 294.4206 | Norm(Oracle): 498.8096
+    [Diagnostics] Reward Pearson Corr: 0.6159 | Var(Δr): 76209.8764
+    [Term-wise] Est: ||dir||=3.021e+02 ||infl||=1.215e+01 ratio=4.023e-02 | Oracle: ||dir||=3.193e+02 ||infl||=2.078e+02 ratio=6.508e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2184 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.7728 | Norm(Est): 205.5703 | Norm(Oracle): 671.9392
+    [Diagnostics] Reward Pearson Corr: 0.7057 | Var(Δr): 45753.4444
+    [Term-wise] Est: ||dir||=2.006e+02 ||infl||=1.786e+01 ratio=8.904e-02 | Oracle: ||dir||=2.068e+02 ||infl||=5.376e+02 ratio=2.599e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.8053 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.9846 | Norm(Est): 332.1621 | Norm(Oracle): 664.4824
+    [Diagnostics] Reward Pearson Corr: 0.5665 | Var(Δr): 92680.2090
+    [Term-wise] Est: ||dir||=3.276e+02 ||infl||=1.011e+01 ratio=3.086e-02 | Oracle: ||dir||=3.453e+02 ||infl||=3.322e+02 ratio=9.622e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.6401 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.9826 | Norm(Est): 314.1915 | Norm(Oracle): 669.2687
+    [Diagnostics] Reward Pearson Corr: 0.5902 | Var(Δr): 101144.1913
+    [Term-wise] Est: ||dir||=3.125e+02 ||infl||=9.152e+00 ratio=2.928e-02 | Oracle: ||dir||=3.300e+02 ||infl||=3.510e+02 ratio=1.063e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3406 | cos(dir_est, dir_oracle)=0.9999
+    [Joint-IRL] iter    0: ||mean residual|| = 2.024084 (best 2.024084) over 241 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 1.993029 (best 1.988944) over 241 envs
+  [Joint-IRL] re-solved over 241 envs in 149.73s | Q_hat diag=[0.0214 0.2041 0.5195 0.0247 0.9336 0.7832 6.5159 0.6753]
+    [Diagnostics] HG Cosine Sim: 0.7547 | Norm(Est): 161.4658 | Norm(Oracle): 451.7704
+    [Diagnostics] Reward Pearson Corr: 0.5442 | Var(Δr): 42180.5636
+    [Term-wise] Est: ||dir||=1.586e+02 ||infl||=1.439e+01 ratio=9.075e-02 | Oracle: ||dir||=1.586e+02 ||infl||=3.544e+02 ratio=2.235e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.7161 | cos(dir_est, dir_oracle)=0.9998
+  iter  240: train=-160.5544±48.5140 eval=-166.6532±70.5838 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.227 0.002 1.    0.226
+ 1.    0.985 0.279 1.   ]
+    [Diagnostics] HG Cosine Sim: 0.5100 | Norm(Est): 64.1507 | Norm(Oracle): 181.0945
+    [Diagnostics] Reward Pearson Corr: 0.4420 | Var(Δr): 102758.0498
+    [Term-wise] Est: ||dir||=6.581e+01 ||infl||=8.180e+00 ratio=1.243e-01 | Oracle: ||dir||=6.675e+01 ||infl||=1.575e+02 ratio=2.360e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1180 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.8052 | Norm(Est): 105.6002 | Norm(Oracle): 447.5404
+    [Diagnostics] Reward Pearson Corr: 0.5289 | Var(Δr): 70797.5630
+    [Term-wise] Est: ||dir||=9.647e+01 ||infl||=1.826e+01 ratio=1.893e-01 | Oracle: ||dir||=9.851e+01 ||infl||=3.736e+02 ratio=3.792e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4762 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.5870 | Norm(Est): 39.4764 | Norm(Oracle): 205.7065
+    [Diagnostics] Reward Pearson Corr: 0.5927 | Var(Δr): 51497.2744
+    [Term-wise] Est: ||dir||=3.869e+01 ||infl||=6.593e+00 ratio=1.704e-01 | Oracle: ||dir||=4.017e+01 ||infl||=1.884e+02 ratio=4.690e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.8061 | cos(dir_est, dir_oracle)=0.9982
+    [Diagnostics] HG Cosine Sim: 0.9039 | Norm(Est): 179.2359 | Norm(Oracle): 418.5552
+    [Diagnostics] Reward Pearson Corr: 0.5773 | Var(Δr): 46547.7713
+    [Term-wise] Est: ||dir||=1.736e+02 ||infl||=1.676e+01 ratio=9.656e-02 | Oracle: ||dir||=1.766e+02 ||infl||=2.722e+02 ratio=1.541e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4789 | cos(dir_est, dir_oracle)=0.9996
+    [Diagnostics] HG Cosine Sim: 0.9312 | Norm(Est): 183.1674 | Norm(Oracle): 424.2685
+    [Diagnostics] Reward Pearson Corr: 0.5208 | Var(Δr): 54236.6629
+    [Term-wise] Est: ||dir||=1.855e+02 ||infl||=7.501e+00 ratio=4.044e-02 | Oracle: ||dir||=1.952e+02 ||infl||=2.508e+02 ratio=1.285e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2329 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.9305 | Norm(Est): 110.2291 | Norm(Oracle): 370.8131
+    [Diagnostics] Reward Pearson Corr: 0.6307 | Var(Δr): 55828.7306
+    [Term-wise] Est: ||dir||=1.053e+02 ||infl||=9.995e+00 ratio=9.491e-02 | Oracle: ||dir||=1.133e+02 ||infl||=2.692e+02 ratio=2.376e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5513 | cos(dir_est, dir_oracle)=0.9995
+    [Diagnostics] HG Cosine Sim: 0.8347 | Norm(Est): 152.0811 | Norm(Oracle): 411.6443
+    [Diagnostics] Reward Pearson Corr: 0.5499 | Var(Δr): 53579.5303
+    [Term-wise] Est: ||dir||=1.489e+02 ||infl||=1.429e+01 ratio=9.599e-02 | Oracle: ||dir||=1.529e+02 ||infl||=3.019e+02 ratio=1.975e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5398 | cos(dir_est, dir_oracle)=0.9996
+    [Diagnostics] HG Cosine Sim: 0.6052 | Norm(Est): 85.3600 | Norm(Oracle): 285.9757
+    [Diagnostics] Reward Pearson Corr: 0.5749 | Var(Δr): 58201.9939
+    [Term-wise] Est: ||dir||=8.650e+01 ||infl||=1.000e+01 ratio=1.156e-01 | Oracle: ||dir||=8.484e+01 ||infl||=2.483e+02 ratio=2.926e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5206 | cos(dir_est, dir_oracle)=0.9988
+    [Diagnostics] HG Cosine Sim: 0.9781 | Norm(Est): 312.8598 | Norm(Oracle): 586.2519
+    [Diagnostics] Reward Pearson Corr: 0.4600 | Var(Δr): 62368.3473
+    [Term-wise] Est: ||dir||=3.133e+02 ||infl||=1.244e+01 ratio=3.969e-02 | Oracle: ||dir||=3.214e+02 ||infl||=2.811e+02 ratio=8.746e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.1749 | cos(dir_est, dir_oracle)=0.9998
+    [Joint-IRL] iter    0: ||mean residual|| = 1.727060 (best 1.727060) over 251 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 3.023792 (best 1.727060) over 251 envs
+  [Joint-IRL] re-solved over 251 envs in 161.31s | Q_hat diag=[ 0.0213  0.2008  0.5202  0.0246  1.0384  0.7924 19.6598  0.8154]
+    [Diagnostics] HG Cosine Sim: 0.6618 | Norm(Est): 90.2845 | Norm(Oracle): 333.7026
+    [Diagnostics] Reward Pearson Corr: 0.6587 | Var(Δr): 73250.7648
+    [Term-wise] Est: ||dir||=8.748e+01 ||infl||=2.476e+01 ratio=2.831e-01 | Oracle: ||dir||=8.862e+01 ||infl||=2.889e+02 ratio=3.260e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3634 | cos(dir_est, dir_oracle)=0.9998
+  iter  250: train=-166.2912±58.5849 eval=-146.9431±52.0823 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.234 0.002 0.995 0.231
+ 1.    1.    0.245 0.988]
+    [Diagnostics] HG Cosine Sim: 0.9394 | Norm(Est): 256.9255 | Norm(Oracle): 663.8346
+    [Diagnostics] Reward Pearson Corr: 0.5625 | Var(Δr): 54282.2381
+    [Term-wise] Est: ||dir||=2.516e+02 ||infl||=2.749e+01 ratio=1.093e-01 | Oracle: ||dir||=2.542e+02 ||infl||=4.353e+02 ratio=1.713e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3550 | cos(dir_est, dir_oracle)=0.9994
+    [Diagnostics] HG Cosine Sim: 0.9218 | Norm(Est): 276.8817 | Norm(Oracle): 428.4372
+    [Diagnostics] Reward Pearson Corr: 0.6023 | Var(Δr): 37275.6494
+    [Term-wise] Est: ||dir||=2.813e+02 ||infl||=4.204e+01 ratio=1.494e-01 | Oracle: ||dir||=2.885e+02 ||infl||=2.100e+02 ratio=7.279e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.3367 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.9049 | Norm(Est): 345.9849 | Norm(Oracle): 527.3599
+    [Diagnostics] Reward Pearson Corr: 0.5995 | Var(Δr): 39631.3391
+    [Term-wise] Est: ||dir||=3.333e+02 ||infl||=5.149e+01 ratio=1.545e-01 | Oracle: ||dir||=3.123e+02 ||infl||=2.667e+02 ratio=8.541e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.1248 | cos(dir_est, dir_oracle)=0.9995
+    [Diagnostics] HG Cosine Sim: 0.7652 | Norm(Est): 97.1691 | Norm(Oracle): 307.2000
+    [Diagnostics] Reward Pearson Corr: 0.4291 | Var(Δr): 80884.1965
+    [Term-wise] Est: ||dir||=9.058e+01 ||infl||=3.021e+01 ratio=3.336e-01 | Oracle: ||dir||=8.488e+01 ||infl||=2.501e+02 ratio=2.947e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1419 | cos(dir_est, dir_oracle)=0.9966
+    [Diagnostics] HG Cosine Sim: 0.7654 | Norm(Est): 136.9457 | Norm(Oracle): 320.9722
+    [Diagnostics] Reward Pearson Corr: 0.4539 | Var(Δr): 71542.8756
+    [Term-wise] Est: ||dir||=1.370e+02 ||infl||=3.825e+01 ratio=2.792e-01 | Oracle: ||dir||=1.348e+02 ||infl||=2.311e+02 ratio=1.715e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1057 | cos(dir_est, dir_oracle)=0.9970
+    [Diagnostics] HG Cosine Sim: 0.9836 | Norm(Est): 244.2260 | Norm(Oracle): 557.9787
+    [Diagnostics] Reward Pearson Corr: 0.5002 | Var(Δr): 55155.6815
+    [Term-wise] Est: ||dir||=2.418e+02 ||infl||=1.531e+01 ratio=6.331e-02 | Oracle: ||dir||=2.535e+02 ||infl||=3.096e+02 ratio=1.221e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2449 | cos(dir_est, dir_oracle)=0.9972
+    [Diagnostics] HG Cosine Sim: 0.9720 | Norm(Est): 400.3924 | Norm(Oracle): 830.2235
+    [Diagnostics] Reward Pearson Corr: 0.6098 | Var(Δr): 55752.6737
+    [Term-wise] Est: ||dir||=3.925e+02 ||infl||=3.527e+01 ratio=8.985e-02 | Oracle: ||dir||=4.215e+02 ||infl||=4.252e+02 ratio=1.009e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0880 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.6625 | Norm(Est): 150.2487 | Norm(Oracle): 307.3988
+    [Diagnostics] Reward Pearson Corr: 0.3798 | Var(Δr): 70759.1611
+    [Term-wise] Est: ||dir||=1.473e+02 ||infl||=1.340e+01 ratio=9.097e-02 | Oracle: ||dir||=1.370e+02 ||infl||=2.370e+02 ratio=1.731e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1180 | cos(dir_est, dir_oracle)=0.9930
+    [Diagnostics] HG Cosine Sim: 0.4523 | Norm(Est): 105.7974 | Norm(Oracle): 497.5423
+    [Diagnostics] Reward Pearson Corr: 0.5621 | Var(Δr): 66105.2271
+    [Term-wise] Est: ||dir||=9.741e+01 ||infl||=4.914e+01 ratio=5.044e-01 | Oracle: ||dir||=9.545e+01 ||infl||=4.599e+02 ratio=4.818e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0204 | cos(dir_est, dir_oracle)=0.9966
+    [Joint-IRL] iter    0: ||mean residual|| = 3.190985 (best 3.190985) over 261 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 9.012445 (best 3.190985) over 261 envs
+  [Joint-IRL] re-solved over 261 envs in 128.00s | Q_hat diag=[2.13000e-02 1.97800e-01 5.22300e-01 2.46000e-02 1.40350e+00 7.97800e-01
+ 5.26457e+01 1.24080e+00]
+    [Diagnostics] HG Cosine Sim: 0.8421 | Norm(Est): 245.1892 | Norm(Oracle): 479.3632
+    [Diagnostics] Reward Pearson Corr: 0.4972 | Var(Δr): 211773.7068
+    [Term-wise] Est: ||dir||=1.871e+02 ||infl||=1.535e+02 ratio=8.208e-01 | Oracle: ||dir||=1.767e+02 ||infl||=3.114e+02 ratio=1.762e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2391 | cos(dir_est, dir_oracle)=0.9993
+  iter  260: train=-151.3756±48.7713 eval=-159.3103±53.9825 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.246 0.002 1.    0.227
+ 0.999 0.997 0.176 0.984]
+    [Diagnostics] HG Cosine Sim: 0.9074 | Norm(Est): 257.4541 | Norm(Oracle): 712.5945
+    [Diagnostics] Reward Pearson Corr: 0.4645 | Var(Δr): 191237.4332
+    [Term-wise] Est: ||dir||=2.538e+02 ||infl||=4.221e+01 ratio=1.663e-01 | Oracle: ||dir||=2.680e+02 ||infl||=4.822e+02 ratio=1.799e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2561 | cos(dir_est, dir_oracle)=0.9989
+    [Diagnostics] HG Cosine Sim: 0.9446 | Norm(Est): 106.7851 | Norm(Oracle): 380.5033
+    [Diagnostics] Reward Pearson Corr: 0.4691 | Var(Δr): 228343.2088
+    [Term-wise] Est: ||dir||=9.878e+01 ||infl||=2.124e+01 ratio=2.150e-01 | Oracle: ||dir||=9.682e+01 ||infl||=2.927e+02 ratio=3.023e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4407 | cos(dir_est, dir_oracle)=0.9973
+    [Diagnostics] HG Cosine Sim: 0.8055 | Norm(Est): 225.0744 | Norm(Oracle): 420.6968
+    [Diagnostics] Reward Pearson Corr: 0.6084 | Var(Δr): 129645.5932
+    [Term-wise] Est: ||dir||=2.154e+02 ||infl||=5.347e+01 ratio=2.482e-01 | Oracle: ||dir||=2.020e+02 ||infl||=2.766e+02 ratio=1.369e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3975 | cos(dir_est, dir_oracle)=0.9828
+    [Diagnostics] HG Cosine Sim: 0.6974 | Norm(Est): 171.6828 | Norm(Oracle): 441.0939
+    [Diagnostics] Reward Pearson Corr: 0.4986 | Var(Δr): 338386.1336
+    [Term-wise] Est: ||dir||=1.515e+02 ||infl||=8.874e+01 ratio=5.858e-01 | Oracle: ||dir||=1.623e+02 ||infl||=3.597e+02 ratio=2.217e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3550 | cos(dir_est, dir_oracle)=0.9994
+    [Diagnostics] HG Cosine Sim: 0.7071 | Norm(Est): 462.8310 | Norm(Oracle): 839.8124
+    [Diagnostics] Reward Pearson Corr: 0.4671 | Var(Δr): 225986.1167
+    [Term-wise] Est: ||dir||=3.704e+02 ||infl||=2.757e+02 ratio=7.444e-01 | Oracle: ||dir||=3.778e+02 ||infl||=4.828e+02 ratio=1.278e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1924 | cos(dir_est, dir_oracle)=0.9994
+    [Diagnostics] HG Cosine Sim: 0.8737 | Norm(Est): 270.4628 | Norm(Oracle): 359.0137
+    [Diagnostics] Reward Pearson Corr: 0.5082 | Var(Δr): 170931.4231
+    [Term-wise] Est: ||dir||=2.698e+02 ||infl||=1.945e+01 ratio=7.208e-02 | Oracle: ||dir||=2.752e+02 ||infl||=1.865e+02 ratio=6.777e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.4551 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.1551 | Norm(Est): 39.8944 | Norm(Oracle): 116.6493
+    [Diagnostics] Reward Pearson Corr: 0.5540 | Var(Δr): 175158.8941
+    [Term-wise] Est: ||dir||=3.635e+01 ||infl||=2.313e+01 ratio=6.362e-01 | Oracle: ||dir||=3.552e+01 ||infl||=1.138e+02 ratio=3.204e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0657 | cos(dir_est, dir_oracle)=0.9969
+    [Diagnostics] HG Cosine Sim: 0.4619 | Norm(Est): 156.7375 | Norm(Oracle): 345.0498
+    [Diagnostics] Reward Pearson Corr: 0.4362 | Var(Δr): 294029.1729
+    [Term-wise] Est: ||dir||=1.036e+02 ||infl||=1.319e+02 ratio=1.273e+00 | Oracle: ||dir||=1.093e+02 ||infl||=2.719e+02 ratio=2.489e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0012 | cos(dir_est, dir_oracle)=0.9996
+    [Diagnostics] HG Cosine Sim: 0.7825 | Norm(Est): 250.3729 | Norm(Oracle): 475.7803
+    [Diagnostics] Reward Pearson Corr: 0.3589 | Var(Δr): 266810.2886
+    [Term-wise] Est: ||dir||=2.410e+02 ||infl||=7.103e+01 ratio=2.948e-01 | Oracle: ||dir||=2.476e+02 ||infl||=3.119e+02 ratio=1.260e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0462 | cos(dir_est, dir_oracle)=0.9999
+    [Joint-IRL] iter    0: ||mean residual|| = 8.812834 (best 8.812834) over 271 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 8.594152 (best 8.594152) over 271 envs
+  [Joint-IRL] re-solved over 271 envs in 183.65s | Q_hat diag=[2.1300e-02 1.9630e-01 5.3310e-01 2.4600e-02 2.5272e+00 8.1380e-01
+ 1.0000e+02 2.5042e+00]
+    [Diagnostics] HG Cosine Sim: 0.6712 | Norm(Est): 182.2982 | Norm(Oracle): 249.9221
+    [Diagnostics] Reward Pearson Corr: 0.3965 | Var(Δr): 1023549.9584
+    [Term-wise] Est: ||dir||=1.572e+02 ||infl||=9.486e+01 ratio=6.033e-01 | Oracle: ||dir||=1.549e+02 ||infl||=1.797e+02 ratio=1.160e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2075 | cos(dir_est, dir_oracle)=0.9995
+  iter  270: train=-150.3296±53.7557 eval=-160.6448±55.3604 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.265 0.001 0.969 0.229
+ 1.    0.991 0.086 1.   ]
+    [Diagnostics] HG Cosine Sim: 0.5413 | Norm(Est): 235.5943 | Norm(Oracle): 429.9180
+    [Diagnostics] Reward Pearson Corr: 0.4732 | Var(Δr): 1021983.3580
+    [Term-wise] Est: ||dir||=1.624e+02 ||infl||=1.707e+02 ratio=1.051e+00 | Oracle: ||dir||=1.672e+02 ||infl||=3.060e+02 ratio=1.830e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0733 | cos(dir_est, dir_oracle)=0.9995
+    [Diagnostics] HG Cosine Sim: 0.9335 | Norm(Est): 212.8693 | Norm(Oracle): 398.0226
+    [Diagnostics] Reward Pearson Corr: 0.3205 | Var(Δr): 1977541.3009
+    [Term-wise] Est: ||dir||=2.102e+02 ||infl||=1.823e+01 ratio=8.672e-02 | Oracle: ||dir||=2.172e+02 ||infl||=2.094e+02 ratio=9.645e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.1706 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.9877 | Norm(Est): 734.8161 | Norm(Oracle): 793.4259
+    [Diagnostics] Reward Pearson Corr: 0.4677 | Var(Δr): 345571.8985
+    [Term-wise] Est: ||dir||=7.390e+02 ||infl||=1.024e+01 ratio=1.385e-02 | Oracle: ||dir||=7.451e+02 ||infl||=1.309e+02 ratio=1.757e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0665 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.8172 | Norm(Est): 312.2974 | Norm(Oracle): 577.0162
+    [Diagnostics] Reward Pearson Corr: 0.4767 | Var(Δr): 1209544.8368
+    [Term-wise] Est: ||dir||=2.570e+02 ||infl||=1.792e+02 ratio=6.971e-01 | Oracle: ||dir||=2.684e+02 ||infl||=3.161e+02 ratio=1.178e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0278 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.4502 | Norm(Est): 70.2896 | Norm(Oracle): 164.6049
+    [Diagnostics] Reward Pearson Corr: 0.4515 | Var(Δr): 1168093.8862
+    [Term-wise] Est: ||dir||=6.442e+01 ||infl||=2.413e+01 ratio=3.745e-01 | Oracle: ||dir||=6.500e+01 ||infl||=1.475e+02 ratio=2.270e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1426 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.8032 | Norm(Est): 163.5184 | Norm(Oracle): 456.9244
+    [Diagnostics] Reward Pearson Corr: 0.6250 | Var(Δr): 799478.8196
+    [Term-wise] Est: ||dir||=1.467e+02 ||infl||=2.438e+01 ratio=1.662e-01 | Oracle: ||dir||=1.534e+02 ||infl||=3.484e+02 ratio=2.271e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5825 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.9039 | Norm(Est): 207.7044 | Norm(Oracle): 472.1380
+    [Diagnostics] Reward Pearson Corr: 0.4031 | Var(Δr): 418740.8177
+    [Term-wise] Est: ||dir||=1.767e+02 ||infl||=8.553e+01 ratio=4.841e-01 | Oracle: ||dir||=1.842e+02 ||infl||=2.972e+02 ratio=1.613e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2194 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.7068 | Norm(Est): 353.5438 | Norm(Oracle): 526.6562
+    [Diagnostics] Reward Pearson Corr: 0.5434 | Var(Δr): 678245.9779
+    [Term-wise] Est: ||dir||=2.260e+02 ||infl||=2.670e+02 ratio=1.181e+00 | Oracle: ||dir||=2.391e+02 ||infl||=3.248e+02 ratio=1.358e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2609 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.1559 | Norm(Est): 86.5624 | Norm(Oracle): 344.2183
+    [Diagnostics] Reward Pearson Corr: 0.5444 | Var(Δr): 1339347.4275
+    [Term-wise] Est: ||dir||=7.689e+01 ||infl||=4.407e+01 ratio=5.732e-01 | Oracle: ||dir||=6.557e+01 ||infl||=3.262e+02 ratio=4.975e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2612 | cos(dir_est, dir_oracle)=0.9334
+    [Joint-IRL] iter    0: ||mean residual|| = 8.084991 (best 8.084991) over 281 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 5.894834 (best 5.894834) over 281 envs
+  [Joint-IRL] re-solved over 281 envs in 179.88s | Q_hat diag=[2.1300e-02 1.9600e-01 5.3710e-01 2.4600e-02 2.9194e+00 8.1950e-01
+ 1.0000e+02 2.9381e+00]
+    [Diagnostics] HG Cosine Sim: 0.7917 | Norm(Est): 350.3737 | Norm(Oracle): 534.0606
+    [Diagnostics] Reward Pearson Corr: 0.4935 | Var(Δr): 849126.6059
+    [Term-wise] Est: ||dir||=3.267e+02 ||infl||=1.283e+02 ratio=3.927e-01 | Oracle: ||dir||=3.238e+02 ||infl||=2.694e+02 ratio=8.319e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2235 | cos(dir_est, dir_oracle)=0.9975
+  iter  280: train=-152.3432±51.9602 eval=-146.7886±48.4472 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.277 0.001 1.    0.224
+ 0.978 1.    0.18  1.   ]
+    [Diagnostics] HG Cosine Sim: 0.6426 | Norm(Est): 100.9073 | Norm(Oracle): 320.8072
+    [Diagnostics] Reward Pearson Corr: 0.5138 | Var(Δr): 480156.4034
+    [Term-wise] Est: ||dir||=8.536e+01 ||infl||=4.804e+01 ratio=5.627e-01 | Oracle: ||dir||=9.254e+01 ||infl||=2.678e+02 ratio=2.894e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2668 | cos(dir_est, dir_oracle)=0.9970
+    [Diagnostics] HG Cosine Sim: 0.8478 | Norm(Est): 215.8003 | Norm(Oracle): 335.6560
+    [Diagnostics] Reward Pearson Corr: 0.6037 | Var(Δr): 811500.3997
+    [Term-wise] Est: ||dir||=1.969e+02 ||infl||=8.533e+01 ratio=4.333e-01 | Oracle: ||dir||=1.928e+02 ||infl||=1.818e+02 ratio=9.428e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.2002 | cos(dir_est, dir_oracle)=0.9976
+    [Diagnostics] HG Cosine Sim: 0.9745 | Norm(Est): 505.2949 | Norm(Oracle): 906.9280
+    [Diagnostics] Reward Pearson Corr: 0.4740 | Var(Δr): 865837.4147
+    [Term-wise] Est: ||dir||=5.107e+02 ||infl||=9.297e+01 ratio=1.820e-01 | Oracle: ||dir||=5.274e+02 ||infl||=4.090e+02 ratio=7.754e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0547 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.1426 | Norm(Est): 48.3383 | Norm(Oracle): 173.9329
+    [Diagnostics] Reward Pearson Corr: 0.4410 | Var(Δr): 640451.6773
+    [Term-wise] Est: ||dir||=4.302e+01 ||infl||=2.752e+01 ratio=6.399e-01 | Oracle: ||dir||=3.425e+01 ||infl||=1.742e+02 ratio=5.085e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0716 | cos(dir_est, dir_oracle)=0.9596
+    [Diagnostics] HG Cosine Sim: 0.6652 | Norm(Est): 136.5276 | Norm(Oracle): 202.1122
+    [Diagnostics] Reward Pearson Corr: 0.4189 | Var(Δr): 872288.0614
+    [Term-wise] Est: ||dir||=1.262e+02 ||infl||=3.050e+01 ratio=2.417e-01 | Oracle: ||dir||=1.110e+02 ||infl||=1.456e+02 ratio=1.312e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0488 | cos(dir_est, dir_oracle)=0.9957
+    [Diagnostics] HG Cosine Sim: 0.1223 | Norm(Est): 67.4374 | Norm(Oracle): 177.7549
+    [Diagnostics] Reward Pearson Corr: 0.4310 | Var(Δr): 1108897.5613
+    [Term-wise] Est: ||dir||=4.261e+01 ||infl||=4.863e+01 ratio=1.141e+00 | Oracle: ||dir||=3.848e+01 ||infl||=1.764e+02 ratio=4.584e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0000 | cos(dir_est, dir_oracle)=0.9930
+    [Diagnostics] HG Cosine Sim: 0.8583 | Norm(Est): 357.2730 | Norm(Oracle): 572.9746
+    [Diagnostics] Reward Pearson Corr: 0.4614 | Var(Δr): 1052161.3462
+    [Term-wise] Est: ||dir||=3.244e+02 ||infl||=1.511e+02 ratio=4.659e-01 | Oracle: ||dir||=3.197e+02 ||infl||=2.990e+02 ratio=9.354e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0211 | cos(dir_est, dir_oracle)=0.9992
+    [Diagnostics] HG Cosine Sim: 0.7069 | Norm(Est): 65.1380 | Norm(Oracle): 254.5739
+    [Diagnostics] Reward Pearson Corr: 0.4925 | Var(Δr): 1003965.8218
+    [Term-wise] Est: ||dir||=6.070e+01 ||infl||=2.765e+01 ratio=4.556e-01 | Oracle: ||dir||=4.660e+01 ||infl||=2.328e+02 ratio=4.996e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4292 | cos(dir_est, dir_oracle)=0.9426
+    [Diagnostics] HG Cosine Sim: 0.2425 | Norm(Est): 58.6289 | Norm(Oracle): 281.9301
+    [Diagnostics] Reward Pearson Corr: 0.4118 | Var(Δr): 561158.5563
+    [Term-wise] Est: ||dir||=4.390e+01 ||infl||=3.877e+01 ratio=8.831e-01 | Oracle: ||dir||=3.358e+01 ||infl||=2.776e+02 ratio=8.267e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1344 | cos(dir_est, dir_oracle)=0.9303
+    [Joint-IRL] iter    0: ||mean residual|| = 5.830424 (best 5.830424) over 291 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 5.484498 (best 5.484498) over 291 envs
+  [Joint-IRL] re-solved over 291 envs in 185.47s | Q_hat diag=[2.1300e-02 1.9600e-01 5.3800e-01 2.4600e-02 3.0033e+00 8.2070e-01
+ 1.0000e+02 3.0310e+00]
+    [Diagnostics] HG Cosine Sim: 0.5611 | Norm(Est): 82.8917 | Norm(Oracle): 405.3747
+    [Diagnostics] Reward Pearson Corr: 0.5441 | Var(Δr): 604142.0647
+    [Term-wise] Est: ||dir||=9.267e+01 ||infl||=2.218e+01 ratio=2.394e-01 | Oracle: ||dir||=6.762e+01 ||infl||=3.928e+02 ratio=5.809e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4041 | cos(dir_est, dir_oracle)=0.9613
+  iter  290: train=-152.2861±52.8223 eval=-144.3368±46.9528 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.277 0.001 0.953 0.218
+ 0.974 0.97  0.345 1.   ]
+    [Diagnostics] HG Cosine Sim: 0.5929 | Norm(Est): 262.3931 | Norm(Oracle): 302.8992
+    [Diagnostics] Reward Pearson Corr: 0.5242 | Var(Δr): 971122.3163
+    [Term-wise] Est: ||dir||=2.616e+02 ||infl||=2.700e+01 ratio=1.032e-01 | Oracle: ||dir||=2.139e+02 ||infl||=2.400e+02 ratio=1.122e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2384 | cos(dir_est, dir_oracle)=0.9966
+    [Diagnostics] HG Cosine Sim: 0.6727 | Norm(Est): 97.7035 | Norm(Oracle): 409.3210
+    [Diagnostics] Reward Pearson Corr: 0.6681 | Var(Δr): 693570.8117
+    [Term-wise] Est: ||dir||=5.152e+01 ||infl||=7.567e+01 ratio=1.469e+00 | Oracle: ||dir||=4.833e+01 ||infl||=3.897e+02 ratio=8.064e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4308 | cos(dir_est, dir_oracle)=0.9472
+    [Diagnostics] HG Cosine Sim: 0.7631 | Norm(Est): 181.2888 | Norm(Oracle): 490.8719
+    [Diagnostics] Reward Pearson Corr: 0.5043 | Var(Δr): 726334.5377
+    [Term-wise] Est: ||dir||=1.892e+02 ||infl||=4.387e+01 ratio=2.318e-01 | Oracle: ||dir||=1.789e+02 ||infl||=3.664e+02 ratio=2.048e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2427 | cos(dir_est, dir_oracle)=0.9861
+    [Diagnostics] HG Cosine Sim: 0.5918 | Norm(Est): 124.3294 | Norm(Oracle): 303.8121
+    [Diagnostics] Reward Pearson Corr: 0.5735 | Var(Δr): 463191.6389
+    [Term-wise] Est: ||dir||=1.077e+02 ||infl||=6.448e+01 ratio=5.988e-01 | Oracle: ||dir||=1.111e+02 ||infl||=2.431e+02 ratio=2.189e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0624 | cos(dir_est, dir_oracle)=0.9652
+    [Diagnostics] HG Cosine Sim: 0.8991 | Norm(Est): 309.5723 | Norm(Oracle): 532.8331
+    [Diagnostics] Reward Pearson Corr: 0.5054 | Var(Δr): 901245.1137
+    [Term-wise] Est: ||dir||=3.058e+02 ||infl||=7.201e+01 ratio=2.355e-01 | Oracle: ||dir||=2.871e+02 ||infl||=2.883e+02 ratio=1.004e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0569 | cos(dir_est, dir_oracle)=0.9987
+    [Diagnostics] HG Cosine Sim: 0.6500 | Norm(Est): 226.3403 | Norm(Oracle): 373.2066
+    [Diagnostics] Reward Pearson Corr: 0.4326 | Var(Δr): 951561.1035
+    [Term-wise] Est: ||dir||=2.035e+02 ||infl||=8.785e+01 ratio=4.317e-01 | Oracle: ||dir||=1.850e+02 ||infl||=2.648e+02 ratio=1.432e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0442 | cos(dir_est, dir_oracle)=0.9959
+    [Diagnostics] HG Cosine Sim: 0.6681 | Norm(Est): 437.1058 | Norm(Oracle): 473.7037
+    [Diagnostics] Reward Pearson Corr: 0.5302 | Var(Δr): 1070340.5122
+    [Term-wise] Est: ||dir||=4.188e+02 ||infl||=9.180e+01 ratio=2.192e-01 | Oracle: ||dir||=2.824e+02 ||infl||=3.614e+02 ratio=1.280e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.5225 | cos(dir_est, dir_oracle)=0.9938
+    [Diagnostics] HG Cosine Sim: 0.9556 | Norm(Est): 305.6160 | Norm(Oracle): 627.1316
+    [Diagnostics] Reward Pearson Corr: 0.4673 | Var(Δr): 976895.8459
+    [Term-wise] Est: ||dir||=2.908e+02 ||infl||=5.105e+01 ratio=1.755e-01 | Oracle: ||dir||=3.038e+02 ||infl||=3.518e+02 ratio=1.158e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3748 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.6068 | Norm(Est): 361.6479 | Norm(Oracle): 258.6258
+    [Diagnostics] Reward Pearson Corr: 0.5281 | Var(Δr): 1070092.7353
+    [Term-wise] Est: ||dir||=3.354e+02 ||infl||=1.524e+02 ratio=4.544e-01 | Oracle: ||dir||=2.469e+02 ||infl||=2.439e+02 ratio=9.879e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.3151 | cos(dir_est, dir_oracle)=0.9969
+    [Joint-IRL] iter    0: ||mean residual|| = 5.571938 (best 5.571938) over 301 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 5.468720 (best 5.468720) over 301 envs
+  [Joint-IRL] re-solved over 301 envs in 203.65s | Q_hat diag=[2.1300e-02 1.9600e-01 5.3830e-01 2.4600e-02 3.0302e+00 8.2100e-01
+ 1.0000e+02 3.0602e+00]
+    [Diagnostics] HG Cosine Sim: 0.6450 | Norm(Est): 107.6044 | Norm(Oracle): 197.1724
+    [Diagnostics] Reward Pearson Corr: 0.4515 | Var(Δr): 594067.7332
+    [Term-wise] Est: ||dir||=1.099e+02 ||infl||=1.041e+01 ratio=9.473e-02 | Oracle: ||dir||=9.320e+01 ||infl||=1.532e+02 ratio=1.643e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2823 | cos(dir_est, dir_oracle)=0.9874
+  iter  300: train=-155.7260±50.9654 eval=-155.8085±57.1567 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.273 0.001 0.988 0.221
+ 1.    1.    0.2   1.   ]
+    [Diagnostics] HG Cosine Sim: 0.6415 | Norm(Est): 96.0953 | Norm(Oracle): 225.4595
+    [Diagnostics] Reward Pearson Corr: 0.4540 | Var(Δr): 768891.5137
+    [Term-wise] Est: ||dir||=7.856e+01 ||infl||=5.678e+01 ratio=7.228e-01 | Oracle: ||dir||=7.682e+01 ||infl||=1.775e+02 ratio=2.310e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1053 | cos(dir_est, dir_oracle)=0.9915
+    [Diagnostics] HG Cosine Sim: 0.7372 | Norm(Est): 68.6335 | Norm(Oracle): 148.6382
+    [Diagnostics] Reward Pearson Corr: 0.5467 | Var(Δr): 975754.2966
+    [Term-wise] Est: ||dir||=4.792e+01 ||infl||=4.353e+01 ratio=9.083e-01 | Oracle: ||dir||=4.393e+01 ||infl||=1.173e+02 ratio=2.670e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2818 | cos(dir_est, dir_oracle)=0.9932
+    [Diagnostics] HG Cosine Sim: 0.6909 | Norm(Est): 130.9887 | Norm(Oracle): 252.0377
+    [Diagnostics] Reward Pearson Corr: 0.4302 | Var(Δr): 909450.2802
+    [Term-wise] Est: ||dir||=1.197e+02 ||infl||=5.736e+01 ratio=4.791e-01 | Oracle: ||dir||=1.055e+02 ||infl||=1.917e+02 ratio=1.817e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0792 | cos(dir_est, dir_oracle)=0.9958
+    [Diagnostics] HG Cosine Sim: 0.6174 | Norm(Est): 47.7381 | Norm(Oracle): 306.7162
+    [Diagnostics] Reward Pearson Corr: 0.5189 | Var(Δr): 1418836.9695
+    [Term-wise] Est: ||dir||=4.569e+01 ||infl||=1.916e+01 ratio=4.193e-01 | Oracle: ||dir||=5.091e+01 ||infl||=2.714e+02 ratio=5.330e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0036 | cos(dir_est, dir_oracle)=0.9912
+    [Diagnostics] HG Cosine Sim: 0.5865 | Norm(Est): 154.4663 | Norm(Oracle): 328.7242
+    [Diagnostics] Reward Pearson Corr: 0.4864 | Var(Δr): 504831.1837
+    [Term-wise] Est: ||dir||=1.235e+02 ||infl||=9.546e+01 ratio=7.727e-01 | Oracle: ||dir||=1.187e+02 ||infl||=2.517e+02 ratio=2.121e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0098 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.9384 | Norm(Est): 640.7933 | Norm(Oracle): 965.6714
+    [Diagnostics] Reward Pearson Corr: 0.5028 | Var(Δr): 1555286.2736
+    [Term-wise] Est: ||dir||=6.283e+02 ||infl||=6.282e+01 ratio=9.998e-02 | Oracle: ||dir||=6.195e+02 ||infl||=4.362e+02 ratio=7.042e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.3732 | cos(dir_est, dir_oracle)=0.9987
+    [Diagnostics] HG Cosine Sim: 0.7705 | Norm(Est): 195.7973 | Norm(Oracle): 593.7824
+    [Diagnostics] Reward Pearson Corr: 0.4967 | Var(Δr): 1950860.1736
+    [Term-wise] Est: ||dir||=1.663e+02 ||infl||=8.088e+01 ratio=4.864e-01 | Oracle: ||dir||=1.751e+02 ||infl||=4.514e+02 ratio=2.577e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1471 | cos(dir_est, dir_oracle)=0.9963
+    [Diagnostics] HG Cosine Sim: 0.5698 | Norm(Est): 115.2635 | Norm(Oracle): 231.5113
+    [Diagnostics] Reward Pearson Corr: 0.5287 | Var(Δr): 485821.6790
+    [Term-wise] Est: ||dir||=1.091e+02 ||infl||=2.411e+01 ratio=2.211e-01 | Oracle: ||dir||=1.072e+02 ||infl||=1.847e+02 ratio=1.723e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2136 | cos(dir_est, dir_oracle)=0.9990
+    [Diagnostics] HG Cosine Sim: 0.7593 | Norm(Est): 288.4894 | Norm(Oracle): 413.1901
+    [Diagnostics] Reward Pearson Corr: 0.5319 | Var(Δr): 1236363.8416
+    [Term-wise] Est: ||dir||=2.542e+02 ||infl||=1.399e+02 ratio=5.505e-01 | Oracle: ||dir||=2.512e+02 ||infl||=2.797e+02 ratio=1.114e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3712 | cos(dir_est, dir_oracle)=0.9962
+    [Joint-IRL] iter    0: ||mean residual|| = 5.395651 (best 5.395651) over 311 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 5.355095 (best 5.355095) over 311 envs
+  [Joint-IRL] re-solved over 311 envs in 174.53s | Q_hat diag=[2.1300e-02 1.9600e-01 5.3840e-01 2.4600e-02 3.0415e+00 8.2120e-01
+ 1.0000e+02 3.0725e+00]
+    [Diagnostics] HG Cosine Sim: 0.7465 | Norm(Est): 130.7532 | Norm(Oracle): 190.4122
+    [Diagnostics] Reward Pearson Corr: 0.4642 | Var(Δr): 1016905.5862
+    [Term-wise] Est: ||dir||=1.241e+02 ||infl||=1.769e+01 ratio=1.426e-01 | Oracle: ||dir||=1.154e+02 ||infl||=1.155e+02 ratio=1.001e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0829 | cos(dir_est, dir_oracle)=0.9732
+  iter  310: train=-162.9967±52.4877 eval=-162.2100±54.4087 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.273 0.001 0.994 0.217
+ 0.984 1.    0.2   1.   ]
+    [Diagnostics] HG Cosine Sim: 0.7581 | Norm(Est): 226.7069 | Norm(Oracle): 455.9532
+    [Diagnostics] Reward Pearson Corr: 0.5335 | Var(Δr): 963639.2003
+    [Term-wise] Est: ||dir||=2.097e+02 ||infl||=7.577e+01 ratio=3.614e-01 | Oracle: ||dir||=2.045e+02 ||infl||=3.300e+02 ratio=1.614e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2175 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.3693 | Norm(Est): 73.8509 | Norm(Oracle): 396.2031
+    [Diagnostics] Reward Pearson Corr: 0.6113 | Var(Δr): 956441.2225
+    [Term-wise] Est: ||dir||=3.918e+01 ||infl||=6.394e+01 ratio=1.632e+00 | Oracle: ||dir||=4.203e+01 ||infl||=3.707e+02 ratio=8.820e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0887 | cos(dir_est, dir_oracle)=0.9943
+    [Diagnostics] HG Cosine Sim: 0.7575 | Norm(Est): 236.1604 | Norm(Oracle): 357.1296
+    [Diagnostics] Reward Pearson Corr: 0.4466 | Var(Δr): 1184738.7700
+    [Term-wise] Est: ||dir||=1.933e+02 ||infl||=1.251e+02 ratio=6.473e-01 | Oracle: ||dir||=1.788e+02 ||infl||=2.322e+02 ratio=1.299e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3545 | cos(dir_est, dir_oracle)=0.9910
+    [Diagnostics] HG Cosine Sim: 0.7935 | Norm(Est): 163.0071 | Norm(Oracle): 332.6295
+    [Diagnostics] Reward Pearson Corr: 0.4003 | Var(Δr): 951194.8334
+    [Term-wise] Est: ||dir||=1.612e+02 ||infl||=1.812e+01 ratio=1.124e-01 | Oracle: ||dir||=1.610e+02 ||infl||=2.300e+02 ratio=1.429e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3007 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.5548 | Norm(Est): 103.1885 | Norm(Oracle): 293.8673
+    [Diagnostics] Reward Pearson Corr: 0.4594 | Var(Δr): 673881.6726
+    [Term-wise] Est: ||dir||=9.481e+01 ||infl||=5.010e+01 ratio=5.284e-01 | Oracle: ||dir||=8.945e+01 ||infl||=2.516e+02 ratio=2.813e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0963 | cos(dir_est, dir_oracle)=0.9994
+    [Diagnostics] HG Cosine Sim: 0.9375 | Norm(Est): 99.7587 | Norm(Oracle): 216.4461
+    [Diagnostics] Reward Pearson Corr: 0.5643 | Var(Δr): 1080822.1191
+    [Term-wise] Est: ||dir||=1.014e+02 ||infl||=4.551e+00 ratio=4.488e-02 | Oracle: ||dir||=1.045e+02 ||infl||=1.229e+02 ratio=1.176e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.3927 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.6885 | Norm(Est): 292.2737 | Norm(Oracle): 488.8614
+    [Diagnostics] Reward Pearson Corr: 0.5049 | Var(Δr): 1001006.5595
+    [Term-wise] Est: ||dir||=2.719e+02 ||infl||=1.077e+02 ratio=3.962e-01 | Oracle: ||dir||=2.886e+02 ||infl||=3.047e+02 ratio=1.056e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.3918 | cos(dir_est, dir_oracle)=0.9979
+    [Diagnostics] HG Cosine Sim: 0.3877 | Norm(Est): 196.4268 | Norm(Oracle): 201.3666
+    [Diagnostics] Reward Pearson Corr: 0.4467 | Var(Δr): 957145.2157
+    [Term-wise] Est: ||dir||=1.087e+02 ||infl||=1.692e+02 ratio=1.556e+00 | Oracle: ||dir||=1.090e+02 ||infl||=1.227e+02 ratio=1.125e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1017 | cos(dir_est, dir_oracle)=0.9976
+    [Diagnostics] HG Cosine Sim: 0.9222 | Norm(Est): 355.3782 | Norm(Oracle): 355.5186
+    [Diagnostics] Reward Pearson Corr: 0.5059 | Var(Δr): 786042.0143
+    [Term-wise] Est: ||dir||=3.290e+02 ||infl||=1.123e+02 ratio=3.414e-01 | Oracle: ||dir||=3.310e+02 ||infl||=1.061e+02 ratio=3.204e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.1779 | cos(dir_est, dir_oracle)=1.0000
+    [Joint-IRL] iter    0: ||mean residual|| = 5.218223 (best 5.218223) over 321 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 5.180034 (best 5.180034) over 321 envs
+  [Joint-IRL] re-solved over 321 envs in 211.24s | Q_hat diag=[2.1300e-02 1.9600e-01 5.3850e-01 2.4600e-02 3.0526e+00 8.2130e-01
+ 1.0000e+02 3.0845e+00]
+    [Diagnostics] HG Cosine Sim: 0.9788 | Norm(Est): 496.4374 | Norm(Oracle): 661.4035
+    [Diagnostics] Reward Pearson Corr: 0.4188 | Var(Δr): 1489228.0074
+    [Term-wise] Est: ||dir||=4.999e+02 ||infl||=3.935e+01 ratio=7.871e-02 | Oracle: ||dir||=5.214e+02 ||infl||=1.929e+02 ratio=3.699e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.2520 | cos(dir_est, dir_oracle)=1.0000
+  iter  320: train=-161.0100±53.7755 eval=-156.0042±56.5960 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.301 0.001 1.    0.217
+ 0.958 0.993 0.056 0.999]
+    [Diagnostics] HG Cosine Sim: 0.4919 | Norm(Est): 155.3576 | Norm(Oracle): 191.2330
+    [Diagnostics] Reward Pearson Corr: 0.4723 | Var(Δr): 866846.2779
+    [Term-wise] Est: ||dir||=1.022e+02 ||infl||=1.151e+02 ratio=1.126e+00 | Oracle: ||dir||=9.469e+01 ||infl||=1.741e+02 ratio=1.839e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3158 | cos(dir_est, dir_oracle)=0.9987
+    [Diagnostics] HG Cosine Sim: 0.6722 | Norm(Est): 151.6802 | Norm(Oracle): 206.6753
+    [Diagnostics] Reward Pearson Corr: 0.4736 | Var(Δr): 772681.6646
+    [Term-wise] Est: ||dir||=1.536e+02 ||infl||=3.842e+01 ratio=2.501e-01 | Oracle: ||dir||=1.422e+02 ||infl||=1.592e+02 ratio=1.120e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3008 | cos(dir_est, dir_oracle)=0.9994
+    [Diagnostics] HG Cosine Sim: 0.8954 | Norm(Est): 403.5609 | Norm(Oracle): 473.9772
+    [Diagnostics] Reward Pearson Corr: 0.5724 | Var(Δr): 562285.9882
+    [Term-wise] Est: ||dir||=4.074e+02 ||infl||=7.469e+00 ratio=1.833e-02 | Oracle: ||dir||=4.001e+02 ||infl||=2.132e+02 ratio=5.329e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.1498 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.8348 | Norm(Est): 338.3338 | Norm(Oracle): 579.3498
+    [Diagnostics] Reward Pearson Corr: 0.4767 | Var(Δr): 823362.2607
+    [Term-wise] Est: ||dir||=3.080e+02 ||infl||=1.115e+02 ratio=3.622e-01 | Oracle: ||dir||=3.207e+02 ||infl||=3.618e+02 ratio=1.128e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2970 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.4755 | Norm(Est): 205.0363 | Norm(Oracle): 372.4616
+    [Diagnostics] Reward Pearson Corr: 0.4838 | Var(Δr): 1047004.0419
+    [Term-wise] Est: ||dir||=1.777e+02 ||infl||=1.279e+02 ratio=7.197e-01 | Oracle: ||dir||=1.713e+02 ||infl||=2.670e+02 ratio=1.559e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2858 | cos(dir_est, dir_oracle)=0.9989
+    [Diagnostics] HG Cosine Sim: 0.6158 | Norm(Est): 163.1511 | Norm(Oracle): 340.8522
+    [Diagnostics] Reward Pearson Corr: 0.5271 | Var(Δr): 1778278.6038
+    [Term-wise] Est: ||dir||=9.695e+01 ||infl||=1.132e+02 ratio=1.168e+00 | Oracle: ||dir||=9.443e+01 ||infl||=2.721e+02 ratio=2.882e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2158 | cos(dir_est, dir_oracle)=0.9981
+    [Diagnostics] HG Cosine Sim: 0.7656 | Norm(Est): 181.7661 | Norm(Oracle): 306.8750
+    [Diagnostics] Reward Pearson Corr: 0.6140 | Var(Δr): 581338.6809
+    [Term-wise] Est: ||dir||=1.689e+02 ||infl||=5.295e+01 ratio=3.135e-01 | Oracle: ||dir||=1.588e+02 ||infl||=1.985e+02 ratio=1.250e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0544 | cos(dir_est, dir_oracle)=0.9887
+    [Diagnostics] HG Cosine Sim: 0.7681 | Norm(Est): 203.5347 | Norm(Oracle): 401.7281
+    [Diagnostics] Reward Pearson Corr: 0.4994 | Var(Δr): 564851.2935
+    [Term-wise] Est: ||dir||=1.897e+02 ||infl||=6.689e+01 ratio=3.526e-01 | Oracle: ||dir||=1.832e+02 ||infl||=2.568e+02 ratio=1.402e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2315 | cos(dir_est, dir_oracle)=0.9956
+    [Diagnostics] HG Cosine Sim: 0.2751 | Norm(Est): 47.9026 | Norm(Oracle): 138.5661
+    [Diagnostics] Reward Pearson Corr: 0.5279 | Var(Δr): 934409.8753
+    [Term-wise] Est: ||dir||=4.584e+01 ||infl||=1.494e+01 ratio=3.259e-01 | Oracle: ||dir||=5.188e+01 ||infl||=1.268e+02 ratio=2.444e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1736 | cos(dir_est, dir_oracle)=0.9875
+    [Joint-IRL] iter    0: ||mean residual|| = 5.142279 (best 5.142279) over 331 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 5.110174 (best 5.110174) over 331 envs
+  [Joint-IRL] re-solved over 331 envs in 160.55s | Q_hat diag=[2.1300e-02 1.9600e-01 5.3860e-01 2.4600e-02 3.0622e+00 8.2140e-01
+ 1.0000e+02 3.0951e+00]
+    [Diagnostics] HG Cosine Sim: 0.7421 | Norm(Est): 127.6150 | Norm(Oracle): 264.0942
+    [Diagnostics] Reward Pearson Corr: 0.3668 | Var(Δr): 470244.7500
+    [Term-wise] Est: ||dir||=1.160e+02 ||infl||=5.093e+01 ratio=4.389e-01 | Oracle: ||dir||=1.125e+02 ||infl||=1.867e+02 ratio=1.660e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0457 | cos(dir_est, dir_oracle)=0.9999
+  iter  330: train=-159.4307±54.5486 eval=-150.7440±44.2797 | μ = [0.    0.    0.    0.    0.    0.    0.001 0.    0.321 0.001 0.981 0.221
+ 0.969 0.978 0.243 1.   ]
+    [Diagnostics] HG Cosine Sim: 0.7618 | Norm(Est): 287.7592 | Norm(Oracle): 449.6553
+    [Diagnostics] Reward Pearson Corr: 0.4513 | Var(Δr): 411465.2419
+    [Term-wise] Est: ||dir||=2.782e+02 ||infl||=5.116e+01 ratio=1.839e-01 | Oracle: ||dir||=2.842e+02 ||infl||=2.910e+02 ratio=1.024e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1219 | cos(dir_est, dir_oracle)=0.9988
+    [Diagnostics] HG Cosine Sim: 0.9195 | Norm(Est): 154.2650 | Norm(Oracle): 476.7791
+    [Diagnostics] Reward Pearson Corr: 0.5051 | Var(Δr): 606419.8807
+    [Term-wise] Est: ||dir||=1.361e+02 ||infl||=4.647e+01 ratio=3.414e-01 | Oracle: ||dir||=1.492e+02 ||infl||=3.311e+02 ratio=2.219e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2309 | cos(dir_est, dir_oracle)=0.9898
+    [Diagnostics] HG Cosine Sim: 0.3431 | Norm(Est): 136.1837 | Norm(Oracle): 326.6762
+    [Diagnostics] Reward Pearson Corr: 0.6093 | Var(Δr): 798412.0983
+    [Term-wise] Est: ||dir||=9.622e+01 ||infl||=8.648e+01 ratio=8.987e-01 | Oracle: ||dir||=9.285e+01 ||infl||=2.859e+02 ratio=3.080e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0796 | cos(dir_est, dir_oracle)=0.9919
+    [Diagnostics] HG Cosine Sim: 0.8108 | Norm(Est): 259.8012 | Norm(Oracle): 765.0036
+    [Diagnostics] Reward Pearson Corr: 0.5161 | Var(Δr): 957295.8323
+    [Term-wise] Est: ||dir||=2.591e+02 ||infl||=5.475e+01 ratio=2.113e-01 | Oracle: ||dir||=2.710e+02 ||infl||=5.599e+02 ratio=2.066e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1633 | cos(dir_est, dir_oracle)=0.9970
+    [Diagnostics] HG Cosine Sim: 0.3022 | Norm(Est): 38.7892 | Norm(Oracle): 161.6389
+    [Diagnostics] Reward Pearson Corr: 0.4656 | Var(Δr): 629223.6935
+    [Term-wise] Est: ||dir||=3.459e+01 ||infl||=1.569e+01 ratio=4.537e-01 | Oracle: ||dir||=3.420e+01 ||infl||=1.563e+02 ratio=4.570e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0373 | cos(dir_est, dir_oracle)=0.9837
+    [Diagnostics] HG Cosine Sim: 0.6836 | Norm(Est): 196.5664 | Norm(Oracle): 476.0403
+    [Diagnostics] Reward Pearson Corr: 0.4984 | Var(Δr): 761850.5371
+    [Term-wise] Est: ||dir||=1.976e+02 ||infl||=2.672e+01 ratio=1.352e-01 | Oracle: ||dir||=1.951e+02 ||infl||=3.725e+02 ratio=1.910e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1337 | cos(dir_est, dir_oracle)=0.9984
+    [Diagnostics] HG Cosine Sim: 0.7626 | Norm(Est): 212.6921 | Norm(Oracle): 365.7698
+    [Diagnostics] Reward Pearson Corr: 0.5210 | Var(Δr): 964493.0333
+    [Term-wise] Est: ||dir||=2.071e+02 ||infl||=3.460e+01 ratio=1.670e-01 | Oracle: ||dir||=1.716e+02 ||infl||=2.619e+02 ratio=1.526e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2819 | cos(dir_est, dir_oracle)=0.9905
+    [Diagnostics] HG Cosine Sim: 0.2928 | Norm(Est): 168.6761 | Norm(Oracle): 378.8283
+    [Diagnostics] Reward Pearson Corr: 0.5102 | Var(Δr): 1227770.5124
+    [Term-wise] Est: ||dir||=1.500e+02 ||infl||=1.025e+02 ratio=6.837e-01 | Oracle: ||dir||=1.216e+02 ||infl||=3.312e+02 ratio=2.724e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2383 | cos(dir_est, dir_oracle)=0.9748
+    [Diagnostics] HG Cosine Sim: 0.6386 | Norm(Est): 215.5092 | Norm(Oracle): 727.7768
+    [Diagnostics] Reward Pearson Corr: 0.5280 | Var(Δr): 919510.6957
+    [Term-wise] Est: ||dir||=1.975e+02 ||infl||=2.942e+01 ratio=1.490e-01 | Oracle: ||dir||=1.922e+02 ||infl||=6.231e+02 ratio=3.242e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4319 | cos(dir_est, dir_oracle)=0.9986
+    [Joint-IRL] iter    0: ||mean residual|| = 5.053112 (best 5.053112) over 341 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 5.019516 (best 5.019516) over 341 envs
+  [Joint-IRL] re-solved over 341 envs in 146.77s | Q_hat diag=[2.1300e-02 1.9590e-01 5.3870e-01 2.4600e-02 3.0722e+00 8.2150e-01
+ 1.0000e+02 3.1063e+00]
+    [Diagnostics] HG Cosine Sim: 0.8080 | Norm(Est): 274.6861 | Norm(Oracle): 398.0588
+    [Diagnostics] Reward Pearson Corr: 0.4678 | Var(Δr): 775927.2035
+    [Term-wise] Est: ||dir||=2.514e+02 ||infl||=1.073e+02 ratio=4.270e-01 | Oracle: ||dir||=2.487e+02 ||infl||=2.208e+02 ratio=8.879e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.1209 | cos(dir_est, dir_oracle)=0.9908
+  iter  340: train=-158.6565±50.3871 eval=-147.4581±51.1483 | μ = [0.    0.    0.    0.    0.    0.    0.004 0.    0.304 0.001 0.988 0.219
+ 0.945 1.    0.286 1.   ]
+    [Diagnostics] HG Cosine Sim: 0.7982 | Norm(Est): 264.3359 | Norm(Oracle): 415.9001
+    [Diagnostics] Reward Pearson Corr: 0.5224 | Var(Δr): 1125294.6892
+    [Term-wise] Est: ||dir||=2.468e+02 ||infl||=2.745e+01 ratio=1.113e-01 | Oracle: ||dir||=1.850e+02 ||infl||=2.979e+02 ratio=1.610e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.7046 | cos(dir_est, dir_oracle)=0.9986
+    [Diagnostics] HG Cosine Sim: 0.1611 | Norm(Est): 115.5270 | Norm(Oracle): 389.4441
+    [Diagnostics] Reward Pearson Corr: 0.5179 | Var(Δr): 820950.1986
+    [Term-wise] Est: ||dir||=3.895e+01 ||infl||=1.072e+02 ratio=2.753e+00 | Oracle: ||dir||=3.991e+01 ||infl||=3.768e+02 ratio=9.440e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0214 | cos(dir_est, dir_oracle)=0.9709
+    [Diagnostics] HG Cosine Sim: 0.2189 | Norm(Est): 115.6451 | Norm(Oracle): 255.1606
+    [Diagnostics] Reward Pearson Corr: 0.4918 | Var(Δr): 419579.2087
+    [Term-wise] Est: ||dir||=7.193e+01 ||infl||=1.005e+02 ratio=1.397e+00 | Oracle: ||dir||=7.731e+01 ||infl||=2.216e+02 ratio=2.867e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0803 | cos(dir_est, dir_oracle)=0.9966
+    [Diagnostics] HG Cosine Sim: 0.8470 | Norm(Est): 352.2039 | Norm(Oracle): 572.5980
+    [Diagnostics] Reward Pearson Corr: 0.5075 | Var(Δr): 1017274.0924
+    [Term-wise] Est: ||dir||=3.546e+02 ||infl||=2.708e+01 ratio=7.637e-02 | Oracle: ||dir||=3.737e+02 ||infl||=3.336e+02 ratio=8.926e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.2803 | cos(dir_est, dir_oracle)=0.9977
+    [Diagnostics] HG Cosine Sim: 0.3866 | Norm(Est): 329.3596 | Norm(Oracle): 399.1731
+    [Diagnostics] Reward Pearson Corr: 0.4790 | Var(Δr): 1349518.9738
+    [Term-wise] Est: ||dir||=1.843e+02 ||infl||=2.821e+02 ratio=1.530e+00 | Oracle: ||dir||=1.805e+02 ||infl||=2.291e+02 ratio=1.269e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2750 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.7967 | Norm(Est): 87.9445 | Norm(Oracle): 204.5446
+    [Diagnostics] Reward Pearson Corr: 0.6004 | Var(Δr): 807530.8223
+    [Term-wise] Est: ||dir||=8.368e+01 ||infl||=3.931e+01 ratio=4.698e-01 | Oracle: ||dir||=8.964e+01 ||infl||=1.306e+02 ratio=1.457e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0919 | cos(dir_est, dir_oracle)=0.9995
+    [Diagnostics] HG Cosine Sim: 0.8809 | Norm(Est): 232.2490 | Norm(Oracle): 451.8262
+    [Diagnostics] Reward Pearson Corr: 0.5606 | Var(Δr): 541548.0113
+    [Term-wise] Est: ||dir||=2.150e+02 ||infl||=6.339e+01 ratio=2.948e-01 | Oracle: ||dir||=2.240e+02 ||infl||=2.605e+02 ratio=1.163e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0754 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.8593 | Norm(Est): 199.3666 | Norm(Oracle): 345.1560
+    [Diagnostics] Reward Pearson Corr: 0.4539 | Var(Δr): 678784.8798
+    [Term-wise] Est: ||dir||=1.948e+02 ||infl||=2.290e+01 ratio=1.175e-01 | Oracle: ||dir||=2.000e+02 ||infl||=1.960e+02 ratio=9.799e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0143 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.9932 | Norm(Est): 975.4151 | Norm(Oracle): 1412.2323
+    [Diagnostics] Reward Pearson Corr: 0.5077 | Var(Δr): 836146.7104
+    [Term-wise] Est: ||dir||=9.690e+02 ||infl||=6.946e+01 ratio=7.168e-02 | Oracle: ||dir||=1.012e+03 ||infl||=4.127e+02 ratio=4.080e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0259 | cos(dir_est, dir_oracle)=1.0000
+    [Joint-IRL] iter    0: ||mean residual|| = 4.980424 (best 4.980424) over 351 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 4.951463 (best 4.951463) over 351 envs
+  [Joint-IRL] re-solved over 351 envs in 179.28s | Q_hat diag=[2.1300e-02 1.9590e-01 5.3880e-01 2.4600e-02 3.0811e+00 8.2150e-01
+ 1.0000e+02 3.1164e+00]
+    [Diagnostics] HG Cosine Sim: 0.6953 | Norm(Est): 179.2892 | Norm(Oracle): 299.6675
+    [Diagnostics] Reward Pearson Corr: 0.3921 | Var(Δr): 1031993.8746
+    [Term-wise] Est: ||dir||=1.871e+02 ||infl||=4.154e+01 ratio=2.220e-01 | Oracle: ||dir||=1.880e+02 ||infl||=2.098e+02 ratio=1.116e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0341 | cos(dir_est, dir_oracle)=0.9999
+  iter  350: train=-158.0462±51.6475 eval=-157.3494±49.2746 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.306 0.    0.999 0.22
+ 1.    0.998 0.    1.   ]
+    [Diagnostics] HG Cosine Sim: 0.8893 | Norm(Est): 169.1248 | Norm(Oracle): 362.3537
+    [Diagnostics] Reward Pearson Corr: 0.5140 | Var(Δr): 484159.0646
+    [Term-wise] Est: ||dir||=1.590e+02 ||infl||=5.291e+01 ratio=3.328e-01 | Oracle: ||dir||=1.657e+02 ||infl||=2.156e+02 ratio=1.302e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0462 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.5084 | Norm(Est): 96.0259 | Norm(Oracle): 249.4742
+    [Diagnostics] Reward Pearson Corr: 0.4660 | Var(Δr): 979214.6892
+    [Term-wise] Est: ||dir||=1.023e+02 ||infl||=3.602e+01 ratio=3.521e-01 | Oracle: ||dir||=1.018e+02 ||infl||=2.265e+02 ratio=2.224e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3759 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.6644 | Norm(Est): 94.6541 | Norm(Oracle): 255.7796
+    [Diagnostics] Reward Pearson Corr: 0.4363 | Var(Δr): 627612.0562
+    [Term-wise] Est: ||dir||=8.925e+01 ||infl||=1.484e+01 ratio=1.662e-01 | Oracle: ||dir||=9.009e+01 ||infl||=2.053e+02 ratio=2.278e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2708 | cos(dir_est, dir_oracle)=0.9983
+    [Diagnostics] HG Cosine Sim: 0.6761 | Norm(Est): 119.7841 | Norm(Oracle): 229.4229
+    [Diagnostics] Reward Pearson Corr: 0.4540 | Var(Δr): 1469419.0735
+    [Term-wise] Est: ||dir||=8.096e+01 ||infl||=7.689e+01 ratio=9.497e-01 | Oracle: ||dir||=8.448e+01 ||infl||=1.674e+02 ratio=1.981e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2056 | cos(dir_est, dir_oracle)=0.9988
+    [Diagnostics] HG Cosine Sim: 0.8450 | Norm(Est): 155.7333 | Norm(Oracle): 251.5650
+    [Diagnostics] Reward Pearson Corr: 0.4587 | Var(Δr): 921607.2914
+    [Term-wise] Est: ||dir||=1.504e+02 ||infl||=1.759e+01 ratio=1.169e-01 | Oracle: ||dir||=1.669e+02 ||infl||=1.390e+02 ratio=8.328e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.1565 | cos(dir_est, dir_oracle)=0.9979
+    [Diagnostics] HG Cosine Sim: 0.7112 | Norm(Est): 201.2202 | Norm(Oracle): 309.7891
+    [Diagnostics] Reward Pearson Corr: 0.4750 | Var(Δr): 638116.7749
+    [Term-wise] Est: ||dir||=1.829e+02 ||infl||=8.280e+01 ratio=4.527e-01 | Oracle: ||dir||=1.828e+02 ||infl||=1.804e+02 ratio=9.871e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1260 | cos(dir_est, dir_oracle)=0.9923
+    [Diagnostics] HG Cosine Sim: 0.5476 | Norm(Est): 124.5262 | Norm(Oracle): 294.6176
+    [Diagnostics] Reward Pearson Corr: 0.5462 | Var(Δr): 934880.3878
+    [Term-wise] Est: ||dir||=1.120e+02 ||infl||=6.192e+01 ratio=5.530e-01 | Oracle: ||dir||=1.134e+02 ||infl||=2.335e+02 ratio=2.059e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1398 | cos(dir_est, dir_oracle)=0.9977
+    [Diagnostics] HG Cosine Sim: 0.3348 | Norm(Est): 95.8013 | Norm(Oracle): 126.8827
+    [Diagnostics] Reward Pearson Corr: 0.5546 | Var(Δr): 1008675.3117
+    [Term-wise] Est: ||dir||=5.907e+01 ||infl||=7.897e+01 ratio=1.337e+00 | Oracle: ||dir||=5.787e+01 ||infl||=9.590e+01 ratio=1.657e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1109 | cos(dir_est, dir_oracle)=0.9994
+    [Diagnostics] HG Cosine Sim: 0.5509 | Norm(Est): 113.6458 | Norm(Oracle): 175.0826
+    [Diagnostics] Reward Pearson Corr: 0.5099 | Var(Δr): 1297630.2478
+    [Term-wise] Est: ||dir||=9.812e+01 ||infl||=7.230e+01 ratio=7.369e-01 | Oracle: ||dir||=9.884e+01 ||infl||=1.321e+02 ratio=1.336e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0687 | cos(dir_est, dir_oracle)=0.9999
+    [Joint-IRL] iter    0: ||mean residual|| = 4.774565 (best 4.774565) over 361 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 4.747390 (best 4.747390) over 361 envs
+  [Joint-IRL] re-solved over 361 envs in 201.08s | Q_hat diag=[2.1300e-02 1.9590e-01 5.3890e-01 2.4600e-02 3.0898e+00 8.2160e-01
+ 1.0000e+02 3.1262e+00]
+    [Diagnostics] HG Cosine Sim: 0.7894 | Norm(Est): 245.5781 | Norm(Oracle): 297.3280
+    [Diagnostics] Reward Pearson Corr: 0.4848 | Var(Δr): 508171.9105
+    [Term-wise] Est: ||dir||=2.327e+02 ||infl||=6.553e+01 ratio=2.816e-01 | Oracle: ||dir||=2.326e+02 ||infl||=1.772e+02 ratio=7.616e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.1054 | cos(dir_est, dir_oracle)=1.0000
+  iter  360: train=-153.0360±48.3324 eval=-159.4511±55.5680 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.297 0.    0.973 0.219
+ 0.978 1.    0.    1.   ]
+    [Diagnostics] HG Cosine Sim: 0.3972 | Norm(Est): 131.9267 | Norm(Oracle): 157.1628
+    [Diagnostics] Reward Pearson Corr: 0.5345 | Var(Δr): 883228.0250
+    [Term-wise] Est: ||dir||=7.417e+01 ||infl||=1.173e+02 ratio=1.581e+00 | Oracle: ||dir||=7.544e+01 ||infl||=1.189e+02 ratio=1.576e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0958 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.3623 | Norm(Est): 64.1967 | Norm(Oracle): 129.7274
+    [Diagnostics] Reward Pearson Corr: 0.4860 | Var(Δr): 1184642.0472
+    [Term-wise] Est: ||dir||=4.955e+01 ||infl||=4.291e+01 ratio=8.661e-01 | Oracle: ||dir||=4.904e+01 ||infl||=1.193e+02 ratio=2.433e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1179 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.9189 | Norm(Est): 177.0886 | Norm(Oracle): 210.5069
+    [Diagnostics] Reward Pearson Corr: 0.4655 | Var(Δr): 1466680.5203
+    [Term-wise] Est: ||dir||=1.792e+02 ||infl||=8.330e+00 ratio=4.649e-02 | Oracle: ||dir||=1.774e+02 ||infl||=8.487e+01 ratio=4.783e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0684 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.7531 | Norm(Est): 374.7081 | Norm(Oracle): 436.0143
+    [Diagnostics] Reward Pearson Corr: 0.4000 | Var(Δr): 1178407.0312
+    [Term-wise] Est: ||dir||=3.302e+02 ||infl||=1.651e+02 ratio=5.000e-01 | Oracle: ||dir||=3.335e+02 ||infl||=2.490e+02 ratio=7.468e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0630 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.8661 | Norm(Est): 114.7957 | Norm(Oracle): 275.6567
+    [Diagnostics] Reward Pearson Corr: 0.4447 | Var(Δr): 978671.8223
+    [Term-wise] Est: ||dir||=1.085e+02 ||infl||=2.276e+01 ratio=2.097e-01 | Oracle: ||dir||=1.130e+02 ||infl||=1.819e+02 ratio=1.609e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1201 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.7622 | Norm(Est): 126.1487 | Norm(Oracle): 238.9854
+    [Diagnostics] Reward Pearson Corr: 0.4395 | Var(Δr): 979179.3964
+    [Term-wise] Est: ||dir||=1.033e+02 ||infl||=8.083e+01 ratio=7.828e-01 | Oracle: ||dir||=1.091e+02 ||infl||=1.433e+02 ratio=1.313e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0674 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.9257 | Norm(Est): 296.3697 | Norm(Oracle): 373.1375
+    [Diagnostics] Reward Pearson Corr: 0.5203 | Var(Δr): 938746.5904
+    [Term-wise] Est: ||dir||=2.964e+02 ||infl||=1.857e+01 ratio=6.266e-02 | Oracle: ||dir||=3.099e+02 ||infl||=1.480e+02 ratio=4.775e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.2323 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.6009 | Norm(Est): 109.7292 | Norm(Oracle): 204.3978
+    [Diagnostics] Reward Pearson Corr: 0.5472 | Var(Δr): 817681.4896
+    [Term-wise] Est: ||dir||=8.110e+01 ||infl||=6.367e+01 ratio=7.851e-01 | Oracle: ||dir||=8.896e+01 ||infl||=1.508e+02 ratio=1.695e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0492 | cos(dir_est, dir_oracle)=0.9988
+    [Diagnostics] HG Cosine Sim: 0.6620 | Norm(Est): 150.4859 | Norm(Oracle): 307.8044
+    [Diagnostics] Reward Pearson Corr: 0.5876 | Var(Δr): 1404075.4579
+    [Term-wise] Est: ||dir||=1.338e+02 ||infl||=5.042e+01 ratio=3.768e-01 | Oracle: ||dir||=1.419e+02 ||infl||=2.469e+02 ratio=1.741e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3500 | cos(dir_est, dir_oracle)=0.9993
+    [Joint-IRL] iter    0: ||mean residual|| = 4.701792 (best 4.701792) over 371 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 4.681525 (best 4.681525) over 371 envs
+  [Joint-IRL] re-solved over 371 envs in 108.04s | Q_hat diag=[2.1300e-02 1.9590e-01 5.3900e-01 2.4600e-02 3.0967e+00 8.2170e-01
+ 1.0000e+02 3.1339e+00]
+    [Diagnostics] HG Cosine Sim: 0.3906 | Norm(Est): 107.1903 | Norm(Oracle): 233.0188
+    [Diagnostics] Reward Pearson Corr: 0.4293 | Var(Δr): 892110.4185
+    [Term-wise] Est: ||dir||=7.481e+01 ||infl||=8.307e+01 ratio=1.110e+00 | Oracle: ||dir||=7.522e+01 ||infl||=1.797e+02 ratio=2.389e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2328 | cos(dir_est, dir_oracle)=0.9999
+  iter  370: train=-161.6247±51.3658 eval=-148.8735±50.8817 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.306 0.    0.971 0.22
+ 0.904 0.986 0.037 0.985]
+    [Diagnostics] HG Cosine Sim: 0.9303 | Norm(Est): 412.9967 | Norm(Oracle): 562.9812
+    [Diagnostics] Reward Pearson Corr: 0.4979 | Var(Δr): 856446.4363
+    [Term-wise] Est: ||dir||=4.201e+02 ||infl||=2.210e+01 ratio=5.262e-02 | Oracle: ||dir||=4.297e+02 ||infl||=2.277e+02 ratio=5.300e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.0543 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.9488 | Norm(Est): 408.6544 | Norm(Oracle): 558.1747
+    [Diagnostics] Reward Pearson Corr: 0.4481 | Var(Δr): 660324.9480
+    [Term-wise] Est: ||dir||=3.984e+02 ||infl||=8.953e+01 ratio=2.247e-01 | Oracle: ||dir||=4.078e+02 ||infl||=1.806e+02 ratio=4.429e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0488 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.2065 | Norm(Est): 111.7483 | Norm(Oracle): 193.1758
+    [Diagnostics] Reward Pearson Corr: 0.3926 | Var(Δr): 916557.6340
+    [Term-wise] Est: ||dir||=5.980e+01 ||infl||=1.032e+02 ratio=1.727e+00 | Oracle: ||dir||=6.164e+01 ||infl||=1.763e+02 ratio=2.859e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0305 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.7227 | Norm(Est): 170.9041 | Norm(Oracle): 303.0157
+    [Diagnostics] Reward Pearson Corr: 0.3188 | Var(Δr): 1117098.7457
+    [Term-wise] Est: ||dir||=1.424e+02 ||infl||=9.659e+01 ratio=6.782e-01 | Oracle: ||dir||=1.446e+02 ||infl||=2.002e+02 ratio=1.384e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0979 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.8415 | Norm(Est): 275.6828 | Norm(Oracle): 579.2667
+    [Diagnostics] Reward Pearson Corr: 0.4891 | Var(Δr): 989462.3501
+    [Term-wise] Est: ||dir||=2.513e+02 ||infl||=9.644e+01 ratio=3.837e-01 | Oracle: ||dir||=2.571e+02 ||infl||=3.707e+02 ratio=1.442e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1290 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.8260 | Norm(Est): 951.0794 | Norm(Oracle): 1054.6024
+    [Diagnostics] Reward Pearson Corr: 0.4221 | Var(Δr): 598914.1028
+    [Term-wise] Est: ||dir||=8.076e+02 ||infl||=5.245e+02 ratio=6.494e-01 | Oracle: ||dir||=8.379e+02 ||infl||=2.463e+02 ratio=2.940e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0372 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.7791 | Norm(Est): 179.3717 | Norm(Oracle): 312.2723
+    [Diagnostics] Reward Pearson Corr: 0.5285 | Var(Δr): 1901221.7537
+    [Term-wise] Est: ||dir||=1.776e+02 ||infl||=2.491e+01 ratio=1.402e-01 | Oracle: ||dir||=1.792e+02 ||infl||=2.084e+02 ratio=1.163e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2006 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.9448 | Norm(Est): 400.2287 | Norm(Oracle): 811.1305
+    [Diagnostics] Reward Pearson Corr: 0.4705 | Var(Δr): 1592652.9389
+    [Term-wise] Est: ||dir||=3.728e+02 ||infl||=1.194e+02 ratio=3.203e-01 | Oracle: ||dir||=3.988e+02 ||infl||=4.233e+02 ratio=1.061e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1019 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.8265 | Norm(Est): 219.0831 | Norm(Oracle): 255.4488
+    [Diagnostics] Reward Pearson Corr: 0.4499 | Var(Δr): 1057674.7396
+    [Term-wise] Est: ||dir||=2.124e+02 ||infl||=8.035e+01 ratio=3.782e-01 | Oracle: ||dir||=2.141e+02 ||infl||=1.097e+02 ratio=5.123e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1211 | cos(dir_est, dir_oracle)=1.0000
+    [Joint-IRL] iter    0: ||mean residual|| = 4.604291 (best 4.604291) over 381 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 4.585110 (best 4.585110) over 381 envs
+  [Joint-IRL] re-solved over 381 envs in 151.39s | Q_hat diag=[2.1300e-02 1.9590e-01 5.3910e-01 2.4600e-02 3.1035e+00 8.2180e-01
+ 1.0000e+02 3.1415e+00]
+    [Diagnostics] HG Cosine Sim: 0.6085 | Norm(Est): 175.2298 | Norm(Oracle): 313.4988
+    [Diagnostics] Reward Pearson Corr: 0.4724 | Var(Δr): 1171346.5607
+    [Term-wise] Est: ||dir||=1.158e+02 ||infl||=1.192e+02 ratio=1.030e+00 | Oracle: ||dir||=1.206e+02 ||infl||=2.256e+02 ratio=1.870e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0930 | cos(dir_est, dir_oracle)=0.9997
+  iter  380: train=-160.4516±52.2702 eval=-159.7848±58.0337 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.306 0.    0.999 0.219
+ 0.989 1.    0.091 1.   ]
+    [Diagnostics] HG Cosine Sim: 0.6687 | Norm(Est): 90.7748 | Norm(Oracle): 177.1904
+    [Diagnostics] Reward Pearson Corr: 0.5083 | Var(Δr): 1053624.9408
+    [Term-wise] Est: ||dir||=8.506e+01 ||infl||=2.335e+01 ratio=2.745e-01 | Oracle: ||dir||=8.623e+01 ||infl||=1.434e+02 ratio=1.663e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.4659 | cos(dir_est, dir_oracle)=0.9996
+    [Diagnostics] HG Cosine Sim: 0.8501 | Norm(Est): 322.2551 | Norm(Oracle): 547.3284
+    [Diagnostics] Reward Pearson Corr: 0.5965 | Var(Δr): 810896.4409
+    [Term-wise] Est: ||dir||=3.209e+02 ||infl||=5.452e+01 ratio=1.699e-01 | Oracle: ||dir||=3.623e+02 ||infl||=3.044e+02 ratio=8.400e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.1095 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.7031 | Norm(Est): 238.6345 | Norm(Oracle): 399.3965
+    [Diagnostics] Reward Pearson Corr: 0.4656 | Var(Δr): 1241218.4527
+    [Term-wise] Est: ||dir||=1.638e+02 ||infl||=1.690e+02 ratio=1.032e+00 | Oracle: ||dir||=1.536e+02 ||infl||=2.793e+02 ratio=1.819e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2530 | cos(dir_est, dir_oracle)=0.9967
+    [Diagnostics] HG Cosine Sim: 0.9809 | Norm(Est): 505.3848 | Norm(Oracle): 764.1934
+    [Diagnostics] Reward Pearson Corr: 0.4367 | Var(Δr): 531654.5963
+    [Term-wise] Est: ||dir||=5.024e+02 ||infl||=6.089e+01 ratio=1.212e-01 | Oracle: ||dir||=5.114e+02 ||infl||=2.624e+02 ratio=5.132e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1416 | cos(dir_est, dir_oracle)=1.0000
+    [Diagnostics] HG Cosine Sim: 0.8763 | Norm(Est): 298.0218 | Norm(Oracle): 433.6404
+    [Diagnostics] Reward Pearson Corr: 0.5189 | Var(Δr): 1186973.9507
+    [Term-wise] Est: ||dir||=2.852e+02 ||infl||=8.091e+01 ratio=2.837e-01 | Oracle: ||dir||=2.770e+02 ||infl||=2.382e+02 ratio=8.599e-01
+    [Term-wise] cos(infl_est, infl_oracle)=0.2329 | cos(dir_est, dir_oracle)=0.9997
+    [Diagnostics] HG Cosine Sim: 0.5455 | Norm(Est): 363.9115 | Norm(Oracle): 395.9867
+    [Diagnostics] Reward Pearson Corr: 0.4031 | Var(Δr): 540276.3143
+    [Term-wise] Est: ||dir||=3.088e+02 ||infl||=2.006e+02 ratio=6.496e-01 | Oracle: ||dir||=3.026e+02 ||infl||=2.550e+02 ratio=8.427e-01
+    [Term-wise] cos(infl_est, infl_oracle)=-0.2108 | cos(dir_est, dir_oracle)=0.9882
+    [Diagnostics] HG Cosine Sim: 0.7997 | Norm(Est): 168.0101 | Norm(Oracle): 311.0638
+    [Diagnostics] Reward Pearson Corr: 0.4297 | Var(Δr): 770515.0562
+    [Term-wise] Est: ||dir||=1.595e+02 ||infl||=2.744e+01 ratio=1.721e-01 | Oracle: ||dir||=1.699e+02 ||infl||=1.996e+02 ratio=1.175e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0653 | cos(dir_est, dir_oracle)=0.9992
+    [Diagnostics] HG Cosine Sim: 0.3982 | Norm(Est): 131.2386 | Norm(Oracle): 265.0144
+    [Diagnostics] Reward Pearson Corr: 0.4232 | Var(Δr): 632375.0258
+    [Term-wise] Est: ||dir||=4.202e+01 ||infl||=1.256e+02 ratio=2.989e+00 | Oracle: ||dir||=4.350e+01 ||infl||=2.415e+02 ratio=5.551e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2484 | cos(dir_est, dir_oracle)=0.9971
+    [Diagnostics] HG Cosine Sim: 0.8636 | Norm(Est): 169.3501 | Norm(Oracle): 467.5246
+    [Diagnostics] Reward Pearson Corr: 0.4480 | Var(Δr): 1017452.4190
+    [Term-wise] Est: ||dir||=1.451e+02 ||infl||=4.691e+01 ratio=3.232e-01 | Oracle: ||dir||=1.565e+02 ||infl||=3.358e+02 ratio=2.146e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2673 | cos(dir_est, dir_oracle)=0.9984
+    [Joint-IRL] iter    0: ||mean residual|| = 4.563297 (best 4.563297) over 391 envs
+    [Joint-IRL] iter   24: ||mean residual|| = 4.542504 (best 4.542504) over 391 envs
+  [Joint-IRL] re-solved over 391 envs in 17.23s | Q_hat diag=[2.1300e-02 1.9590e-01 5.3920e-01 2.4600e-02 3.1109e+00 8.2190e-01
+ 1.0000e+02 3.1498e+00]
+    [Diagnostics] HG Cosine Sim: 0.8363 | Norm(Est): 180.6812 | Norm(Oracle): 460.6751
+    [Diagnostics] Reward Pearson Corr: 0.5435 | Var(Δr): 1202848.9169
+    [Term-wise] Est: ||dir||=1.529e+02 ||infl||=8.505e+01 ratio=5.563e-01 | Oracle: ||dir||=1.642e+02 ||infl||=3.063e+02 ratio=1.866e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0469 | cos(dir_est, dir_oracle)=0.9998
+  iter  390: train=-162.6241±47.5990 eval=-153.7706±43.1464 | μ = [0.    0.    0.    0.    0.    0.    0.    0.    0.325 0.    1.    0.222
+ 0.996 0.995 0.156 0.974]
+    [Diagnostics] HG Cosine Sim: 0.9271 | Norm(Est): 333.5507 | Norm(Oracle): 659.9750
+    [Diagnostics] Reward Pearson Corr: 0.4836 | Var(Δr): 784155.8309
+    [Term-wise] Est: ||dir||=3.301e+02 ||infl||=3.929e+01 ratio=1.190e-01 | Oracle: ||dir||=3.252e+02 ||infl||=3.891e+02 ratio=1.196e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.3478 | cos(dir_est, dir_oracle)=0.9989
+    [Diagnostics] HG Cosine Sim: 0.5338 | Norm(Est): 150.7469 | Norm(Oracle): 191.5548
+    [Diagnostics] Reward Pearson Corr: 0.4278 | Var(Δr): 1069984.9664
+    [Term-wise] Est: ||dir||=8.537e+01 ||infl||=1.323e+02 ratio=1.549e+00 | Oracle: ||dir||=8.214e+01 ||infl||=1.337e+02 ratio=1.627e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1753 | cos(dir_est, dir_oracle)=0.9990
+    [Diagnostics] HG Cosine Sim: 0.3952 | Norm(Est): 59.3321 | Norm(Oracle): 148.0066
+    [Diagnostics] Reward Pearson Corr: 0.5146 | Var(Δr): 988036.7929
+    [Term-wise] Est: ||dir||=5.382e+01 ||infl||=1.888e+01 ratio=3.509e-01 | Oracle: ||dir||=5.245e+01 ||infl||=1.404e+02 ratio=2.676e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.2801 | cos(dir_est, dir_oracle)=0.9970
+    [Diagnostics] HG Cosine Sim: 0.7161 | Norm(Est): 103.9867 | Norm(Oracle): 141.1314
+    [Diagnostics] Reward Pearson Corr: 0.4687 | Var(Δr): 627519.7760
+    [Term-wise] Est: ||dir||=9.158e+01 ||infl||=2.996e+01 ratio=3.272e-01 | Oracle: ||dir||=9.172e+01 ||infl||=9.349e+01 ratio=1.019e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0467 | cos(dir_est, dir_oracle)=0.9941
+    [Diagnostics] HG Cosine Sim: 0.7317 | Norm(Est): 229.7739 | Norm(Oracle): 347.6205
+    [Diagnostics] Reward Pearson Corr: 0.5315 | Var(Δr): 718071.7769
+    [Term-wise] Est: ||dir||=1.956e+02 ||infl||=1.150e+02 ratio=5.879e-01 | Oracle: ||dir||=1.994e+02 ||infl||=2.012e+02 ratio=1.009e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0702 | cos(dir_est, dir_oracle)=0.9994
+    [Diagnostics] HG Cosine Sim: 0.2600 | Norm(Est): 118.8430 | Norm(Oracle): 337.0983
+    [Diagnostics] Reward Pearson Corr: 0.5350 | Var(Δr): 1039276.3515
+    [Term-wise] Est: ||dir||=7.603e+01 ||infl||=9.866e+01 ratio=1.298e+00 | Oracle: ||dir||=7.959e+01 ||infl||=3.004e+02 ratio=3.774e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.1080 | cos(dir_est, dir_oracle)=0.9989
+    [Diagnostics] HG Cosine Sim: 0.8521 | Norm(Est): 227.5134 | Norm(Oracle): 533.6549
+    [Diagnostics] Reward Pearson Corr: 0.4606 | Var(Δr): 1161134.7115
+    [Term-wise] Est: ||dir||=2.022e+02 ||infl||=1.041e+02 ratio=5.147e-01 | Oracle: ||dir||=2.167e+02 ||infl||=3.372e+02 ratio=1.556e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.0601 | cos(dir_est, dir_oracle)=0.9998
+    [Diagnostics] HG Cosine Sim: 0.4806 | Norm(Est): 111.5570 | Norm(Oracle): 283.0432
+    [Diagnostics] Reward Pearson Corr: 0.3349 | Var(Δr): 1229749.4441
+    [Term-wise] Est: ||dir||=8.855e+01 ||infl||=4.993e+01 ratio=5.638e-01 | Oracle: ||dir||=8.968e+01 ||infl||=2.512e+02 ratio=2.801e+00
+    [Term-wise] cos(infl_est, infl_oracle)=0.1493 | cos(dir_est, dir_oracle)=0.9999
+    [Diagnostics] HG Cosine Sim: 0.3053 | Norm(Est): 91.2777 | Norm(Oracle): 152.5254
+    [Diagnostics] Reward Pearson Corr: 0.4550 | Var(Δr): 448787.3644
+    [Term-wise] Est: ||dir||=5.500e+01 ||infl||=8.369e+01 ratio=1.522e+00 | Oracle: ||dir||=5.518e+01 ||infl||=1.187e+02 ratio=2.151e+00
+    [Term-wise] cos(infl_est, infl_oracle)=-0.0921 | cos(dir_est, dir_oracle)=0.9992
+=== Saved to data/internal/rebuttal/exp5_joint_earlystop25/stats_irl_joint_pooled_seed2.pkl ===
