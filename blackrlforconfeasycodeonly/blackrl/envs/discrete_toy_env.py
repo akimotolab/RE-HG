@@ -26,7 +26,7 @@ class DiscreteToyEnvBase(Environment):
     def __init__(self, random_start=False):
         """Initialize the discrete toy environment."""
         # Transition function: transition[state][leader_action][follower_action]
-        # = 0: Sへ遷移, = 1: Aへ遷移, = 2: Bへ遷移, = -1: 遷移しない
+        # = 0: go to S, = 1: go to A, = 2: go to B, = -1: no transition
         self.transition = np.ones((3, 2, 3), dtype=np.int32) * -1
 
         # Reward function: rewards[state][leader_action][follower_action]

@@ -24,7 +24,7 @@ class MDCEIRL:
         self.learning_rate = learning_rate
         self.lr_decay = lr_decay
         self.irl_rollout_episodes = irl_rollout_episodes
-        self.w: torch.Tensor | None = None  # requires_grad は使わない（手動更新）
+        self.w: torch.Tensor | None = None  # no requires_grad (updated manually)
 
     def compute_expert_fev(
         self,
@@ -68,7 +68,7 @@ class MDCEIRL:
             if traj_fev is not None:
                 all_traj_fev.append(traj_fev)
 
-        # (平均をとる処理はそのまま)
+        # (averaging unchanged)
         if len(all_traj_fev) > 0:
             fev = torch.mean(torch.stack(all_traj_fev), dim=0)
         else:
@@ -106,22 +106,22 @@ class MDCEIRL:
         t = 0
 
         while True:
-            # リーダーの方策（確率分布 [p(0), p(1)]）を取得
+            # Get the leader policy (probability distribution [p(0), p(1)])
             leader_probs = leader_policy(obs)
             if not isinstance(leader_probs, (list, np.ndarray)):
-                # (フォールバック) もし leader_policy が int を返した場合
+                # (Fallback) if leader_policy returns an int
                 leader_act = leader_probs
             else:
-                # 確率分布からサンプリングして int (0 or 1) に変換
+                # Sample from the distribution and convert to int (0 or 1)
                 n_leader_actions = len(leader_probs)
                 leader_act = np.random.choice(n_leader_actions, p=leader_probs)
 
             # Sample follower action from policy
-            # これで follower_act = policy(obs, (int)leader_act) となり安全
+            # Now follower_act = policy(obs, (int)leader_act), which is safe
             follower_act = policy(obs, leader_act)
 
             # Compute feature vector
-            # これで phi_t = self.feature_fn(obs, (int)leader_act, ...) となり安全
+            # Now phi_t = self.feature_fn(obs, (int)leader_act, ...), which is safe
             phi_t = self.feature_fn(obs, leader_act, follower_act)
             if isinstance(phi_t, np.ndarray):
                 phi_t = torch.from_numpy(phi_t).float()

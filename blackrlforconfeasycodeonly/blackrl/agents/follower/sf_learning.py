@@ -23,5 +23,5 @@ class SuccessorFeatureLearning:
         self.learning_rate = learning_rate
         self.temperature = temperature
 
-        # SFテーブル: ψ(s, leader_a, follower_b) -> vector
+        # SF table: ψ(s, leader_a, follower_b) -> vector
         self.sf_table = np.zeros((self.n_s, self.n_la, self.n_fa, feature_dim), dtype=np.float32)

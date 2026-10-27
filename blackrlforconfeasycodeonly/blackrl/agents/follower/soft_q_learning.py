@@ -132,10 +132,10 @@ class SoftQLearning:
 
             for next_leader_act in range(num_leader_actions):
                 if next_leader_act < len(leader_action_probs):
-                    # V_F^soft(s', a') を計算
+                    # Compute V_F^soft(s', a')
                     soft_value = self.compute_soft_value(next_state, next_leader_act)
 
-                    # 期待値に加算: p(a'|s') * V(s', a')
+                    # Add to the expectation: p(a'|s') * V(s', a')
                     expected_soft_value += leader_action_probs[next_leader_act] * soft_value
 
             target_q = reward + self.discount * expected_soft_value
@@ -171,7 +171,7 @@ class SoftQLearning:
         for b in follower_actions:
             q_val = self.get_q_value(state, leader_action, b)
             log_prob = (q_val - soft_value) / self.temperature
-            # キーを整数に統一（離散アクションの場合）
+            # Normalize keys to int (for discrete actions)
             action_key = int(b) if isinstance(b, (int, np.integer)) else b
             probs[action_key] = np.exp(log_prob)
 
@@ -188,7 +188,7 @@ class SoftQLearning:
         state: np.ndarray | float,
         leader_action: np.ndarray | float,
     ) -> np.ndarray:
-        # ε-greedy: ε確率でランダム、1-ε確率でsoftmax方策
+        # ε-greedy: random with probability ε, softmax policy with probability 1-ε
         if self.epsilon > 0.0 and np.random.random() < self.epsilon:
             n_actions = self.env_spec.action_space.n
             sampled_action = np.random.randint(n_actions)
@@ -202,7 +202,7 @@ class SoftQLearning:
         sampled_idx = np.random.choice(len(actions), p=probs)
         sampled_action = actions[sampled_idx]
 
-        # 常にnumpy配列として返す（型を統一）
+        # Always return a numpy array (consistent type)
         if isinstance(sampled_action, tuple):
             return np.array(sampled_action, dtype=np.int32)
         return np.array(sampled_action, dtype=np.int32)

@@ -758,25 +758,25 @@ class FollowerEstimator:
                 mu_sa_expr[(s, a)] = cp.sum(mu_x[sa_indices[(s, a)]])
 
         # Max causal entropy <=> Min Σ_x rel_entr(μ_x, μ_sa)
-        # denom (mu_sa) を各状態・行動・行動 (s, a, b) の形状にブロードキャストする
-        # 変数のリストを作って hstack するのは非常に遅いため、行列表現を使います
+        # Broadcast denom (mu_sa) to the shape of each (state, action, action) triple (s, a, b)
+        # Building a list of variables and hstack-ing them is very slow, so use a matrix form
         
-        # mu_sa の配列を作成 (サイズ: n_s * n_a)
+        # Build the mu_sa array (size: n_s * n_a)
         mu_sa_list = []
         for s in range(n_s):
             for a in range(n_a):
                 mu_sa_list.append(cp.sum(mu_x[sa_indices[(s, a)]]))
-        # mu_sa_vec はサイズ (n_s * n_a,) の1次元配列
+        # mu_sa_vec is a 1-D array of size (n_s * n_a,)
         mu_sa_vec = cp.hstack(mu_sa_list)
 
-        # 各要素を n_b 回ずつ繰り返すインデックスを作成
-        # 例: n_b=3 の場合 [0, 0, 0, 1, 1, 1, 2, 2, 2, ...]
+        # Build indices that repeat each element n_b times
+        # e.g. for n_b=3: [0, 0, 0, 1, 1, 1, 2, 2, 2, ...]
         repeat_idx = np.repeat(np.arange(n_s * n_a), n_b)
 
-        # インデックス参照を使って mu_sa_vec を拡張 (サイズ: n_s * n_a * n_b)
+        # Expand mu_sa_vec by indexing (size: n_s * n_a * n_b)
         mu_sa_expanded = mu_sa_vec[repeat_idx]
 
-        # 目的関数を一括で計算
+        # Compute the objective in one go
         entropy_obj = cp.sum(cp.rel_entr(mu_x, mu_sa_expanded + 1e-12))
 
 
@@ -788,7 +788,7 @@ class FollowerEstimator:
         xi = cp.Variable(feature_dim, nonneg=True)
         fem_penalty = 1
         
-        # ベクトル演算による一括定義
+        # Vectorized definition
         feat_expr = feat_mat @ mu_x
         c_pos = feat_expr - expert_fev <= xi
         c_neg = expert_fev - feat_expr <= xi
@@ -796,7 +796,7 @@ class FollowerEstimator:
         constraints.append(c_pos)
         constraints.append(c_neg)
 
-        # Bellman flow constraint (ベクトル化)
+        # Bellman flow constraint (vectorized)
         constraints.append(mu_s == p0 + gamma * (trans_to @ mu_x))
 
         # Leader-marginal consistency: Σ_b μ(s,a,b) = π_L(a|s) μ(s)

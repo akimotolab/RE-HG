@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# エラーが出たら停止
+# Stop on error
 set -e
 
-# プロジェクトルートに移動（このスクリプトが sh/ にある場合）
+# Move to the project root (this script lives in sh/)
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$PROJECT_ROOT"
@@ -11,14 +11,14 @@ cd "$PROJECT_ROOT"
 echo "Starting Parallel Experiments..."
 echo "Working directory: $(pwd)"
 
-# ログディレクトリを作成
+# Create the log directory
 LOG_DIR="data/internal/discrete_toyenv/test18critic10out50update5nonbuffersoftfullbatchexpgamma0.9beta0.25randomstart"
 mkdir -p "$LOG_DIR"
 
-# 5つの実験をバックグラウンド (&) で並列実行
-# nohup を使ってターミナルを閉じても動き続けるようにする
-# ログはそれぞれ別のファイルに出力する
-# --output-dir オプションで統計ファイルもLOG_DIRに保存
+# Run the experiments in parallel in the background (&)
+# nohup keeps them running after the terminal is closed
+# Each experiment writes to its own log file
+# --output-dir also saves the stats files to LOG_DIR
 nohup uv run python -u scripts/runrun.py --mode irl --output-dir "$LOG_DIR" > "$LOG_DIR/logs_irl.txt" 2>&1 &
 PID1=$!
 echo "Started Proposed (IRL) [PID: $PID1]"
@@ -52,7 +52,7 @@ PID9=$!
 echo "Started Proposed (IRL aggregate) [PID: $PID9]"
 
 
-# PIDをファイルに保存（後で確認できるように）
+# Save PIDs to files (for checking later)
 echo "$PID1" > "$LOG_DIR/.pids_irl.txt"
 echo "$PID2" > "$LOG_DIR/.pids_expert_surrogate_no_second_term.txt"
 echo "$PID3" > "$LOG_DIR/.pids_irl_known_dynamics.txt"
@@ -73,15 +73,15 @@ echo ""
 echo "Waiting for all experiments to finish..."
 echo "(Press Ctrl+C to detach - processes will continue in background)"
 
-# 全てのバックグラウンドプロセスが終わるのを待つ
-# Ctrl+Cで中断しても、nohupで実行されているのでプロセスは続行される
+# Wait for all background processes to finish
+# The processes run under nohup, so they keep going after Ctrl+C
 trap 'echo ""; echo "Detached from processes. They will continue running in background."; exit 0' INT TERM
 
 wait $PID1 $PID2 $PID3 $PID4 $PID6 $PID7 $PID8 $PID9
 
 echo "All experiments finished!"
 
-# 最後にまとめてプロット
+# Plot everything at the end
 echo "Generating plots..."
 uv run python scripts/runrun.py --mode plot --output-dir "$LOG_DIR"
 

@@ -557,7 +557,7 @@ def run_method(method: str, cfg: Config, w_init: np.ndarray, log: Callable[[str]
         "reward": [],
     }
 
-    # w_init を theta0 環境でのIRL結果とみなし、その環境下での確信度を計算
+    # Treat w_init as the IRL result in the theta0 environment and compute the confidence under that environment
     _, pi_init = soft_value_iteration(float(cfg.theta0), w_init, cfg.gamma, cfg.beta)
     Sigma_init = covariance_from_policy(float(cfg.theta0), pi_init, cfg.gamma)
 

@@ -636,8 +636,8 @@ def run_method(method: str, cfg: Config, w_init: np.ndarray, log: Callable[[str]
         "reward_centered_norm": [],
     }
 
-    # === 両方のメソッドに対して初期バイアス報酬を確信度行列に組み込む（フェアな比較） ===
-    # w_init を theta0 環境でのIRL結果とみなし、その環境下での確信度を計算
+    # === Fold the initial biased reward into the confidence matrix for both methods (fair comparison) ===
+    # Treat w_init as the IRL result in the theta0 environment and compute the confidence under that environment
     _, pi_init = soft_value_iteration(float(cfg.theta0), w_init, cfg.gamma, cfg.beta)
     Sigma_init = covariance_from_policy(float(cfg.theta0), pi_init, cfg.gamma, cfg.reg)
 
@@ -646,15 +646,15 @@ def run_method(method: str, cfg: Config, w_init: np.ndarray, log: Callable[[str]
     U_init = eigvecs_init @ np.diag(mask_init) @ eigvecs_init.T
     U_init = 0.5 * (U_init + U_init.T)
 
-    # run_local_irl() の出力は平均0に中心化されるため、初期項も同じゲージに揃える。
+    # run_local_irl() outputs are centered to mean 0, so put the initial term in the same gauge.
     w_init_centered = w_init - np.mean(w_init)
 
-    # 最初のデタラメな結果をアグリゲートの土台にする
+    # Use the first (arbitrary) estimate as the base of the aggregate
     sigma_bar = sigma_bar + U_init
     v_acc = v_acc + U_init @ w_init_centered
 
-    # 初期表示点(iter=0)は両手法で同じ w_init に揃える。
-    # 集約の効果はループ内で next_w_current を通して反映する。
+    # Use the same w_init for both methods at the initial point (iter=0).
+    # The effect of aggregation enters through next_w_current inside the loop.
     if method == "single_fixed_irl":
         w_current = w_init.copy()
     # ======================================================================

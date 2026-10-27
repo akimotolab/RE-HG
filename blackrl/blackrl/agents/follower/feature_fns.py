@@ -33,7 +33,7 @@ def make_lqr_irl_feature_fn(
     *,
     include_leader_squared: bool = False,
 ) -> Callable:
-    """Return a feature_fn for LQR IRL with fixed dimensions (状態の2乗, 行動の2乗).
+    """Return a feature_fn for LQR IRL with fixed dimensions (squared state, squared action).
 
     Convenient when you need a callable with a known feature dimension for MDCEIRL.
 

@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$PROJECT_ROOT"
 
-# ---- 引数パース ----
+# ---- Parse arguments ----
 LOG_DIR="data/internal/conf_continuous/testgod1"
 N_SEEDS=3
 
@@ -59,7 +59,7 @@ echo "Monitor progress (example):"
 echo "  tail -f $LOG_DIR/logs_softvi_seed0.txt"
 echo ""
 
-# 全プロセスの終了を待つ
+# Wait for all processes to finish
 trap 'echo "Detached. Processes continue in background."; exit 0' INT TERM
 wait "${PIDS[@]}"
 

@@ -64,11 +64,11 @@ def feature_fn(state, leader_action, follower_action):
 
 
 def run_experiment(mode, output_dir):
-    """指定されたモードの実験を1つだけ実行して保存する"""
+    """Run a single experiment for the given mode and save the results."""
     print(f"\n=== Starting Experiment: {mode} ===")
 
     env = DiscreteToyEnvPaper(random_start=True)
-    # アルゴリズム初期化
+    # Initialize the algorithm
     algo = BilevelRL(
         env_spec=env.spec,
         leader_policy=create_simple_leader_policy(),
@@ -77,12 +77,12 @@ def run_experiment(mode, output_dir):
         **COMMON_PARAMS,
     )
 
-    # 学習実行
-    # irl は内部的に oracle_mode="none"
-    # expert_surrogate_no_second_term は true SoftVI follower を使い、
-    # 第2項のみ無効化するベースラインモード（empirical surrogate は使わない）
-    # irl_known_dynamics は oracle_mode="irl_known_dynamics"
-    # irl_known_dynamics_every_iter は毎反復でMDCE IRLを実行
+    # Run training
+    # irl uses oracle_mode="none" internally
+    # expert_surrogate_no_second_term uses the true SoftVI follower and is a
+    # baseline that only disables the second term (no empirical surrogate)
+    # irl_known_dynamics uses oracle_mode="irl_known_dynamics"
+    # irl_known_dynamics_every_iter runs MDCE IRL at every iteration
     if mode == "irl":
         oracle_arg = "none"
     elif mode == "expert_surrogate_no_second_term":
@@ -90,12 +90,12 @@ def run_experiment(mode, output_dir):
     elif mode == "expert_surrogate_known_dynamics_no_second_term":
         oracle_arg = "expert_surrogate_known_dynamics_no_second_term"
     else:
-        oracle_arg = mode  # softvi / softql / irl_known_dynamics / softvi_known_dynamics をそのまま渡す
+        oracle_arg = mode  # pass softvi / softql / irl_known_dynamics / softvi_known_dynamics through as is
     use_second_term = mode not in ("expert_surrogate_no_second_term", "expert_surrogate_known_dynamics_no_second_term")
 
     stats = algo.train(env=env, oracle_mode=oracle_arg, use_second_term=use_second_term, **TRAIN_PARAMS)
 
-    # 結果保存
+    # Save results
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     save_path = output_dir / f"stats_{mode}.pkl"
@@ -106,12 +106,12 @@ def run_experiment(mode, output_dir):
 
 
 def merge_and_plot(output_dir):
-    """保存された結果を読み込んでプロットする"""
+    """Load saved results and plot them."""
     output_dir = Path(output_dir)
     print(f"\n=== Merging Results and Plotting (from {output_dir}) ===")
     results = {}
 
-    # 読み込みマッピング
+    # Loading map
     modes = {
         "irl": "Proposed IRL",
         "irl_recursive_rls": "Proposed Aggregate IRL",
@@ -137,8 +137,8 @@ def merge_and_plot(output_dir):
         print("No results found to plot.")
         return
 
-    # プロット
-    # Proposed (IRL) がある前提で、それをメインにし、他をベースラインにする
+    # Plot
+    # Assume Proposed (IRL) exists; use it as the main curve and the others as baselines
     main_stats = results.get("Proposed (IRL)", {})
     baselines = {k: v for k, v in results.items() if k != "Proposed (IRL)"}
 

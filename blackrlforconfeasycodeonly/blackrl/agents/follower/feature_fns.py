@@ -16,7 +16,7 @@ def lqr_irl_feature_fn(
     *,
     include_leader_squared: bool = False,
 ) -> np.ndarray:
-    """Feature for LQR IRL: 状態の2乗, 行動の2乗 (and optionally leader action squared).
+    """Feature for LQR IRL: squared state, squared action (and optionally leader action squared).
 
     φ = [ state.ravel()**2, follower_action.ravel()**2 ]
     so that r = w·φ can express diagonal quadratic cost (e.g. x'Qx + u'Ru with diagonal Q,R).
@@ -28,7 +28,7 @@ def lqr_irl_feature_fn(
     leader_action : array-like
         Leader action vector.
     follower_action : array-like
-        Follower action vector (the "行動" in 行動の2乗).
+        Follower action vector (the "action" in "squared action").
     include_leader_squared : bool
         If True, append leader_action.ravel()**2 to the feature (for cost terms in a).
 
@@ -53,7 +53,7 @@ def make_lqr_irl_feature_fn(
     *,
     include_leader_squared: bool = False,
 ) -> Callable:
-    """Return a feature_fn for LQR IRL with fixed dimensions (状態の2乗, 行動の2乗).
+    """Return a feature_fn for LQR IRL with fixed dimensions (squared state, squared action).
 
     Convenient when you need a callable with a known feature dimension for MDCEIRL.
 

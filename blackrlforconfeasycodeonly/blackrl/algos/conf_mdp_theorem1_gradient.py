@@ -352,14 +352,14 @@ def _grad_QF_theta_full(
 
     ∂Q_F/∂θ_k has seven terms:
 
-      (Aθ s + Bb)' P (Aθ s + Bb) の微分:
-        t1 = γ b'B' dP_k B b                   (P 経由, b 二次項)
-        t2 = 2γ b'B' dP_k A_theta s            (P 経由, 交差項)
-        t3 = γ (A_theta s)' dP_k (A_theta s)   (P 経由, 状態二次項)
-        t4 = 2γ b'B' P dA_k s                  (A 経由, 交差項)
-        t5 = 2γ (A_theta s)' P dA_k s          (A 経由, 状態二次項)
+      Derivative of (Aθ s + Bb)' P (Aθ s + Bb):
+        t1 = γ b'B' dP_k B b                   (via P, quadratic in b)
+        t2 = 2γ b'B' dP_k A_theta s            (via P, cross term)
+        t3 = γ (A_theta s)' dP_k (A_theta s)   (via P, quadratic in state)
+        t4 = 2γ b'B' P dA_k s                  (via A, cross term)
+        t5 = 2γ (A_theta s)' P dA_k s          (via A, quadratic in state)
 
-      ノイズ項 + v^{θ} の微分 (定数項):
+      Derivative of the noise term + v^{θ} (constant term):
         t6 = [γσ²/(1-γ)] Tr(dP_k)
         t7 = [γ²β / (2(1-γ))] Tr(B S⁻¹ B' dP_k)
 
@@ -386,7 +386,7 @@ def _grad_QF_theta_full(
     S_inv   = sol["S_inv"]
 
     As       = A_theta @ s   # (n,)
-    BSinvBt  = B @ S_inv @ B.T   # (n, n), 一度計算して共有
+    BSinvBt  = B @ S_inv @ B.T   # (n, n), computed once and shared
     coeff_t6 = gamma_F * sigma2 / (1.0 - gamma_F)
     coeff_t7 = gamma_F**2 * beta / (2.0 * (1.0 - gamma_F))
     grad = np.zeros(n_theta, dtype=np.float64)
@@ -395,7 +395,7 @@ def _grad_QF_theta_full(
         dP_k = dP_dtheta[:, k].reshape(n, n)
         dA_k = dA_dtheta[:, k].reshape(n, n)
 
-        # ---- P 経由 ----
+        # ---- via P ----
         # t1: γ b'B' dP_k B b
         t1 = gamma_F * float(b @ B.T @ dP_k @ B @ b)
         # t2: 2γ b'B' dP_k A_theta s
@@ -403,14 +403,14 @@ def _grad_QF_theta_full(
         # t3: γ (A_theta s)' dP_k (A_theta s)
         t3 = gamma_F * float(As @ dP_k @ As)
 
-        # ---- A 経由 ----
+        # ---- via A ----
         dA_k_s = dA_k @ s   # (n,)
         # t4: 2γ b'B' P dA_k s
         t4 = 2.0 * gamma_F * float(b @ B.T @ P @ dA_k_s)
         # t5: 2γ (A_theta s)' P dA_k s
         t5 = 2.0 * gamma_F * float(As @ P @ dA_k_s)
 
-        # ---- ノイズ項 + v^{θ} 定数項 ----
+        # ---- noise term + constant term of v^{θ} ----
         tr_dP_k        = float(np.trace(dP_k))
         tr_BSinvBt_dPk = float(np.trace(BSinvBt @ dP_k))
         # t6: [γσ²/(1-γ)] Tr(dP_k)
@@ -446,9 +446,9 @@ def theorem1_step_gradient(
     r_L: float,
     env,
     A_theta: np.ndarray,
-    sol_grad: dict | None,         # term3 用 DARE 解 (None → term3 スキップ)
+    sol_grad: dict | None,         # DARE solution for term3 (None → skip term3)
     dA_dtheta: np.ndarray,
-    dP_dtheta: np.ndarray | None,  # term3 用 ∂P/∂θ  (sol_grad が None なら None)
+    dP_dtheta: np.ndarray | None,  # ∂P/∂θ for term3 (None if sol_grad is None)
     M_s: np.ndarray,
     V_const: float,
     gamma_F: float,
@@ -500,8 +500,8 @@ def theorem1_episode_gradient(
     gamma_L: float,
     gamma_F: float,
     beta: float,
-    sol_follower: dict,     # フォロワー真の DARE 解 → Lyapunov V_L 計算に使用
-    sol_grad: dict | None,  # term3 の ∇Q_F 計算用 DARE 解 (None → term3 スキップ)
+    sol_follower: dict,     # true follower DARE solution → used to compute the Lyapunov V_L
+    sol_grad: dict | None,  # DARE solution for ∇Q_F in term3 (None → skip term3)
     include_term3: bool,
 ) -> np.ndarray:
     """Compute ∇_θ J_L contribution from one full episode via Theorem 1.
@@ -534,7 +534,7 @@ def theorem1_episode_gradient(
     # --- Jacobian ∂A/∂θ ---
     dA_dth = _dA_dtheta(env)  # (n*n, 2n)
 
-    # --- ∂P/∂θ: term3 が必要な場合のみ (sol_grad の P/S_inv/Ks を使用) ---
+    # --- ∂P/∂θ: only when term3 is needed (uses P/S_inv/Ks from sol_grad) ---
     if include_term3:
         dP_dth = _dP_dtheta_vec(
             A_theta, env.B, sol_grad["P"], sol_grad["S_inv"], sol_grad["Ks"],
@@ -543,7 +543,7 @@ def theorem1_episode_gradient(
     else:
         dP_dth = None
 
-    # --- Leader value matrix M_s: フォロワー真の行動 (sol_follower) に基づく V_L ---
+    # --- Leader value matrix M_s: V_L based on the follower's true actions (sol_follower) ---
     Sigma_0 = (env.init_temp_std ** 2) * np.eye(env.num_zones)
     lv_info = compute_leader_value_lyapunov(
         env, il, aa, A_theta, sol_follower["Ks"], sol_follower["S_inv"],

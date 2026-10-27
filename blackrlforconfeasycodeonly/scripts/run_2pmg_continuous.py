@@ -2,18 +2,18 @@
 
 irl_known_dynamics / irl_unknown_dynamics
 ------------------
-リーダーの状態遷移ダイナミクスは既知（A, B, C）または未知（データから回帰推定）という設定のもと，
-特徴量期待値マッチング（Feature Expectation Matching, FEM）IRL によって
-フォロワーの cost matrices (Q_hat, R_hat) を推定する．
+Under the setting where the leader's state-transition dynamics are known (A, B, C) or unknown (estimated by regression from data),
+Feature Expectation Matching (FEM) IRL is used to
+estimate the follower's cost matrices (Q_hat, R_hat).
 
-  1. エキスパート軌跡から  μ_expert = E[φ(s,b)]  を計算（φ = 二次特徴量）
-     ※ OLS や逆LQR は一切使わない．観測できるのは (s, a, b) の軌跡のみ．
-  2. IRL ループ:
+  1. Compute μ_expert = E[φ(s,b)] from expert trajectories (φ = quadratic features)
+     Note: no OLS or inverse LQR is used. Only (s, a, b) trajectories are observed.
+  2. IRL loop:
        w → diag(exp(w)) = (Q,R) → solve_2pmg_lqr → π* → E_π*[φ(s,b)] = μ_policy
-       w += α (μ_expert - μ_policy)   ← max-ent IRL 勾配
-  3. 収束した (Q_hat, R_hat) を保持し，以降は毎イテレーション
+       w += α (μ_expert - μ_policy)   ← max-ent IRL gradient
+  3. Keep the converged (Q_hat, R_hat), and at every subsequent iteration
        solve_2pmg_lqr(A, B, C, Q_hat, R_hat, gamma_F, K_theta_current)
-     で DARE を解き直してフォロワー方策を再導出する（BC ではない）．
+     re-solve the DARE to re-derive the follower policy (not BC).
 
 Modes
 -----
@@ -299,20 +299,20 @@ def _sol_to_follower_params(sol: dict, m: int, beta: float):
 
 
 # ---------------------------------------------------------------------------
-# Feature Expectation Matching (FEM) IRL  ← 正しい連続IRL実装
+# Feature Expectation Matching (FEM) IRL  ← correct continuous IRL implementation
 # ---------------------------------------------------------------------------
 
 
 def _quad_features(s: np.ndarray, a: np.ndarray, b: np.ndarray) -> np.ndarray:
     """Quadratic feature vector φ(s, a, b) = [s₁², ..., sₙ², b₁², ..., bₘ²].
 
-    論文の仮定 (Assumption 1): φ: S×A×B → R^K
-    リーダー行動 a は受け取るが，フォロワーコストは s と b のみに依存するため
-    特徴量に a² を含めない（フォロワーコスト = s'Qs + b'Rb の場合）．
-    必要に応じて include_leader=True で a² を追加可能．
+    Assumption 1 of the paper: φ: S×A×B → R^K
+    The leader action a is taken as input, but since the follower cost depends only on s and b,
+    a² is not included in the features (when the follower cost is s'Qs + b'Rb).
+    If needed, a² can be added with include_leader=True.
 
-    対応する報酬関数: r_F(s,a,b;w) = φ(s,a,b)·w
-    w が対角要素のとき: r_F = -Σ wᵢ sᵢ² - Σ wⱼ bⱼ²  = -(s'Qs + b'Rb)
+    Corresponding reward function: r_F(s,a,b;w) = φ(s,a,b)·w
+    When w holds the diagonal entries: r_F = -Σ wᵢ sᵢ² - Σ wⱼ bⱼ²  = -(s'Qs + b'Rb)
     where Q = diag(w[:n]), R = diag(w[n:]).
     """
     return np.concatenate([s**2, b**2])  # φ(s,a,b): a independent cost
@@ -322,22 +322,22 @@ def compute_expert_fev(
     expert_trajs: list[dict],
     gamma_F: float,
 ) -> np.ndarray:
-    """エキスパート軌跡から割引特徴量期待値 μ_expert = E[Σ γ^t φ(s_t,a_t,b_t)] を計算.
+    """Compute the discounted feature expectation μ_expert = E[Σ γ^t φ(s_t,a_t,b_t)] from expert trajectories.
 
-    論文 (MDCE IRL) の FEV 定義に従い，γ^t 割引を適用する:
+    Following the FEV definition of the paper (MDCE IRL), apply γ^t discounting:
         φ̄_BR^{γ_F} = E^{f,g*}[ Σ_t γ_F^t φ(s_t, a_t, b_t) ]
 
-    IRL の核心: OLS も逆LQR も不要．観測された (s, a, b) の軌跡のみを使用する．
+    Key point of IRL: no OLS or inverse LQR. Only observed (s, a, b) trajectories are used.
 
     Parameters
     ----------
     expert_trajs : list of dicts, each with 's', 'a', 'b' keys
-                   (各要素が1エピソードの時系列リスト)
-    gamma_F : float  フォロワー割引率
+                   (each element is the time-series list of one episode)
+    gamma_F : float  follower discount factor
 
     Returns
     -------
-    mu : (n_s + m,)  割引特徴量期待値ベクトル
+    mu : (n_s + m,)  discounted feature expectation vector
 
     """
     traj_fevs = []
@@ -370,31 +370,31 @@ def compute_policy_fev(
     sigma_leader: float,
     Sigma_0: np.ndarray,
 ) -> np.ndarray:
-    """割引 Lyapunov 方程式による μ_policy の解析的計算 (2PMG版, サンプリング不要).
+    """Analytic μ_policy via the discounted Lyapunov equation (2PMG version, no sampling).
 
-    離散版では compute_analytic_sf (叫続局特徴量) に相当する菡続版アナログ.
+    Continuous analogue of compute_analytic_sf (successor features) in the discrete version.
 
-    導出
+    Derivation
     ------
-    閉ループ行列:
+    Closed-loop matrix:
         K_eff = Ks + Ka K_θ                     (m, n)
-        A_cl  = A_tilde - B K_eff               (n, n)  (安定な閉ループ行列)
+        A_cl  = A_tilde - B K_eff               (n, n)  (stable closed-loop matrix)
 
-    プロセスノイズ共分散:
+    Process noise covariance:
         Q_noise = (C - B Ka)σ_L²(C-BKa)' + B(β/2)S⁻¹B' + σ_env² I
 
-    割引 Lyapunov 方程式 (第3引数が SF の辺辺辺の山):
+    Discounted Lyapunov equation (continuous analogue of the SF recursion):
         M = γ A_cl M A_cl' + Σ_0 + γ/(1-γ) Q_noise
         ↔ solve_discrete_lyapunov(√γ A_cl,  Σ_0 + γ/(1-γ) Q_noise)
 
-    FEV (サンプリング不要):
+    FEV (no sampling):
         μ_s = diag(M)
         μ_b = diag(K_eff M K_eff') + (1/(1-γ)) diag(Cov_b_eff)
 
     Parameters
     ----------
-    sigma_leader : float  リーダー方策の標準偏差 (エピソード収集と一致させる)
-    Sigma_0      : (n, n)  初期状態共分散 (None → I)
+    sigma_leader : float  std of the leader policy (match the value used for episode collection)
+    Sigma_0      : (n, n)  initial state covariance (None → I)
 
     """
     try:
@@ -413,7 +413,7 @@ def compute_policy_fev(
     A_tilde = sol["A_tilde"]  # (n, n) = A + C K_θ
 
     # ------------------------------------------------------------------
-    # Step 1: 閉ループ行列  (Soft VI・SF の連続版)
+    # Step 1: closed-loop matrix  (continuous version of Soft VI / SF)
     # b_t = -(Ks + Ka K_θ) s_t + ε_b_eff  =  -K_eff s_t + ε_b_eff
     # s_{t+1} = A_tilde s_t + B b_t + ε_s
     #          = (A_tilde - B K_eff) s_t + noise
@@ -422,28 +422,28 @@ def compute_policy_fev(
     A_cl = A_tilde - B @ K_eff  # (n, n)
 
     # ------------------------------------------------------------------
-    # Step 2: プロセスノイズ共分散
-    #   ε_a  ~ N(0, σ_L² I)  ← リーダー方策の確率的行動
-    #   ε_b  ~ N(0, (β/2) S⁻¹)  ← MaxEnt フォロワーのエントロピー
+    # Step 2: process noise covariance
+    #   ε_a  ~ N(0, σ_L² I)  ← stochastic actions of the leader policy
+    #   ε_b  ~ N(0, (β/2) S⁻¹)  ← entropy of the MaxEnt follower
     #   ε_b_eff = -Ka ε_a + ε_b
     #   w_t = (C - B Ka) ε_a + B ε_b + σ_env ε_s
     # ------------------------------------------------------------------
     C_eff = C - B @ Ka  # (n, p)
-    Cov_a = sigma_leader**2 * np.eye(n_p)  # leader標準偏差から
-    Cov_b_entropy = (beta / 2.0) * S_inv  # MaxEntエントロピーから
-    Cov_b_eff = Ka @ Cov_a @ Ka.T + Cov_b_entropy  # フォロワー局所ノイズ
+    Cov_a = sigma_leader**2 * np.eye(n_p)  # from the leader std
+    Cov_b_entropy = (beta / 2.0) * S_inv  # from the MaxEnt entropy
+    Cov_b_eff = Ka @ Cov_a @ Ka.T + Cov_b_entropy  # local follower noise
 
     Q_noise = (
-        C_eff @ Cov_a @ C_eff.T  # リーダーノイズの伝播
-        + B @ Cov_b_entropy @ B.T  # フォロワーノイズの伝播
+        C_eff @ Cov_a @ C_eff.T  # propagation of leader noise
+        + B @ Cov_b_entropy @ B.T  # propagation of follower noise
     )
 
     # ------------------------------------------------------------------
-    # Step 3: 割引 Lyapunov 方程式を解く (離散版SFの連続版アナログ)
+    # Step 3: solve the discounted Lyapunov equation (continuous analogue of the discrete SF)
     #
     #   M = γ A_cl M A_cl' + Σ_0 + γ/(1-γ) Q_noise
     #
-    # solve_discrete_lyapunov(A, Q) は X = A X A' + Q を解くので,
+    # solve_discrete_lyapunov(A, Q) solves X = A X A' + Q, so
     #   A := √γ A_cl
     #   Q := Σ_0 + γ/(1-γ) Q_noise
     # ------------------------------------------------------------------
@@ -455,7 +455,7 @@ def compute_policy_fev(
         return np.ones(n_s + m) * 1e6
 
     # ------------------------------------------------------------------
-    # Step 4: FEV を共分散の対角成分から読み出す
+    # Step 4: read the FEV off the diagonal of the covariance
     #   E[Σ_t γ^t s_i(t)^2] = M[i,i]
     #   E[Σ_t γ^t b_j(t)^2] = (K_eff M K_eff')[j,j] + (1/(1-γ)) Cov_b_eff[j,j]
     # ------------------------------------------------------------------
@@ -482,17 +482,17 @@ def fem_irl_loop(
 ) -> tuple[np.ndarray, np.ndarray]:
     """Feature Expectation Matching IRL for 2PMG (LQR setting).
 
-    正しい IRL の実装 (割引 Lyapunov 方程式による完全解析的計算):
-      - 入力: エキスパート特徴量期待値 μ_expert
-      - 出力: 推定コスト行列 (Q_hat, R_hat)
-      - OLS / 逆LQR / Ks_exp / サンプリング は一切不要
-      - 各イテレーション: DARE (↔Soft VI) → Lyapunov (↔SF) → 割引FEV
+    Correct IRL implementation (fully analytic via the discounted Lyapunov equation):
+      - Input: expert feature expectation μ_expert
+      - Output: estimated cost matrices (Q_hat, R_hat)
+      - No OLS / inverse LQR / Ks_exp / sampling needed
+      - Each iteration: DARE (↔Soft VI) → Lyapunov (↔SF) → discounted FEV
 
     Parameters
     ----------
-    sigma_leader : float  軌跡収集と同じ値を設定すること
-    n_irl_iters  : IRL勾配更新の反復数
-    lr_irl       : 学習率
+    sigma_leader : float  set to the same value as for trajectory collection
+    n_irl_iters  : number of IRL gradient updates
+    lr_irl       : learning rate
 
     Returns
     -------
@@ -502,10 +502,10 @@ def fem_irl_loop(
     """
     n_s = A.shape[0]
     m = B.shape[1]
-    # パラメトライズ: w = [log q₀, ..., log qₙ, log r₀, ..., log rₘ]
+    # Parametrization: w = [log q₀, ..., log qₙ, log r₀, ..., log rₘ]
     # → Q = diag(exp(w[:n_s])), R = diag(exp(w[n_s:]))
-    # log で陽性制約を保証（Nelder-Mead 不要）
-    log_w = np.zeros(n_s + m, dtype=np.float64)  # 初期値: Q=R=I
+    # log guarantees positivity (no Nelder-Mead needed)
+    log_w = np.zeros(n_s + m, dtype=np.float64)  # init: Q=R=I
 
     # Use negative features for reward view: phi_r = -phi_cost.
     # We keep cost parameterization (Q,R) positive via exp(log_w), and apply
@@ -560,7 +560,7 @@ def fem_irl_loop(
 
 
 # ---------------------------------------------------------------------------
-# RLS helpers (conf と同一の符号規約: Q_diag = exp(-ω_q), R_diag = exp(-ω_r))
+# RLS helpers (same sign convention as conf: Q_diag = exp(-ω_q), R_diag = exp(-ω_r))
 # ---------------------------------------------------------------------------
 
 
@@ -594,20 +594,20 @@ def _2pmg_info_matrix_from_trajs(
     beta: float,
     reg: float,
 ) -> np.ndarray:
-    """2PMG版 Σ_k の解析的推定.
+    """Analytic estimate of Σ_k for the 2PMG.
 
-    conf 版 _conf_info_matrix_from_trajs に対応するが，2PMG では
-    フォロワーが (s, a) を条件として行動するため:
+    Corresponds to _conf_info_matrix_from_trajs in the conf version, but in the 2PMG
+    the follower acts conditioned on (s, a), so we approximate it by:
         b_mean  = -(Ks + Ka K_θ) s - Ka (a - K_θ s)
                 = -K_eff s - Ka ε_a
-    で近似し，K_eff = Ks + Ka @ K_theta を用いて閉ループ行列を構成する.
+    and build the closed-loop matrix with K_eff = Ks + Ka @ K_theta.
 
-    ψ_i(s, b) = ∂Q_soft(s, b, a) / ∂ω_i を解析的に計算:
-        dP_i: リアプノフ方程式 (A_cl ペースの離散時間)
+    Compute ψ_i(s, b) = ∂Q_soft(s, b, a) / ∂ω_i analytically:
+        dP_i: Lyapunov equation (discrete time, based on A_cl)
         dS_i = dR_i + γ B' dP_i B
-        dKs_i, dKa_i: 最適解の感度
+        dKs_i, dKa_i: sensitivity of the optimal solution
 
-    軌跡内の (s, a, b) を使い, E_b[ψ_i | s, a] をガウス平均で引いて中心化する.
+    Center using (s, a, b) in the trajectories by subtracting the Gaussian mean E_b[ψ_i | s, a].
     """
     dim = n_s + m
     A = np.asarray(A, dtype=np.float64)
@@ -632,13 +632,13 @@ def _2pmg_info_matrix_from_trajs(
     P0 = np.asarray(sol0["P"], dtype=np.float64)  # (n, n)
     A_tilde = np.asarray(sol0["A_tilde"], dtype=np.float64)  # (n, n)
 
-    K_eff = Ks0 + Ka0 @ K_theta  # (m, n)  確率的リーダーノイズを無視した平均
+    K_eff = Ks0 + Ka0 @ K_theta  # (m, n)  mean, ignoring the stochastic leader noise
     A_cl = A_tilde - B @ K_eff  # (n, n)
 
-    # フォロワーの局所的ノイズ共分散 (MaxEnt): Cov_b_eff ≈ (β/2) S⁻¹
+    # Local follower noise covariance (MaxEnt): Cov_b_eff ≈ (β/2) S⁻¹
     Cov_b = (beta / 2.0) * S0_inv  # (m, m)
 
-    # ---- ω_i ごとの微分係数 ----
+    # ---- derivative coefficients for each ω_i ----
     omega_q = np.clip(omega[:n_s], -8.0, 8.0)
     omega_r = np.clip(omega[n_s : n_s + m], -8.0, 8.0)
     q_raw = np.exp(-omega_q)
@@ -660,13 +660,13 @@ def _2pmg_info_matrix_from_trajs(
             j = i - n_s
             dR_i[j, j] = dr[j]
 
-        # Envelope theorem: dP_i はリアプノフ方程式
+        # Envelope theorem: dP_i solves a Lyapunov equation
         # dP_i = (dQ_i + K_eff' dR_i K_eff) + γ A_cl' dP_i A_cl
         M_i = dQ_i + K_eff.T @ dR_i @ K_eff
         dP_i = solve_discrete_lyapunov(sq_g * A_cl.T, M_i)
 
         dS_i = dR_i + gamma_F * (B.T @ dP_i @ B)
-        # 逆行列を明示的に計算する代わりに np.linalg.solve を使う (数値的に安定)
+        # Use np.linalg.solve instead of explicitly computing the inverse (numerically stable)
         # dKs_i = γ (-S⁻¹ dS_i S⁻¹ B' P A + S⁻¹ B' dP_i A)
         #      = γ S⁻¹ (-dS_i S⁻¹ B' P A + B' dP_i A)
         rhs_Ks = -dS_i @ np.linalg.solve(S0, B.T @ P0 @ A) + B.T @ dP_i @ A
@@ -681,7 +681,7 @@ def _2pmg_info_matrix_from_trajs(
         dKs[i] = dKs_i
         dKa[i] = dKa_i
 
-    # ---- 軌跡から Σ_k を集計 ----
+    # ---- accumulate Σ_k from the trajectories ----
     Sigma_acc = np.zeros((dim, dim), dtype=np.float64)
     w_sum = 0.0
 
@@ -690,7 +690,7 @@ def _2pmg_info_matrix_from_trajs(
             s = np.asarray(s, dtype=np.float64).ravel()
             a = np.asarray(a, dtype=np.float64).ravel()
             b = np.asarray(b, dtype=np.float64).ravel()
-            # フォロワーの条件付き平均 b | s, a
+            # Conditional mean of the follower b | s, a
             mu_b = -(Ks0 @ s + Ka0 @ a)
             w_t = float(gamma_F**t)
 
@@ -700,7 +700,7 @@ def _2pmg_info_matrix_from_trajs(
                 dSi = dS[i]
                 dKsi = dKs[i]
                 dKai = dKa[i]
-                # dK_eff_i = dKs_i + dKa_i @ K_theta  (≈ 0 に近似してもよいが正確に計算)
+                # dK_eff_i = dKs_i + dKa_i @ K_theta  (could be approximated by 0, but computed exactly)
                 dK_eff_i = dKsi + dKai @ K_theta
                 Mi = dSi @ K_eff + S0 @ dK_eff_i  # d(S K_eff)/dω_i
 
@@ -1065,19 +1065,19 @@ def run_experiment(mode: str, output_dir: str, seed: int) -> dict:
     if verbose:
         print(f"  [Pre-training] Initializing critic with uniform state distribution ({n_ep * 100} episodes)...")
 
-    # 状態空間 [-1.5, 1.5] x [-1.5, 1.5] 程度を一様にサンプリング
+    # Sample uniformly over roughly [-1.5, 1.5] x [-1.5, 1.5] of the state space
     n_pre_ep = n_ep * 10
     rng_pre = np.random.default_rng(seed)
-    # 位置はターゲット(-0.8)と初期(1.0)の間を含む範囲
+    # The position range covers the target (-0.8) and the initial value (1.0)
     low = np.array([-1.5, -1.0])
     high = np.array([1.5, 1.0])
     random_starts = [rng_pre.uniform(low, high) for _ in range(n_pre_ep)]
 
-    # 現時点の(Oracle/IRL)フォロワーパラメータで収集
+    # Collect with the current (Oracle/IRL) follower parameters
     if mode == "softvi" or mode == "non_irl":
         sol_pre = solve_2pmg_lqr(_A, _B, _C, _W, _U, gamma_F, leader_policy.K)
     else:  # irl
-        sol_pre = solve_2pmg_lqr(_A, _B, _C, _W, _U, gamma_F, leader_policy.K)  # 初回はW,Uで代用
+        sol_pre = solve_2pmg_lqr(_A, _B, _C, _W, _U, gamma_F, leader_policy.K)  # use W, U on the first call
 
     Ksf_pre, Kaf_pre, bf_pre, Sf_pre = _sol_to_follower_params(sol_pre, m, beta)
 
@@ -1095,7 +1095,7 @@ def run_experiment(mode: str, output_dir: str, seed: int) -> dict:
         initial_state_overrides=random_starts,
     )
 
-    # 収集したデータで 50 epoch ほどクリティックを叩き込む (SARSA TD)
+    # Train the critic on the collected data for about 50 epochs (SARSA TD)
     pre_s_curr, pre_a_curr, pre_b_curr = [], [], []
     pre_r_curr = []
     pre_s_next, pre_a_next, pre_b_next = [], [], []
@@ -1156,11 +1156,11 @@ def run_experiment(mode: str, output_dir: str, seed: int) -> dict:
 
         elif mode == "irl_known_dynamics" or mode == "irl_unknown_dynamics":
             if not surrogate_fitted:
-                # === 正しい FEM-IRL による推定 ===
+                # === Estimation with the correct FEM-IRL ===
 
-                # Step 1: エキスパートデータ収集
-                # 真の (W, U) でのフォロワー解析解を使ってエキスパート軌跡を生成
-                # （現実では「専門家の軌跡を観測するだけ」に相当）
+                # Step 1: collect expert data
+                # Generate expert trajectories with the analytic follower solution under the true (W, U)
+                # (in practice this corresponds to "just observing expert trajectories")
                 sol0 = solve_2pmg_lqr(_A, _B, _C, _W, _U, gamma_F, leader_policy.K)
                 Ks0, Ka0, b0, Sf0 = _sol_to_follower_params(sol0, m, beta)
 
@@ -1189,17 +1189,17 @@ def run_experiment(mode: str, output_dir: str, seed: int) -> dict:
                 else:
                     A_hat, B_hat, C_hat = _A, _B, _C
 
-                # Step 2: エキスパート特徴量期待値を計算
-                # Ks_exp は使わない。観測された (s, a, b) の軌跡から
-                # γ^t 割引付きで φ(s_t, a_t, b_t) を集計するだけ（論文 FEV 定義）
+                # Step 2: compute the expert feature expectation
+                # Ks_exp is not used. Just accumulate φ(s_t, a_t, b_t) with γ^t discounting
+                # from the observed (s, a, b) trajectories (FEV definition in the paper)
                 mu_expert = compute_expert_fev(expert_trajs, gamma_F)
                 if verbose:
                     print(
                         f"  [FEM-IRL] μ_expert = {mu_expert.round(4)}",
                     )
 
-                # Step 3: FEM-IRL ループ → (Q_hat, R_hat) を推定
-                # OLS・逆LQR・Nelder-Mead は不要
+                # Step 3: FEM-IRL loop → estimate (Q_hat, R_hat)
+                # No OLS / inverse LQR / Nelder-Mead needed
                 if verbose:
                     print("  [FEM-IRL] Starting feature expectation matching...")
                 Q_hat, R_hat = fem_irl_loop(
@@ -1222,14 +1222,14 @@ def run_experiment(mode: str, output_dir: str, seed: int) -> dict:
                     )
                 surrogate_fitted = True
 
-            # Step 4: 推定済み (A_hat, B_hat, C_hat, Q_hat, R_hat) + 現在の K_theta で DARE を解き直す
+            # Step 4: re-solve the DARE with the estimated (A_hat, B_hat, C_hat, Q_hat, R_hat) and the current K_theta
             sol = solve_2pmg_lqr(A_hat, B_hat, C_hat, Q_hat, R_hat, gamma_F, leader_policy.K)
             Ks_f, Ka_f, bias_f, Sigma_f = _sol_to_follower_params(sol, m, beta)
 
         elif mode in ("irl_recursive_rls", "irl_unknown_recursive_rls"):
-            # 毎イテレーション FEM-IRL + Σ_k を RLS で累積し ω̄_k を更新するモード.
+            # Mode that runs FEM-IRL every iteration, accumulates Σ_k with RLS, and updates ω̄_k.
 
-            # Step 1: 現在 K_theta で真のフォロワーを動かしエキスパート軌跡を収集
+            # Step 1: run the true follower with the current K_theta and collect expert trajectories
             sol_exp = solve_2pmg_lqr(_A, _B, _C, _W, _U, gamma_F, leader_policy.K)
             Ks_exp, Ka_exp, b_exp, Sf_exp = _sol_to_follower_params(sol_exp, m, beta)
 
@@ -1254,7 +1254,7 @@ def run_experiment(mode: str, output_dir: str, seed: int) -> dict:
             else:
                 A_hat, B_hat, C_hat = _A, _B, _C
 
-            # Step 2: ローカル IRL → ω_k
+            # Step 2: local IRL → ω_k
             mu_expert_k = compute_expert_fev(expert_trajs, gamma_F)
             Q_k, R_k = fem_irl_loop(
                 expert_mu=mu_expert_k,
@@ -1275,7 +1275,7 @@ def run_experiment(mode: str, output_dir: str, seed: int) -> dict:
             )
             omega_k = _omega_from_diag_cost_2pmg(Q_k, R_k)
 
-            # Step 3: Σ_k を解析的に計算
+            # Step 3: compute Σ_k analytically
             Sigma_k = _2pmg_info_matrix_from_trajs(
                 expert_trajs,
                 A=A_hat,
@@ -1290,7 +1290,7 @@ def run_experiment(mode: str, output_dir: str, seed: int) -> dict:
                 reg=PARAMS["rls_reg"],
             )
 
-            # Step 4: 全てのサンプルの情報を累積（完全勾配法なのでeigminによる弾きは廃止）
+            # Step 4: accumulate information from all samples (full-gradient method, so eigmin-based rejection was removed)
             assert rls_sigma_bar is not None and rls_v_acc is not None and rls_omega_bar is not None
             eigvals_k = np.linalg.eigvalsh(Sigma_k)
 
@@ -1316,7 +1316,7 @@ def run_experiment(mode: str, output_dir: str, seed: int) -> dict:
 
             Q_hat, R_hat = _diag_from_reward_param_2pmg(rls_omega_bar, n_s, m)
 
-            # Step 5: 推定報酬で DARE を解いてフォロワーパラメータを更新
+            # Step 5: solve the DARE with the estimated reward and update the follower parameters
             sol = solve_2pmg_lqr(A_hat, B_hat, C_hat, Q_hat, R_hat, gamma_F, leader_policy.K)
             Ks_f, Ka_f, bias_f, Sigma_f = _sol_to_follower_params(sol, m, beta)
 
@@ -1392,7 +1392,7 @@ def run_experiment(mode: str, output_dir: str, seed: int) -> dict:
         true_sol = solve_2pmg_lqr(_A, _B, _C, _W, _U, gamma_F, leader_policy.K)
         true_Ks_f, true_Ka_f, true_b_f, true_Sigma_f = _sol_to_follower_params(true_sol, m, beta)
 
-        # 評価用エピソードの収集 (論文の実験設定に合わせて10エピソード等に設定)
+        # Collect evaluation episodes (e.g. 10 episodes, following the paper's experimental setup)
         _, eval_trajectories = _collect_episodes_parallel(
             leader_policy,
             true_Ks_f,
@@ -1508,7 +1508,7 @@ def merge_and_plot(output_dir: str) -> None:
     except Exception as e:
         print(f"Failed to plot performance: {e}")
 
-    # --- 軌跡のプロットを追加 ---
+    # --- add trajectory plots ---
     try:
         plot_eval_trajectories(results, save_path=out / "eval_trajectories.pdf")
         print(f"Trajectory plot saved to {out / 'eval_trajectories.pdf'}")
@@ -1528,7 +1528,7 @@ def plot_eval_trajectories(results: dict, save_path: Path):
         if not trajs:
             continue
 
-        # 最初の評価エピソードを代表としてプロット
+        # Plot the first evaluation episode as the representative
         traj = trajs[0]
         s_arr = np.array(traj["s"])  # (T, n_s)
         time = np.arange(len(s_arr))

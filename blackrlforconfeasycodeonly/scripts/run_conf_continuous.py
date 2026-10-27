@@ -19,7 +19,7 @@ from scipy.linalg import solve_discrete_lyapunov
 _ENV_CLASS_NAME  = "BuildingThermalControlEnv"
 _ENV_MODULE_PATH = "blackrl.envs.configurable_mdp_continuous_env"
 
-# === 🌟 実行スクリプト側を Source of Truth にする 🌟 ===
+# === The run script is the source of truth ===
 _ENV_INIT_KWARGS: dict = {
     "num_zones": 4,
     "num_hvac_units": 2,
@@ -74,7 +74,7 @@ def _worker_episode_conf(
     discount_leader: float,
     seed: int,
 ) -> dict:
-    """軌跡収集のみ行う worker。勾配計算はメインプロセスで theorem1_episode_gradient が担う。"""
+    """Worker that only collects trajectories. Gradients are computed in the main process by theorem1_episode_gradient."""
     module  = importlib.import_module(env_module_path)
     env_cls = getattr(module, env_class_name)
     env     = env_cls(**env_init_kwargs)
@@ -133,8 +133,8 @@ def _collect_episodes_parallel(
     base_seed: int,
     max_workers: int,
 ) -> tuple[dict, list]:
-    """軌跡を並列収集する。per_episode_params の各要素: (theta, Ks_f, bias_f, Sigma_f)。
-    勾配計算はしない。メインプロセスで theorem1_episode_gradient を呼ぶこと。
+    """Collect trajectories in parallel. Each element of per_episode_params: (theta, Ks_f, bias_f, Sigma_f).
+    No gradients are computed here. Call theorem1_episode_gradient in the main process.
     """
     n_ep  = len(per_episode_params)
     max_w = min(n_ep, max_workers)
@@ -177,15 +177,15 @@ def _collect_episodes_parallel(
 
 
 # ---------------------------------------------------------------------------
-# Leader policy: θ = μ（決定論的）  conf-MDP では θ は固定パラメータ
+# Leader policy: θ = μ (deterministic). In the conf-MDP, θ is a fixed parameter
 # ---------------------------------------------------------------------------
 
 class ConstantEpisodeLeaderPolicy:
-    """Conf-MDP のリーダーポリシー。
+    """Leader policy for the conf-MDP.
 
-    論文通り θ は確率変数ではなく決定論的パラメータ。
-    複数エピソードは θ の多様性のためではなく、
-    環境ノイズ・フォロワーノイズを平均化するために使用する。
+    As in the paper, θ is a deterministic parameter, not a random variable.
+    Multiple episodes are used not to diversify θ but
+    to average out environment noise and follower noise.
     """
 
     def __init__(self, n_theta: int, seed: int = 0):
@@ -193,7 +193,7 @@ class ConstantEpisodeLeaderPolicy:
         self.mu = rng.uniform(0.0, 0.3, size=n_theta).astype(np.float64)
 
     def get_theta(self) -> np.ndarray:
-        """決定論的に θ = μ を返す（クリップして [0, 1]^(2n) に収める）。"""
+        """Return θ = μ deterministically (clipped to [0, 1]^(2n))."""
         return np.clip(self.mu, 0.0, 1.0)
 
     def update(self, grad_mu: np.ndarray, lr: float) -> None:
@@ -210,22 +210,22 @@ def _sol_to_follower_params_conf(sol: dict, m: int, beta: float):
 
 
 # ---------------------------------------------------------------------------
-# Feature Expectation Matching (FEM) IRL  ← conf-MDP 用
-# • conf-MDP は毎ステップのリーダー行動 a_t が存在しないので
-#   φ(s, b) = [s², b²] が正しい特徴量設計（a は入らない）
-# • 2PMG の _quad_features(s, a, b) と対比することで両設定の構造的違いが明確になる
+# Feature Expectation Matching (FEM) IRL  ← for the conf-MDP
+# • The conf-MDP has no per-step leader action a_t, so
+#   φ(s, b) = [s², b²] is the right feature design (no a)
+# • Contrast with _quad_features(s, a, b) in the 2PMG to see the structural difference between the two settings
 # ---------------------------------------------------------------------------
 
 def _conf_quad_features(s: np.ndarray, b: np.ndarray) -> np.ndarray:
-    """特徴量ベクトル φ(s, b) = [s₁², ..., sₙ², b₁², ..., bₘ²] (conf-MDP用).
+    """Feature vector φ(s, b) = [s₁², ..., sₙ², b₁², ..., bₘ²] (for the conf-MDP).
 
-    論文の仮定 1: φ: S×B → R^K
-    conf-MDPではリーダーが A(θ) をプログラムするため，フォロワーの観測は (s, b) のみ．
-    フォロワーコスト: r_F = -(s'Qs + b'Rb) → φ(s,b)·w で表現できる．
+    Assumption 1 of the paper: φ: S×B → R^K
+    In the conf-MDP the leader programs A(θ), so the follower only observes (s, b).
+    Follower cost: r_F = -(s'Qs + b'Rb) → expressible as φ(s,b)·w.
 
-    2PMGとの結決的な違い:
-      2PMG: _quad_features(s, a, b) ← 嬕数に a を含む (だがコストには不使用)
-      conf: _conf_quad_features(s, b) ← a の概念こそ存在しない
+    Key difference from the 2PMG:
+      2PMG: _quad_features(s, a, b) ← takes a as an argument (but does not use it in the cost)
+      conf: _conf_quad_features(s, b) ← there is no notion of a at all
     """
     return np.concatenate([s ** 2, b ** 2])
 
@@ -234,16 +234,16 @@ def compute_expert_fev_conf(
     expert_trajs: list[dict],
     gamma_F: float,
 ) -> np.ndarray:
-    """エキスパート軌跡から割引特徴量期待値を計算 (conf-MDP版).
+    """Compute discounted feature expectations from expert trajectories (conf-MDP version).
 
         φ̄_BR^{γ_F} = E^{g*}[ Σ_t γ_F^t φ(s_t, b_t) ]
 
-    conf-MDPでは a が存在しないので φ(s, b) だけで足りる．
+    The conf-MDP has no a, so φ(s, b) alone is enough.
 
     Parameters
     ----------
     expert_trajs : list of dicts with 's', 'b' keys (time-series per episode)
-    gamma_F      : float  フォロワー割引率
+    gamma_F      : float  follower discount factor
     """
     traj_fevs = []
     for traj in expert_trajs:
@@ -267,15 +267,15 @@ def compute_policy_fev_conf(
     gamma_F: float,
     beta: float,
 ) -> np.ndarray:
-    """割引 Lyapunov 方程式による μ_policy の解析的計算 (conf-MDP版, サンプリング不要).
+    """Analytic μ_policy via the discounted Lyapunov equation (conf-MDP version, no sampling).
 
-    2PMG版との対比:
-      conf-MDP: a が存在しないので閉ループ行列が単純
+    Contrast with the 2PMG version:
+      conf-MDP: no a, so the closed-loop matrix is simple
         A_cl = A_theta_ref - B @ Ks
         Q_noise = B (β/2) S⁻¹ B' + σ_env² I
-      2PMG: K_eff = Ks + Ka K_θ が必要
+      2PMG: needs K_eff = Ks + Ka K_θ
 
-    割引 Lyapunov 方程式:
+    Discounted Lyapunov equation:
         M = γ A_cl M A_cl' + Σ_0 + γ/(1-γ) Q_noise
 
     FEV:
@@ -291,21 +291,21 @@ def compute_policy_fev_conf(
     S_inv = sol["S_inv"]   # (m, m)
 
     # ------------------------------------------------------------------
-    # Step 1: 閉ループ行列  (conf-MDP は a なしなので 2PMG より単純)
+    # Step 1: closed-loop matrix  (simpler than the 2PMG since the conf-MDP has no a)
     # b_t = -Ks s_t + ε_b,  ε_b ~ N(0, (β/2) S⁻¹)
     # s_{t+1} = A_theta s_t + B b_t + ε_env
     #         = (A_theta - B Ks) s_t + B ε_b + ε_env
     # ------------------------------------------------------------------
     A_cl = A_theta_ref - env.B @ Ks
 
-    Cov_b = (beta / 2.0) * S_inv          # MaxEntフォロワーノイズ
+    Cov_b = (beta / 2.0) * S_inv          # MaxEnt follower noise
     Q_noise = (
-        env.B @ Cov_b @ env.B.T           # フォロワーノイズの伝播
-        + (env.transition_std ** 2) * np.eye(n_s)    # 環境ノイズ
+        env.B @ Cov_b @ env.B.T           # propagation of follower noise
+        + (env.transition_std ** 2) * np.eye(n_s)    # environment noise
     )
 
     # ------------------------------------------------------------------
-    # Step 2: 割引 Lyapunov 方程式
+    # Step 2: discounted Lyapunov equation
     #   M = γ A_cl M A_cl' + Σ_0 + γ/(1-γ) Q_noise
     #   solve_discrete_lyapunov(√γ A_cl, Σ_0 + γ/(1-γ) Q_noise)
     # ------------------------------------------------------------------
@@ -339,23 +339,23 @@ def fem_irl_loop_conf(
 ) -> tuple[np.ndarray, np.ndarray]:
     """Feature Expectation Matching IRL for conf-MDP (LQR setting).
 
-    conf-MDP版の正しい IRL実装 (割引 Lyapunov 方程式による完全解析的計算):
-      - φ(s, b) = [s², b²]   (リーダー行動 a は存在せず，不要)
-      - 各イテレーション: DARE (↔Soft VI) → Lyapunov (↔SF) → 割引FEV  (サンプリング不要)
-      - OLS / 逆LQR / Nelder-Mead は不要
+    Correct IRL implementation for the conf-MDP (fully analytic via the discounted Lyapunov equation):
+      - φ(s, b) = [s², b²]   (no leader action a; not needed)
+      - Each iteration: DARE (↔Soft VI) → Lyapunov (↔SF) → discounted FEV  (no sampling)
+      - No OLS / inverse LQR / Nelder-Mead
 
-    2PMG版 (fem_irl_loop) との対比:
-      2PMG: a が存在 → K_eff = Ks + Ka K_θ, sigma_leader が必要
-      conf: a 概念なし → A_cl = A_theta - B Ks のみ, エントロピーノイズのみ
+    Contrast with the 2PMG version (fem_irl_loop):
+      2PMG: a exists → needs K_eff = Ks + Ka K_θ and sigma_leader
+      conf: no notion of a → only A_cl = A_theta - B Ks, entropy noise only
     """
     n_s = A_theta_ref.shape[0]
     m   = env.B.shape[1]
-    log_w = np.zeros(n_s + m, dtype=np.float64)  # 初期値: log_w=0 → Q=R=I
+    log_w = np.zeros(n_s + m, dtype=np.float64)  # init: log_w=0 → Q=R=I
 
     for i in range(n_irl_iters):
-        # 報酬重みパラメトリゼーション: コスト行列 = exp(-log_w)
-        #   log_w が増える → コスト減 → フォロワーがその特徴量をより使う
-        #   これにより報酬ベース勾配 (μ_expert - μ_policy) が正しく作用する
+        # Reward weight parametrization: cost matrix = exp(-log_w)
+        #   larger log_w → lower cost → the follower uses that feature more
+        #   this makes the reward-based gradient (μ_expert - μ_policy) act correctly
         Q = np.diag(np.maximum(np.exp(-log_w[:n_s]), 1e-8))
         R = np.diag(np.maximum(np.exp(-log_w[n_s:]), 1e-8))
 
@@ -363,17 +363,17 @@ def fem_irl_loop_conf(
             env, A_theta_ref, Q, R, gamma_F, beta,
         )
 
-        # 報酬ベース IRL 勾配 (MaxEnt IRL 標準形式):
-        #   r_F = -(s'Qs + b'Rb) = θ'φ で θ = -[Q_diag; R_diag] を報酬重みと見なす
+        # Reward-based IRL gradient (standard MaxEnt IRL form):
+        #   r_F = -(s'Qs + b'Rb) = θ'φ, treating θ = -[Q_diag; R_diag] as the reward weights
         #   ∂log P / ∂θ = μ_expert - μ_policy
-        #   θ = -exp(-log_w) = -1/exp(log_w) なので chain rule:
+        #   θ = -exp(-log_w) = -1/exp(log_w), so by the chain rule:
         #   ∂L/∂log_wᵢ = (μ_expert - μ_policy)ᵢ * exp(-log_wᵢ)
-        grad_reward = expert_mu - mu_policy                     # 報酬勾配
+        grad_reward = expert_mu - mu_policy                     # reward gradient
         grad_logw   = grad_reward * np.exp(-log_w)             # chain rule
-        # gradient clipping でオーバーフロー防止
+        # gradient clipping to prevent overflow
         grad_logw   = np.clip(grad_logw, -50.0, 50.0)
         log_w      += lr_irl * grad_logw
-        # log_w を [-20, 20] にクランプ (exp overflow 防止)
+        # clamp log_w to [-20, 20] (prevents exp overflow)
         log_w       = np.clip(log_w, -20.0, 20.0)
 
         if verbose and (i % 20 == 0 or i == n_irl_iters - 1):
@@ -545,7 +545,7 @@ def theorem1_update(
         grad_mu += np.asarray(traj["grad_theta"], dtype=np.float64)
     grad_mu /= len(trajs)
 
-    # 論文設定: gradient clipping (max norm 1.0)
+    # Paper setting: gradient clipping (max norm 1.0)
     grad_norm = float(np.linalg.norm(grad_mu))
     if grad_norm > grad_clip_max_norm:
         grad_mu = grad_mu * (grad_clip_max_norm / grad_norm)
@@ -561,25 +561,25 @@ def theorem1_update(
 
 PARAMS = {
     "n_leader_iterations":      200,
-    "n_episodes_per_iteration":  100,   # 論文設定: 100 trajectories / iteration
-    "n_eval_episodes":           50,    # 論文設定: 50 rollouts for evaluation per iteration
+    "n_episodes_per_iteration":  100,   # paper setting: 100 trajectories / iteration
+    "n_eval_episodes":           50,    # paper setting: 50 rollouts for evaluation per iteration
     "learning_rate_leader":      1e-1,
     "discount_leader":           0.9,
     "discount_follower":         0.9,
     "beta":                      1e-1,
     "max_workers":               32,
-    "grad_clip_max_norm":        1.0,   # 論文設定: estimated gradients clipped to max norm 1.0
+    "grad_clip_max_norm":        1.0,   # paper setting: estimated gradients clipped to max norm 1.0
     # iterative IRL + RLS mode
     "rls_reg":                   1e-6,
     "rls_prior_precision":       1e-1,
-    "rls_eig_threshold":         1e-4,    # 固有値しきい値 ε
+    "rls_eig_threshold":         1e-4,    # eigenvalue threshold ε
     "rls_local_irl_iters":       200,
     "rls_local_irl_lr":          0.01,
-    "rls_max_update_iters":      10,     # 何イテレーションまでパラメータ推定を更新するか
+    "rls_max_update_iters":      10,     # number of iterations during which the parameter estimate is updated
     "verbose":                   True,
 }
 
-# リーダー報酬の重み係数 (環境デフォルトと合わせる)
+# Weights of the leader reward (match the environment defaults)
 _LEADER_REWARD_WEIGHTS = {
     "stability_weight":        1.0,
     "energy_weight":           0.5,
@@ -600,9 +600,9 @@ def _evaluate_leader_mu(
 ) -> tuple[float, float, dict]:
     """Evaluate leader with deterministic theta=mu (no leader sampling noise).
 
-    - mu_theta を決定論的リーダー行動として固定 (sigma=0 相当)
-    - フォロワーは真のコスト (env.Q, env.R) で DARE → 真の最適応答
-    - n_eval_eps エピソードの平均・標準偏差を返す (初期状態・遷移ノイズは確率的)
+    - Fix mu_theta as the deterministic leader action (equivalent to sigma=0)
+    - The follower solves the DARE with the true costs (env.Q, env.R) → true best response
+    - Return the mean and std over n_eval_eps episodes (initial state and transition noise are stochastic)
     """
     n_zones = env.num_zones
     n_hvac  = env.num_hvac_units
@@ -658,13 +658,13 @@ def run_experiment(mode: str, output_dir: str, seed: int = 42) -> dict:
     max_w   = PARAMS["max_workers"]
 
     stats = {
-        # training trajectories (gradient用)
+        # training trajectories (for the gradient)
         "leader_return":          [], "leader_return_std":          [],
         "stability":              [], "stability_std":              [],
         "energy_cost":            [], "energy_cost_std":            [],
         "insulation_cost":        [], "insulation_cost_std":        [],
         "airflow_cost":           [], "airflow_cost_std":           [],
-        # evaluation rollouts (論文の50 rollouts: mu を固定して評価)
+        # evaluation rollouts (the paper's 50 rollouts: evaluate with mu fixed)
         "eval_leader_return":     [], "eval_leader_return_std":     [],
         "eval_stability":         [], "eval_stability_std":         [],
         "eval_energy_cost":       [], "eval_energy_cost_std":       [],
@@ -733,7 +733,7 @@ def run_experiment(mode: str, output_dir: str, seed: int = 42) -> dict:
 
         elif mode == "irl_known_dynamics":
             if not surrogate_fitted:
-                # === 正しい FEM-IRL による推定 (conf-MDP 版) ===
+                # === Estimation with the correct FEM-IRL (conf-MDP version) ===
                 theta_c    = np.full(n_theta, 0.5)
                 il_c, aa_c = theta_c[:n_zones], theta_c[n_zones:]
                 A_c        = env.compute_parameterized_A(il_c, aa_c)
@@ -783,7 +783,7 @@ def run_experiment(mode: str, output_dir: str, seed: int = 42) -> dict:
             include_term3 = True
 
         elif mode == "irl_recursive_rls":
-            # 毎 iteration で IRL を解き、その推定を RLS で累積統合するモード
+            # Mode that solves IRL at every iteration and accumulates the estimates with RLS
             il       = theta[:n_zones]
             aa       = theta[n_zones:]
             A_theta  = env.compute_parameterized_A(il, aa)
@@ -841,7 +841,7 @@ def run_experiment(mode: str, output_dir: str, seed: int = 42) -> dict:
             rls_sigma_bar = rls_sigma_bar + U_k
             rls_v_acc = rls_v_acc + U_k @ omega_k
 
-            # 3. 解析解で reward parameter を更新
+            # 3. Update the reward parameter with the analytic solution
             omega_prev = omega_bar.copy()
 
             ridge = float(PARAMS.get("rls_reg", 1e-6))
@@ -888,14 +888,14 @@ def run_experiment(mode: str, output_dir: str, seed: int = 42) -> dict:
         else:
             raise ValueError(f"Unknown mode: {mode!r}")
 
-        # ---- Parallel episode collection (軌跡収集のみ) ----
+        # ---- Parallel episode collection (trajectories only) ----
         pool, trajs = _collect_episodes_parallel(
             per_ep, gamma_L, base_seed=iteration, max_workers=max_w,
         )
 
-        # ---- 勾配計算: メインプロセスで theorem1_episode_gradient を呼ぶ ----
-        # softvi/irl_known_dynamics: term1+2+3 全部計算
-        # non_irl:                   term1+2 のみ (include_term3=False)
+        # ---- Gradient computation: call theorem1_episode_gradient in the main process ----
+        # softvi/irl_known_dynamics: compute term1+2+3
+        # non_irl:                   term1+2 only (include_term3=False)
         il = theta[:n_zones]
         aa = theta[n_zones:]
         for traj in trajs:
@@ -928,9 +928,9 @@ def run_experiment(mode: str, output_dir: str, seed: int = 42) -> dict:
             stats["airflow_cost"].append(float(np.mean(airs)))
             stats["airflow_cost_std"].append(float(np.std(airs)))
 
-        # ---- Evaluation rollouts (論文: 50 rollouts でリーダー return を評価) ----
-        # mu を決定論的リーダー行動として固定、env.Q/R で真のフォロワー最適応答を使用。
-        # seed: iter × 1_000_000 + seed でtraining rolloutと分離
+        # ---- Evaluation rollouts (paper: evaluate the leader return with 50 rollouts) ----
+        # Fix mu as the deterministic leader action and use the true follower best response under env.Q/R.
+        # seed: iter × 1_000_000 + seed, kept separate from the training rollouts
         eval_mean, eval_std, eval_comps = _evaluate_leader_mu(
             env, leader_policy.mu,
             n_eval_eps    = PARAMS["n_eval_episodes"],
@@ -954,7 +954,7 @@ def run_experiment(mode: str, output_dir: str, seed: int = 42) -> dict:
 
     out  = Path(output_dir)
     out.mkdir(parents=True, exist_ok=True)
-    # seed ごとに別ファイル保存 (後で aggregate_seeds で集計)
+    # Save one file per seed (aggregated later by aggregate_seeds)
     path = out / f"stats_{mode}_seed{seed}.pkl"
     with open(path, "wb") as f:
         pickle.dump(stats, f)
@@ -979,10 +979,10 @@ def aggregate_seeds(
     mode: str,
     n_seeds: int = 10,
 ) -> dict:
-    """n_seeds 分の per-seed pkl を読み込み、iteration ごとに mean/std を計算して返す.
+    """Load the per-seed pkl files for n_seeds seeds and return the mean/std at each iteration.
 
-    論文設定: 10 seeds, max/min 除外後 8 seeds で mean/std
-    → max/min 除外ロジックは実装済みだがコメントアウト中。
+    Paper setting: 10 seeds, mean/std over 8 seeds after dropping max/min
+    → the max/min dropping logic is implemented but commented out.
     """
     out = Path(output_dir)
     all_data: dict[str, list[list[float]]] = {k: [] for k in _METRIC_KEYS}
@@ -1012,10 +1012,10 @@ def aggregate_seeds(
             continue
         arr = np.array(all_data[k])  # shape: (n_seeds, n_iterations)
 
-        # ----- 通常の mean / std (全seed使用) -----
+        # ----- plain mean / std (all seeds) -----
         result[f"{k}_mean"] = arr.mean(axis=0).tolist()
         result[f"{k}_std"]  = arr.std(axis=0).tolist()
-    # pkl に保存
+    # Save to pkl
     agg_path = out / f"aggregated_{mode}.pkl"
     with open(agg_path, "wb") as f:
         pickle.dump(result, f)
@@ -1033,7 +1033,7 @@ def merge_and_plot(output_dir: str, n_seeds: int = 10) -> None:
         "non_irl": "Baseline No-Influence",
     }
 
-    # まず集計
+    # Aggregate first
     agg_results = {}
     for key, name in modes.items():
         agg = aggregate_seeds(str(out), key, n_seeds=n_seeds)
@@ -1046,7 +1046,7 @@ def merge_and_plot(output_dir: str, n_seeds: int = 10) -> None:
         return
 
     def _to_plot_stats(agg: dict, use_eval: bool = True) -> dict:
-        """aggregated dict → plot_learning_curves が期待する形式に変換."""
+        """Convert the aggregated dict to the format plot_learning_curves expects."""
         prefix = "eval_" if use_eval else ""
         return {
             "leader_return":        agg.get(f"{prefix}leader_return_mean", []),
@@ -1076,7 +1076,7 @@ def merge_and_plot(output_dir: str, n_seeds: int = 10) -> None:
 
 
 def _merge_and_plot_single_seed(output_dir: str) -> None:
-    """Fallback: single-seed pkl から直接プロット (旧挙動との互換)."""
+    """Fallback: plot directly from a single-seed pkl (compatible with the old behavior)."""
     from scripts.plot_learning_curves import plot_learning_curves, plot_components, plot_leader_performance_only
     out   = Path(output_dir)
     modes = {
